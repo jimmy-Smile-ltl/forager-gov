@@ -72,9 +72,9 @@
   },
   "市": {
    "total": 12202,
-   "with_url": 11847,
-   "missing": 355,
-   "missing_rate": 2.91,
+   "with_url": 11848,
+   "missing": 354,
+   "missing_rate": 2.9,
    "systems": {
     "gov": {
      "total": 407,
@@ -96,9 +96,9 @@
     },
     "zx": {
      "total": 405,
-     "with_url": 260,
-     "missing": 145,
-     "missing_rate": 35.8
+     "with_url": 261,
+     "missing": 144,
+     "missing_rate": 35.56
     },
     "jw": {
      "total": 405,
@@ -140,9 +140,9 @@
   },
   "县": {
    "total": 16805,
-   "with_url": 11566,
-   "missing": 5239,
-   "missing_rate": 31.18,
+   "with_url": 11651,
+   "missing": 5154,
+   "missing_rate": 30.67,
    "systems": {
     "gov": {
      "total": 2910,
@@ -158,15 +158,15 @@
     },
     "rd": {
      "total": 2779,
-     "with_url": 884,
-     "missing": 1895,
-     "missing_rate": 68.19
+     "with_url": 932,
+     "missing": 1847,
+     "missing_rate": 66.46
     },
     "zx": {
      "total": 2779,
-     "with_url": 409,
-     "missing": 2370,
-     "missing_rate": 85.28
+     "with_url": 446,
+     "missing": 2333,
+     "missing_rate": 83.95
     },
     "jw": {
      "total": 2779,
@@ -286,16 +286,16 @@
     },
     "县": {
      "total": 2779,
-     "with_url": 884,
-     "missing": 1895,
-     "missing_rate": 68.19
+     "with_url": 932,
+     "missing": 1847,
+     "missing_rate": 66.46
     }
    },
    "total": {
     "total": 3215,
-    "with_url": 1257,
-    "missing": 1958,
-    "missing_rate": 60.9
+    "with_url": 1305,
+    "missing": 1910,
+    "missing_rate": 59.41
    }
   },
   {
@@ -310,22 +310,22 @@
     },
     "市": {
      "total": 405,
-     "with_url": 260,
-     "missing": 145,
-     "missing_rate": 35.8
+     "with_url": 261,
+     "missing": 144,
+     "missing_rate": 35.56
     },
     "县": {
      "total": 2779,
-     "with_url": 409,
-     "missing": 2370,
-     "missing_rate": 85.28
+     "with_url": 446,
+     "missing": 2333,
+     "missing_rate": 83.95
     }
    },
    "total": {
     "total": 3215,
-    "with_url": 700,
-    "missing": 2515,
-    "missing_rate": 78.23
+    "with_url": 738,
+    "missing": 2477,
+    "missing_rate": 77.05
    }
   },
   {
@@ -511,8 +511,8 @@
  ],
  "total": {
   "total": 31228,
-  "with_url": 25431,
-  "missing": 5797,
-  "missing_rate": 18.56
+  "with_url": 25517,
+  "missing": 5711,
+  "missing_rate": 18.29
  }
 }

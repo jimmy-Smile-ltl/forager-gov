@@ -274380,5 +274380,951 @@
   "source_level": "L3",
   "verified_at": "2026-11-17",
   "snapshot": ""
+ },
+ "人大|济源市人大": {
+  "u": "http://www.jyrdcwh.gov.cn/",
+  "status": "ok",
+  "n": "济源市人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|昌平区政协": {
+  "u": "https://cpzx.bjchp.gov.cn/",
+  "status": "ok",
+  "n": "昌平区政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|正定县人大": {
+  "u": "https://www.zd.gov.cn/columns/cc5227b1-18c9-441b-a54d-8ae86b752bd3/index.html",
+  "status": "ok",
+  "n": "正定县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|元氏县人大": {
+  "u": "https://www.yuanshi.gov.cn/columns/d5438e73-3c44-405d-9695-e68d01be3f73/",
+  "status": "ok",
+  "n": "元氏县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|辛集市人大": {
+  "u": "https://www.xinji.gov.cn/app/2232_101/",
+  "status": "ok",
+  "n": "辛集市人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|平遥县人大": {
+  "u": "https://www.jzpyrd.gov.cn/",
+  "status": "ok",
+  "n": "平遥县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|盐湖区人大": {
+  "u": "https://management.ycyhrd.gov.cn/",
+  "status": "ok",
+  "n": "盐湖区人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|兴县人大": {
+  "u": "http://www.sxxingxian.gov.cn/xxgk/czxx_28839/chnl184/",
+  "status": "ok",
+  "n": "兴县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|昌图县人大": {
+  "u": "https://www.changtu.gov.cn/changtu/zwgk/zfxxgk/fdzdgknr57/yjs/bmjs/2022n70/ctxrmdbdhcwwyhjg/index.html",
+  "status": "ok",
+  "n": "昌图县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|龙港区人大": {
+  "u": "https://wzrd.wenzhou.gov.cn/col/col1229003098/index.html?uid=4447716pageNum=0",
+  "status": "ok",
+  "n": "龙港区人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|建昌县人大": {
+  "u": "https://www.jianchang.gov.cn/xxgk_3511/zfxxgk/fdzdgknr/czzj/czysgk/rdbmys/",
+  "status": "ok",
+  "n": "建昌县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|溧水区人大": {
+  "u": "https://www.njrd.gov.cn/jcrd/lsq/",
+  "status": "ok",
+  "n": "溧水区人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|仙居县人大": {
+  "u": "https://www.zjxj.gov.cn/col/col1637053/index.html",
+  "status": "ok",
+  "n": "仙居县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|巢湖市人大": {
+  "u": "http://www.chrd.gov.cn/",
+  "status": "ok",
+  "n": "巢湖市人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|潘集区人大": {
+  "u": "https://hnrd.huainan.gov.cn/dblz/dbxx/pjqdbt/index.html",
+  "status": "ok",
+  "n": "潘集区人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|界首市人大": {
+  "u": "http://www.ahjsrd.gov.cn/",
+  "status": "ok",
+  "n": "界首市人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|沙县区人大": {
+  "u": "https://www.spbrd.gov.cn/",
+  "status": "ok",
+  "n": "沙县区人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|共青城市人大": {
+  "u": "https://www.gongqing.gov.cn/fdzdxxgk/01/03_1/bmys/gqcsrmdbdhcwwyhbgs/",
+  "status": "ok",
+  "n": "共青城市人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|瑞金市人大": {
+  "u": "https://www.ruijin.gov.cn/rjsrmzfyyh/rdcwbgsdqu/bmys_list1.shtml",
+  "status": "ok",
+  "n": "瑞金市人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|崇仁县人大": {
+  "u": "https://www.jxcr.gov.cn/col/col8943/index.html",
+  "status": "ok",
+  "n": "崇仁县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|微山县人大": {
+  "u": "http://www.weishan.gov.cn/col/col27495/index.html",
+  "status": "ok",
+  "n": "微山县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|邹城市人大": {
+  "u": "http://www.zoucheng.gov.cn/col/col62540/index.html",
+  "status": "ok",
+  "n": "邹城市人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|夏津县人大": {
+  "u": "http://www.xiajin.gov.cn/n31121413/n37746850/n37776167/n37790091/n37790138/n72125625/index.html",
+  "status": "ok",
+  "n": "夏津县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|涧西区人大": {
+  "u": "https://lysrd.henanrd.gov.cn/jxqrd/",
+  "status": "ok",
+  "n": "涧西区人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|马村区人大": {
+  "u": "https://jzsrd.henanrd.gov.cn/mcq/",
+  "status": "ok",
+  "n": "马村区人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|西平县人大": {
+  "u": "http://xpx.henanrd.gov.cn/",
+  "status": "ok",
+  "n": "西平县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|房县人大": {
+  "u": "https://www.fangxian.gov.cn/xxgk/fdzdgknr/zfld/xrd/",
+  "status": "ok",
+  "n": "房县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|建始县人大": {
+  "u": "http://www.hbjs.gov.cn/xxgk/gkml/CZZJ_1/czyjsx/jsxrd/",
+  "status": "ok",
+  "n": "建始县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|湘阴县人大": {
+  "u": "https://www.xiangyin.gov.cn/31185/62150/62151/index.htm",
+  "status": "ok",
+  "n": "湘阴县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|平江县人大": {
+  "u": "https://www.pingjiang.gov.cn/pjx/pjrd/index.htm",
+  "status": "ok",
+  "n": "平江县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|澧县人大": {
+  "u": "https://www.cdsrd.gov.cn/xxrd/lx/",
+  "status": "ok",
+  "n": "澧县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|临澧县人大": {
+  "u": "https://www.cdsrd.gov.cn/xxrd/ll",
+  "status": "ok",
+  "n": "临澧县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|阳朔县人大": {
+  "u": "http://www.glrd.gov.cn/xqjc/t27145497.shtml",
+  "status": "ok",
+  "n": "阳朔县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|荔浦市人大": {
+  "u": "http://www.glrd.gov.cn/xqjc/t27564373.shtml",
+  "status": "ok",
+  "n": "荔浦市人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|双流区人大": {
+  "u": "http://www.slqrd.gov.cn/psp/pc/index.html",
+  "status": "ok",
+  "n": "双流区人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|彭州市人大": {
+  "u": "https://www.cdpzrd.gov.cn/",
+  "status": "ok",
+  "n": "彭州市人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|东区人大": {
+  "u": "http://www.dcrd.gov.cn/null",
+  "status": "ok",
+  "n": "东区人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|旌阳区人大": {
+  "u": "https://www.scdyrd.gov.cn/channels/36.html",
+  "status": "ok",
+  "n": "旌阳区人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|罗江区人大": {
+  "u": "https://www.scdyrd.gov.cn/channels/37.html",
+  "status": "ok",
+  "n": "罗江区人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|广汉市人大": {
+  "u": "https://www.scdyrd.gov.cn/channels/38.html",
+  "status": "ok",
+  "n": "广汉市人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|绵竹市人大": {
+  "u": "http://www.scdyrd.gov.cn/channels/39.html",
+  "status": "ok",
+  "n": "绵竹市人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|蓬溪县人大": {
+  "u": "http://www.snrd.gov.cn/qxrd/2024-06-19/5443.html",
+  "status": "ok",
+  "n": "蓬溪县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|大英县人大": {
+  "u": "https://www.daying.gov.cn/phone/articshow/9bc39ac77f782e7fd6154b8c325c0113.html",
+  "status": "ok",
+  "n": "大英县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|平昌县人大": {
+  "u": "https://www.scpcrd.gov.cn/",
+  "status": "ok",
+  "n": "平昌县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|平塘县人大": {
+  "u": "https://www.gzpt.gov.cn/ztzl_500411/rdzt/ptxczzjxxgkzl/xygbmhdwczyjsjsgjf/xrdb/",
+  "status": "ok",
+  "n": "平塘县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|云龙县人大": {
+  "u": "http://www.xzylrd.gov.cn/",
+  "status": "ok",
+  "n": "云龙县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|未央区人大": {
+  "u": "https://www.weiyang.gov.cn/ztzl/rdcwhzt/1.html",
+  "status": "ok",
+  "n": "未央区人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|民勤县人大": {
+  "u": "https://www.minqin.gov.cn/col/col29699/index.html",
+  "status": "ok",
+  "n": "民勤县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "人大|陇西县人大": {
+  "u": "http://www.cnlongxi.gov.cn/col/col9577/index.html",
+  "status": "ok",
+  "n": "陇西县人大",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|文安县政协": {
+  "u": "https://www.wenan.gov.cn/GOV1/Category_1505/Index.aspx",
+  "status": "ok",
+  "n": "文安县政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|左云县政协": {
+  "u": "http://zhengxie.bjdx.gov.cn/dxzx/zxdt/gzdt37/2050991/index.html",
+  "status": "ok",
+  "n": "左云县政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|吉县政协": {
+  "u": "http://www.jxjazx.gov.cn/",
+  "status": "ok",
+  "n": "吉县政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|巴林右旗政协": {
+  "u": "https://www.blyq.gov.cn/zzllms/zzllmsldjs/zzllmsszxld/",
+  "status": "ok",
+  "n": "巴林右旗政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|乌兰浩特市政协": {
+  "u": "http://www.wlht.gov.cn/eportal/ui?pageId=1678027",
+  "status": "ok",
+  "n": "乌兰浩特市政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|昌邑区政协": {
+  "u": "http://www.changyi.gov.cn/wzq/zx/",
+  "status": "ok",
+  "n": "昌邑区政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|锡山区政协": {
+  "u": "https://dangqun.jsxishan.gov.cn/zx/",
+  "status": "ok",
+  "n": "锡山区政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|余杭区政协": {
+  "u": "https://www.hzzx.gov.cn/qxszx/yh/index.htm",
+  "status": "ok",
+  "n": "余杭区政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|海盐县政协": {
+  "u": "https://zhzx.haiyan.gov.cn/",
+  "status": "ok",
+  "n": "海盐县政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|德清县政协": {
+  "u": "https://www.deqing.gov.cn/col/col1229212679/index.html",
+  "status": "ok",
+  "n": "德清县政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|莲都区政协": {
+  "u": "http://zx.lishui.gov.cn/col/col1229404493/index.html?uid=6439098",
+  "status": "ok",
+  "n": "莲都区政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|松阳县政协": {
+  "u": "http://zx.lishui.gov.cn/col/col1229404500/index.html",
+  "status": "ok",
+  "n": "松阳县政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|珠山区政协": {
+  "u": "https://www.jdzzsq.gov.cn/sy/jrzs/t934878.shtml",
+  "status": "ok",
+  "n": "珠山区政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|瑞金市政协": {
+  "u": "https://www.ruijin.gov.cn/rjsrmzfyyh/zxrjswbmpc/bmys_list1.shtml",
+  "status": "ok",
+  "n": "瑞金市政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|德兴市政协": {
+  "u": "https://www.srzx.gov.cn/a/xianshiquzhengxiegongzuo/2024/0314/9848.html",
+  "status": "ok",
+  "n": "德兴市政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|长清区政协": {
+  "u": "https://www.jnzx.gov.cn/folder325/folder330/folder433/folder439/",
+  "status": "ok",
+  "n": "长清区政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|章丘区政协": {
+  "u": "https://www.jnzx.gov.cn/folder325/folder330/folder433/folder440/",
+  "status": "ok",
+  "n": "章丘区政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|钢城区政协": {
+  "u": "https://www.jnzx.gov.cn/folder325/folder330/folder433/folder443/",
+  "status": "ok",
+  "n": "钢城区政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|微山县政协": {
+  "u": "http://www.weishan.gov.cn/col/col27496/index.html",
+  "status": "ok",
+  "n": "微山县政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|东港区政协": {
+  "u": "https://www.dgszx.gov.cn/",
+  "status": "ok",
+  "n": "东港区政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|德城区政协": {
+  "u": "http://www.decheng.gov.cn/n55004251/n55004287/n55004585/n55069671/n69174992/index.html",
+  "status": "ok",
+  "n": "德城区政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|云梦县政协": {
+  "u": "http://www.xgszx.gov.cn/ymxzx/index.jhtml",
+  "status": "ok",
+  "n": "云梦县政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|来凤县政协": {
+  "u": "http://www.laifeng.gov.cn/xxgk/zdlyxxg/czyjsx/lfxzxb/",
+  "status": "ok",
+  "n": "来凤县政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|雨花区政协": {
+  "u": "https://www.njyhzx.gov.cn/",
+  "status": "ok",
+  "n": "雨花区政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|长沙县政协": {
+  "u": "http://csxzx.csx.gov.cn/",
+  "status": "ok",
+  "n": "长沙县政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|浏阳市政协": {
+  "u": "http://www.liuyang.gov.cn/fzlm_1/ztzl/zwzt/lyczyjsgk7/bmyjs9662/zxlyswyhbgs/index.html",
+  "status": "ok",
+  "n": "浏阳市政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|蓬江区政协": {
+  "u": "https://www.pjq.gov.cn/gzjg/pjqzx/",
+  "status": "ok",
+  "n": "蓬江区政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|长洲区政协": {
+  "u": "http://www.wzczq.gov.cn/ztzl/rdzx/",
+  "status": "ok",
+  "n": "长洲区政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|江州区政协": {
+  "u": "http://jzlz.gxczzx.gov.cn/",
+  "status": "ok",
+  "n": "江州区政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|梓潼县政协": {
+  "u": "http://www.sczx.gov.cn/content-e93dca8dbf3e48f3be4648d3b7ff9349-2c93ea8275cfe1580175d541cd6a00fe.html",
+  "status": "ok",
+  "n": "梓潼县政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|彭山区政协": {
+  "u": "https://www.scps.gov.cn/zfxxgk/fdzdgknr/yjsxxgk/qjbm_dw_/qjbm_dw_ys/qzxb.htm",
+  "status": "ok",
+  "n": "彭山区政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|罗甸县政协": {
+  "u": "https://www.gzluodian.gov.cn/zwgk/xxgkml/jcxxgk/czzj/sgjf/ldxzxbgs/",
+  "status": "ok",
+  "n": "罗甸县政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|镇坪县政协": {
+  "u": "https://www.zhp.gov.cn/Node-29675.html",
+  "status": "ok",
+  "n": "镇坪县政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|舟曲县政协": {
+  "u": "http://www.zqx.gov.cn/ldzc1/xzxld/zxzx.htm",
+  "status": "ok",
+  "n": "舟曲县政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|湟中区政协": {
+  "u": "https://www.huangzhong.gov.cn/html/dzdt/8900.html",
+  "status": "ok",
+  "n": "湟中区政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|兴海县政协": {
+  "u": "https://xinghai.hnzzx.gov.cn/",
+  "status": "ok",
+  "n": "兴海县政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
+ },
+ "政协|彭阳县政协": {
+  "u": "https://www.pengyang.gov.cn/xxgk_13872/bmxxgkml/4190/4386/4850/index.html",
+  "status": "ok",
+  "n": "彭阳县政协",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-17",
+  "snapshot": ""
  }
 }

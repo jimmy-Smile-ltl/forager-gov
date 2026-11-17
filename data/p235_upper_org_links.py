@@ -48,6 +48,7 @@ DRY = "--dry" in sys.argv
 FORCE = "--force" in sys.argv
 LIMIT = int(os.environ.get("P235_LIMIT", "0")) or None
 WORKERS = int(os.environ.get("P235_WORKERS", "6"))
+NAV_N = int(os.environ.get("P235_NAV", "0")) or None   # 覆盖 crawl 的 max_nav
 BROWSER_MAX = int(os.environ.get("P235_BROWSER", "40"))
 P.DRY = DRY  # 统一 DRY 开关（apply_fill 读的是 p223 模块变量）
 
@@ -122,7 +123,8 @@ def same_host(a, b):
     return urlparse(a).netloc.lower() == urlparse(b).netloc.lower()
 
 
-def crawl(u, max_nav=10):
+def crawl(u, max_nav=None):
+    max_nav = max_nav or NAV_N or 10
     """首页 + 栏目页（2 层）。返回 [(page_url, html)]。"""
     pages = []
     h = get(u)
@@ -143,10 +145,30 @@ def crawl(u, max_nav=10):
             navs.append(link)
     # 先取「文字像县区/基层/机构」的，再取纯频道页
     navs.sort(key=lambda x: 0 if (P.NAV_KW.search(x) or NAV2.search(x)) else 1)
+    nav_pages = []
     for nu in navs[:max_nav]:
         nh = get(nu)
         if nh and len(nh) > 300:
             pages.append((nu, nh))
+            nav_pages.append((nu, nh))
+    # 深爬：栏目页里再找「县区/基层/下辖」二级栏目跟一层（P235_DEEP=1）
+    if os.environ.get("P235_DEEP") == "1":
+        seen2 = {u for u, _ in pages}
+        sub = []
+        for nu, nh in nav_pages:
+            for txt, link in P.extract_links(nh, nu):
+                if link in seen2 or not same_host(link, u):
+                    continue
+                is_chan = bool(CHAN.search(link))
+                if (P.NEWS_PATH.search(link) or P.NEWS_QUERY.search(link)) and not is_chan:
+                    continue
+                if NAV2.search(txt) or is_chan:
+                    seen2.add(link)
+                    sub.append(link)
+        for nu in sub[:max_nav * 2]:
+            nh = get(nu)
+            if nh and len(nh) > 300:
+                pages.append((nu, nh))
     return pages
 
 

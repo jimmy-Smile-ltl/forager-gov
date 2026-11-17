@@ -107,7 +107,7 @@ COUNTY_C = {
 # 新闻/文章/门户栏目路径（不是机构官网）
 NEWS_PATH = re.compile(
     r"/(news|content|article|detail|info|tzgg|art|Show|doc|Item|columns|channel)(/|_|\.)|"
-    r"/art\d+|/t\d{8}_|/\d{4}[-/]?\d{2}/|/c\d{6,}|/content_\d+|/content-\d+"
+    r"/art\d+|/t\d{8}_|/\d{4}[-/]?\d{2}/|/c\d{6,}|/content_\d+|/content-\d+|/content-[0-9a-f]{16,}"
     r"|/(19|20)\d{2}_\d{2}(_\d{2})?/|/\d{5,}\.s?html?"
     r"|/(19|20)\d{6}/|/\d{8}\.s?html?|/static/|/contents/\d+/\d+",
     re.I)
@@ -122,7 +122,8 @@ CHANNEL_OK = re.compile(r"/columns/[0-9a-f][0-9a-f-]{7,}(/index\.html?)?/?(\?.*)
 # 财政预决算 / 部门预算公示专栏（曾把「人大常委会办公室预算」页当区人大官网）
 BAD_COLUMN = re.compile(
     r"/(ysjs|czyjs|czxx|czbg|cwbg|caiheng|qyjsgk|czjsgk|cwys|yjsgk|"
-    r"czys|ysgk|jfzq|czgk|jyta|jytabl|zxta|taya|yajy|taql|zxwj)/", re.I)
+    r"czys|ysgk|jfzq|czgk|jyta|jytabl|zxta|taya|yajy|taql|zxwj|"
+    r"czzj|sgjf|czxxgk|ysxxgk|yjsxxgk|cwxx|cwtz|qjbm_dw)/", re.I)
 BAD_HOST = (
     "baidu.com", "weixin.qq.com", "weibo.com", "people.com.cn", "xinhuanet.com",
     "news.cn", "cctv.com", "mzfzw.net", "qq.com", "163.com", "sohu.com",
@@ -903,33 +904,57 @@ S4_BAD_DOM = ("baidu.com", "weixin", "weibo", "people.com.cn", "xinhuanet", "new
               "npc.gov.cn", "cppcc.gov.cn", "ccdi.gov.cn", "spp.gov.cn", "court.gov.cn")
 
 
+def _s4_queries(t):
+    """检索式。默认 1 条（省+市+县+机构）；P223_S4_VARIANT=1 时追加
+    「县名+机构」「县名+机构 官网」——实测在同批 miss 任务上仍有约 6.7%
+    的新命中（人大/政协各 30 条抽样 A/B：0/30 → 2/30）。"""
+    qs = [_s4_q(t)]
+    if os.environ.get("P223_S4_SKIP_BASE") == "1":
+        qs = []            # 第二轮：基础式上一轮已查过（miss），只跑变体
+    v = os.environ.get("P223_S4_VARIANT") or ""
+    if not v:
+        return qs or [_s4_q(t)]
+    nm = t["county"].get("n", "")
+    org = t["org_name"][1:]
+    extra = [f"{nm}{org}"] + ([f"{nm}{org} 官网"] if v == "2" else [])
+    for q in extra:
+        if q and q not in qs:
+            qs.append(q)
+    return qs
+
+
 def _s4_probe(t):
     """网络+校验（线程内完成）；返回 (t, url, note) 或 None。写库留给主线程。"""
     county, org_name = t["county"], t["org_name"]
-    h = serp(_s4_q(t))
-    if not h:
-        return (t, "__serpfail__", "")
-    cands = []
-    for u in re.findall(r'mu="(https?://[^"]+)"', h):
-        dom = urlparse(u).netloc.lower()
-        if any(b in dom for b in S4_BAD_DOM) or not host_ok(u):
-            continue
-        cands.append(u)
-        if len(cands) >= 6:
-            break
     county_host = urlparse(county.get("u") or "").netloc.lower().replace("www.", "")
-    for u in cands:
-        dom = urlparse(u).netloc.lower()
-        same_portal = bool(county_host) and dom.replace("www.", "") == county_host
-        # 本县政府门户上的机构频道页（/columns/<uuid>/）也算官方入口，
-        # 但域名特征规则不适用——由 title 双验兜底（S2 同口径）。
-        if not same_portal and not re.search(ORG5[org_name]["feat"], dom, re.I):
-            if not (RELAX and ORG_PATH[org_name].search(urlparse(u).path or "")):
-                continue
-        ok, note = valid_candidate(t, u, "")
-        if not ok:
+    serp_failed = True
+    for q in _s4_queries(t):
+        h = serp(q)
+        if not h:
             continue
-        return (t, u, note)
+        serp_failed = False
+        cands = []
+        for u in re.findall(r'mu="(https?://[^"]+)"', h):
+            dom = urlparse(u).netloc.lower()
+            if any(b in dom for b in S4_BAD_DOM) or not host_ok(u):
+                continue
+            cands.append(u)
+            if len(cands) >= 6:
+                break
+        for u in cands:
+            dom = urlparse(u).netloc.lower()
+            same_portal = bool(county_host) and dom.replace("www.", "") == county_host
+            # 本县政府门户上的机构频道页（/columns/<uuid>/）也算官方入口，
+            # 但域名特征规则不适用——由 title 双验兜底（S2 同口径）。
+            if not same_portal and not re.search(ORG5[org_name]["feat"], dom, re.I):
+                if not (RELAX and ORG_PATH[org_name].search(urlparse(u).path or "")):
+                    continue
+            ok, note = valid_candidate(t, u, "")
+            if not ok:
+                continue
+            return (t, u, note)
+    if serp_failed:
+        return (t, "__serpfail__", "")
     return (t, None, "")
 
 
