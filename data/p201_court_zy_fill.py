@@ -10,6 +10,8 @@ from urllib.parse import parse_qs, urlparse, unquote
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 sys.path.insert(0, os.path.join(ROOT, "util"))
+sys.path.insert(0, os.path.join(ROOT, "data"))
+from site_contract import five_key, five_name, upsert_registry
 TREE_F = os.path.join(ROOT, "data", "tree.json")
 REG_F = os.path.join(ROOT, "data", "site_registry.json")
 STATE_F = os.path.join(ROOT, "data", "p201_state.json")
@@ -164,12 +166,17 @@ def main():
             hn.setdefault("ks", []).append(kids[b])
             added += 1
             changed += 1
-        # registry 同步
+        # registry 同步（键 `<类别>|<全名>`，城市全名 + 中级人民法院）
         reg = json.load(open(REG_F, encoding="utf-8"))
         for k in (hn.get("ks") or []):
-            if k.get("u"):
-                reg[f"法院|{k['n']}"] = {"u": k["u"], "n": k["n"], "locations": ["块", "条"],
-                                        "source_level": "L1", "verified_at": "2026-11-16", "status": "ok", "snapshot": ""}
+            n = k.get("n", "")
+            if not k.get("u") or not n.endswith("中级人民法院"):
+                continue
+            city = n[:-len("中级人民法院")]
+            upsert_registry(reg, five_key(city, "市中级人民法院"), k["u"],
+                            name=five_name(city, "市中级人民法院"),
+                            source_level="L1", source=k.get("s", ""),
+                            locations=["块", "条"])
         _atomic(reg, REG_F)
         st["done"][hn["n"]] = f"ok:{changed}chg"
         _atomic(st, STATE_F)

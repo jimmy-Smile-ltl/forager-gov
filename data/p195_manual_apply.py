@@ -8,11 +8,13 @@
   梅州 8 县区  — 梅州市政府门户首页 tab 面板
 用法: cd data && uv run python p195_manual_apply.py
 """
-import json, os, sys
+import datetime, json, os, sys
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 TREE_F = os.path.join(BASE, "tree.json")
 REG_F = os.path.join(BASE, "site_registry.json")
+sys.path.insert(0, BASE)
+from site_contract import upsert_registry
 
 # 候选: (省, 市, 县名, URL)
 CANDS = [
@@ -128,7 +130,7 @@ CANDS = [
 def main():
     tree = json.load(open(TREE_F, encoding="utf-8"))
     reg = json.load(open(REG_F, encoding="utf-8"))
-    today = "2026-11-13"
+    today = datetime.date.today().isoformat()
 
     # 索引: (p1,p2,n) -> node（节点自带 p1/p2 字段）
     idx = {}
@@ -154,28 +156,15 @@ def main():
             continue
         nd["u"] = u
         nd["s"] = f"来源：{p2}政府门户县区导航 HTML 提取（title 验证）"
-        nd["verified_at"] = today
-        nd["status"] = "ok"
-        # registry 同源登记
+        # registry 是 status/verified_at 主数据，树节点只留 u/s
         key = f"县级人民政府|{nm}"
-        ent = reg.get(key)
-        if ent is None:
-            reg[key] = {"u": u, "n": nm, "locations": ["块"],
-                        "source_level": "L2", "verified_at": today,
-                        "status": "ok", "snapshot": "", "xxgk": "", "xxgk_src": ""}
-        else:
-            ent["u"] = u
-            ent["source_level"] = ent.get("source_level") or "L2"
-            ent["verified_at"] = today
-            ent["status"] = "ok"
-            ent.setdefault("locations", [])
-            if "块" not in ent["locations"]:
-                ent["locations"].append("块")
+        upsert_registry(reg, key, u, name=nm, source_level="L2",
+                        source=nd["s"], verified_at=today, locations=["块"])
         hit += 1
         print(f"[ok] {p1}/{p2}/{nm} {old or '空'} -> {u}")
 
     json.dump(tree, open(TREE_F, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    json.dump(reg, open(REG_F, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+    json.dump(reg, open(REG_F, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(f"落库完成: hit={hit} already={already} miss={miss}")
 
 

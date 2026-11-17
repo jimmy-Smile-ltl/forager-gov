@@ -12,10 +12,14 @@
 （空才填, 已有不动——p78 纪律; 同省内基底名撞车(桥西×3)歧义不填）。
 写 tree.json + registry。幂等可重复跑。
 """
-import json, os, re
+import datetime, json, os, re, sys
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(BASE)
+sys.path.insert(0, os.path.join(BASE, "data"))
+from site_contract import upsert_registry
+
+TODAY = datetime.date.today().isoformat()
 
 ETH_PY = re.compile(
     r"(哈萨克族?|维吾尔族?|柯尔克孜族?|蒙古族?|藏族?|回族|壮族|苗族|黎族"
@@ -160,14 +164,12 @@ for system, org_name, suf in [("法院系统", "县人民法院", ("人民法院
         node["u"] = u
         node["s"] = f"来源：{system}条系统同源回填（p196）"
         key = f"县级{org_name[1:]}|{cname}"
-        if key in reg and reg[key].get("u"):
-            pass
-        else:
-            reg[key] = {"u": u, "n": cname, "locations": ["块"],
-                        "source_level": "L1", "verified_at": "2026-11-12",
-                        "status": "ok", "snapshot": "", "xxgk": "", "xxgk_src": ""}
+        if not (reg.get(key) or {}).get("u"):
+            upsert_registry(reg, key, u, name=cname, source_level="L1",
+                            source=node["s"], verified_at=TODAY,
+                            locations=["块"])
         filled += 1
 
 json.dump(tree, open("data/tree.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-json.dump(reg, open("data/site_registry.json", "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+json.dump(reg, open("data/site_registry.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(f"P196 条→块同步: 回填 {filled} 个并列机关 URL, 歧义跳过 {skipped_amb}")

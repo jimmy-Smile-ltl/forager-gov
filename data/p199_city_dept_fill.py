@@ -9,6 +9,7 @@ registry 同源登记。只增不改已有节点。
 用法: cd data && uv run python p199_city_dept_fill.py
 """
 import sys, os, re, json, subprocess
+import datetime
 from urllib.parse import urlparse, urljoin
 
 def _atomic_dump(obj, path):
@@ -272,18 +273,18 @@ def _city_wrapper(p1, cname, curl, cnode, st, reg, tree):
         cnode.setdefault("ks", []).append(grp)
     have = {k.get("n") for k in grp.get("ks", [])}
     added = 0
+    today = datetime.date.today().isoformat()
     for t, (u, vtitle) in sorted(got.items()):
         if t in have:
             continue
         grp["ks"].append({
             "n": t, "l": "市", "k": "政府部门", "c": "市级政府部门",
             "p1": p1, "p2": cname, "u": u,
-            "s": f"来源：{cname}政府门户部门导航 HTML 提取（title 验证: {vtitle}）",
-            "verified_at": "2026-11-13", "status": "ok"})
+            "s": f"来源：{cname}政府门户部门导航 HTML 提取（title 验证: {vtitle}）"})
         rkey = f"市级政府部门|{p1}{t}"
         if rkey not in reg:
             reg[rkey] = {"u": u, "n": t, "locations": ["块"],
-                         "source_level": "L2", "verified_at": "2026-11-13",
+                         "source_level": "L2", "verified_at": today,
                          "status": "ok", "snapshot": "", "xxgk": "", "xxgk_src": ""}
         added += 1
         _ADDED_TOTAL += 1

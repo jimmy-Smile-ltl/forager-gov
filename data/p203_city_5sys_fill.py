@@ -10,6 +10,8 @@ from urllib.parse import urlparse
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 sys.path.insert(0, os.path.join(ROOT, "util"))
+sys.path.insert(0, os.path.join(ROOT, "data"))
+from site_contract import five_key, five_name, upsert_registry
 TREE_F = os.path.join(ROOT, "data", "tree.json")
 REG_F = os.path.join(ROOT, "data", "site_registry.json")
 STATE_F = os.path.join(ROOT, "data", "p203_state.json")
@@ -132,8 +134,12 @@ def main():
                     for o in (jg.get("ks") or []):
                         if o.get("n") == cnode and not (o.get("u") or "").strip():
                             o["u"] = u
-                            o["s"] = f"来源:{porg}官网({purl})市级链接区块 HTML 提取"
-                            reg[f"{cnode.replace('市','',1) or cnode}|{c['n']}"] = {"u": u, "n": c["n"] + cnode, "locations": ["块"], "source_level": "L1", "verified_at": "2026-11-16", "status": "ok", "snapshot": ""}
+                            src = f"来源:{porg}官网({purl})市级链接区块 HTML 提取"
+                            o["s"] = src
+                            upsert_registry(reg, five_key(c["n"], cnode), u,
+                                            name=five_name(c["n"], cnode),
+                                            source_level="L1", source=src,
+                                            locations=["块"])
                             got += 1
                             filled += 1
             st["done"][key] = f"ok:{got}"

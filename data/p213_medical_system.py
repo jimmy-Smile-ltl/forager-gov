@@ -14,7 +14,7 @@
 # 疾控中心渠道: SERP 搜索 + title 筛选(事业单位, 官网无省级导航, 用户指示)。
 # 运行: (cd data && BROWSER_TIERS=off uv run python p213_medical_system.py)
 #   后续挂 p198_loop 顺序执行(单写者纪律), miss 项轮间重试。
-import json, os, re, socket, sys, tempfile, threading, time, urllib.parse
+import datetime, json, os, re, socket, sys, tempfile, threading, time, urllib.parse
 from urllib.parse import urlparse
 from concurrent.futures import ThreadPoolExecutor
 
@@ -26,7 +26,7 @@ load_dotenv(os.path.join(ROOT, ".env"))
 TREE_F = os.path.join(ROOT, "data", "tree.json")
 REG_F = os.path.join(ROOT, "data", "site_registry.json")
 STATE_F = os.path.join(ROOT, "data", "p213_state.json")
-TODAY = "2026-11-17"
+TODAY = datetime.date.today().isoformat()
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
 _TUNNEL = os.environ.get("TUNNEL_PROXY", "")
 _tl = threading.local()

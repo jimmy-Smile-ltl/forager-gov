@@ -9,6 +9,8 @@ from urllib.parse import urlparse
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 sys.path.insert(0, os.path.join(ROOT, "util"))
+sys.path.insert(0, os.path.join(ROOT, "data"))
+from site_contract import base as city_base, five_key, five_name, upsert_registry
 TREE_F = os.path.join(ROOT, "data", "tree.json")
 REG_F = os.path.join(ROOT, "data", "site_registry.json")
 STATE_F = os.path.join(ROOT, "data", "p204_state.json")
@@ -126,10 +128,10 @@ def main():
         pn, c, o = item
         key = f"{pn}|{c.get('n')}|{o.get('n')}"
         city = c.get("n", "")
-        cn = city.replace("市", "").replace("自治州", "").replace("地区", "")
-        cn = re.sub(r"([维吾尔|哈萨克|柯尔克孜|蒙古|藏|回|壮|苗|黎|侗|满|白|傣|彝|哈尼|拉祜|傈僳|佤|羌|布依|仡佬|毛南|瑶|畲|土家|朝鲜|锡伯|达斡尔|鄂温克|鄂伦春|赫哲|塔吉克|撒拉|保安|裕固|东乡|纳西|景颇|阿昌|普米|怒|德昂|独龙|基诺|门巴|珞巴|京]+族)", "", cn)
+        cn = city_base(city)
         okw, ows, ofeat = ORG[o.get("n")]
         got = False
+        lvl = None
         # 渠道2: 市门户导航
         port = c.get("u") or ""
         if port:
@@ -156,6 +158,7 @@ def main():
                             o["u"] = u
                             o["s"] = f"来源:市门户({port})导航链接 HTML 提取+title验证"
                             got = True
+                            lvl = "L2"
                             break
         # 渠道3: 百度 SERP 兜底
         if not got:
@@ -202,9 +205,13 @@ def main():
                         o["u"] = u
                         o["s"] = "来源:SERP线索+title严格验证(市名边界+机构词双验)"
                         got = True
+                        lvl = "L3"
                         break
         if got:
-            reg[f"法院|{o['n']}|{city}"] = {"u": o["u"], "n": city + o["n"], "locations": ["块"], "source_level": "L3", "verified_at": "2026-11-16", "status": "ok", "snapshot": ""}
+            upsert_registry(reg, five_key(city, o["n"]), o["u"],
+                            name=five_name(city, o["n"]),
+                            source_level=lvl or "L3", source=o.get("s", ""),
+                            locations=["块"])
         return key, got, o.get("u", "")
     results = []
     with ThreadPoolExecutor(16) as ex:

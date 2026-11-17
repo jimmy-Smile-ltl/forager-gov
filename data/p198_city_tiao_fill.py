@@ -37,6 +37,8 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(BASE)
 sys.path.insert(0, ROOT)
 sys.path.insert(0, os.path.join(ROOT, "util"))
+sys.path.insert(0, BASE)
+from site_contract import five_key, five_name, parse_five, upsert_registry
 
 TREE_F = os.path.join(BASE, "tree.json")
 REG_F = os.path.join(BASE, "site_registry.json")
@@ -215,6 +217,7 @@ def verify_city(ty, city_base, u):
 
 def main():
     tree = load_tree()
+    reg = json.load(open(REG_F, encoding="utf-8"))
     root = find_root(tree)
     portals = city_portal_map(tree)
     gaps = enumerate_gaps(tree, root)
@@ -247,9 +250,13 @@ def main():
                         if c.get("n") == cname and c.get("u") != u:
                             c["u"] = u
                             c["s"] = c.get("s") or "来源：p198 市级补全（重放）"
-                            c["verified_at"] = "2026-11-13"
-                            c["status"] = "ok"
                             replay += 1
+                            pf = parse_five(cname)
+                            if pf:
+                                upsert_registry(reg, five_key(*pf), u,
+                                                name=five_name(*pf),
+                                                source_level="L2",
+                                                source=c["s"], locations=["条"])
     if replay:
         print(f"重放恢复 {replay} 处")
     print(f"市级缺口 {len(gaps)}, 市门户映射 {len(portals)}")
@@ -307,14 +314,19 @@ def main():
             continue
         u, vtitle = got
         cnode["u"] = u
-        cnode["s"] = f"来源：{base}政府门户导航 HTML 提取（title 验证: {vtitle}）"
-        cnode["verified_at"] = "2026-11-13"
-        cnode["status"] = "ok"
+        src = f"来源：{base}政府门户导航 HTML 提取（title 验证: {vtitle}）"
+        cnode["s"] = src
         st["done"][key] = u
         filled += 1
+        pf = parse_five(cname)
+        if pf:
+            upsert_registry(reg, five_key(*pf), u, name=five_name(*pf),
+                            source_level="L2", source=src, locations=["条"])
         print(f"[ok] {ty} {p1}/{cname} -> {u}")
     if filled:
         _atomic_dump(tree, TREE_F)
+    if filled or replay:
+        _atomic_dump(reg, REG_F)
     save_state(st)
     print(f"本轮落库 {filled}")
 

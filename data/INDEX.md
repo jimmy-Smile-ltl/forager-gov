@@ -1,6 +1,6 @@
 # 提取规则脚本索引
 
-共 274 个脚本（data/*.py）。编号 p0-p221 = 开发顺序。
+共 276 个脚本（data/*.py）。编号 p0-p222 = 开发顺序。
 按主题分类，查找某板块的处理脚本直接看对应组；p116-p200 为中期批次，见文末概览。
 
 ## 中央/并列机关（11）
@@ -127,7 +127,9 @@
 - `p94_zx_batch.py` — 政协市级数据汇总 → rd_zx.jsonl。
 - `p95_zx_mount.py` — 政协市级挂载（政协系统条模块 + 老系统回填）。仿 p78。
 
-## 数据管线（10）
+## 数据管线（12）
+- `site_contract.py` — 补采统一写库契约（2026-11-17）：五系统标准 registry 键 `<类别>|<全名>`（人大|城市人大 / 政协|城市政协 / 法院|城市中级人民法院 / 检察|城市人民检察院 / 纪委|城市监委）、`five_key`/`five_name`/`parse_five`/`base`、`source_level`（L1>L2>L3 只升不降）与 `upsert_registry`（合并 locations、保留 xxgk/snapshot）。所有补采脚本必须经它写 registry，禁止手拼键。
+- `p222_registry_contract_fix.py` — registry 写库契约迁移与校验：历史脏键归一（`法院|市人大|石家庄市`、`人大|北京市` 等）、重复条目合并、树有 URL 而 registry 缺记录时补登、已审计无官网的旧 URL 不复活、canonical 条目与树 URL 对齐。`--check` 输出硬问题（tree-url-no-registry / url-mismatch / malformed-key），必须 0 才可发布。
 - `p221_url_stats.py` — URL 缺失率统计（省/市/县 × 政府/人大/政协/纪委/法院/检察/党委/群团/民主党派…）：块视图省级子树逐机构统计 u 是否为空，输出 `data/url_stats.json` + `data/URL_STATS.md`，并把结果嵌进 `data_js/quality.js`（站点「数据健康」面板消费）；p22 管线自动调用。
 - `p220_dead_link_fix.py` — 死域名清理 + 错挂修正：整站下线/迁域的存量 URL（DNS NXDOMAIN）替换或列名，衡阳县/濮阳中院错挂修复，同步 registry（写前备份）。
 - `p22_split_data.py` — 把 tree.json / extraction_rules.json 拆分为模块化数据文件（自动调用 gen_viz）。
@@ -206,7 +208,7 @@
 
 ## 五系统市级补全与审计（13）
 - `p201_court_zy_fill.py` — 中院 URL 全量补全：各省高院官网「中院」区块提取，elink elid 直链解码（URL 编码/base64 两形态），节点名全名化。
-- `p202_court_blk_sync.py` — 条树中院 URL 回填块树「市中级人民法院」（空才填）。
+- `p202_court_blk_sync.py` — 条树中院 URL 回填块树「市中级人民法院」（空才填）；p220 判死域（xjcourt.org / *.chinacourt.gov.cn / elink 包裹同类目标）回填前拦截，只有实际回填才写盘（indent=1，避免格式化噪音）。
 - `p203_city_5sys_fill.py` — 五系统市级补全渠道①：省人大/政协/检察院/纪委官网首页市级链接区块真实提取。
 - `p204_city_5sys_deep.py` — 渠道②③：市门户导航 + 百度 SERP 兜底（mu 属性取真实 URL，title 双验；每线程独立 curl_cffi Session）。
 - `p205_audit_5sys.py` — 五系统市级 URL 全量审计：硬问题（文章/新闻页、门户根址、黑名单、title 不符）与存疑（中性标题/JS 壳/省级官网市级频道）分档输出。

@@ -995,7 +995,7 @@ def _atomic_dump(obj, path):
 
 
 _atomic_dump(tree, TREE_F)
-json.dump(reg, open(REG_F, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+json.dump(reg, open(REG_F, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 # ── 5. 报告 ──
 n_gap = sum(len(v["counties"]) for v in gaps_by_parent.values())

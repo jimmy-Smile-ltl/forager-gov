@@ -8,6 +8,8 @@ from urllib.parse import urlparse
 from concurrent.futures import ThreadPoolExecutor
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT); sys.path.insert(0, os.path.join(ROOT, "util"))
+sys.path.insert(0, os.path.join(ROOT, "data"))
+from site_contract import five_key, five_name, upsert_registry
 from dotenv import load_dotenv
 load_dotenv(os.path.join(ROOT, ".env"))
 _TUNNEL = os.environ.get("TUNNEL_PROXY", "")
@@ -66,6 +68,7 @@ def main():
         try: st = json.load(open("p206_state.json", encoding="utf-8"))
         except Exception: pass
     blk = next(g for g in t.get("ks") if g.get("n", "").startswith("省级"))
+    reg = json.load(open("site_registry.json", encoding="utf-8"))
     tasks = []
     for p in (blk.get("ks") or []):
         pn = p.get("n", "")
@@ -125,9 +128,14 @@ def main():
         st["done"][f"{pn}|{city}|{onm}"] = tag.lower()
         if u:
             filled += 1
+            src = "来源:市门户导航(首页/组织机构栏目) HTML 提取+title验证"
+            upsert_registry(reg, five_key(city, onm), u,
+                            name=five_name(city, onm), source_level="L2",
+                            source=src, locations=["块"])
             print(f"HIT {pn}|{city}|{onm}: {u[:60]}")
     _atomic(st, "p206_state.json")
     _atomic(t, "tree.json")
+    _atomic(reg, "site_registry.json")
     print(f"p206 done, filled: {filled}")
 from urllib.parse import urljoin
 if __name__ == "__main__":

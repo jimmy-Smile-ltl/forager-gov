@@ -36,6 +36,11 @@ while true; do
   # p213 医疗系统(卫生健康)条系统: 市级卫健委补全, miss 项轮间重试(每轮限量 100)
   (cd data && P213_LIMIT=100 BROWSER_TIERS=off PYTHONUNBUFFERED=1 uv run python p213_medical_system.py) >> /tmp/p213.log 2>&1
   (cd data && BROWSER_TIERS=off PYTHONUNBUFFERED=1 uv run python p200_func_fill.py) >> /tmp/p200.log 2>&1
+  # p222 写库契约校验: 五系统标准键 + tree/registry URL 一致性（硬问题必须 0）
+  echo "═══ 契约校验 $(date '+%F %T') ═══"
+  if ! (cd data && uv run python p222_registry_contract_fix.py --check) >> /tmp/p222.log 2>&1; then
+    echo "p222 契约校验发现硬问题，见 /tmp/p222.log（本轮继续，下轮采集前须修复）" >> /tmp/p198.log
+  fi
   echo "═══ 周末任务 第 $ROUND 轮采集完成 $(date '+%F %T')，重建视图 ═══"
   (cd data && uv run python p22_split_data.py) >> /tmp/p198.log 2>&1
   cp 模板.html 中国政府网站体系.html

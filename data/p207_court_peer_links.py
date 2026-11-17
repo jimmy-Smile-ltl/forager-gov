@@ -8,6 +8,8 @@ from urllib.parse import urlparse
 from concurrent.futures import ThreadPoolExecutor
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT); sys.path.insert(0, os.path.join(ROOT, "util"))
+sys.path.insert(0, os.path.join(ROOT, "data"))
+from site_contract import five_key, five_name, upsert_registry
 TREE_F = os.path.join(ROOT, "data", "tree.json")
 REG_F = os.path.join(ROOT, "data", "site_registry.json")
 ETH = r"(哈萨克族?|维吾尔族?|柯尔克孜族?|朝鲜族?|蒙古族?|藏族?|回族?|壮族?|苗族?|黎族?|侗族?|满族?|白族?|傣族?|彝族?|哈尼族?|拉祜族?|傈僳族?|佤族?|水族?|羌族?|布依族?|仡佬族?|仫佬族?|毛南族?|瑶族?|畲族?|土家族?|锡伯族?|达斡尔族?|鄂温克族?|鄂伦春族?|赫哲族?|俄罗斯族?|塔塔尔族?|乌孜别克族?|塔吉克族?|撒拉族?|保安族?|裕固族?|东乡族?|纳西族?|景颇族?|阿昌族?|普米族?|怒族?|德昂族?|独龙族?|基诺族?|门巴族?|珞巴族?|京族?|自治)$"
@@ -95,8 +97,11 @@ def main():
             if b in found and not (o.get("u") or "").strip():
                 txt, u = found[b]
                 o["u"] = u
-                o["s"] = "来源:同省中院官网互链(友情链接区块) HTML 提取"
-                reg[f"法院|{o['n']}|{c['n']}"] = {"u": u, "n": c["n"] + o["n"], "locations": ["块"], "source_level": "L1", "verified_at": "2026-11-17", "status": "ok", "snapshot": ""}
+                src = "来源:同省中院官网互链(友情链接区块) HTML 提取"
+                o["s"] = src
+                upsert_registry(reg, five_key(c["n"], o["n"]), u,
+                                name=five_name(c["n"], o["n"]),
+                                source_level="L2", source=src, locations=["块"])
                 filled += 1
                 print(f"HIT {pn}|{c['n']}: {u}")
         _atomic(t, TREE_F)

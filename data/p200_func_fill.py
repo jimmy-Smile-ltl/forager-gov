@@ -12,7 +12,10 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(BASE)
 sys.path.insert(0, ROOT)
 sys.path.insert(0, os.path.join(ROOT, "util"))
+sys.path.insert(0, BASE)
+from site_contract import upsert_registry
 TREE_F = os.path.join(BASE, "tree.json")
+REG_F = os.path.join(BASE, "site_registry.json")
 STATE_F = os.path.join(BASE, "p200_state.json")
 
 FUNC_KW = ('开发区','高新区','经开区','园区','示范区','新区','试验区','保税区',
@@ -95,6 +98,7 @@ def main():
             walk(c)
     walk(tree)
     st = load_state()
+    reg = json.load(open(REG_F, encoding="utf-8"))
     # 防错配: 同 URL 已用于其他节点则不再匹配（威海临港误配 eweihai 教训）
     used_urls = {u for u in st.get("done", {}).values()}
     print(f"功能区缺口 {len(funcs)} | 市门户 {len(portals)}")
@@ -185,9 +189,10 @@ def main():
             st["tried"][key] = "verify_fail"
             continue
         cnode["u"] = u
-        cnode["s"] = f"来源：{p2}政府门户园区导航 HTML 提取（title 验证）"
-        cnode["verified_at"] = "2026-11-16"
-        cnode["status"] = "ok"
+        src = f"来源：{p2}政府门户园区导航 HTML 提取（title 验证）"
+        cnode["s"] = src
+        upsert_registry(reg, f"县级人民政府|{nm}", u, name=nm,
+                        source_level="L2", source=src, locations=["块"])
         st["done"][key] = u
         used_urls.add(u)
         filled += 1
@@ -195,6 +200,7 @@ def main():
         save_state(st)
     if filled:
         json.dump(tree, open(TREE_F, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        json.dump(reg, open(REG_F, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     save_state(st)
     print(f"本轮落库 {filled}")
 
