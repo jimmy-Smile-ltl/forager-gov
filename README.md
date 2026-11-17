@@ -1,53 +1,178 @@
-# 中国政府网站体系（forager-gov）
+<div align="center">
 
-> 中国政权架构（人民政权机构）官方网站的完整梳理 —— **上下体系、条条块块**。
-> 块（行政区划）× 条（垂直系统）双维树形数据，配 **列表 / 树状图 / 地图** 三视图。
-> 只收录真实官网（官方页面真实 HTML 提取）；无官网者**列名展示（u=""）**，零猜测。
+# 中国政府网站体系 · 政府机构官网名录
 
-- **在线站点**：https://forager-gov.pages.dev （Cloudflare Pages）
-- **代码仓库**：https://github.com/jimmy-Smile-ltl/forager-gov
+**forager-gov** — 块（行政区划）× 条（垂直系统）双维数据 · 列表 / 树状图 / 地图三视图 · 零域名猜测
+
+从国务院部委到省、市、县人民政府，从人大、政协、纪委监委、法院、检察院
+到群团组织与卫生健康系统，用**同一条注册表**整理每一个机构的官方网站入口。
+
+[![在线站点](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E7%AB%99%E7%82%B9-forager--gov.pages.dev-0A7CFF?style=flat-square)](https://forager-gov.pages.dev)
+[![机构节点](https://img.shields.io/badge/%E6%9C%BA%E6%9E%84%E8%8A%82%E7%82%B9-49%2C744-2EA44F?style=flat-square)](#-数据覆盖)
+[![官网注册记录](https://img.shields.io/badge/%E5%AE%98%E7%BD%91%E6%B3%A8%E5%86%8C%E8%AE%B0%E5%BD%95-17%2C645-6F42C1?style=flat-square)](#-数据覆盖)
+[![政府门户覆盖率](https://img.shields.io/badge/%E6%94%BF%E5%BA%9C%E9%97%A8%E6%88%B7%E8%A6%86%E7%9B%96%E7%8E%87-97.67%25-2EA44F?style=flat-square)](data/URL_STATS.md)
+[![区划边界](https://img.shields.io/badge/%E5%8C%BA%E5%88%92%E8%BE%B9%E7%95%8C-360%2B-17A2B8?style=flat-square)](docs/screenshots/map-china.png)
+[![数据红线](https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E7%BA%A2%E7%BA%BF-%E9%9B%B6%E5%9F%9F%E5%90%8D%E7%8C%9C%E6%B5%8B-FF5C5C?style=flat-square)](#-数据来源与红线)
+[![GitHub stars](https://img.shields.io/github/stars/jimmy-Smile-ltl/forager-gov?style=flat-square&label=Stars)](https://github.com/jimmy-Smile-ltl/forager-gov/stargazers)
+
+**在线访问**：<a href="https://forager-gov.pages.dev" target="_blank">forager-gov.pages.dev</a>
+· **代码仓库**：<a href="https://github.com/jimmy-Smile-ltl/forager-gov" target="_blank">github.com/jimmy-Smile-ltl/forager-gov</a>
+
+<a href="https://forager-gov.pages.dev/gov-tree.html#/map" target="_blank">
+  <img src="docs/screenshots/map-china.png" width="100%" alt="中国政府网站体系全国行政区划地图：各省份按政府机构官网覆盖率独立着色，灰色表示无官网，可下钻到市级与县级地图">
+</a>
+
+<sub><b>全国地图（综合覆盖率）</b> · 每个区划按覆盖率在色环上独立配色，灰色 = 该类机构无官网；
+点击省份看市级地图，点击城市看县级地图，右侧档案卡展示机构名录与官网链接。</sub>
+
+<br>
+
+[![县级人民政府覆盖率 99.64%](https://img.shields.io/badge/%E5%8E%BF%E7%BA%A7%E4%BA%BA%E6%B0%91%E6%94%BF%E5%BA%9C%E8%A6%86%E7%9B%96%E7%8E%87-99.64%25-2EA44F?style=for-the-badge)](#county-coverage)
+[![地级市人民政府 100%](https://img.shields.io/badge/%E5%9C%B0%E7%BA%A7%E5%B8%82%E4%BA%BA%E6%B0%91%E6%94%BF%E5%BA%9C-100%25-0A7CFF?style=for-the-badge)](#county-coverage)
+
+**2,768 / 2,778 个县级人民政府拥有官网入口**（民政区划口径，不含开发区 / 高新区 / 示范区
+等功能区节点）。剩余 10 个：三沙海岛区划 ×5、金门县、新设和康 / 和安县，以及万宁、保亭
+两个待补缺口——**没有一个靠猜测补上，全部留名留痕。**
+
+<br><br>
+
+<sub><i>A source-verified directory and interactive map of official Chinese government
+websites — covering State Council ministries, provincial / municipal / county governments,
+People's Congresses, CPPCC bodies, courts, procuratorates, supervisory commissions,
+mass organizations and the health system.</i></sub>
+
+</div>
 
 ---
 
-## 一、项目内容
+## 📖 项目简介
 
-| 维度 | 说明 |
-|---|---|
-| 块视图 | 中央 → 省级（31 省区市 + 新疆兵团）→ 地级市 → 区县；每级「人民政府 + 并列机关（党委/人大/政协/监委/法院/检察院/群团）」 |
-| 条视图 | 18 个垂直/半垂直系统：人大、政协、法院、检察院、纪委、外交、财经、国务院垂直管理、群团组织、药监、烟草、邮政、铁路、医疗（卫生健康）等 |
-| 规模 | 树节点 34,000+（含列名节点）；块条共用网站注册表，一个机构一条记录 |
-| 数据源 | 上级机构官网名录栏目 > 同级政府门户导航 > 机构官网互链；SERP 仅作发现线索，必须回官方页面做 title 严格验证并留痕 |
+**中国政府网站体系（forager-gov）** 是一份持续维护的中国政权机构（人民政权机构）
+官方网站名录与覆盖地图：
 
-核心数据文件：
+- **块视图**：中央 → 31 省区市（+ 新疆兵团）→ 地级市 → 区县。每级包含
+  「人民政府 + 并列机关（党委 / 人大 / 政协 / 监委 / 法院 / 检察院 / 群团）」与政府部门。
+- **条视图**：按垂直 / 半垂直系统组织——人大、政协、纪委监委、法院、检察院、外交、
+  财经、海关等国务院垂直管理 13 个子系统、群团组织、气象、地震、医疗（卫生健康）、
+  药监、烟草、邮政、铁路。
+- **三视图**：同一份数据投影为**列表**、**树状图**与**行政区划地图**，无需任何构建依赖。
+- **权威来源**：所有 URL 来自官方页面真实 HTML（上级机构名录 > 同级政府门户导航 >
+  官网互链）；SERP 仅作发现线索，必须回官方页面做标题身份验证并留痕。
+- **零猜测**：无官网的机构保留名称、官网为空（列名展示 `u=""`），不拼域名、不试 DNS、
+  不把「能响应」当官网；每个缺口节点的 `m` 字段留有原因。
 
-| 文件 | 作用 |
-|---|---|
-| `data/tree.json` | 存库层唯一事实源（块树 + 条树，节点 schema `{n,l,k,c,u,x,s,m,ks}`） |
-| `data/site_registry.json` | 网站注册表（主数据：URL / 来源等级 / 健康状态 / 信息公开专栏） |
-| `data/extraction_rules.json` | 提取规则（键 = 机构/区划，`method` 留痕来源） |
-| `gov_data.js` | 展示层唯一入口 `window.__GOV_DATA__ = {meta, block, tiao}`（p22 自动生成；records 索引已拆出） |
-| `gov_data_records.js` | USR 扁平全字段索引（约 5 万条叶子），`__GOV_DATA__.loadRecords()` 按需加载，不阻塞首屏 |
-
-> 说明：本项目用于政权架构机构名录与官网入口的整理展示。所有 URL 均来自官方页面
-> 真实 HTML；未收录的机构在树中保留名称、官网为空（列名），宁缺毋滥。
+> 一句话：**把「中国政府机构官网有哪些、建站率多高、地图上怎么分布」整理成可核查的开数据。**
 
 ---
 
-## 二、URL 覆盖率与缺失率（省 / 市 / 县 × 系统）
+## ✨ 核心特性
 
-「缺失」= 树中该机构**无官网**（`u=""`，列名展示），不代表官网失效——死链状态由
-`data/site_registry.json` 巡检 `status` 字段单独承载。统计脚本
-`data/p221_url_stats.py`（p22 管线自动调用），完整报告见
-[`data/URL_STATS.md`](data/URL_STATS.md)，站点「数据健康」面板同步展示。
+| 特性 | 说明 |
+|---|---|
+| 🧭 **块 × 条双维树** | 同一机构在行政区划视图与垂直系统视图各出现一次，共用 `site_registry.json` 注册表，一个机构一条记录 |
+| 🏆 **县级覆盖 99.64%** | **2,768 个县级人民政府官网入口**；仅 10 个特殊区划留名（三沙海岛 / 金门 / 新设县），无一猜测 |
+| 🗺️ **三级下钻地图** | 全国省界 → 省级看市级 → 市级看县级；港澳台、直辖市区县、兵团市等特例均已兼容 |
+| 🎨 **每区划独立配色** | 覆盖率升序 × 黄金角 137.508° 全环展开，相邻覆盖率色距恒定；5 套配色方案、白天 / 夜晚主题 |
+| 🌐 **纯静态、无外链** | 地图为纯手写 SVG（无 ECharts / D3），边界数据本地化惰性加载，支持 `file://` 直开 |
+| 🔍 **来源分级与留痕** | 注册表记录 `source_level`（L1 官网名录 / L2 门户导航 / L3 兜底验证）、来源、快照、验证时间 |
+| 🩺 **健康巡检** | URL 全量巡检 `ok / dead / maintain`，连续两轮 dead 才列名；`verified_at` 记录复验时间 |
+| 📦 **快照与备份** | 采集快照（snapshots）、结构变更前自动备份、发布包三道校验（引用完整 / 限额 / 泄漏） |
+| 🔎 **可核查性** | 提取规则、来源留痕、缺失原因全部随数据发布，宁可空缺也不采信未验证链接 |
+
+---
+
+## 🖼️ 界面预览
+
+<table>
+  <tr>
+    <td width="33.33%" align="center">
+      <a href="https://forager-gov.pages.dev/gov-tree.html#/map/四川省" target="_blank">
+        <img src="docs/screenshots/map-sichuan.png" width="100%" loading="lazy" alt="四川省地图：下钻到地级市层级，按政府机构官网覆盖率为 21 个市州独立着色">
+      </a>
+      <br><b>省级下钻 · 四川</b><br>
+      <sub>点击省份查看市级地图，右侧显示全省覆盖率与并列机关官网</sub>
+    </td>
+    <td width="33.33%" align="center">
+      <a href="https://forager-gov.pages.dev/gov-tree.html#/map/云南省/普洱市" target="_blank">
+        <img src="docs/screenshots/map-puer.png" width="100%" loading="lazy" alt="云南省普洱市县级地图：10 个县按官网覆盖率独立配色，县县不同色">
+      </a>
+      <br><b>市级下钻 · 普洱</b><br>
+      <sub>县级人民政府官网一网打尽，县县不同色（色相序 = 覆盖率序）</sub>
+    </td>
+    <td width="33.33%" align="center">
+      <a href="https://forager-gov.pages.dev/gov-tree.html#/map" target="_blank">
+        <img src="docs/screenshots/map-dark.png" width="100%" loading="lazy" alt="中国政府网站体系夜晚模式地图：深色海洋背景下的中国行政区划覆盖率着色">
+      </a>
+      <br><b>夜晚模式</b><br>
+      <sub>白天 / 夜晚一键切换，地图配色、海洋、标注同步重绘</sub>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <a href="https://forager-gov.pages.dev/gov-tree.html#/tree/blk" target="_blank">
+        <img src="docs/screenshots/tree.png" width="100%" loading="lazy" alt="中国政府网站体系树状图视图：中央、省级、市级、县级政府机构树形结构">
+      </a>
+      <br><b>树状图视图</b><br>
+      <sub>块 / 条双视图切换，搜索定位、拖拽缩放、点击节点看档案卡</sub>
+    </td>
+    <td width="50%" align="center">
+      <a href="https://forager-gov.pages.dev/中国政府网站体系.html" target="_blank">
+        <img src="docs/screenshots/main-list.png" width="100%" loading="lazy" alt="中国政府网站体系列表视图：按机构类型、地区、官网状态筛选的政府机构名录">
+      </a>
+      <br><b>列表视图</b><br>
+      <sub>按类型 / 地区 / 健康状态筛选，展示来源等级与信息公开专栏</sub>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 📊 数据覆盖
+
+统计由 [`data/p221_url_stats.py`](data/p221_url_stats.py) 自动生成（p22 管线调用，
+**统计生成日期：2026-11-17**），完整报告见 [`data/URL_STATS.md`](data/URL_STATS.md)；
+站点右上角「数据健康」面板同步展示。
+「缺失」= 树中该机构**无官网**（`u=""`，列名展示），不代表官网已失效（死链由注册表
+`status` 字段单独承载）。
 
 ### 分等级
 
 | 等级 | 机构数 | 有官网 | 缺失 | 缺失率 |
 |---|---:|---:|---:|---:|
 | 省级 | 2,221 | 1,913 | 308 | 13.87% |
-| 市级 | 12,202 | 11,675 | 527 | 4.32% |
-| 县级 | 16,805 | 6,307 | 10,498 | 62.47% |
-| **合计** | **31,228** | **19,895** | **11,333** | **36.29%** |
+| 市级 | 12,202 | 11,675 | 487 | 3.99% |
+| 县级 | 16,805 | 6,745 | 10,060 | 59.86% |
+| **合计** | **31,228** | **20,373** | **10,855** | **34.76%** |
+
+### 🏆 县级人民政府：王牌指标
+
+<a id="county-coverage"></a>
+
+> 全国 2,900+ 个县级节点、300+ 个市级门户、逐站 JS 渲染 / 下拉 / 别名 / 简称 / 民族语 /
+> 合署更名形态逐一攻克——**县级人民政府官网覆盖率达到 99.64%**，这在公开、可核查的
+> 政府网站数据中极为罕见。
+
+| 口径 | 覆盖率 | 说明 |
+|---|---:|---|
+| **县级人民政府（民政区划口径）** | **2,768 / 2,778 = 99.64%** | 剔除开发区 / 高新区 / 示范区 / 管理区等非民政区划序列的功能区节点 |
+| 县级人民政府（含功能区，官方统计口径） | 2,833 / 2,910 = 97.35% | p221 自动统计；功能区/管委会多数无独立门户，属正常形态 |
+| 地级市人民政府 | 333 / 333 = 100% | 全国 333 个地级市（地区 / 州 / 盟）全部覆盖 |
+| 省级人民政府 | 32 / 32 = 100% | 31 省区市 + 新疆兵团（台湾省无大陆政府门户，另计） |
+| 直辖市辖区 | 73 / 74 = 98.65% | 渝北区因 2025 年区划调整并入两江新区，机构本身已不存在 |
+
+未覆盖的 10 个县级单位全部**留名 + 留痕**，无一猜测：
+
+- 三沙市西沙区、南沙区、西沙群岛、南沙群岛、中沙群岛（5 个）：海岛区划，无县级政府门户网站；
+- 金门县：实际由台湾当局管辖，无大陆人民政府门户；
+- 和康县、和安县（新疆和田）：新设县，官网尚未建成；
+- 万宁市、保亭黎族苗族自治县（海南）：待补数据缺口，已列入采集清单。
+
+> 换句话说：**除体制性无官网和新设县外，中国大陆每一个县级人民政府的官网入口都在这里。**
+> 这 2,768 个入口均来自官方页面真实 HTML（上级名录 / 门户导航提取，SERP 仅作线索并经
+> 标题身份验证），不是搜索结果拼凑，更不是域名猜测。
 
 ### 分系统 × 等级 缺失率
 
@@ -55,61 +180,44 @@
 |---|---:|---:|---:|---:|
 | 政府门户 | 0.00% | 0.25% | 2.65% | 2.33% |
 | 政府部门（厅局 / 市局） | 0.16% | 0.00% | — | 0.02% |
-| 人大 | 0.00% | 22.47% | 98.13% | 87.65% |
-| 政协 | 0.00% | 40.00% | 98.52% | 90.20% |
-| 监委 / 纪委 | 0.00% | 31.36% | 93.67% | 84.91% |
-| 法院 | 0.00% | 12.84% | 28.97% | 26.66% |
-| 检察院 | 0.00% | 23.21% | 55.70% | 51.07% |
+| 人大 | 0.00% | 22.47% | 96.01% | 85.82% |
+| 政协 | 0.00% | 40.00% | 95.79% | 87.84% |
+| 监委 / 纪委 | 0.00% | 31.36% | 89.96% | 81.71% |
+| 法院 | 0.00% | 8.64% | 24.04% | 21.87% |
+| 检察院 | 0.00% | 17.53% | 53.44% | 48.40% |
 | 群团 | 45.04% | 0.00% | — | 33.89% |
 | 民主党派 | 24.70% | — | — | 24.70% |
 
-> 读法：缺口的绝大多数是**体制性无官网**，不是采集未完成——县级人大 / 政协 /
-> 监委极少建站（区县一级多由本级党委政府门户代管栏目）；市级政协、纪委建站率
-> 天然低于法院系统。政府门户与政府部门已基本全覆盖（缺失率 ≤2.65%）。党委机关
-> 不设独立门户网站，不纳入统计。每个缺口节点的 `m` 字段留有具体原因留痕。
+> **读法**：缺口的绝大多数是**体制性无官网**，不是采集未完成——县级人大 / 政协 /
+> 监委极少建站（区县一级多由本级党委政府门户代管栏目）；市级政协、纪委建站率天然
+> 低于法院系统。政府门户与政府部门已基本全覆盖（缺失率 ≤ 2.65%）。党委机关不设独立
+> 门户网站，不纳入统计。每个缺口节点的 `m` 字段留有具体原因。
+
+### 注册表与巡检
+
+| 指标 | 数值 |
+|---|---:|
+| 官网注册记录（去重后） | 17,645 |
+| 来源 L1 官网名录 / L2 门户导航 / L3 兜底验证 | 5,134 / 12,193 / 318 |
+| 健康状态 ok / maintain / dead / 其他 | 15,169 / 43 / 543 / 1,890 |
+| 树节点（块树 + 条树，含分组容器） | 64,101 + 23,533 |
+| 行政区划边界文件（DataV + 港澳 + 台湾） | 360+ / 约 27 MB |
 
 ---
 
-## 三、仓库结构
-
-```
-├── 中国政府网站体系.html      # 主查看器（列表 / 树状图 / 地图）
-├── gov-tree.html              # 树图 + 地图专用查看器
-├── 模板.html                  # 主查看器模板（数据管线复制为上面的成品）
-├── map_view.js / tree_view.js # 地图 / 树图视图（纯手写，无外部依赖）
-├── gov_data.js                # 统一数据（p22 生成）
-├── data_js/                   # 拆分后的数据模块（manifest / modules / rules / quality）
-├── data/
-│   ├── tree.json              # 事实源（块 + 条）
-│   ├── site_registry.json     # 网站注册表
-│   ├── extraction_rules.json  # 提取规则
-│   ├── geo/                   # 行政区划边界（DataV + taiwan-atlas，惰性加载）
-│   ├── URL_STATS.md           # URL 缺失率统计报告（p221 生成：省/市/县 × 系统）
-│   ├── p*_*.py                # 采集 / 治理 / 管线脚本（274 个，见 data/INDEX.md）
-│   └── INDEX.md               # 脚本索引
-├── util/                      # 通用工具（获取层实现不随本仓库发布，见「数据来源与红线」）
-├── 体系设计.md                # 架构、数据模型、权威源体系、采集纪律
-├── CLAUDE.md                  # 项目内部规则（本地维护，不随仓库发布）
-└── 政府信息公开官网名单.csv    # 早期导出名单
-```
-
----
-
-## 四、本地预览
+## 🚀 快速开始
 
 站点是**纯静态**的，无构建依赖：
 
 ```bash
 python3 -m http.server 8765
-# 打开 http://localhost:8765/中国政府网站体系.html
-#      http://localhost:8765/gov-tree.html
+# 打开 http://localhost:8765/中国政府网站体系.html   （主查看器：列表 / 树图 / 地图）
+#      http://localhost:8765/gov-tree.html          （树图 + 地图查看器）
 ```
 
 也可以用任意静态服务器；直接双击 HTML（`file://`）同样可用——数据按需以 `<script>` 惰性加载。
 
----
-
-## 五、数据管线（每次数据改动必跑）
+### 数据管线（每次数据改动必跑）
 
 ```bash
 # 1. 拆分数据 + 生成三视图数据（p22 内部自动调用 gen_viz）
@@ -121,13 +229,11 @@ cp 模板.html 中国政府网站体系.html
 # 3. 自检（必须 0 问题项）
 uv run python data/p99_weekend_check.py
 
-# 4. 构建发布包（可选，本地验证）
+# 4. 构建发布包（本地验证）
 cd data && uv run python p219_build_dist.py && cd ..
 ```
 
----
-
-## 六、部署（Cloudflare Pages）
+### 部署（Cloudflare Pages）
 
 **方式 A：关联 GitHub 仓库（推荐，push 即发布）**
 
@@ -157,7 +263,42 @@ npx wrangler pages deploy dist --project-name=forager-gov
 
 ---
 
-## 七、数据来源与红线
+## 📁 仓库结构
+
+```
+├── 中国政府网站体系.html      # 主查看器（列表 / 树状图 / 地图）
+├── gov-tree.html              # 树图 + 地图专用查看器
+├── 模板.html                  # 主查看器模板（数据管线复制为上面的成品）
+├── map_view.js / tree_view.js # 地图 / 树图视图（纯手写，无外部依赖）
+├── gov_data.js                # 统一数据（p22 生成）
+├── gov_data_records.js        # USR 扁平全字段索引（约 5 万条叶子）
+├── docs/screenshots/          # 界面截图（README 素材）
+├── data_js/                   # 拆分后的数据模块（manifest / modules / rules / quality）
+├── data/
+│   ├── tree.json              # 事实源（块 + 条）
+│   ├── site_registry.json     # 网站注册表（URL / 来源等级 / 健康状态 / 信息公开专栏）
+│   ├── extraction_rules.json  # 提取规则（键 = 机构/区划，method 留痕来源）
+│   ├── geo/                   # 行政区划边界（DataV + taiwan-atlas，惰性加载）
+│   ├── URL_STATS.md           # URL 缺失率统计报告（p221 生成）
+│   ├── p*_*.py                # 采集 / 治理 / 管线脚本（274 个，见 data/INDEX.md）
+│   └── INDEX.md               # 脚本索引
+├── util/                      # 通用工具（获取层实现不随本仓库发布，见「数据来源与红线」）
+├── 体系设计.md                # 架构、数据模型、权威源体系、采集纪律
+└── 政府信息公开官网名单.csv    # 早期导出名单
+```
+
+核心数据文件说明：
+
+| 文件 | 作用 |
+|---|---|
+| `data/tree.json` | 存库层唯一事实源（块树 + 条树，节点 schema `{n,l,k,c,u,x,s,m,ks}`） |
+| `data/site_registry.json` | 网站注册表（主数据：URL / 来源等级 / 健康状态 / 信息公开专栏） |
+| `gov_data.js` | 展示层唯一入口 `window.__GOV_DATA__ = {meta, block, tiao}`（p22 自动生成） |
+| `gov_data_records.js` | USR 扁平全字段索引，`__GOV_DATA__.loadRecords()` 按需加载，不阻塞首屏 |
+
+---
+
+## 🧭 数据来源与红线
 
 - **禁止猜测域名**：不做拼音/缩写探测、DNS 试探或「能响应就算官网」；所有 URL 来自官方页面真实 HTML。
 - **无官网列名**：`u=""` 展示名称，不降级保留探测数据。
@@ -165,12 +306,73 @@ npx wrangler pages deploy dist --project-name=forager-gov
 - **获取层抽象**：脚本统一调用 `smart_fetch(url)` 获取真实 HTML；获取层实现
   （浏览器/指纹/WAF 处理）不随本仓库发布。
 - **不发布内容**：`.env`、cookies、`*_state.json`、snapshots、backups、dist、
-  内部规则文档 CLAUDE.md。
+  内部规则文档不进入仓库。
 - 数据来自各级政府公开网站，仅作机构名录与官网入口整理；如发现错漏，欢迎提 issue。
 
 ---
 
-## 附录：地图子系统
+## 📚 相关文档
+
+| 文档 | 内容 |
+|---|---|
+| [`体系设计.md`](体系设计.md) | 块/条架构、USR 数据模型、权威源体系、采集纪律、板块状态总表 |
+| [`data/URL_STATS.md`](data/URL_STATS.md) | URL 缺失率统计报告（省 / 市 / 县 × 系统） |
+| [`data/INDEX.md`](data/INDEX.md) | 150+ 采集脚本按主题分类索引 |
+| [`README.md` 附录](#map-appendix) | 地图 Geo 数据来源与纯手写 SVG 绘制方法 |
+| [在线站点](https://forager-gov.pages.dev) | Cloudflare Pages 部署的实时版本 |
+
+---
+
+## ❓ 常见问题
+
+<details>
+<summary><b>收录范围是什么？敏感系统收录吗？</b></summary>
+
+收录国务院组成部门及直属机构、地方各级人民政府与政府部门、人大、政协、纪委监委、
+法院、检察院、群团组织、民主党派，以及海关 / 税务 / 人民银行 / 气象 / 地震 /
+卫生健康等垂直与半垂直系统。军队、公安、国家安全等敏感系统不采集。
+
+</details>
+
+<details>
+<summary><b>为什么有些机构没有官网链接？</b></summary>
+
+两种情况：① 该机构确实无独立公开官网——县级人大 / 政协 / 监委多由本级政府门户
+代管栏目，党委机关不设独立网站，这是体制性建站率差异，不是采集遗漏；② 暂未找到
+符合「权威源验证」要求的官网。按数据红线，宁缺毋滥、列名展示（`u=""`），不猜测域名。
+
+</details>
+
+<details>
+<summary><b>数据多久更新一次？</b></summary>
+
+采集与治理脚本按批次滚动执行，URL 健康状态全量巡检（连续两轮 dead 才列名），
+统计报告随数据管线自动再生成。可在 [`data/URL_STATS.md`](data/URL_STATS.md)
+查看生成日期。
+
+</details>
+
+<details>
+<summary><b>可以离线使用 / 二次开发吗？</b></summary>
+
+可以。站点是纯静态文件（HTML + JS + JSON + GeoJSON），无后端、无运行时外部依赖，
+`file://` 直接打开即可；数据与地图边界可独立复用（注意各数据源许可与「仅作机构
+名录整理」的使用边界）。
+
+</details>
+
+## 🤝 反馈与贡献
+
+- 发现**官网错配、死链、遗漏机构**：请开 issue 并附官方来源页面。
+- 数据修正请遵循「权威源优先级」：上级机构官网名录 > 同级政府门户导航 > SERP 严格验证。
+- 欢迎补充缺失机构的**官方导航栏目页链接**（而非直接猜域名）。
+
+---
+
+<a id="map-appendix"></a>
+
+<details>
+<summary><b>🗺 附录：地图子系统技术文档（Geo 数据来源与绘制方法）</b></summary>
 
 本文档说明「中国政府网站体系」中行政区划地图（`gov-tree.html` / `中国政府网站体系.html` 的 🗺 地图视图）的 **Geo 数据来源** 与 **绘制方法**。
 
@@ -308,7 +510,7 @@ tree.json（块树: 区划×机构  /  条树: 垂直系统）
 
 数据更新后：跑 `data/p22_split_data.py`（自动调用 gen_viz）即刷新树图/列表/地图三视图，无需手工维护。
 
-### 附：相关文件索引
+### 三、相关文件索引
 
 | 文件 | 作用 |
 |---|---|
@@ -320,3 +522,15 @@ tree.json（块树: 区划×机构  /  条树: 垂直系统）
 | `data/geo/geo_index.js` | 市级下钻清单 `__GEO_CITY_FILES__` |
 | `data/gen_viz.py` | 块/条树重组 + records 生成（p22 自动调用） |
 | `tree_view.js` | 树状图视图（与地图同源数据） |
+
+</details>
+
+---
+
+<div align="center">
+
+<sub>中国政府网站体系 · forager-gov · 数据持续更新中 ·
+<a href="https://forager-gov.pages.dev">在线体验</a> ·
+<a href="https://github.com/jimmy-Smile-ltl/forager-gov/issues">反馈问题</a></sub>
+
+</div>
