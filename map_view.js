@@ -534,8 +534,10 @@ window.MapViz=(function(){
         ripple(e);
         const ad=typeof p.adcode==="number"?String(p.adcode):p.adcode;
         if(level==="china"&&ad){
-          // 全国 → 省图（市级）
+          // 全国 → 省图（市级）；县界包与省图文件**并发**预取——用户点完省
+          // 通常在几百毫秒内就点市, 不能等省图渲染完才开始下整包
           render();
+          prefetchBundle(ad);
           loadProvince(ad,name);
         }else if(level==="province"&&ad&&CITY_FILES.has(ad)){
           // 省图 → 市图（县级）；无县级文件的区划（直辖市区/省直管县）直接看详情
