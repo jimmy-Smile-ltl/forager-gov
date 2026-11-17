@@ -1,0 +1,1 @@
+window.__R=window.__R||{};window.__R["国务院垂直管理系统（3 机构）"]={"portal":"http://www.customs.gov.cn/","method":"归纳：海关+移民管理+自然资源督察（海关全域名 Cloudflare 防护待补，移民无官网导航列名）","sources":[],"code":"","depts":[],"cities":[]};

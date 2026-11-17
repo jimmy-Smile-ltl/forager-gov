@@ -1,0 +1,1 @@
+window.__R=window.__R||{};window.__R["新疆生产建设兵团·团省委"]={"portal":"","method":"无独立公开门户/未验证 → 列名参考","sources":[],"code":"# -*- coding: utf-8 -*-\n\"\"\"新疆生产建设兵团 团省委: 无独立公开门户（列名）。\"\"\"\n","depts":[{"n":"团省委","u":"http://tw.xjbt.gov.cn/","o":0}],"cities":[]};

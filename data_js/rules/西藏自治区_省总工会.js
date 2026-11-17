@@ -1,0 +1,1 @@
+window.__R=window.__R||{};window.__R["西藏自治区·省总工会"]={"portal":"https://www.xzgh.org.cn/","method":"独立门户（全总官网省级工会栏目权威来源）","sources":["https://www.xzgh.org.cn/"],"code":"# -*- coding: utf-8 -*-\n\"\"\"西藏自治区 省总工会: 无独立公开门户（列名）。\"\"\"\n","depts":[{"n":"省总工会","u":"","o":0}],"cities":[]};

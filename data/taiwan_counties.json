@@ -1,0 +1,91 @@
+[
+{
+"name": "台北市",
+"portal": "https://www.gov.taipei/",
+"note": "台北市拥有城市顶级域名 .taipei（全球首批城市 gTLD），政府网站用 gov.taipei；原 taipei.gov.tw 已跳转"
+},
+{
+"name": "新北市",
+"portal": "https://www.ntpc.gov.tw/"
+},
+{
+"name": "桃园市",
+"portal": "https://www.tycg.gov.tw/"
+},
+{
+"name": "台中市",
+"portal": "https://www.taichung.gov.tw/"
+},
+{
+"name": "台南市",
+"portal": "https://www.tainan.gov.tw/"
+},
+{
+"name": "高雄市",
+"portal": "https://www.kcg.gov.tw/"
+},
+{
+"name": "基隆市",
+"portal": "https://www.klcg.gov.tw/"
+},
+{
+"name": "新竹市",
+"portal": "https://www.hccg.gov.tw/"
+},
+{
+"name": "嘉义市",
+"portal": "https://www.chiayi.gov.tw/"
+},
+{
+"name": "新竹县",
+"portal": "https://www.hsinchu.gov.tw/"
+},
+{
+"name": "苗栗县",
+"portal": "https://www.miaoli.gov.tw/"
+},
+{
+"name": "彰化县",
+"portal": "https://www.chcg.gov.tw/"
+},
+{
+"name": "南投县",
+"portal": "https://www.nantou.gov.tw/"
+},
+{
+"name": "云林县",
+"portal": "https://www.yunlin.gov.tw/"
+},
+{
+"name": "嘉义县",
+"portal": "https://www.cyhg.gov.tw/"
+},
+{
+"name": "屏东县",
+"portal": "https://www.pthg.gov.tw/"
+},
+{
+"name": "宜兰县",
+"portal": "https://www.e-land.gov.tw/"
+},
+{
+"name": "花莲县",
+"portal": "https://www.hl.gov.tw/"
+},
+{
+"name": "台东县",
+"portal": "https://www.taitung.gov.tw/"
+},
+{
+"name": "澎湖县",
+"portal": "https://www.penghu.gov.tw/"
+},
+{
+"name": "金门县",
+"portal": "https://www.kinmen.gov.tw/"
+},
+{
+"name": "连江县",
+"portal": "https://www.matsu.gov.tw/"
+}
+]

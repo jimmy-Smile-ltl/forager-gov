@@ -1,0 +1,212 @@
+[
+{
+"name": "北京海关",
+"portal": "http://beijing.customs.gov.cn/",
+"host": "beijing.customs.gov.cn"
+},
+{
+"name": "天津海关",
+"portal": "http://tianjin.customs.gov.cn/",
+"host": "tianjin.customs.gov.cn"
+},
+{
+"name": "石家庄海关",
+"portal": "http://shijiazhuang.customs.gov.cn/",
+"host": "shijiazhuang.customs.gov.cn"
+},
+{
+"name": "太原海关",
+"portal": "http://taiyuan.customs.gov.cn/",
+"host": "taiyuan.customs.gov.cn"
+},
+{
+"name": "呼和浩特海关",
+"portal": "http://huhehaote.customs.gov.cn/",
+"host": "huhehaote.customs.gov.cn"
+},
+{
+"name": "满洲里海关",
+"portal": "http://manzhouli.customs.gov.cn/",
+"host": "manzhouli.customs.gov.cn"
+},
+{
+"name": "大连海关",
+"portal": "http://dalian.customs.gov.cn/",
+"host": "dalian.customs.gov.cn"
+},
+{
+"name": "沈阳海关",
+"portal": "http://shenyang.customs.gov.cn/",
+"host": "shenyang.customs.gov.cn"
+},
+{
+"name": "长春海关",
+"portal": "http://changchun.customs.gov.cn/",
+"host": "changchun.customs.gov.cn"
+},
+{
+"name": "哈尔滨海关",
+"portal": "http://harbin.customs.gov.cn/",
+"host": "harbin.customs.gov.cn"
+},
+{
+"name": "上海海关",
+"portal": "http://shanghai.customs.gov.cn/",
+"host": "shanghai.customs.gov.cn"
+},
+{
+"name": "南京海关",
+"portal": "http://nanjing.customs.gov.cn/",
+"host": "nanjing.customs.gov.cn"
+},
+{
+"name": "杭州海关",
+"portal": "http://hangzhou.customs.gov.cn/",
+"host": "hangzhou.customs.gov.cn"
+},
+{
+"name": "宁波海关",
+"portal": "http://ningbo.customs.gov.cn/",
+"host": "ningbo.customs.gov.cn"
+},
+{
+"name": "合肥海关",
+"portal": "http://hefei.customs.gov.cn/",
+"host": "hefei.customs.gov.cn"
+},
+{
+"name": "福州海关",
+"portal": "http://fuzhou.customs.gov.cn/",
+"host": "fuzhou.customs.gov.cn"
+},
+{
+"name": "厦门海关",
+"portal": "http://xiamen.customs.gov.cn/",
+"host": "xiamen.customs.gov.cn"
+},
+{
+"name": "南昌海关",
+"portal": "http://nanchang.customs.gov.cn/",
+"host": "nanchang.customs.gov.cn"
+},
+{
+"name": "青岛海关",
+"portal": "http://qingdao.customs.gov.cn/",
+"host": "qingdao.customs.gov.cn"
+},
+{
+"name": "济南海关",
+"portal": "http://jinan.customs.gov.cn/",
+"host": "jinan.customs.gov.cn"
+},
+{
+"name": "郑州海关",
+"portal": "http://zhengzhou.customs.gov.cn/",
+"host": "zhengzhou.customs.gov.cn"
+},
+{
+"name": "武汉海关",
+"portal": "http://wuhan.customs.gov.cn/",
+"host": "wuhan.customs.gov.cn"
+},
+{
+"name": "长沙海关",
+"portal": "http://changsha.customs.gov.cn/",
+"host": "changsha.customs.gov.cn"
+},
+{
+"name": "广州海关",
+"portal": "http://guangzhou.customs.gov.cn/",
+"host": "guangzhou.customs.gov.cn"
+},
+{
+"name": "黄埔海关",
+"portal": "http://huangpu.customs.gov.cn/",
+"host": "huangpu.customs.gov.cn"
+},
+{
+"name": "深圳海关",
+"portal": "http://shenzhen.customs.gov.cn/",
+"host": "shenzhen.customs.gov.cn"
+},
+{
+"name": "拱北海关",
+"portal": "http://gongbei.customs.gov.cn/",
+"host": "gongbei.customs.gov.cn"
+},
+{
+"name": "汕头海关",
+"portal": "http://shantou.customs.gov.cn/",
+"host": "shantou.customs.gov.cn"
+},
+{
+"name": "江门海关",
+"portal": "http://jiangmen.customs.gov.cn/",
+"host": "jiangmen.customs.gov.cn"
+},
+{
+"name": "湛江海关",
+"portal": "http://zhanjiang.customs.gov.cn/",
+"host": "zhanjiang.customs.gov.cn"
+},
+{
+"name": "南宁海关",
+"portal": "http://nanning.customs.gov.cn/",
+"host": "nanning.customs.gov.cn"
+},
+{
+"name": "海口海关",
+"portal": "http://haikou.customs.gov.cn/",
+"host": "haikou.customs.gov.cn"
+},
+{
+"name": "重庆海关",
+"portal": "http://chongqing.customs.gov.cn/",
+"host": "chongqing.customs.gov.cn"
+},
+{
+"name": "成都海关",
+"portal": "http://chengdu.customs.gov.cn/",
+"host": "chengdu.customs.gov.cn"
+},
+{
+"name": "贵阳海关",
+"portal": "http://guiyang.customs.gov.cn/",
+"host": "guiyang.customs.gov.cn"
+},
+{
+"name": "昆明海关",
+"portal": "http://kunming.customs.gov.cn/",
+"host": "kunming.customs.gov.cn"
+},
+{
+"name": "拉萨海关",
+"portal": "http://lasa.customs.gov.cn/",
+"host": "lasa.customs.gov.cn"
+},
+{
+"name": "西安海关",
+"portal": "http://xian.customs.gov.cn/",
+"host": "xian.customs.gov.cn"
+},
+{
+"name": "兰州海关",
+"portal": "http://lanzhou.customs.gov.cn/",
+"host": "lanzhou.customs.gov.cn"
+},
+{
+"name": "西宁海关",
+"portal": "http://xining.customs.gov.cn/",
+"host": "xining.customs.gov.cn"
+},
+{
+"name": "银川海关",
+"portal": "http://yinchuan.customs.gov.cn/",
+"host": "yinchuan.customs.gov.cn"
+},
+{
+"name": "乌鲁木齐海关",
+"portal": "http://urumqi.customs.gov.cn/",
+"host": "urumqi.customs.gov.cn"
+}
+]

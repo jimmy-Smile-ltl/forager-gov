@@ -1,0 +1,1 @@
+window.__R=window.__R||{};window.__R["广东省·省科协"]={"portal":"","method":"无独立公开门户/未验证 → 列名参考","sources":[],"code":"# -*- coding: utf-8 -*-\n\"\"\"广东省 省科协: 无独立公开门户（列名）。\"\"\"\n","depts":[{"n":"省科协","u":"","o":0}],"cities":[]};

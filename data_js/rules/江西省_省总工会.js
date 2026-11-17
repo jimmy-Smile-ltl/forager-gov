@@ -1,0 +1,1 @@
+window.__R=window.__R||{};window.__R["江西省·省总工会"]={"portal":"https://www.jxgh.org.cn","method":"独立门户（全总官网省级工会栏目权威来源）","sources":["https://www.jxgh.org.cn"],"code":"# -*- coding: utf-8 -*-\n\"\"\"江西省 省总工会: 无独立公开门户（列名）。\"\"\"\n","depts":[{"n":"省总工会","u":"","o":0}],"cities":[]};

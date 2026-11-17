@@ -1,0 +1,544 @@
+{"province": "北京市", "slot": "省总工会", "query": "北京市总工会", "url": "https://www.bjzgh.org", "candidates": ["w3.org", "bjzgh.org"], "candidates_clean": ["bjzgh.org"], "verify": "pass"}
+{"province": "北京市", "slot": "团省委", "query": "共青团北京省委", "url": "https://www.bjyouth.net", "candidates": ["w3.org", "bjyouth.net", "126.net"], "candidates_clean": ["bjyouth.net"], "verify": "pass"}
+{"province": "北京市", "slot": "省妇联", "query": "北京市妇女联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "北京市", "slot": "省科协", "query": "北京市科学技术协会", "url": "", "candidates": ["w3.org", "bast.net"], "candidates_clean": ["bast.net"]}
+{"province": "北京市", "slot": "省文联", "query": "北京市文学艺术界联合会", "url": "http://www.bjwl.org.cn", "candidates": ["w3.org", "bjwl.org.cn"], "candidates_clean": ["bjwl.org.cn"], "verify": "pass"}
+{"province": "北京市", "slot": "省作协", "query": "北京市作家协会", "url": "http://www.bjwl.org.cn", "candidates": ["w3.org", "bjwl.org.cn"], "candidates_clean": ["bjwl.org.cn"], "verify": "render_pass"}
+{"province": "北京市", "slot": "省工商联", "query": "北京市工商业联合会", "url": "", "candidates": ["w3.org", "acfic.org.cn"], "candidates_clean": []}
+{"province": "北京市", "slot": "省残联", "query": "北京市残疾人联合会", "url": "https://www.bdpf.org.cn", "candidates": ["w3.org", "bdpf.org.cn"], "candidates_clean": ["bdpf.org.cn"], "verify": "render_pass"}
+{"province": "北京市", "slot": "省贸促会", "query": "北京市贸促会", "url": "https://www.ccpitbj.org", "candidates": ["w3.org", "ccpitbj.org"], "candidates_clean": ["ccpitbj.org"], "verify": "pass"}
+{"province": "北京市", "slot": "省红十字会", "query": "北京市红十字会", "url": "", "candidates": ["w3.org", "bjredcross.org.cn"], "candidates_clean": []}
+{"province": "天津市", "slot": "省总工会", "query": "天津市总工会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "天津市", "slot": "团省委", "query": "共青团天津省委", "url": "http://www.youthtj.org.cn", "candidates": ["w3.org", "youthtj.org.cn", "gqt.org.cn"], "candidates_clean": ["youthtj.org.cn"], "verify": "pass"}
+{"province": "天津市", "slot": "省妇联", "query": "天津市妇女联合会", "url": "", "candidates": ["w3.org", "women.org.cn", "tjwomen.org.cn"], "candidates_clean": []}
+{"province": "天津市", "slot": "省科协", "query": "天津市科学技术协会", "url": "https://www.tast.org.cn", "candidates": ["w3.org", "tast.org.cn"], "candidates_clean": ["tast.org.cn"], "verify": "pass"}
+{"province": "天津市", "slot": "省文联", "query": "天津市文学艺术界联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "天津市", "slot": "省作协", "query": "天津市作家协会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "天津市", "slot": "省工商联", "query": "天津市工商业联合会", "url": "", "candidates": ["w3.org", "acfic.org.cn"], "candidates_clean": []}
+{"province": "天津市", "slot": "省残联", "query": "天津市残疾人联合会", "url": "http://www.tjdpf.org.cn", "candidates": ["w3.org", "tjdpf.org.cn"], "candidates_clean": ["tjdpf.org.cn"], "verify": "pass"}
+{"province": "天津市", "slot": "省贸促会", "query": "天津市贸促会", "url": "https://www.ccpittj.org", "candidates": ["w3.org", "ccpittj.org"], "candidates_clean": ["ccpittj.org"], "verify": "render_pass"}
+{"province": "天津市", "slot": "省红十字会", "query": "天津市红十字会", "url": "https://www.tjredcross.org", "candidates": ["w3.org", "tjredcross.org", "redcross.org.cn", "tjbc.org.cn"], "candidates_clean": ["tjredcross.org", "tjbc.org.cn"], "verify": "pass"}
+{"province": "河北省", "slot": "省总工会", "query": "河北省总工会", "url": "https://www.hebgh.org.cn", "candidates": ["w3.org", "hebgh.org.cn"], "candidates_clean": ["hebgh.org.cn"], "verify": "pass"}
+{"province": "河北省", "slot": "团省委", "query": "共青团河北省委", "url": "", "candidates": ["w3.org", "54heb.org.cn"], "candidates_clean": ["54heb.org.cn"]}
+{"province": "河北省", "slot": "省妇联", "query": "河北省妇女联合会", "url": "", "candidates": ["w3.org", "hebeiwomen.org.cn"], "candidates_clean": []}
+{"province": "河北省", "slot": "省科协", "query": "河北省科学技术协会", "url": "", "candidates": ["w3.org", "hbast.org.cn"], "candidates_clean": ["hbast.org.cn"]}
+{"province": "河北省", "slot": "省文联", "query": "河北省文学艺术界联合会", "url": "http://www.hbswl.org.cn", "candidates": ["w3.org", "hbswl.org.cn"], "candidates_clean": ["hbswl.org.cn"], "verify": "pass"}
+{"province": "河北省", "slot": "省作协", "query": "河北省作家协会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "河北省", "slot": "省工商联", "query": "河北省工商业联合会", "url": "https://www.hebgsl.org.cn", "candidates": ["w3.org", "hebgsl.org.cn", "cgcc.org.cn"], "candidates_clean": ["hebgsl.org.cn", "cgcc.org.cn"], "verify": "render_pass"}
+{"province": "河北省", "slot": "省残联", "query": "河北省残疾人联合会", "url": "", "candidates": ["w3.org", "hebcl.org.cn"], "candidates_clean": ["hebcl.org.cn"]}
+{"province": "河北省", "slot": "省贸促会", "query": "河北省贸促会", "url": "", "candidates": ["w3.org", "ccpit.org"], "candidates_clean": []}
+{"province": "河北省", "slot": "省红十字会", "query": "河北省红十字会", "url": "https://www.hebredcross.org", "candidates": ["w3.org", "hebredcross.org"], "candidates_clean": ["hebredcross.org"], "verify": "pass"}
+{"province": "山西省", "slot": "省总工会", "query": "山西省总工会", "url": "https://www.sxgh.org.cn", "candidates": ["w3.org", "sxgh.org.cn"], "candidates_clean": ["sxgh.org.cn"], "verify": "pass"}
+{"province": "山西省", "slot": "团省委", "query": "共青团山西省委", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "山西省", "slot": "省妇联", "query": "山西省妇女联合会", "url": "https://www.banbiantian.org.cn", "candidates": ["w3.org", "banbiantian.org.cn"], "candidates_clean": ["banbiantian.org.cn"], "verify": "pass"}
+{"province": "山西省", "slot": "省科协", "query": "山西省科学技术协会", "url": "", "candidates": ["w3.org", "cast.org.cn"], "candidates_clean": []}
+{"province": "山西省", "slot": "省文联", "query": "山西省文学艺术界联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "山西省", "slot": "省作协", "query": "山西省作家协会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "山西省", "slot": "省工商联", "query": "山西省工商业联合会", "url": "http://www.sxsgsylhh.org", "candidates": ["w3.org", "sxsgsylhh.org"], "candidates_clean": ["sxsgsylhh.org"], "verify": "pass"}
+{"province": "山西省", "slot": "省残联", "query": "山西省残疾人联合会", "url": "https://www.sxdpf.org.cn", "candidates": ["w3.org", "sxdpf.org.cn", "cdpf.org.cn"], "candidates_clean": ["sxdpf.org.cn"], "verify": "pass"}
+{"province": "山西省", "slot": "省贸促会", "query": "山西省贸促会", "url": "", "candidates": ["w3.org", "ccpit.org"], "candidates_clean": []}
+{"province": "山西省", "slot": "省红十字会", "query": "山西省红十字会", "url": "", "candidates": ["w3.org", "sxredcross.org.cn", "redcross.org.cn"], "candidates_clean": []}
+{"province": "内蒙古自治区", "slot": "省总工会", "query": "内蒙古自治区总工会", "url": "https://www.nmgzgh.org.cn", "candidates": ["w3.org", "nmgzgh.org.cn"], "candidates_clean": ["nmgzgh.org.cn"], "verify": "pass"}
+{"province": "内蒙古自治区", "slot": "团省委", "query": "共青团内蒙古省委", "url": "https://www.nmyouth.org.cn", "candidates": ["w3.org", "nmyouth.org.cn", "hhhtgqt.org.cn"], "candidates_clean": ["nmyouth.org.cn"], "verify": "pass"}
+{"province": "内蒙古自治区", "slot": "省妇联", "query": "内蒙古自治区妇女联合会", "url": "", "candidates": ["w3.org", "nmwomen.org.cn", "women.org.cn"], "candidates_clean": []}
+{"province": "内蒙古自治区", "slot": "省科协", "query": "内蒙古自治区科学技术协会", "url": "https://www.imast.org.cn", "candidates": ["w3.org", "imast.org.cn"], "candidates_clean": ["imast.org.cn"], "verify": "pass"}
+{"province": "内蒙古自治区", "slot": "省文联", "query": "内蒙古自治区文学艺术界联合会", "url": "", "candidates": ["w3.org", "imflac.org.cn"], "candidates_clean": ["imflac.org.cn"]}
+{"province": "内蒙古自治区", "slot": "省作协", "query": "内蒙古自治区作家协会", "url": "", "candidates": ["w3.org", "littlewriter.org"], "candidates_clean": ["littlewriter.org"], "verify": "render_fail"}
+{"province": "内蒙古自治区", "slot": "省工商联", "query": "内蒙古自治区工商业联合会", "url": "https://www.nmgfic.org.cn", "candidates": ["w3.org", "nmgfic.org.cn"], "candidates_clean": ["nmgfic.org.cn"], "verify": "render_pass"}
+{"province": "内蒙古自治区", "slot": "省残联", "query": "内蒙古自治区残疾人联合会", "url": "", "candidates": ["w3.org", "nmgcl.org.cn"], "candidates_clean": ["nmgcl.org.cn"]}
+{"province": "内蒙古自治区", "slot": "省贸促会", "query": "内蒙古自治区贸促会", "url": "http://www.ccpitnmg.org.cn", "candidates": ["w3.org", "ccpitnmg.org.cn", "ccpit.org"], "candidates_clean": ["ccpitnmg.org.cn"], "verify": "pass"}
+{"province": "内蒙古自治区", "slot": "省红十字会", "query": "内蒙古自治区红十字会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "辽宁省", "slot": "省总工会", "query": "辽宁省总工会", "url": "https://www.lnszgh.org", "candidates": ["w3.org", "lnszgh.org"], "candidates_clean": ["lnszgh.org"], "verify": "pass"}
+{"province": "辽宁省", "slot": "团省委", "query": "共青团辽宁省委", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "辽宁省", "slot": "省妇联", "query": "辽宁省妇女联合会", "url": "", "candidates": ["w3.org", "women.org.cn"], "candidates_clean": []}
+{"province": "辽宁省", "slot": "省科协", "query": "辽宁省科学技术协会", "url": "https://www.lnast.net", "candidates": ["w3.org", "lnast.net", "lnszgh.org"], "candidates_clean": ["lnast.net", "lnszgh.org"], "verify": "pass"}
+{"province": "辽宁省", "slot": "省文联", "query": "辽宁省文学艺术界联合会", "url": "http://www.lnwyw.org.cn", "candidates": ["w3.org", "lnwyw.org.cn"], "candidates_clean": ["lnwyw.org.cn"], "verify": "render_pass"}
+{"province": "辽宁省", "slot": "省作协", "query": "辽宁省作家协会", "url": "https://www.liaoningwriter.org.cn", "candidates": ["w3.org", "liaoningwriter.org.cn"], "candidates_clean": ["liaoningwriter.org.cn"], "verify": "render_pass"}
+{"province": "辽宁省", "slot": "省工商联", "query": "辽宁省工商业联合会", "url": "https://www.lnsgsl.org", "candidates": ["w3.org", "lnsgsl.org"], "candidates_clean": ["lnsgsl.org"], "verify": "render_pass"}
+{"province": "辽宁省", "slot": "省残联", "query": "辽宁省残疾人联合会", "url": "https://www.lncl.org.cn", "candidates": ["w3.org", "lncl.org.cn"], "candidates_clean": ["lncl.org.cn"], "verify": "pass"}
+{"province": "辽宁省", "slot": "省贸促会", "query": "辽宁省贸促会", "url": "http://www.ccpitln.org", "candidates": ["w3.org", "ccpitln.org"], "candidates_clean": ["ccpitln.org"], "verify": "pass"}
+{"province": "辽宁省", "slot": "省红十字会", "query": "辽宁省红十字会", "url": "https://www.lnrcf.org.cn", "candidates": ["w3.org", "lnrcf.org.cn"], "candidates_clean": ["lnrcf.org.cn"], "verify": "pass"}
+{"province": "吉林省", "slot": "省总工会", "query": "吉林省总工会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "吉林省", "slot": "团省委", "query": "共青团吉林省委", "url": "http://www.jl54.org", "candidates": ["w3.org", "jl54.org"], "candidates_clean": ["jl54.org"], "verify": "pass"}
+{"province": "吉林省", "slot": "省妇联", "query": "吉林省妇女联合会", "url": "", "candidates": ["w3.org", "jlwomen.org.cn"], "candidates_clean": []}
+{"province": "吉林省", "slot": "省科协", "query": "吉林省科学技术协会", "url": "https://www.jlstnet.net", "candidates": ["w3.org", "jlstnet.net", "jlskx.org.cn"], "candidates_clean": ["jlstnet.net", "jlskx.org.cn"], "verify": "pass"}
+{"province": "吉林省", "slot": "省文联", "query": "吉林省文学艺术界联合会", "url": "http://www.jlpflac.org.cn", "candidates": ["w3.org", "jlpflac.org.cn"], "candidates_clean": ["jlpflac.org.cn"], "verify": "pass"}
+{"province": "吉林省", "slot": "省作协", "query": "吉林省作家协会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "吉林省", "slot": "省工商联", "query": "吉林省工商业联合会", "url": "", "candidates": ["w3.org", "jlszsh.net"], "candidates_clean": ["jlszsh.net"]}
+{"province": "吉林省", "slot": "省残联", "query": "吉林省残疾人联合会", "url": "http://www.jldpf.org.cn", "candidates": ["w3.org", "jldpf.org.cn"], "candidates_clean": ["jldpf.org.cn"], "verify": "pass"}
+{"province": "吉林省", "slot": "省贸促会", "query": "吉林省贸促会", "url": "", "candidates": ["w3.org", "ccpit.org"], "candidates_clean": []}
+{"province": "吉林省", "slot": "省红十字会", "query": "吉林省红十字会", "url": "", "candidates": ["w3.org", "jlsredcross.org.cn"], "candidates_clean": []}
+{"province": "黑龙江省", "slot": "省总工会", "query": "黑龙江省总工会", "url": "https://www.hljgh.org.cn", "candidates": ["w3.org", "hljgh.org.cn"], "candidates_clean": ["hljgh.org.cn"], "verify": "render_pass"}
+{"province": "黑龙江省", "slot": "团省委", "query": "共青团黑龙江省委", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "黑龙江省", "slot": "省妇联", "query": "黑龙江省妇女联合会", "url": "https://www.hljwomen.org", "candidates": ["w3.org", "hljwomen.org"], "candidates_clean": ["hljwomen.org"], "verify": "pass"}
+{"province": "黑龙江省", "slot": "省科协", "query": "黑龙江省科学技术协会", "url": "https://www.hljkx.org.cn", "candidates": ["w3.org", "hljkx.org.cn"], "candidates_clean": ["hljkx.org.cn"], "verify": "pass"}
+{"province": "黑龙江省", "slot": "省文联", "query": "黑龙江省文学艺术界联合会", "url": "", "candidates": ["w3.org", "hljswl.org.cn"], "candidates_clean": ["hljswl.org.cn"]}
+{"province": "黑龙江省", "slot": "省作协", "query": "黑龙江省作家协会", "url": "https://www.hljzjw.org.cn", "candidates": ["w3.org", "hljzjw.org.cn"], "candidates_clean": ["hljzjw.org.cn"], "verify": "pass"}
+{"province": "黑龙江省", "slot": "省工商联", "query": "黑龙江省工商业联合会", "url": "https://www.hljfic.org.cn", "candidates": ["w3.org", "hljfic.org.cn"], "candidates_clean": ["hljfic.org.cn"], "verify": "render_pass"}
+{"province": "黑龙江省", "slot": "省残联", "query": "黑龙江省残疾人联合会", "url": "https://www.hljcl.org.cn", "candidates": ["w3.org", "hljcl.org.cn"], "candidates_clean": ["hljcl.org.cn"], "verify": "pass"}
+{"province": "黑龙江省", "slot": "省贸促会", "query": "黑龙江省贸促会", "url": "https://www.ccpithlj.org.cn", "candidates": ["w3.org", "ccpithlj.org.cn", "gjcjzx.org.cn"], "candidates_clean": ["ccpithlj.org.cn", "gjcjzx.org.cn"], "verify": "pass"}
+{"province": "黑龙江省", "slot": "省红十字会", "query": "黑龙江省红十字会", "url": "", "candidates": ["w3.org", "hljredcross.org.cn"], "candidates_clean": []}
+{"province": "上海市", "slot": "省总工会", "query": "上海市总工会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "上海市", "slot": "团省委", "query": "共青团上海省委", "url": "https://www.shyouth.net", "candidates": ["w3.org", "shyouth.net"], "candidates_clean": ["shyouth.net"], "verify": "render_pass"}
+{"province": "上海市", "slot": "省妇联", "query": "上海市妇女联合会", "url": "https://www.shwomen.org", "candidates": ["w3.org", "shwomen.org"], "candidates_clean": ["shwomen.org"], "verify": "render_pass"}
+{"province": "上海市", "slot": "省科协", "query": "上海市科学技术协会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "上海市", "slot": "省文联", "query": "上海市文学艺术界联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "上海市", "slot": "省作协", "query": "上海市作家协会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "上海市", "slot": "省工商联", "query": "上海市工商业联合会", "url": "http://www.sfic.org.cn", "candidates": ["w3.org", "sfic.org.cn"], "candidates_clean": ["sfic.org.cn"], "verify": "render_pass"}
+{"province": "上海市", "slot": "省残联", "query": "上海市残疾人联合会", "url": "https://www.shdpf.org.cn", "candidates": ["w3.org", "shdpf.org.cn"], "candidates_clean": ["shdpf.org.cn"], "verify": "pass"}
+{"province": "上海市", "slot": "省贸促会", "query": "上海市贸促会", "url": "https://www.cpitsh.org", "candidates": ["w3.org", "cpitsh.org"], "candidates_clean": ["cpitsh.org"], "verify": "render_pass"}
+{"province": "上海市", "slot": "省红十字会", "query": "上海市红十字会", "url": "https://www.redcross-sha.org.cn", "candidates": ["w3.org", "redcross-sha.org.cn"], "candidates_clean": ["redcross-sha.org.cn"], "verify": "pass"}
+{"province": "江苏省", "slot": "省总工会", "query": "江苏省总工会", "url": "https://www.jsgh.org", "candidates": ["w3.org", "jsgh.org"], "candidates_clean": ["jsgh.org"], "verify": "pass"}
+{"province": "江苏省", "slot": "团省委", "query": "共青团江苏省委", "url": "", "candidates": ["w3.org", "jiangsugqt.org.cn"], "candidates_clean": []}
+{"province": "江苏省", "slot": "省妇联", "query": "江苏省妇女联合会", "url": "", "candidates": ["w3.org", "jsnxetd.org.cn"], "candidates_clean": ["jsnxetd.org.cn"]}
+{"province": "江苏省", "slot": "省科协", "query": "江苏省科学技术协会", "url": "https://www.jskx.org.cn", "candidates": ["w3.org", "jskx.org.cn"], "candidates_clean": ["jskx.org.cn"], "verify": "render_pass"}
+{"province": "江苏省", "slot": "省文联", "query": "江苏省文学艺术界联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "江苏省", "slot": "省作协", "query": "江苏省作家协会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "江苏省", "slot": "省工商联", "query": "江苏省工商业联合会", "url": "https://www.jssh.org.cn", "candidates": ["w3.org", "jssh.org.cn"], "candidates_clean": ["jssh.org.cn"], "verify": "pass"}
+{"province": "江苏省", "slot": "省残联", "query": "江苏省残疾人联合会", "url": "", "candidates": ["w3.org", "cdpf.org.cn"], "candidates_clean": []}
+{"province": "江苏省", "slot": "省贸促会", "query": "江苏省贸促会", "url": "https://www.ccpitjs.org", "candidates": ["w3.org", "ccpitjs.org"], "candidates_clean": ["ccpitjs.org"], "verify": "pass"}
+{"province": "江苏省", "slot": "省红十字会", "query": "江苏省红十字会", "url": "", "candidates": ["w3.org", "jsredcross.org.cn"], "candidates_clean": []}
+{"province": "浙江省", "slot": "省总工会", "query": "浙江省总工会", "url": "https://www.zjftu.org", "candidates": ["w3.org", "zjftu.org"], "candidates_clean": ["zjftu.org"], "verify": "pass"}
+{"province": "浙江省", "slot": "团省委", "query": "共青团浙江省委", "url": "https://www.zjyouth.org.cn", "candidates": ["w3.org", "zjyouth.org.cn"], "candidates_clean": ["zjyouth.org.cn"], "verify": "pass"}
+{"province": "浙江省", "slot": "省妇联", "query": "浙江省妇女联合会", "url": "", "candidates": ["w3.org", "zjswomen.org.cn"], "candidates_clean": []}
+{"province": "浙江省", "slot": "省科协", "query": "浙江省科学技术协会", "url": "https://www.zast.org.cn", "candidates": ["w3.org", "zast.org.cn"], "candidates_clean": ["zast.org.cn"], "verify": "render_pass"}
+{"province": "浙江省", "slot": "省文联", "query": "浙江省文学艺术界联合会", "url": "", "candidates": ["w3.org", "zjzj.org"], "candidates_clean": ["zjzj.org"], "verify": "render_fail"}
+{"province": "浙江省", "slot": "省作协", "query": "浙江省作家协会", "url": "https://www.zjzj.org", "candidates": ["w3.org", "zjzj.org"], "candidates_clean": ["zjzj.org"], "verify": "render_pass"}
+{"province": "浙江省", "slot": "省工商联", "query": "浙江省工商业联合会", "url": "https://www.zjfic.org.cn", "candidates": ["w3.org", "zjfic.org.cn"], "candidates_clean": ["zjfic.org.cn"], "verify": "render_pass"}
+{"province": "浙江省", "slot": "省残联", "query": "浙江省残疾人联合会", "url": "https://www.zjdpf.org.cn", "candidates": ["w3.org", "zjdpf.org.cn"], "candidates_clean": ["zjdpf.org.cn"], "verify": "pass"}
+{"province": "浙江省", "slot": "省贸促会", "query": "浙江省贸促会", "url": "", "candidates": ["w3.org", "ccpit.org"], "candidates_clean": []}
+{"province": "浙江省", "slot": "省红十字会", "query": "浙江省红十字会", "url": "", "candidates": ["w3.org", "zjredcross.org.cn"], "candidates_clean": []}
+{"province": "安徽省", "slot": "省总工会", "query": "安徽省总工会", "url": "", "candidates": ["w3.org", "ahghw.org.cn"], "candidates_clean": ["ahghw.org.cn"]}
+{"province": "安徽省", "slot": "团省委", "query": "共青团安徽省委", "url": "https://www.ahyouth.org.cn", "candidates": ["w3.org", "ahyouth.org.cn"], "candidates_clean": ["ahyouth.org.cn"], "verify": "render_pass"}
+{"province": "安徽省", "slot": "省妇联", "query": "安徽省妇女联合会", "url": "", "candidates": ["w3.org", "ahwomen.org.cn"], "candidates_clean": []}
+{"province": "安徽省", "slot": "省科协", "query": "安徽省科学技术协会", "url": "", "candidates": ["w3.org", "ahpst.net"], "candidates_clean": ["ahpst.net"]}
+{"province": "安徽省", "slot": "省文联", "query": "安徽省文学艺术界联合会", "url": "", "candidates": ["w3.org", "cflac.org.cn"], "candidates_clean": []}
+{"province": "安徽省", "slot": "省作协", "query": "安徽省作家协会", "url": "", "candidates": ["w3.org", "cnenc.net"], "candidates_clean": ["cnenc.net"], "verify": "title_mismatch"}
+{"province": "安徽省", "slot": "省工商联", "query": "安徽省工商业联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "安徽省", "slot": "省残联", "query": "安徽省残疾人联合会", "url": "https://www.ahdpf.org.cn", "candidates": ["w3.org", "ahdpf.org.cn", "cdpf.org.cn"], "candidates_clean": ["ahdpf.org.cn"], "verify": "pass"}
+{"province": "安徽省", "slot": "省贸促会", "query": "安徽省贸促会", "url": "https://www.ccpit-ah.org.cn", "candidates": ["w3.org", "ccpit-ah.org.cn"], "candidates_clean": ["ccpit-ah.org.cn"], "verify": "pass"}
+{"province": "安徽省", "slot": "省红十字会", "query": "安徽省红十字会", "url": "", "candidates": ["w3.org", "ahredcross.org.cn"], "candidates_clean": []}
+{"province": "福建省", "slot": "省总工会", "query": "福建省总工会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "福建省", "slot": "团省委", "query": "共青团福建省委", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "福建省", "slot": "省妇联", "query": "福建省妇女联合会", "url": "", "candidates": ["w3.org", "fjwomen.org.cn"], "candidates_clean": []}
+{"province": "福建省", "slot": "省科协", "query": "福建省科学技术协会", "url": "https://www.fjkx.org", "candidates": ["w3.org", "fjkx.org", "cast.org.cn"], "candidates_clean": ["fjkx.org"], "verify": "render_pass"}
+{"province": "福建省", "slot": "省文联", "query": "福建省文学艺术界联合会", "url": "", "candidates": ["w3.org", "cnenc.net"], "candidates_clean": ["cnenc.net"], "verify": "title_mismatch"}
+{"province": "福建省", "slot": "省作协", "query": "福建省作家协会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "福建省", "slot": "省工商联", "query": "福建省工商业联合会", "url": "https://www.fjgsl.org.cn", "candidates": ["w3.org", "fjgsl.org.cn"], "candidates_clean": ["fjgsl.org.cn"], "verify": "pass"}
+{"province": "福建省", "slot": "省残联", "query": "福建省残疾人联合会", "url": "", "candidates": ["w3.org", "1203.org"], "candidates_clean": ["1203.org"]}
+{"province": "福建省", "slot": "省贸促会", "query": "福建省贸促会", "url": "https://www.ccpitfujian.org", "candidates": ["w3.org", "ccpitfujian.org", "ccpitfujian.org.cn"], "candidates_clean": ["ccpitfujian.org", "ccpitfujian.org.cn"], "verify": "pass"}
+{"province": "福建省", "slot": "省红十字会", "query": "福建省红十字会", "url": "", "candidates": ["w3.org", "fjredcross.org.cn"], "candidates_clean": []}
+{"province": "江西省", "slot": "省总工会", "query": "江西省总工会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "江西省", "slot": "团省委", "query": "共青团江西省委", "url": "https://www.jxyouth.org.cn", "candidates": ["w3.org", "jxyouth.org.cn"], "candidates_clean": ["jxyouth.org.cn"], "verify": "pass_curl"}
+{"province": "江西省", "slot": "省妇联", "query": "江西省妇女联合会", "url": "", "candidates": ["w3.org", "jxwomen.org.cn"], "candidates_clean": []}
+{"province": "江西省", "slot": "省科协", "query": "江西省科学技术协会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "江西省", "slot": "省文联", "query": "江西省文学艺术界联合会", "url": "", "candidates": ["w3.org", "zzdh.net"], "candidates_clean": ["zzdh.net"], "verify": "title_mismatch"}
+{"province": "江西省", "slot": "省作协", "query": "江西省作家协会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "江西省", "slot": "省工商联", "query": "江西省工商业联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "江西省", "slot": "省残联", "query": "江西省残疾人联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "江西省", "slot": "省贸促会", "query": "江西省贸促会", "url": "https://www.ccpitjx.org.cn", "candidates": ["w3.org", "ccpitjx.org.cn", "ccpit.org"], "candidates_clean": ["ccpitjx.org.cn"], "verify": "pass_curl"}
+{"province": "江西省", "slot": "省红十字会", "query": "江西省红十字会", "url": "", "candidates": ["w3.org", "jxredcross.org.cn"], "candidates_clean": []}
+{"province": "山东省", "slot": "省总工会", "query": "山东省总工会", "url": "https://www.sdgh.org.cn", "candidates": ["w3.org", "sdgh.org.cn"], "candidates_clean": ["sdgh.org.cn"], "verify": "pass"}
+{"province": "山东省", "slot": "团省委", "query": "共青团山东省委", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "山东省", "slot": "省妇联", "query": "山东省妇女联合会", "url": "", "candidates": ["w3.org", "sdwomen.org.cn"], "candidates_clean": []}
+{"province": "山东省", "slot": "省科协", "query": "山东省科学技术协会", "url": "https://www.sdast.org.cn", "candidates": ["w3.org", "sdast.org.cn"], "candidates_clean": ["sdast.org.cn"], "verify": "pass"}
+{"province": "山东省", "slot": "省文联", "query": "山东省文学艺术界联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "山东省", "slot": "省作协", "query": "山东省作家协会", "url": "http://www.sdzj.org", "candidates": ["w3.org", "sdzj.org"], "candidates_clean": ["sdzj.org"], "verify": "pass"}
+{"province": "山东省", "slot": "省工商联", "query": "山东省工商业联合会", "url": "http://www.ficc.org.cn", "candidates": ["w3.org", "ficc.org.cn"], "candidates_clean": ["ficc.org.cn"], "verify": "render_pass"}
+{"province": "山东省", "slot": "省残联", "query": "山东省残疾人联合会", "url": "http://www.sddpf.org.cn", "candidates": ["w3.org", "sddpf.org.cn"], "candidates_clean": ["sddpf.org.cn"], "verify": "pass"}
+{"province": "山东省", "slot": "省贸促会", "query": "山东省贸促会", "url": "", "candidates": ["w3.org", "ccpit.org"], "candidates_clean": []}
+{"province": "山东省", "slot": "省红十字会", "query": "山东省红十字会", "url": "", "candidates": ["w3.org", "sdredcross.org.cn"], "candidates_clean": []}
+{"province": "河南省", "slot": "省总工会", "query": "河南省总工会", "url": "https://www.hngh.org", "candidates": ["w3.org", "hngh.org"], "candidates_clean": ["hngh.org"], "verify": "render_pass"}
+{"province": "河南省", "slot": "团省委", "query": "共青团河南省委", "url": "https://www.hnyouth.org.cn", "candidates": ["w3.org", "hnyouth.org.cn"], "candidates_clean": ["hnyouth.org.cn"], "verify": "pass"}
+{"province": "河南省", "slot": "省妇联", "query": "河南省妇女联合会", "url": "", "candidates": ["w3.org", "women.org.cn"], "candidates_clean": []}
+{"province": "河南省", "slot": "省科协", "query": "河南省科学技术协会", "url": "http://www.hast.net", "candidates": ["w3.org", "hast.net"], "candidates_clean": ["hast.net"], "verify": "uncertain"}
+{"province": "河南省", "slot": "省文联", "query": "河南省文学艺术界联合会", "url": "http://www.hnwy.org.cn", "candidates": ["w3.org", "hnwy.org.cn"], "candidates_clean": ["hnwy.org.cn"], "verify": "pass"}
+{"province": "河南省", "slot": "省作协", "query": "河南省作家协会", "url": "http://www.hnwy.org.cn", "candidates": ["w3.org", "hnwy.org.cn"], "candidates_clean": ["hnwy.org.cn"], "verify": "pass"}
+{"province": "河南省", "slot": "省工商联", "query": "河南省工商业联合会", "url": "https://www.hngsl.org.cn", "candidates": ["w3.org", "hngsl.org.cn", "xhnr.net"], "candidates_clean": ["hngsl.org.cn", "xhnr.net"], "verify": "render_pass"}
+{"province": "河南省", "slot": "省残联", "query": "河南省残疾人联合会", "url": "https://www.henancjr.org.cn", "candidates": ["w3.org", "henancjr.org.cn", "cdpf.org.cn"], "candidates_clean": ["henancjr.org.cn"], "verify": "pass"}
+{"province": "河南省", "slot": "省贸促会", "query": "河南省贸促会", "url": "", "candidates": ["w3.org", "ccpithenan.org.cn", "ccpit.org"], "candidates_clean": ["ccpithenan.org.cn"]}
+{"province": "河南省", "slot": "省红十字会", "query": "河南省红十字会", "url": "https://www.haredcross.org", "candidates": ["w3.org", "haredcross.org"], "candidates_clean": ["haredcross.org"], "verify": "pass"}
+{"province": "湖北省", "slot": "省总工会", "query": "湖北省总工会", "url": "https://www.hbzgh.org.cn", "candidates": ["w3.org", "hbzgh.org.cn"], "candidates_clean": ["hbzgh.org.cn"], "verify": "pass"}
+{"province": "湖北省", "slot": "团省委", "query": "共青团湖北省委", "url": "", "candidates": ["w3.org", "hbgqt.org.cn", "jzgqt.org.cn"], "candidates_clean": []}
+{"province": "湖北省", "slot": "省妇联", "query": "湖北省妇女联合会", "url": "", "candidates": ["w3.org", "women.org.cn"], "candidates_clean": []}
+{"province": "湖北省", "slot": "省科协", "query": "湖北省科学技术协会", "url": "https://www.hbkx.org.cn", "candidates": ["w3.org", "hbkx.org.cn"], "candidates_clean": ["hbkx.org.cn"], "verify": "pass"}
+{"province": "湖北省", "slot": "省文联", "query": "湖北省文学艺术界联合会", "url": "https://www.hbwy.org.cn", "candidates": ["w3.org", "hbwy.org.cn"], "candidates_clean": ["hbwy.org.cn"], "verify": "pass"}
+{"province": "湖北省", "slot": "省作协", "query": "湖北省作家协会", "url": "https://www.hbzjw.org.cn", "candidates": ["w3.org", "hbzjw.org.cn"], "candidates_clean": ["hbzjw.org.cn"], "verify": "render_pass"}
+{"province": "湖北省", "slot": "省工商联", "query": "湖北省工商业联合会", "url": "", "candidates": ["w3.org", "yeah.net"], "candidates_clean": ["yeah.net"], "verify": "title_mismatch"}
+{"province": "湖北省", "slot": "省残联", "query": "湖北省残疾人联合会", "url": "http://www.hbdpf.org.cn", "candidates": ["w3.org", "hbdpf.org.cn"], "candidates_clean": ["hbdpf.org.cn"], "verify": "pass"}
+{"province": "湖北省", "slot": "省贸促会", "query": "湖北省贸促会", "url": "", "candidates": ["w3.org", "hbccpit.org", "ccpit.org"], "candidates_clean": []}
+{"province": "湖北省", "slot": "省红十字会", "query": "湖北省红十字会", "url": "", "candidates": ["w3.org", "hbsredcross.org.cn"], "candidates_clean": []}
+{"province": "湖南省", "slot": "省总工会", "query": "湖南省总工会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "湖南省", "slot": "团省委", "query": "共青团湖南省委", "url": "", "candidates": ["w3.org", "hngqt.org.cn"], "candidates_clean": []}
+{"province": "湖南省", "slot": "省妇联", "query": "湖南省妇女联合会", "url": "", "candidates": ["w3.org", "hnwomen.org.cn"], "candidates_clean": []}
+{"province": "湖南省", "slot": "省科协", "query": "湖南省科学技术协会", "url": "https://www.hnast.org.cn", "candidates": ["w3.org", "hnast.org.cn"], "candidates_clean": ["hnast.org.cn"], "verify": "pass"}
+{"province": "湖南省", "slot": "省文联", "query": "湖南省文学艺术界联合会", "url": "", "candidates": ["w3.org", "cdswl.org.cn"], "candidates_clean": ["cdswl.org.cn"]}
+{"province": "湖南省", "slot": "省作协", "query": "湖南省作家协会", "url": "https://www.zjzj.org", "candidates": ["w3.org", "zjzj.org"], "candidates_clean": ["zjzj.org"], "verify": "render_pass"}
+{"province": "湖南省", "slot": "省工商联", "query": "湖南省工商业联合会", "url": "http://www.hnsfic.org.cn", "candidates": ["w3.org", "hnsfic.org.cn"], "candidates_clean": ["hnsfic.org.cn"], "verify": "pass"}
+{"province": "湖南省", "slot": "省残联", "query": "湖南省残疾人联合会", "url": "https://www.hndpf.org", "candidates": ["w3.org", "hndpf.org", "cdpf.org.cn"], "candidates_clean": ["hndpf.org"], "verify": "pass"}
+{"province": "湖南省", "slot": "省贸促会", "query": "湖南省贸促会", "url": "", "candidates": ["w3.org", "hnccpit.org"], "candidates_clean": []}
+{"province": "湖南省", "slot": "省红十字会", "query": "湖南省红十字会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "广东省", "slot": "省总工会", "query": "广东省总工会", "url": "https://www.gdftu.org.cn", "candidates": ["w3.org", "gdftu.org.cn"], "candidates_clean": ["gdftu.org.cn"], "verify": "pass"}
+{"province": "广东省", "slot": "团省委", "query": "共青团广东省委", "url": "https://www.gdcyl.org", "candidates": ["w3.org", "gdcyl.org"], "candidates_clean": ["gdcyl.org"], "verify": "pass"}
+{"province": "广东省", "slot": "省妇联", "query": "广东省妇女联合会", "url": "", "candidates": ["w3.org", "gdwomen.org.cn"], "candidates_clean": []}
+{"province": "广东省", "slot": "省科协", "query": "广东省科学技术协会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "广东省", "slot": "省文联", "query": "广东省文学艺术界联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "广东省", "slot": "省作协", "query": "广东省作家协会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "广东省", "slot": "省工商联", "query": "广东省工商业联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "广东省", "slot": "省残联", "query": "广东省残疾人联合会", "url": "https://www.gddpf.org.cn", "candidates": ["w3.org", "gddpf.org.cn", "cdpf.org.cn"], "candidates_clean": ["gddpf.org.cn"], "verify": "pass"}
+{"province": "广东省", "slot": "省贸促会", "query": "广东省贸促会", "url": "", "candidates": ["w3.org", "ccpit.org", "gzccpit.org.cn"], "candidates_clean": []}
+{"province": "广东省", "slot": "省红十字会", "query": "广东省红十字会", "url": "", "candidates": ["w3.org", "gdsredcross.org.cn"], "candidates_clean": []}
+{"province": "广西壮族自治区", "slot": "省总工会", "query": "广西壮族自治区总工会", "url": "https://www.gxftu.org", "candidates": ["w3.org", "gxftu.org"], "candidates_clean": ["gxftu.org"], "verify": "pass"}
+{"province": "广西壮族自治区", "slot": "团省委", "query": "共青团广西省委", "url": "http://www.ccyl.org.cn", "candidates": ["w3.org", "gxgqt.org.cn", "ccyl.org.cn"], "candidates_clean": ["ccyl.org.cn"], "verify": "pass"}
+{"province": "广西壮族自治区", "slot": "省妇联", "query": "广西壮族自治区妇女联合会", "url": "", "candidates": ["w3.org", "gxwomen.org.cn"], "candidates_clean": []}
+{"province": "广西壮族自治区", "slot": "省科协", "query": "广西壮族自治区科学技术协会", "url": "http://www.gxast.org.cn", "candidates": ["w3.org", "gxast.org.cn"], "candidates_clean": ["gxast.org.cn"], "verify": "pass"}
+{"province": "广西壮族自治区", "slot": "省文联", "query": "广西壮族自治区文学艺术界联合会", "url": "", "candidates": ["w3.org", "imflac.org.cn"], "candidates_clean": ["imflac.org.cn"]}
+{"province": "广西壮族自治区", "slot": "省作协", "query": "广西壮族自治区作家协会", "url": "", "candidates": ["w3.org", "xinhua.org"], "candidates_clean": ["xinhua.org"], "verify": "title_mismatch"}
+{"province": "广西壮族自治区", "slot": "省工商联", "query": "广西壮族自治区工商业联合会", "url": "https://www.gxfic.org.cn", "candidates": ["w3.org", "gxfic.org.cn"], "candidates_clean": ["gxfic.org.cn"], "verify": "render_pass"}
+{"province": "广西壮族自治区", "slot": "省残联", "query": "广西壮族自治区残疾人联合会", "url": "http://www.gxdpf.org.cn", "candidates": ["w3.org", "gxdpf.org.cn"], "candidates_clean": ["gxdpf.org.cn"], "verify": "pass"}
+{"province": "广西壮族自治区", "slot": "省贸促会", "query": "广西壮族自治区贸促会", "url": "https://www.ccpitgx.org", "candidates": ["w3.org", "ccpitgx.org"], "candidates_clean": ["ccpitgx.org"], "verify": "pass"}
+{"province": "广西壮族自治区", "slot": "省红十字会", "query": "广西壮族自治区红十字会", "url": "", "candidates": ["w3.org", "gxredcross.org.cn"], "candidates_clean": []}
+{"province": "海南省", "slot": "省总工会", "query": "海南省总工会", "url": "https://www.hnszgh.org", "candidates": ["w3.org", "hnszgh.org"], "candidates_clean": ["hnszgh.org"], "verify": "pass"}
+{"province": "海南省", "slot": "团省委", "query": "共青团海南省委", "url": "https://www.zyhn.org.cn", "candidates": ["w3.org", "zyhn.org.cn"], "candidates_clean": ["zyhn.org.cn"], "verify": "pass"}
+{"province": "海南省", "slot": "省妇联", "query": "海南省妇女联合会", "url": "http://www.hnnxw.org.cn", "candidates": ["w3.org", "hnnxw.org.cn"], "candidates_clean": ["hnnxw.org.cn"], "verify": "pass"}
+{"province": "海南省", "slot": "省科协", "query": "海南省科学技术协会", "url": "https://www.hainanast.org.cn", "candidates": ["w3.org", "hainanast.org.cn"], "candidates_clean": ["hainanast.org.cn"], "verify": "pass"}
+{"province": "海南省", "slot": "省文联", "query": "海南省文学艺术界联合会", "url": "https://www.hnwenyi.net", "candidates": ["w3.org", "hnwenyi.net"], "candidates_clean": ["hnwenyi.net"], "verify": "pass"}
+{"province": "海南省", "slot": "省作协", "query": "海南省作家协会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "海南省", "slot": "省工商联", "query": "海南省工商业联合会", "url": "http://www.hnfic.org.cn", "candidates": ["w3.org", "hnfic.org.cn"], "candidates_clean": ["hnfic.org.cn"], "verify": "pass"}
+{"province": "海南省", "slot": "省残联", "query": "海南省残疾人联合会", "url": "https://www.hidpf.org.cn", "candidates": ["w3.org", "hidpf.org.cn"], "candidates_clean": ["hidpf.org.cn"], "verify": "pass"}
+{"province": "海南省", "slot": "省贸促会", "query": "海南省贸促会", "url": "http://www.ccpithn.org", "candidates": ["w3.org", "ccpithn.org", "ccpit.org"], "candidates_clean": ["ccpithn.org"], "verify": "pass"}
+{"province": "海南省", "slot": "省红十字会", "query": "海南省红十字会", "url": "https://www.blood.org.cn", "candidates": ["w3.org", "hainanredcross.org.cn", "blood.org.cn"], "candidates_clean": ["blood.org.cn"], "verify": "render_pass"}
+{"province": "重庆市", "slot": "省总工会", "query": "重庆市总工会", "url": "", "candidates": ["w3.org", "cqgh.org"], "candidates_clean": ["cqgh.org"]}
+{"province": "重庆市", "slot": "团省委", "query": "共青团重庆省委", "url": "", "candidates": ["w3.org", "cqyl.org.cn"], "candidates_clean": ["cqyl.org.cn"]}
+{"province": "重庆市", "slot": "省妇联", "query": "重庆市妇女联合会", "url": "", "candidates": ["w3.org", "cqwomen.org.cn", "women.org.cn"], "candidates_clean": []}
+{"province": "重庆市", "slot": "省科协", "query": "重庆市科学技术协会", "url": "", "candidates": ["w3.org", "cast.org.cn"], "candidates_clean": []}
+{"province": "重庆市", "slot": "省文联", "query": "重庆市文学艺术界联合会", "url": "", "candidates": ["w3.org", "cqwl.org"], "candidates_clean": ["cqwl.org"]}
+{"province": "重庆市", "slot": "省作协", "query": "重庆市作家协会", "url": "https://www.chinadas.net", "candidates": ["w3.org", "chinadas.net"], "candidates_clean": ["chinadas.net"], "verify": "uncertain"}
+{"province": "重庆市", "slot": "省工商联", "query": "重庆市工商业联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "重庆市", "slot": "省残联", "query": "重庆市残疾人联合会", "url": "", "candidates": ["w3.org", "cqdpf.org.cn", "cdpf.org.cn"], "candidates_clean": ["cqdpf.org.cn"]}
+{"province": "重庆市", "slot": "省贸促会", "query": "重庆市贸促会", "url": "", "candidates": ["w3.org", "ccpitcq.org.cn", "ccpit.org"], "candidates_clean": ["ccpitcq.org.cn"]}
+{"province": "重庆市", "slot": "省红十字会", "query": "重庆市红十字会", "url": "", "candidates": ["w3.org", "cqredcross.org.cn"], "candidates_clean": []}
+{"province": "四川省", "slot": "省总工会", "query": "四川省总工会", "url": "https://www.scgh.org", "candidates": ["w3.org", "scgh.org"], "candidates_clean": ["scgh.org"], "verify": "pass"}
+{"province": "四川省", "slot": "团省委", "query": "共青团四川省委", "url": "", "candidates": ["w3.org", "zzdh.net"], "candidates_clean": ["zzdh.net"], "verify": "title_mismatch"}
+{"province": "四川省", "slot": "省妇联", "query": "四川省妇女联合会", "url": "https://www.scfl.org.cn", "candidates": ["w3.org", "scfl.org.cn"], "candidates_clean": ["scfl.org.cn"], "verify": "render_pass"}
+{"province": "四川省", "slot": "省科协", "query": "四川省科学技术协会", "url": "https://www.sckx.org.cn", "candidates": ["w3.org", "sckx.org.cn"], "candidates_clean": ["sckx.org.cn"], "verify": "pass"}
+{"province": "四川省", "slot": "省文联", "query": "四川省文学艺术界联合会", "url": "", "candidates": ["w3.org", "newssc.org"], "candidates_clean": ["newssc.org"], "verify": "title_mismatch"}
+{"province": "四川省", "slot": "省作协", "query": "四川省作家协会", "url": "", "candidates": ["w3.org", "sczjw.net"], "candidates_clean": ["sczjw.net"]}
+{"province": "四川省", "slot": "省工商联", "query": "四川省工商业联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "四川省", "slot": "省残联", "query": "四川省残疾人联合会", "url": "", "candidates": ["w3.org", "scdpf.org.cn"], "candidates_clean": []}
+{"province": "四川省", "slot": "省贸促会", "query": "四川省贸促会", "url": "https://www.ccpit-sichuan.org", "candidates": ["w3.org", "ccpit-sichuan.org"], "candidates_clean": ["ccpit-sichuan.org"], "verify": "pass"}
+{"province": "四川省", "slot": "省红十字会", "query": "四川省红十字会", "url": "", "candidates": ["w3.org", "scredcross.org.cn"], "candidates_clean": []}
+{"province": "贵州省", "slot": "省总工会", "query": "贵州省总工会", "url": "https://www.guizgh.org.cn", "candidates": ["w3.org", "guizgh.org.cn"], "candidates_clean": ["guizgh.org.cn"], "verify": "pass_curl"}
+{"province": "贵州省", "slot": "团省委", "query": "共青团贵州省委", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "贵州省", "slot": "省妇联", "query": "贵州省妇女联合会", "url": "", "candidates": ["w3.org", "gzswomen.org.cn"], "candidates_clean": []}
+{"province": "贵州省", "slot": "省科协", "query": "贵州省科学技术协会", "url": "http://www.gast.org.cn", "candidates": ["w3.org", "gast.org.cn"], "candidates_clean": ["gast.org.cn"], "verify": "pass"}
+{"province": "贵州省", "slot": "省文联", "query": "贵州省文学艺术界联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "贵州省", "slot": "省作协", "query": "贵州省作家协会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "贵州省", "slot": "省工商联", "query": "贵州省工商业联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "贵州省", "slot": "省残联", "query": "贵州省残疾人联合会", "url": "http://www.gzsdpf.org.cn", "candidates": ["w3.org", "gzsdpf.org.cn", "cdpf.org.cn"], "candidates_clean": ["gzsdpf.org.cn"], "verify": "pass"}
+{"province": "贵州省", "slot": "省贸促会", "query": "贵州省贸促会", "url": "https://www.ccpitguizhou.org.cn", "candidates": ["w3.org", "ccpitguizhou.org.cn", "ccpit.org"], "candidates_clean": ["ccpitguizhou.org.cn"], "verify": "pass"}
+{"province": "贵州省", "slot": "省红十字会", "query": "贵州省红十字会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "云南省", "slot": "省总工会", "query": "云南省总工会", "url": "https://www.ynzgh.org.cn", "candidates": ["w3.org", "ynzgh.org.cn"], "candidates_clean": ["ynzgh.org.cn"], "verify": "pass"}
+{"province": "云南省", "slot": "团省委", "query": "共青团云南省委", "url": "", "candidates": ["w3.org", "yngqt.org.cn"], "candidates_clean": []}
+{"province": "云南省", "slot": "省妇联", "query": "云南省妇女联合会", "url": "", "candidates": ["w3.org", "women.org.cn"], "candidates_clean": []}
+{"province": "云南省", "slot": "省科协", "query": "云南省科学技术协会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "云南省", "slot": "省文联", "query": "云南省文学艺术界联合会", "url": "https://www.ynwy.org.cn", "candidates": ["w3.org", "ynwy.org.cn"], "candidates_clean": ["ynwy.org.cn"], "verify": "pass"}
+{"province": "云南省", "slot": "省作协", "query": "云南省作家协会", "url": "https://www.ynwy.org.cn", "candidates": ["w3.org", "ynwy.org.cn"], "candidates_clean": ["ynwy.org.cn"], "verify": "render_pass"}
+{"province": "云南省", "slot": "省工商联", "query": "云南省工商业联合会", "url": "https://www.ynsgsl.org.cn", "candidates": ["w3.org", "ynsgsl.org.cn"], "candidates_clean": ["ynsgsl.org.cn"], "verify": "pass"}
+{"province": "云南省", "slot": "省残联", "query": "云南省残疾人联合会", "url": "https://www.yncl.org.cn", "candidates": ["w3.org", "yncl.org.cn"], "candidates_clean": ["yncl.org.cn"], "verify": "pass"}
+{"province": "云南省", "slot": "省贸促会", "query": "云南省贸促会", "url": "", "candidates": ["w3.org", "ccpit.org"], "candidates_clean": []}
+{"province": "云南省", "slot": "省红十字会", "query": "云南省红十字会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "西藏自治区", "slot": "省总工会", "query": "西藏自治区总工会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "西藏自治区", "slot": "团省委", "query": "共青团西藏省委", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "西藏自治区", "slot": "省妇联", "query": "西藏自治区妇女联合会", "url": "", "candidates": ["w3.org", "sygoc.org.cn"], "candidates_clean": ["sygoc.org.cn"], "verify": "render_fail"}
+{"province": "西藏自治区", "slot": "省科协", "query": "西藏自治区科学技术协会", "url": "", "candidates": ["w3.org", "cast.org.cn"], "candidates_clean": []}
+{"province": "西藏自治区", "slot": "省文联", "query": "西藏自治区文学艺术界联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "西藏自治区", "slot": "省作协", "query": "西藏自治区作家协会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "西藏自治区", "slot": "省工商联", "query": "西藏自治区工商业联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "西藏自治区", "slot": "省残联", "query": "西藏自治区残疾人联合会", "url": "", "candidates": ["w3.org", "cdpf.org.cn"], "candidates_clean": []}
+{"province": "西藏自治区", "slot": "省贸促会", "query": "西藏自治区贸促会", "url": "", "candidates": ["w3.org", "ccpit.org", "xzzrzy.org.cn"], "candidates_clean": ["xzzrzy.org.cn"], "verify": "render_fail"}
+{"province": "西藏自治区", "slot": "省红十字会", "query": "西藏自治区红十字会", "url": "", "candidates": ["w3.org", "xjredcross.org.cn"], "candidates_clean": []}
+{"province": "陕西省", "slot": "省总工会", "query": "陕西省总工会", "url": "https://www.shxgh.org", "candidates": ["w3.org", "shxgh.org"], "candidates_clean": ["shxgh.org"], "verify": "pass"}
+{"province": "陕西省", "slot": "团省委", "query": "共青团陕西省委", "url": "http://www.sxstx.org.cn", "candidates": ["w3.org", "sxgqt.org.cn", "sxstx.org.cn"], "candidates_clean": ["sxstx.org.cn"], "verify": "render_pass"}
+{"province": "陕西省", "slot": "省妇联", "query": "陕西省妇女联合会", "url": "", "candidates": ["w3.org", "sxwomen.org.cn"], "candidates_clean": []}
+{"province": "陕西省", "slot": "省科协", "query": "陕西省科学技术协会", "url": "https://www.snast.org.cn", "candidates": ["w3.org", "snast.org.cn"], "candidates_clean": ["snast.org.cn"], "verify": "pass"}
+{"province": "陕西省", "slot": "省文联", "query": "陕西省文学艺术界联合会", "url": "https://www.sxwl.org.cn", "candidates": ["w3.org", "sxwl.org.cn"], "candidates_clean": ["sxwl.org.cn"], "verify": "pass"}
+{"province": "陕西省", "slot": "省作协", "query": "陕西省作家协会", "url": "https://www.sxzjw.org", "candidates": ["w3.org", "sxzjw.org"], "candidates_clean": ["sxzjw.org"], "verify": "pass"}
+{"province": "陕西省", "slot": "省工商联", "query": "陕西省工商业联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "陕西省", "slot": "省残联", "query": "陕西省残疾人联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "陕西省", "slot": "省贸促会", "query": "陕西省贸促会", "url": "https://www.ccpit-shaanxi.org.cn", "candidates": ["w3.org", "ccpit-shaanxi.org.cn"], "candidates_clean": ["ccpit-shaanxi.org.cn"], "verify": "pass"}
+{"province": "陕西省", "slot": "省红十字会", "query": "陕西省红十字会", "url": "", "candidates": ["w3.org", "snredcross.org.cn"], "candidates_clean": []}
+{"province": "甘肃省", "slot": "省总工会", "query": "甘肃省总工会", "url": "https://www.gsgh.org.cn", "candidates": ["w3.org", "gsgh.org.cn", "tsszgh.org.cn"], "candidates_clean": ["gsgh.org.cn", "tsszgh.org.cn"], "verify": "pass"}
+{"province": "甘肃省", "slot": "团省委", "query": "共青团甘肃省委", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "甘肃省", "slot": "省妇联", "query": "甘肃省妇女联合会", "url": "", "candidates": ["w3.org", "gswomen.org.cn"], "candidates_clean": []}
+{"province": "甘肃省", "slot": "省科协", "query": "甘肃省科学技术协会", "url": "https://www.gsast.org.cn", "candidates": ["w3.org", "gsast.org.cn", "cast.org.cn"], "candidates_clean": ["gsast.org.cn"], "verify": "pass"}
+{"province": "甘肃省", "slot": "省文联", "query": "甘肃省文学艺术界联合会", "url": "http://www.gsarts.org.cn", "candidates": ["w3.org", "gsarts.org.cn"], "candidates_clean": ["gsarts.org.cn"], "verify": "pass"}
+{"province": "甘肃省", "slot": "省作协", "query": "甘肃省作家协会", "url": "http://www.gsarts.org.cn", "candidates": ["w3.org", "gsarts.org.cn"], "candidates_clean": ["gsarts.org.cn"], "verify": "render_pass"}
+{"province": "甘肃省", "slot": "省工商联", "query": "甘肃省工商业联合会", "url": "", "candidates": ["w3.org", "cngsda.net"], "candidates_clean": ["cngsda.net"]}
+{"province": "甘肃省", "slot": "省残联", "query": "甘肃省残疾人联合会", "url": "https://www.gsdpf.org.cn", "candidates": ["w3.org", "gsdpf.org.cn", "gscjrjy.org.cn", "cdpf.org.cn"], "candidates_clean": ["gsdpf.org.cn", "gscjrjy.org.cn"], "verify": "pass"}
+{"province": "甘肃省", "slot": "省贸促会", "query": "甘肃省贸促会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "甘肃省", "slot": "省红十字会", "query": "甘肃省红十字会", "url": "", "candidates": ["w3.org", "gsredcross.org.cn"], "candidates_clean": []}
+{"province": "青海省", "slot": "省总工会", "query": "青海省总工会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "青海省", "slot": "团省委", "query": "共青团青海省委", "url": "", "candidates": ["w3.org", "qhgqt.org.cn"], "candidates_clean": []}
+{"province": "青海省", "slot": "省妇联", "query": "青海省妇女联合会", "url": "https://www.qhflh.org.cn", "candidates": ["w3.org", "qhflh.org.cn"], "candidates_clean": ["qhflh.org.cn"], "verify": "render_pass"}
+{"province": "青海省", "slot": "省科协", "query": "青海省科学技术协会", "url": "https://www.qast.org.cn", "candidates": ["w3.org", "qast.org.cn"], "candidates_clean": ["qast.org.cn"], "verify": "pass"}
+{"province": "青海省", "slot": "省文联", "query": "青海省文学艺术界联合会", "url": "http://www.qhwyw.org.cn", "candidates": ["w3.org", "qhwyw.org.cn"], "candidates_clean": ["qhwyw.org.cn"], "verify": "pass"}
+{"province": "青海省", "slot": "省作协", "query": "青海省作家协会", "url": "http://www.qhwyw.org.cn", "candidates": ["w3.org", "qhwyw.org.cn"], "candidates_clean": ["qhwyw.org.cn"], "verify": "pass"}
+{"province": "青海省", "slot": "省工商联", "query": "青海省工商业联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "青海省", "slot": "省残联", "query": "青海省残疾人联合会", "url": "", "candidates": ["w3.org", "qhcl.org.cn", "cdpf.org.cn"], "candidates_clean": ["qhcl.org.cn"]}
+{"province": "青海省", "slot": "省贸促会", "query": "青海省贸促会", "url": "", "candidates": ["w3.org", "ccpit.org"], "candidates_clean": []}
+{"province": "青海省", "slot": "省红十字会", "query": "青海省红十字会", "url": "", "candidates": ["w3.org", "qhredcross.org.cn"], "candidates_clean": []}
+{"province": "宁夏回族自治区", "slot": "省总工会", "query": "宁夏回族自治区总工会", "url": "https://www.nxzgh.org.cn", "candidates": ["w3.org", "nxzgh.org.cn"], "candidates_clean": ["nxzgh.org.cn"], "verify": "pass"}
+{"province": "宁夏回族自治区", "slot": "团省委", "query": "共青团宁夏省委", "url": "http://www.ccyl.org.cn", "candidates": ["w3.org", "ccyl.org.cn"], "candidates_clean": ["ccyl.org.cn"], "verify": "pass"}
+{"province": "宁夏回族自治区", "slot": "省妇联", "query": "宁夏回族自治区妇女联合会", "url": "", "candidates": ["w3.org", "nxwomen.org.cn", "women.org.cn"], "candidates_clean": []}
+{"province": "宁夏回族自治区", "slot": "省科协", "query": "宁夏回族自治区科学技术协会", "url": "http://www.nxdzkj.org.cn", "candidates": ["w3.org", "nxdzkj.org.cn", "cast.org.cn"], "candidates_clean": ["nxdzkj.org.cn"], "verify": "pass"}
+{"province": "宁夏回族自治区", "slot": "省文联", "query": "宁夏回族自治区文学艺术界联合会", "url": "http://www.nxwl.org.cn", "candidates": ["w3.org", "nxwl.org.cn"], "candidates_clean": ["nxwl.org.cn"], "verify": "render_pass"}
+{"province": "宁夏回族自治区", "slot": "省作协", "query": "宁夏回族自治区作家协会", "url": "http://www.nxwl.org.cn", "candidates": ["w3.org", "nxwl.org.cn"], "candidates_clean": ["nxwl.org.cn"], "verify": "render_pass"}
+{"province": "宁夏回族自治区", "slot": "省工商联", "query": "宁夏回族自治区工商业联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "宁夏回族自治区", "slot": "省残联", "query": "宁夏回族自治区残疾人联合会", "url": "https://www.ndpf.org.cn", "candidates": ["w3.org", "ndpf.org.cn", "cdpf.org.cn"], "candidates_clean": ["ndpf.org.cn"], "verify": "pass"}
+{"province": "宁夏回族自治区", "slot": "省贸促会", "query": "宁夏回族自治区贸促会", "url": "", "candidates": ["w3.org", "ccpit.org"], "candidates_clean": []}
+{"province": "宁夏回族自治区", "slot": "省红十字会", "query": "宁夏回族自治区红十字会", "url": "", "candidates": ["w3.org", "nxredcross.org.cn"], "candidates_clean": []}
+{"province": "新疆维吾尔自治区", "slot": "省总工会", "query": "新疆维吾尔自治区总工会", "url": "https://www.xjzgh.org.cn", "candidates": ["w3.org", "xjzgh.org.cn"], "candidates_clean": ["xjzgh.org.cn"], "verify": "pass"}
+{"province": "新疆维吾尔自治区", "slot": "团省委", "query": "共青团新疆省委", "url": "", "candidates": ["w3.org", "gqt.org.cn"], "candidates_clean": []}
+{"province": "新疆维吾尔自治区", "slot": "省妇联", "query": "新疆维吾尔自治区妇女联合会", "url": "", "candidates": ["w3.org", "xjwomen.org.cn", "women.org.cn"], "candidates_clean": []}
+{"province": "新疆维吾尔自治区", "slot": "省科协", "query": "新疆维吾尔自治区科学技术协会", "url": "https://www.xast.org.cn", "candidates": ["w3.org", "xast.org.cn"], "candidates_clean": ["xast.org.cn"], "verify": "pass"}
+{"province": "新疆维吾尔自治区", "slot": "省文联", "query": "新疆维吾尔自治区文学艺术界联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "新疆维吾尔自治区", "slot": "省作协", "query": "新疆维吾尔自治区作家协会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "新疆维吾尔自治区", "slot": "省工商联", "query": "新疆维吾尔自治区工商业联合会", "url": "", "candidates": ["w3.org", "acfic.org.cn"], "candidates_clean": []}
+{"province": "新疆维吾尔自治区", "slot": "省残联", "query": "新疆维吾尔自治区残疾人联合会", "url": "https://www.xjdpf.org.cn", "candidates": ["w3.org", "xjdpf.org.cn"], "candidates_clean": ["xjdpf.org.cn"], "verify": "pass"}
+{"province": "新疆维吾尔自治区", "slot": "省贸促会", "query": "新疆维吾尔自治区贸促会", "url": "https://www.ccpitxj.org.cn", "candidates": ["w3.org", "ccpitxj.org.cn"], "candidates_clean": ["ccpitxj.org.cn"], "verify": "pass"}
+{"province": "新疆维吾尔自治区", "slot": "省红十字会", "query": "新疆维吾尔自治区红十字会", "url": "", "candidates": ["w3.org", "xjredcross.org.cn"], "candidates_clean": []}
+{"province": "新疆生产建设兵团", "slot": "省总工会", "query": "新疆生产建设兵团总工会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "新疆生产建设兵团", "slot": "团省委", "query": "共青团新疆生产建设兵团省委", "url": "", "candidates": ["w3.org", "gqt.org.cn", "hbgqt.org.cn"], "candidates_clean": []}
+{"province": "新疆生产建设兵团", "slot": "省妇联", "query": "新疆生产建设兵团妇女联合会", "url": "", "candidates": ["w3.org", "women.org.cn"], "candidates_clean": []}
+{"province": "新疆生产建设兵团", "slot": "省科协", "query": "新疆生产建设兵团科学技术协会", "url": "https://www.bacsi.org.cn", "candidates": ["w3.org", "bacsi.org.cn", "cast.org.cn"], "candidates_clean": ["bacsi.org.cn"], "verify": "render_pass"}
+{"province": "新疆生产建设兵团", "slot": "省文联", "query": "新疆生产建设兵团文学艺术界联合会", "url": "", "candidates": ["w3.org", "cnenc.net"], "candidates_clean": ["cnenc.net"], "verify": "title_mismatch"}
+{"province": "新疆生产建设兵团", "slot": "省作协", "query": "新疆生产建设兵团作家协会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "新疆生产建设兵团", "slot": "省工商联", "query": "新疆生产建设兵团工商业联合会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "新疆生产建设兵团", "slot": "省残联", "query": "新疆生产建设兵团残疾人联合会", "url": "https://www.xjdpf.org.cn", "candidates": ["w3.org", "xjdpf.org.cn"], "candidates_clean": ["xjdpf.org.cn"], "verify": "pass"}
+{"province": "新疆生产建设兵团", "slot": "省贸促会", "query": "新疆生产建设兵团贸促会", "url": "", "candidates": ["w3.org", "ccpit.org"], "candidates_clean": []}
+{"province": "新疆生产建设兵团", "slot": "省红十字会", "query": "新疆生产建设兵团红十字会", "url": "", "candidates": ["w3.org"], "candidates_clean": []}
+{"province": "北京市", "slot": "省侨联", "query": "北京市归国华侨联合会", "url": "https://www.bjql.org.cn", "candidates": ["bjql.org.cn"], "candidates_clean": ["bjql.org.cn"], "verify": "pass"}
+{"province": "北京市", "slot": "省台联", "query": "北京市台湾同胞联谊会", "url": "https://www.bjstl.org.cn", "candidates": ["bjstl.org.cn"], "candidates_clean": ["bjstl.org.cn"], "verify": "pass"}
+{"province": "北京市", "slot": "省法学会", "query": "北京市法学会", "url": "https://www.bjfxh.org.cn", "candidates": ["bjfxh.org.cn"], "candidates_clean": ["bjfxh.org.cn"], "verify": "render_pass"}
+{"province": "北京市", "slot": "省记协", "query": "北京市新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "北京市", "slot": "省人民对外友好协会", "query": "北京市人民对外友好协会", "url": "http://www.bjyx.org.cn", "candidates": ["bjyx.org.cn"], "candidates_clean": ["bjyx.org.cn"], "verify": "pass"}
+{"province": "北京市", "slot": "省计划生育协会", "query": "北京市计划生育协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "北京市", "slot": "省欧美同学会", "query": "北京市欧美同学会", "url": "https://www.bjwrsa.org.cn", "candidates": ["bjwrsa.org.cn"], "candidates_clean": ["bjwrsa.org.cn"], "verify": "pass"}
+{"province": "天津市", "slot": "省侨联", "query": "天津市归国华侨联合会", "url": "https://www.tjql.org.cn", "candidates": ["tjql.org.cn", "tjql.org", "tjtzb.org.cn"], "candidates_clean": ["tjql.org.cn", "tjql.org", "tjtzb.org.cn"], "verify": "pass"}
+{"province": "天津市", "slot": "省台联", "query": "天津市台湾同胞联谊会", "url": "https://www.tjtzb.org.cn", "candidates": ["tjtzb.org.cn", "fjtv.net"], "candidates_clean": ["tjtzb.org.cn", "fjtv.net"], "verify": "render_pass"}
+{"province": "天津市", "slot": "省法学会", "query": "天津市法学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "天津市", "slot": "省记协", "query": "天津市新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "天津市", "slot": "省人民对外友好协会", "query": "天津市人民对外友好协会", "url": "", "candidates": ["xinhua.org"], "candidates_clean": ["xinhua.org"], "verify": "title_mismatch"}
+{"province": "天津市", "slot": "省计划生育协会", "query": "天津市计划生育协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "天津市", "slot": "省欧美同学会", "query": "天津市欧美同学会", "url": "", "candidates": ["tjtzb.org.cn"], "candidates_clean": ["tjtzb.org.cn"], "verify": "render_fail"}
+{"province": "河北省", "slot": "省侨联", "query": "河北省归国华侨联合会", "url": "http://www.hebeiql.org.cn", "candidates": ["hebeiql.org.cn"], "candidates_clean": ["hebeiql.org.cn"], "verify": "pass"}
+{"province": "河北省", "slot": "省台联", "query": "河北省台湾同胞联谊会", "url": "", "candidates": ["fjtv.net"], "candidates_clean": ["fjtv.net"], "verify": "manual_fail"}
+{"province": "河北省", "slot": "省法学会", "query": "河北省法学会", "url": "http://www.hbsfxh.org.cn", "candidates": ["hbsfxh.org.cn"], "candidates_clean": ["hbsfxh.org.cn"], "verify": "pass"}
+{"province": "河北省", "slot": "省记协", "query": "河北省新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "河北省", "slot": "省人民对外友好协会", "query": "河北省人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "河北省", "slot": "省计划生育协会", "query": "河北省计划生育协会", "url": "https://www.hebfpa.org.cn", "candidates": ["hebfpa.org.cn"], "candidates_clean": ["hebfpa.org.cn"], "verify": "pass"}
+{"province": "河北省", "slot": "省欧美同学会", "query": "河北省欧美同学会", "url": "https://www.wrsf.org.cn", "candidates": ["wrsf.org.cn"], "candidates_clean": ["wrsf.org.cn"], "verify": "render_pass"}
+{"province": "山西省", "slot": "省侨联", "query": "山西省归国华侨联合会", "url": "http://www.yqql.org.cn", "candidates": ["yqql.org.cn"], "candidates_clean": ["yqql.org.cn"], "verify": "pass"}
+{"province": "山西省", "slot": "省台联", "query": "山西省台湾同胞联谊会", "url": "https://www.zjtmtl.org.cn", "candidates": ["zjtmtl.org.cn", "fjtv.net"], "candidates_clean": ["zjtmtl.org.cn", "fjtv.net"], "verify": "pass"}
+{"province": "山西省", "slot": "省法学会", "query": "山西省法学会", "url": "http://www.shanxilawsociety.org.cn", "candidates": ["shanxilawsociety.org.cn"], "candidates_clean": ["shanxilawsociety.org.cn"], "verify": "pass"}
+{"province": "山西省", "slot": "省记协", "query": "山西省新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "山西省", "slot": "省人民对外友好协会", "query": "山西省人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "山西省", "slot": "省计划生育协会", "query": "山西省计划生育协会", "url": "http://www.sxsjsx.org.cn", "candidates": ["sxsjsx.org", "sxsjsx.org.cn"], "candidates_clean": ["sxsjsx.org", "sxsjsx.org.cn"], "verify": "pass"}
+{"province": "山西省", "slot": "省欧美同学会", "query": "山西省欧美同学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "内蒙古自治区", "slot": "省侨联", "query": "内蒙古自治区归国华侨联合会", "url": "https://www.nmgql.org.cn", "candidates": ["nmgql.org.cn"], "candidates_clean": ["nmgql.org.cn"], "verify": "pass"}
+{"province": "内蒙古自治区", "slot": "省台联", "query": "内蒙古自治区台湾同胞联谊会", "url": "", "candidates": ["banyuetan.org"], "candidates_clean": ["banyuetan.org"], "verify": "render_fail"}
+{"province": "内蒙古自治区", "slot": "省法学会", "query": "内蒙古自治区法学会", "url": "https://www.nmgfxh.org.cn", "candidates": ["nmgfxh.org.cn"], "candidates_clean": ["nmgfxh.org.cn"], "verify": "pass"}
+{"province": "内蒙古自治区", "slot": "省记协", "query": "内蒙古自治区新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "内蒙古自治区", "slot": "省人民对外友好协会", "query": "内蒙古自治区人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "内蒙古自治区", "slot": "省计划生育协会", "query": "内蒙古自治区计划生育协会", "url": "", "candidates": ["nmgfpa.org.cn"], "candidates_clean": ["nmgfpa.org.cn"]}
+{"province": "内蒙古自治区", "slot": "省欧美同学会", "query": "内蒙古自治区欧美同学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "辽宁省", "slot": "省侨联", "query": "辽宁省归国华侨联合会", "url": "http://www.lnsql.org.cn", "candidates": ["lnsql.org.cn"], "candidates_clean": ["lnsql.org.cn"], "verify": "pass"}
+{"province": "辽宁省", "slot": "省台联", "query": "辽宁省台湾同胞联谊会", "url": "", "candidates": ["fjtv.net"], "candidates_clean": ["fjtv.net"], "verify": "unreachable_drop"}
+{"province": "辽宁省", "slot": "省法学会", "query": "辽宁省法学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "辽宁省", "slot": "省记协", "query": "辽宁省新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "辽宁省", "slot": "省人民对外友好协会", "query": "辽宁省人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "辽宁省", "slot": "省计划生育协会", "query": "辽宁省计划生育协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "辽宁省", "slot": "省欧美同学会", "query": "辽宁省欧美同学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "吉林省", "slot": "省侨联", "query": "吉林省归国华侨联合会", "url": "", "candidates": ["jlsql.org"], "candidates_clean": ["jlsql.org"]}
+{"province": "吉林省", "slot": "省台联", "query": "吉林省台湾同胞联谊会", "url": "", "candidates": ["jltm.org.cn", "fjtv.net"], "candidates_clean": ["jltm.org.cn", "fjtv.net"], "verify": "render_fail"}
+{"province": "吉林省", "slot": "省法学会", "query": "吉林省法学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "吉林省", "slot": "省记协", "query": "吉林省新闻工作者协会", "url": "https://www.chinadas.net", "candidates": ["chinadas.net", "jljx.net"], "candidates_clean": ["chinadas.net", "jljx.net"], "verify": "uncertain"}
+{"province": "吉林省", "slot": "省人民对外友好协会", "query": "吉林省人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "吉林省", "slot": "省计划生育协会", "query": "吉林省计划生育协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "吉林省", "slot": "省欧美同学会", "query": "吉林省欧美同学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "黑龙江省", "slot": "省侨联", "query": "黑龙江省归国华侨联合会", "url": "http://www.hrbqiaolian.org.cn", "candidates": ["hljsql.org.cn", "hrbqiaolian.org.cn"], "candidates_clean": ["hljsql.org.cn", "hrbqiaolian.org.cn"], "verify": "pass_repick"}
+{"province": "黑龙江省", "slot": "省台联", "query": "黑龙江省台湾同胞联谊会", "url": "", "candidates": ["hljsql.org.cn", "fjtv.net"], "candidates_clean": ["hljsql.org.cn", "fjtv.net"], "verify": "render_fail"}
+{"province": "黑龙江省", "slot": "省法学会", "query": "黑龙江省法学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "黑龙江省", "slot": "省记协", "query": "黑龙江省新闻工作者协会", "url": "", "candidates": ["hljswl.org.cn"], "candidates_clean": ["hljswl.org.cn"]}
+{"province": "黑龙江省", "slot": "省人民对外友好协会", "query": "黑龙江省人民对外友好协会", "url": "", "candidates": ["hljvisa.org.cn"], "candidates_clean": ["hljvisa.org.cn"], "verify": "render_fail"}
+{"province": "黑龙江省", "slot": "省计划生育协会", "query": "黑龙江省计划生育协会", "url": "https://www.hljfpa.org.cn", "candidates": ["hljfpa.org.cn"], "candidates_clean": ["hljfpa.org.cn"], "verify": "pass"}
+{"province": "黑龙江省", "slot": "省欧美同学会", "query": "黑龙江省欧美同学会", "url": "http://www.horsa.org.cn", "candidates": ["horsa.org.cn", "china-sorsa.org"], "candidates_clean": ["horsa.org.cn", "china-sorsa.org"], "verify": "pass"}
+{"province": "上海市", "slot": "省侨联", "query": "上海市归国华侨联合会", "url": "", "candidates": ["shanghaiql.org"], "candidates_clean": ["shanghaiql.org"]}
+{"province": "上海市", "slot": "省台联", "query": "上海市台湾同胞联谊会", "url": "https://www.shtl.org.cn", "candidates": ["shtl.org.cn", "shanghai-taiwan.org"], "candidates_clean": ["shtl.org.cn", "shanghai-taiwan.org"], "verify": "pass"}
+{"province": "上海市", "slot": "省法学会", "query": "上海市法学会", "url": "", "candidates": ["sls.org.cn"], "candidates_clean": ["sls.org.cn"]}
+{"province": "上海市", "slot": "省记协", "query": "上海市新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "上海市", "slot": "省人民对外友好协会", "query": "上海市人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "上海市", "slot": "省计划生育协会", "query": "上海市计划生育协会", "url": "https://www.chinadas.net", "candidates": ["shfpa.org.cn", "chinadas.net"], "candidates_clean": ["shfpa.org.cn", "chinadas.net"], "verify": "uncertain"}
+{"province": "上海市", "slot": "省欧美同学会", "query": "上海市欧美同学会", "url": "", "candidates": ["china-sorsa.org"], "candidates_clean": ["china-sorsa.org"]}
+{"province": "江苏省", "slot": "省侨联", "query": "江苏省归国华侨联合会", "url": "https://www.sxql.org.cn", "candidates": ["sxql.org.cn"], "candidates_clean": ["sxql.org.cn"], "verify": "pass"}
+{"province": "江苏省", "slot": "省台联", "query": "江苏省台湾同胞联谊会", "url": "", "candidates": ["fjtv.net"], "candidates_clean": ["fjtv.net"], "verify": "unreachable_drop"}
+{"province": "江苏省", "slot": "省法学会", "query": "江苏省法学会", "url": "", "candidates": ["jsfxh.org"], "candidates_clean": ["jsfxh.org"]}
+{"province": "江苏省", "slot": "省记协", "query": "江苏省新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "江苏省", "slot": "省人民对外友好协会", "query": "江苏省人民对外友好协会", "url": "http://www.jafie.org", "candidates": ["jafie.org"], "candidates_clean": ["jafie.org"], "verify": "pass"}
+{"province": "江苏省", "slot": "省计划生育协会", "query": "江苏省计划生育协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "江苏省", "slot": "省欧美同学会", "query": "江苏省欧美同学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "浙江省", "slot": "省侨联", "query": "浙江省归国华侨联合会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "浙江省", "slot": "省台联", "query": "浙江省台湾同胞联谊会", "url": "https://www.zjtmtl.org.cn", "candidates": ["zjtmtl.org.cn"], "candidates_clean": ["zjtmtl.org.cn"], "verify": "pass"}
+{"province": "浙江省", "slot": "省法学会", "query": "浙江省法学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "浙江省", "slot": "省记协", "query": "浙江省新闻工作者协会", "url": "https://www.zja.org.cn", "candidates": ["zja.org.cn"], "candidates_clean": ["zja.org.cn"], "verify": "pass"}
+{"province": "浙江省", "slot": "省人民对外友好协会", "query": "浙江省人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "浙江省", "slot": "省计划生育协会", "query": "浙江省计划生育协会", "url": "https://www.zjfpa.org.cn", "candidates": ["zjfpa.org.cn"], "candidates_clean": ["zjfpa.org.cn"], "verify": "pass"}
+{"province": "浙江省", "slot": "省欧美同学会", "query": "浙江省欧美同学会", "url": "", "candidates": ["hztyzx.org.cn"], "candidates_clean": ["hztyzx.org.cn"], "verify": "render_fail"}
+{"province": "安徽省", "slot": "省侨联", "query": "安徽省归国华侨联合会", "url": "https://www.ahql.org.cn", "candidates": ["ahql.org.cn"], "candidates_clean": ["ahql.org.cn"], "verify": "pass"}
+{"province": "安徽省", "slot": "省台联", "query": "安徽省台湾同胞联谊会", "url": "", "candidates": ["fjtv.net"], "candidates_clean": ["fjtv.net"], "verify": "unreachable_drop"}
+{"province": "安徽省", "slot": "省法学会", "query": "安徽省法学会", "url": "http://www.ahfxh.org.cn", "candidates": ["ahfxh.org.cn"], "candidates_clean": ["ahfxh.org.cn"], "verify": "pass"}
+{"province": "安徽省", "slot": "省记协", "query": "安徽省新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "安徽省", "slot": "省人民对外友好协会", "query": "安徽省人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "安徽省", "slot": "省计划生育协会", "query": "安徽省计划生育协会", "url": "http://www.ahsjsx.org.cn", "candidates": ["ahsjsx.org.cn", "ahsjsx.org"], "candidates_clean": ["ahsjsx.org.cn", "ahsjsx.org"], "verify": "pass"}
+{"province": "安徽省", "slot": "省欧美同学会", "query": "安徽省欧美同学会", "url": "", "candidates": ["ahyouth.org.cn", "ahfcyj.org.cn"], "candidates_clean": ["ahyouth.org.cn", "ahfcyj.org.cn"], "verify": "render_fail"}
+{"province": "福建省", "slot": "省侨联", "query": "福建省归国华侨联合会", "url": "http://fqworld.org", "candidates": ["fqworld.org"], "candidates_clean": ["fqworld.org"], "verify": "render_pass"}
+{"province": "福建省", "slot": "省台联", "query": "福建省台湾同胞联谊会", "url": "", "candidates": ["fjtv.net"], "candidates_clean": ["fjtv.net"], "verify": "unreachable_drop"}
+{"province": "福建省", "slot": "省法学会", "query": "福建省法学会", "url": "", "candidates": ["pafj.net"], "candidates_clean": ["pafj.net"], "verify": "render_fail"}
+{"province": "福建省", "slot": "省记协", "query": "福建省新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "福建省", "slot": "省人民对外友好协会", "query": "福建省人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "福建省", "slot": "省计划生育协会", "query": "福建省计划生育协会", "url": "https://www.fjfpa.org.cn", "candidates": ["fjfpa.org.cn"], "candidates_clean": ["fjfpa.org.cn"], "verify": "pass"}
+{"province": "福建省", "slot": "省欧美同学会", "query": "福建省欧美同学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "江西省", "slot": "省侨联", "query": "江西省归国华侨联合会", "url": "http://www.jxql.org", "candidates": ["jxql.org"], "candidates_clean": ["jxql.org"], "verify": "pass"}
+{"province": "江西省", "slot": "省台联", "query": "江西省台湾同胞联谊会", "url": "", "candidates": ["fjtv.net"], "candidates_clean": ["fjtv.net"], "verify": "unreachable_drop"}
+{"province": "江西省", "slot": "省法学会", "query": "江西省法学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "江西省", "slot": "省记协", "query": "江西省新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "江西省", "slot": "省人民对外友好协会", "query": "江西省人民对外友好协会", "url": "", "candidates": ["jxhrda.org.cn"], "candidates_clean": ["jxhrda.org.cn"], "verify": "render_fail"}
+{"province": "江西省", "slot": "省计划生育协会", "query": "江西省计划生育协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "江西省", "slot": "省欧美同学会", "query": "江西省欧美同学会", "url": "", "candidates": ["jxtyzx.org"], "candidates_clean": ["jxtyzx.org"]}
+{"province": "山东省", "slot": "省侨联", "query": "山东省归国华侨联合会", "url": "http://www.sdql.org", "candidates": ["sdql.org"], "candidates_clean": ["sdql.org"], "verify": "pass"}
+{"province": "山东省", "slot": "省台联", "query": "山东省台湾同胞联谊会", "url": "", "candidates": ["fjtv.net"], "candidates_clean": ["fjtv.net"], "verify": "unreachable_drop"}
+{"province": "山东省", "slot": "省法学会", "query": "山东省法学会", "url": "", "candidates": ["sdsfxh.org.cn"], "candidates_clean": ["sdsfxh.org.cn"]}
+{"province": "山东省", "slot": "省记协", "query": "山东省新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "山东省", "slot": "省人民对外友好协会", "query": "山东省人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "山东省", "slot": "省计划生育协会", "query": "山东省计划生育协会", "url": "http://www.sdsjsx.org.cn", "candidates": ["sdsjsx.org.cn"], "candidates_clean": ["sdsjsx.org.cn"], "verify": "pass"}
+{"province": "山东省", "slot": "省欧美同学会", "query": "山东省欧美同学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "河南省", "slot": "省侨联", "query": "河南省归国华侨联合会", "url": "https://www.henanql.org.cn", "candidates": ["henanql.org.cn"], "candidates_clean": ["henanql.org.cn"], "verify": "pass"}
+{"province": "河南省", "slot": "省台联", "query": "河南省台湾同胞联谊会", "url": "", "candidates": ["fjtv.net"], "candidates_clean": ["fjtv.net"], "verify": "unreachable_drop"}
+{"province": "河南省", "slot": "省法学会", "query": "河南省法学会", "url": "", "candidates": ["cfgw.net"], "candidates_clean": ["cfgw.net"], "verify": "render_fail"}
+{"province": "河南省", "slot": "省记协", "query": "河南省新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "河南省", "slot": "省人民对外友好协会", "query": "河南省人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "河南省", "slot": "省计划生育协会", "query": "河南省计划生育协会", "url": "http://www.hnjsx.org", "candidates": ["hnjsx.org"], "candidates_clean": ["hnjsx.org"], "verify": "pass"}
+{"province": "河南省", "slot": "省欧美同学会", "query": "河南省欧美同学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "湖北省", "slot": "省侨联", "query": "湖北省归国华侨联合会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "湖北省", "slot": "省台联", "query": "湖北省台湾同胞联谊会", "url": "", "candidates": ["whtsw.org.cn", "fjtv.net"], "candidates_clean": ["whtsw.org.cn", "fjtv.net"], "verify": "render_fail"}
+{"province": "湖北省", "slot": "省法学会", "query": "湖北省法学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "湖北省", "slot": "省记协", "query": "湖北省新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "湖北省", "slot": "省人民对外友好协会", "query": "湖北省人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "湖北省", "slot": "省计划生育协会", "query": "湖北省计划生育协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "湖北省", "slot": "省欧美同学会", "query": "湖北省欧美同学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "湖南省", "slot": "省侨联", "query": "湖南省归国华侨联合会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "湖南省", "slot": "省台联", "query": "湖南省台湾同胞联谊会", "url": "https://www.hnswtzb.org", "candidates": ["hnswtzb.org", "fjtv.net"], "candidates_clean": ["hnswtzb.org", "fjtv.net"], "verify": "render_pass"}
+{"province": "湖南省", "slot": "省法学会", "query": "湖南省法学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "湖南省", "slot": "省记协", "query": "湖南省新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "湖南省", "slot": "省人民对外友好协会", "query": "湖南省人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "湖南省", "slot": "省计划生育协会", "query": "湖南省计划生育协会", "url": "https://www.hnfpa.org.cn", "candidates": ["hnfpa.org.cn"], "candidates_clean": ["hnfpa.org.cn"], "verify": "pass"}
+{"province": "湖南省", "slot": "省欧美同学会", "query": "湖南省欧美同学会", "url": "https://www.hnswtzb.org", "candidates": ["hnswtzb.org"], "candidates_clean": ["hnswtzb.org"], "verify": "render_pass"}
+{"province": "广东省", "slot": "省侨联", "query": "广东省归国华侨联合会", "url": "https://www.gdql.org.cn", "candidates": ["gdql.org.cn"], "candidates_clean": ["gdql.org.cn"], "verify": "pass"}
+{"province": "广东省", "slot": "省台联", "query": "广东省台湾同胞联谊会", "url": "", "candidates": ["gztl.org.cn"], "candidates_clean": ["gztl.org.cn"]}
+{"province": "广东省", "slot": "省法学会", "query": "广东省法学会", "url": "http://www.gdfxh.org.cn", "candidates": ["gdfxh.org.cn"], "candidates_clean": ["gdfxh.org.cn"], "verify": "pass"}
+{"province": "广东省", "slot": "省记协", "query": "广东省新闻工作者协会", "url": "http://www.gdjx.org.cn", "candidates": ["gdjx.org.cn"], "candidates_clean": ["gdjx.org.cn"], "verify": "pass"}
+{"province": "广东省", "slot": "省人民对外友好协会", "query": "广东省人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "广东省", "slot": "省计划生育协会", "query": "广东省计划生育协会", "url": "https://www.gzfpa.org.cn", "candidates": ["gdfpa.org.cn", "gzfpa.org.cn"], "candidates_clean": ["gdfpa.org.cn", "gzfpa.org.cn"], "verify": "pass"}
+{"province": "广东省", "slot": "省欧美同学会", "query": "广东省欧美同学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "广西壮族自治区", "slot": "省侨联", "query": "广西壮族自治区归国华侨联合会", "url": "http://www.jxql.org", "candidates": ["jxql.org", "gxdfz.org.cn"], "candidates_clean": ["jxql.org", "gxdfz.org.cn"], "verify": "pass"}
+{"province": "广西壮族自治区", "slot": "省台联", "query": "广西壮族自治区台湾同胞联谊会", "url": "http://www.zhongguotongcuhui.org.cn", "candidates": ["zhongguotongcuhui.org.cn"], "candidates_clean": ["zhongguotongcuhui.org.cn"], "verify": "render_pass"}
+{"province": "广西壮族自治区", "slot": "省法学会", "query": "广西壮族自治区法学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "广西壮族自治区", "slot": "省记协", "query": "广西壮族自治区新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "广西壮族自治区", "slot": "省人民对外友好协会", "query": "广西壮族自治区人民对外友好协会", "url": "", "candidates": ["iprcc.org.cn"], "candidates_clean": ["iprcc.org.cn"], "verify": "render_fail"}
+{"province": "广西壮族自治区", "slot": "省计划生育协会", "query": "广西壮族自治区计划生育协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "广西壮族自治区", "slot": "省欧美同学会", "query": "广西壮族自治区欧美同学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "海南省", "slot": "省侨联", "query": "海南省归国华侨联合会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "海南省", "slot": "省台联", "query": "海南省台湾同胞联谊会", "url": "https://www.hntzb.org.cn", "candidates": ["hntzb.org.cn", "hntm.org.cn"], "candidates_clean": ["hntzb.org.cn", "hntm.org.cn"], "verify": "render_pass"}
+{"province": "海南省", "slot": "省法学会", "query": "海南省法学会", "url": "http://www.hnfxh.org.cn", "candidates": ["hnfxh.org.cn"], "candidates_clean": ["hnfxh.org.cn"], "verify": "pass"}
+{"province": "海南省", "slot": "省记协", "query": "海南省新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "海南省", "slot": "省人民对外友好协会", "query": "海南省人民对外友好协会", "url": "", "candidates": ["zebao.net"], "candidates_clean": ["zebao.net"], "verify": "title_mismatch"}
+{"province": "海南省", "slot": "省计划生育协会", "query": "海南省计划生育协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "海南省", "slot": "省欧美同学会", "query": "海南省欧美同学会", "url": "https://www.hnwrsa.org.cn", "candidates": ["hnwrsa.org.cn", "hntzb.org.cn"], "candidates_clean": ["hnwrsa.org.cn", "hntzb.org.cn"], "verify": "pass"}
+{"province": "重庆市", "slot": "省侨联", "query": "重庆市归国华侨联合会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "重庆市", "slot": "省台联", "query": "重庆市台湾同胞联谊会", "url": "", "candidates": ["yut8.org.cn", "fjtv.net"], "candidates_clean": ["yut8.org.cn", "fjtv.net"], "verify": "render_fail"}
+{"province": "重庆市", "slot": "省法学会", "query": "重庆市法学会", "url": "https://www.cqsfxh.org.cn", "candidates": ["cqsfxh.org.cn"], "candidates_clean": ["cqsfxh.org.cn"], "verify": "pass"}
+{"province": "重庆市", "slot": "省记协", "query": "重庆市新闻工作者协会", "url": "", "candidates": ["cqsja.org.cn"], "candidates_clean": ["cqsja.org.cn"]}
+{"province": "重庆市", "slot": "省人民对外友好协会", "query": "重庆市人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "重庆市", "slot": "省计划生育协会", "query": "重庆市计划生育协会", "url": "", "candidates": ["cqpfp.org"], "candidates_clean": ["cqpfp.org"], "verify": "title_mismatch"}
+{"province": "重庆市", "slot": "省欧美同学会", "query": "重庆市欧美同学会", "url": "", "candidates": ["cqwrsa.org.cn"], "candidates_clean": ["cqwrsa.org.cn"]}
+{"province": "四川省", "slot": "省侨联", "query": "四川省归国华侨联合会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "四川省", "slot": "省台联", "query": "四川省台湾同胞联谊会", "url": "", "candidates": ["scfoce.org"], "candidates_clean": ["scfoce.org"], "verify": "render_fail"}
+{"province": "四川省", "slot": "省法学会", "query": "四川省法学会", "url": "https://www.scfxw.org", "candidates": ["scfxw.org"], "candidates_clean": ["scfxw.org"], "verify": "pass"}
+{"province": "四川省", "slot": "省记协", "query": "四川省新闻工作者协会", "url": "", "candidates": ["newssc.org"], "candidates_clean": ["newssc.org"], "verify": "title_mismatch"}
+{"province": "四川省", "slot": "省人民对外友好协会", "query": "四川省人民对外友好协会", "url": "https://www.sifa.org.cn", "candidates": ["sifa.org.cn"], "candidates_clean": ["sifa.org.cn"], "verify": "pass"}
+{"province": "四川省", "slot": "省计划生育协会", "query": "四川省计划生育协会", "url": "https://www.scfpa.org.cn", "candidates": ["scfpa.org.cn"], "candidates_clean": ["scfpa.org.cn"], "verify": "pass"}
+{"province": "四川省", "slot": "省欧美同学会", "query": "四川省欧美同学会", "url": "http://www.sczg.org.cn", "candidates": ["sczg.org.cn"], "candidates_clean": ["sczg.org.cn"], "verify": "render_pass"}
+{"province": "贵州省", "slot": "省侨联", "query": "贵州省归国华侨联合会", "url": "http://www.gzql.org.cn", "candidates": ["gzql.org.cn"], "candidates_clean": ["gzql.org.cn"], "verify": "pass"}
+{"province": "贵州省", "slot": "省台联", "query": "贵州省台湾同胞联谊会", "url": "", "candidates": ["gdql.org.cn", "fjtv.net"], "candidates_clean": ["gdql.org.cn", "fjtv.net"], "verify": "render_fail"}
+{"province": "贵州省", "slot": "省法学会", "query": "贵州省法学会", "url": "http://www.gzsfxh.org.cn", "candidates": ["gzsfxh.org.cn"], "candidates_clean": ["gzsfxh.org.cn"], "verify": "pass"}
+{"province": "贵州省", "slot": "省记协", "query": "贵州省新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "贵州省", "slot": "省人民对外友好协会", "query": "贵州省人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "贵州省", "slot": "省计划生育协会", "query": "贵州省计划生育协会", "url": "https://www.gzsfpa.org.cn", "candidates": ["gzsfpa.org.cn"], "candidates_clean": ["gzsfpa.org.cn"], "verify": "pass"}
+{"province": "贵州省", "slot": "省欧美同学会", "query": "贵州省欧美同学会", "url": "", "candidates": ["gzswtzb.org.cn"], "candidates_clean": ["gzswtzb.org.cn"], "verify": "title_mismatch"}
+{"province": "云南省", "slot": "省侨联", "query": "云南省归国华侨联合会", "url": "http://www.ynql.org.cn", "candidates": ["ynql.org.cn"], "candidates_clean": ["ynql.org.cn"], "verify": "pass"}
+{"province": "云南省", "slot": "省台联", "query": "云南省台湾同胞联谊会", "url": "", "candidates": ["ynzg.org"], "candidates_clean": ["ynzg.org"], "verify": "render_fail"}
+{"province": "云南省", "slot": "省法学会", "query": "云南省法学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "云南省", "slot": "省记协", "query": "云南省新闻工作者协会", "url": "", "candidates": ["ynskl.org.cn"], "candidates_clean": ["ynskl.org.cn"], "verify": "render_fail"}
+{"province": "云南省", "slot": "省人民对外友好协会", "query": "云南省人民对外友好协会", "url": "https://www.ynpaffc.org.cn", "candidates": ["ynpaffc.org.cn"], "candidates_clean": ["ynpaffc.org.cn"], "verify": "pass"}
+{"province": "云南省", "slot": "省计划生育协会", "query": "云南省计划生育协会", "url": "https://www.ynfpa.org.cn", "candidates": ["ynfpa.org.cn"], "candidates_clean": ["ynfpa.org.cn"], "verify": "pass"}
+{"province": "云南省", "slot": "省欧美同学会", "query": "云南省欧美同学会", "url": "", "candidates": ["ynsy.org.cn"], "candidates_clean": ["ynsy.org.cn"], "verify": "title_mismatch"}
+{"province": "西藏自治区", "slot": "省侨联", "query": "西藏自治区归国华侨联合会", "url": "https://www.gdql.org.cn", "candidates": ["gdql.org.cn"], "candidates_clean": ["gdql.org.cn"], "verify": "pass"}
+{"province": "西藏自治区", "slot": "省台联", "query": "西藏自治区台湾同胞联谊会", "url": "https://www.bjstl.org.cn", "candidates": ["bjstl.org.cn"], "candidates_clean": ["bjstl.org.cn"], "verify": "pass"}
+{"province": "西藏自治区", "slot": "省法学会", "query": "西藏自治区法学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "西藏自治区", "slot": "省记协", "query": "西藏自治区新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "西藏自治区", "slot": "省人民对外友好协会", "query": "西藏自治区人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "西藏自治区", "slot": "省计划生育协会", "query": "西藏自治区计划生育协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "西藏自治区", "slot": "省欧美同学会", "query": "西藏自治区欧美同学会", "url": "https://www.wrsf.org.cn", "candidates": ["wrsf.org.cn"], "candidates_clean": ["wrsf.org.cn"], "verify": "render_pass"}
+{"province": "陕西省", "slot": "省侨联", "query": "陕西省归国华侨联合会", "url": "https://www.sxql.org.cn", "candidates": ["sxql.org.cn"], "candidates_clean": ["sxql.org.cn"], "verify": "pass"}
+{"province": "陕西省", "slot": "省台联", "query": "陕西省台湾同胞联谊会", "url": "", "candidates": ["fjtv.net"], "candidates_clean": ["fjtv.net"], "verify": "unreachable_drop"}
+{"province": "陕西省", "slot": "省法学会", "query": "陕西省法学会", "url": "https://www.sxsfxw.org.cn", "candidates": ["sxsfxw.org.cn"], "candidates_clean": ["sxsfxw.org.cn"], "verify": "pass"}
+{"province": "陕西省", "slot": "省记协", "query": "陕西省新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "陕西省", "slot": "省人民对外友好协会", "query": "陕西省人民对外友好协会", "url": "", "candidates": ["spaffc.org.cn"], "candidates_clean": ["spaffc.org.cn"]}
+{"province": "陕西省", "slot": "省计划生育协会", "query": "陕西省计划生育协会", "url": "https://www.sxsjhsyxh.org.cn", "candidates": ["sxsjhsyxh.org.cn"], "candidates_clean": ["sxsjhsyxh.org.cn"], "verify": "pass"}
+{"province": "陕西省", "slot": "省欧美同学会", "query": "陕西省欧美同学会", "url": "", "candidates": ["sxql.org.cn"], "candidates_clean": ["sxql.org.cn"], "verify": "render_fail"}
+{"province": "甘肃省", "slot": "省侨联", "query": "甘肃省归国华侨联合会", "url": "https://www.gsqlw.org", "candidates": ["gsqlw.org"], "candidates_clean": ["gsqlw.org"], "verify": "pass"}
+{"province": "甘肃省", "slot": "省台联", "query": "甘肃省台湾同胞联谊会", "url": "", "candidates": ["fjtv.net"], "candidates_clean": ["fjtv.net"], "verify": "unreachable_drop"}
+{"province": "甘肃省", "slot": "省法学会", "query": "甘肃省法学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "甘肃省", "slot": "省记协", "query": "甘肃省新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "甘肃省", "slot": "省人民对外友好协会", "query": "甘肃省人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "甘肃省", "slot": "省计划生育协会", "query": "甘肃省计划生育协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "甘肃省", "slot": "省欧美同学会", "query": "甘肃省欧美同学会", "url": "", "candidates": ["ns.org.cn"], "candidates_clean": ["ns.org.cn"], "verify": "render_fail"}
+{"province": "青海省", "slot": "省侨联", "query": "青海省归国华侨联合会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "青海省", "slot": "省台联", "query": "青海省台湾同胞联谊会", "url": "", "candidates": ["fjtv.net"], "candidates_clean": ["fjtv.net"], "verify": "unreachable_drop"}
+{"province": "青海省", "slot": "省法学会", "query": "青海省法学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "青海省", "slot": "省记协", "query": "青海省新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "青海省", "slot": "省人民对外友好协会", "query": "青海省人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "青海省", "slot": "省计划生育协会", "query": "青海省计划生育协会", "url": "https://www.scfpa.org.cn", "candidates": ["scfpa.org.cn"], "candidates_clean": ["scfpa.org.cn"], "verify": "pass"}
+{"province": "青海省", "slot": "省欧美同学会", "query": "青海省欧美同学会", "url": "https://www.qhass.org.cn", "candidates": ["qhass.org.cn"], "candidates_clean": ["qhass.org.cn"], "verify": "uncertain"}
+{"province": "宁夏回族自治区", "slot": "省侨联", "query": "宁夏回族自治区归国华侨联合会", "url": "https://www.gdql.org.cn", "candidates": ["nxda.org.cn", "gdql.org.cn"], "candidates_clean": ["nxda.org.cn", "gdql.org.cn"], "verify": "pass"}
+{"province": "宁夏回族自治区", "slot": "省台联", "query": "宁夏回族自治区台湾同胞联谊会", "url": "http://www.nxwsg.org.cn", "candidates": ["nxwsg.org.cn", "jsmm.org.cn"], "candidates_clean": ["nxwsg.org.cn", "jsmm.org.cn"], "verify": "uncertain"}
+{"province": "宁夏回族自治区", "slot": "省法学会", "query": "宁夏回族自治区法学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "宁夏回族自治区", "slot": "省记协", "query": "宁夏回族自治区新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "宁夏回族自治区", "slot": "省人民对外友好协会", "query": "宁夏回族自治区人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "宁夏回族自治区", "slot": "省计划生育协会", "query": "宁夏回族自治区计划生育协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "宁夏回族自治区", "slot": "省欧美同学会", "query": "宁夏回族自治区欧美同学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "新疆维吾尔自治区", "slot": "省侨联", "query": "新疆维吾尔自治区归国华侨联合会", "url": "", "candidates": ["xjjgdj.org.cn"], "candidates_clean": ["xjjgdj.org.cn"], "verify": "render_fail"}
+{"province": "新疆维吾尔自治区", "slot": "省台联", "query": "新疆维吾尔自治区台湾同胞联谊会", "url": "", "candidates": ["xjmg.org"], "candidates_clean": ["xjmg.org"], "verify": "render_fail"}
+{"province": "新疆维吾尔自治区", "slot": "省法学会", "query": "新疆维吾尔自治区法学会", "url": "http://www.mzyfz.org.cn", "candidates": ["mzyfz.org.cn"], "candidates_clean": ["mzyfz.org.cn"], "verify": "render_pass"}
+{"province": "新疆维吾尔自治区", "slot": "省记协", "query": "新疆维吾尔自治区新闻工作者协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "新疆维吾尔自治区", "slot": "省人民对外友好协会", "query": "新疆维吾尔自治区人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "新疆维吾尔自治区", "slot": "省计划生育协会", "query": "新疆维吾尔自治区计划生育协会", "url": "", "candidates": ["nmgfpa.org.cn"], "candidates_clean": ["nmgfpa.org.cn"]}
+{"province": "新疆维吾尔自治区", "slot": "省欧美同学会", "query": "新疆维吾尔自治区欧美同学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "新疆生产建设兵团", "slot": "省侨联", "query": "新疆生产建设兵团归国华侨联合会", "url": "", "candidates": ["btwmw.net"], "candidates_clean": ["btwmw.net"], "verify": "render_fail"}
+{"province": "新疆生产建设兵团", "slot": "省台联", "query": "新疆生产建设兵团台湾同胞联谊会", "url": "", "candidates": ["xjmg.org"], "candidates_clean": ["xjmg.org"], "verify": "render_fail"}
+{"province": "新疆生产建设兵团", "slot": "省法学会", "query": "新疆生产建设兵团法学会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "新疆生产建设兵团", "slot": "省记协", "query": "新疆生产建设兵团新闻工作者协会", "url": "", "candidates": ["cnenc.net"], "candidates_clean": ["cnenc.net"], "verify": "title_mismatch"}
+{"province": "新疆生产建设兵团", "slot": "省人民对外友好协会", "query": "新疆生产建设兵团人民对外友好协会", "url": "", "candidates": [], "candidates_clean": []}
+{"province": "新疆生产建设兵团", "slot": "省计划生育协会", "query": "新疆生产建设兵团计划生育协会", "url": "", "candidates": ["btwmw.net"], "candidates_clean": ["btwmw.net"], "verify": "render_fail"}
+{"province": "新疆生产建设兵团", "slot": "省欧美同学会", "query": "新疆生产建设兵团欧美同学会", "url": "", "candidates": [], "candidates_clean": []}

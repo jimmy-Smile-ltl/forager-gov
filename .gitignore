@@ -1,0 +1,35 @@
+# ===== 敏感与本地凭据 =====
+.env
+.env.*
+!.env.example
+.DS_Store
+**/.DS_Store
+.claude/
+
+# ===== 运行时缓存 =====
+__pycache__/
+*.py[cod]
+*.log
+logs/
+
+# ===== 内部规则与证据快照 =====
+CLAUDE.md
+data/*.html
+data/*.htm
+
+# ===== 中间产物 / 备份 / 快照 =====
+dist/
+backups/
+data/backups/
+snapshots/
+data/snapshots/
+*.bak
+*.tmp
+*_state*.json
+
+# ===== 获取层实现（浏览器/指纹/WAF 处理，不随仓库发布）=====
+util/*
+!util/extract_org.py
+
+# ===== 历史归档代码 =====
+采集代码归档/

@@ -1,0 +1,351 @@
+{
+"司局子站": [
+{
+"n": "办公室（外事司）",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzz/sjzz_tt.shtml"
+},
+{
+"n": "计划司",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzr/sjzz_tt.shtml"
+},
+{
+"n": "专卖司",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzd/sjzz_tt.shtml"
+},
+{
+"n": "运行司",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzn/sjzz_tt.shtml"
+},
+{
+"n": "法规司",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzdk/sjzz_tt.shtml"
+},
+{
+"n": "财务司",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzq/sjzz_tt.shtml"
+},
+{
+"n": "审计司",
+"u": "http://www.tobacco.gov.cn/gjyc/sjsjgzz/sjzz_tt.shtml"
+},
+{
+"n": "科技司",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzs/sjzz_tt.shtml"
+},
+{
+"n": "人事司",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzznv/sjzz_tt.shtml"
+},
+{
+"n": "直属机关党委",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzze/sjzz_tt.shtml"
+},
+{
+"n": "廉政办（巡视办）",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzv/sjzz_tt.shtml"
+},
+{
+"n": "规范办（采购办）",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzsd/sjzz_tt.shtml"
+},
+{
+"n": "董事会工作办公室",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzb/sjzz_tt.shtml"
+},
+{
+"n": "党校",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzsu/sjzz_tt.shtml"
+},
+{
+"n": "研究所（政研室）",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzrm/sjzz_tt.shtml"
+},
+{
+"n": "离退办",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzg/sjzz_tt.shtml"
+},
+{
+"n": "服务局",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzu/sjzz_tt.shtml"
+},
+{
+"n": "信息中心（网信办）",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzbm/sjzz_tt.shtml"
+},
+{
+"n": "烟草学会",
+"u": "http://www.tobacco.gov.cn/gjyc/ycxuehui/ycxh_index.shtml"
+},
+{
+"n": "烟叶公司",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzuf/sjzz_tt.shtml"
+},
+{
+"n": "销售公司",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzqt/sjzz_tt.shtml"
+},
+{
+"n": "投资公司",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzuv/sjzz_tt.shtml"
+},
+{
+"n": "烟机公司",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzdp/sjzz_tt.shtml"
+},
+{
+"n": "中烟国际",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzdkt/sjzz_tt.shtml"
+},
+{
+"n": "商务物流公司",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzsp/sjzz_tt.shtml"
+},
+{
+"n": "中烟实业",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzvk/sjzz_tt.shtml"
+},
+{
+"n": "双维公司",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzgq/sjzz_tt.shtml"
+},
+{
+"n": "杂志社（传媒中心）",
+"u": "http://www.tobacco.gov.cn/gjyc/bgsjgzzug/sjzz_zzstt.shtml"
+}
+],
+"省级单位": [
+{
+"n": "北京",
+"u": "http://bj.tobacco.gov.cn/"
+},
+{
+"n": "天津",
+"u": "http://tj.tobacco.gov.cn/"
+},
+{
+"n": "河北",
+"u": "http://he.tobacco.gov.cn/"
+},
+{
+"n": "山西",
+"u": "http://sx.tobacco.gov.cn/sxwwcms/index/index.htm"
+},
+{
+"n": "内蒙古",
+"u": "http://nm.tobacco.gov.cn/"
+},
+{
+"n": "辽宁",
+"u": "https://ln.tobacco.gov.cn/"
+},
+{
+"n": "吉林",
+"u": "http://www.jltobacco.com.cn/main/"
+},
+{
+"n": "黑龙江",
+"u": "https://hlj.tobacco.gov.cn/"
+},
+{
+"n": "大连",
+"u": "http://dl.tobacco.gov.cn/"
+},
+{
+"n": "上海",
+"u": "http://www.sh.tobacco.gov.cn"
+},
+{
+"n": "江苏",
+"u": "http://js.tobacco.gov.cn/"
+},
+{
+"n": "浙江",
+"u": "https://zjyc.tobacco.gov.cn/"
+},
+{
+"n": "安徽",
+"u": "http://ah.tobacco.gov.cn/"
+},
+{
+"n": "福建",
+"u": "http://fj.tobacco.gov.cn/"
+},
+{
+"n": "江西",
+"u": "http://jx.tobacco.gov.cn/"
+},
+{
+"n": "山东",
+"u": "https://sd.tobacco.gov.cn/"
+},
+{
+"n": "河南",
+"u": "https://ha.tobacco.gov.cn"
+},
+{
+"n": "湖北",
+"u": "https://hb.tobacco.gov.cn/portal-web/"
+},
+{
+"n": "湖南",
+"u": "http://hn.tobacco.gov.cn/"
+},
+{
+"n": "广东",
+"u": "http://gd.tobacco.gov.cn/"
+},
+{
+"n": "广西",
+"u": "http://gx.tobacco.gov.cn/gxwwcms/index/index.htm"
+},
+{
+"n": "海南",
+"u": "https://hi.tobacco.gov.cn/"
+},
+{
+"n": "深圳",
+"u": "https://sz.tobacco.gov.cn/"
+},
+{
+"n": "重庆",
+"u": "http://cq.tobacco.gov.cn/"
+},
+{
+"n": "四川",
+"u": "http://sc.tobacco.gov.cn/"
+},
+{
+"n": "贵州",
+"u": "http://gz.tobacco.gov.cn/"
+},
+{
+"n": "云南",
+"u": "https://www.yn-tobacco.com/"
+},
+{
+"n": "西藏",
+"u": "http://www.tobacco.gov.cn/gjyc/xzycgsjj/sjzz_tt.shtml"
+},
+{
+"n": "陕西",
+"u": "http://sn.tobacco.gov.cn/"
+},
+{
+"n": "甘肃",
+"u": "http://gs.tobacco.gov.cn/"
+},
+{
+"n": "青海",
+"u": "http://qh.tobacco.gov.cn/"
+},
+{
+"n": "宁夏",
+"u": "https://nx.tobacco.gov.cn/eap/main"
+},
+{
+"n": "新疆",
+"u": "http://www.tobacco.gov.cn/gjyc/xjycgsjj/sjzz_tt.shtml"
+}
+],
+"工业企业": [
+{
+"n": "河北中烟",
+"u": "http://hegy.tobacco.com.cn/"
+},
+{
+"n": "江苏中烟",
+"u": "http://jsgy.tobacco.com.cn/"
+},
+{
+"n": "浙江中烟",
+"u": "http://zjgy.tobacco.com.cn/"
+},
+{
+"n": "安徽中烟",
+"u": "http://ahgy.tobacco.com.cn/"
+},
+{
+"n": "福建中烟",
+"u": "http://fjgy.tobacco.com.cn/"
+},
+{
+"n": "江西中烟",
+"u": "http://jxgy.tobacco.com.cn/"
+},
+{
+"n": "山东中烟",
+"u": "https://sdgy.tobacco.com.cn/"
+},
+{
+"n": "河南中烟",
+"u": "https://hagy.tobacco.com.cn"
+},
+{
+"n": "湖北中烟",
+"u": "http://hbgy.tobacco.com.cn/"
+},
+{
+"n": "湖南中烟",
+"u": "http://hngy.tobacco.com.cn/"
+},
+{
+"n": "广东中烟",
+"u": "https://gdgy.tobacco.com.cn"
+},
+{
+"n": "广西中烟",
+"u": "http://gxgy.tobacco.com.cn/"
+},
+{
+"n": "重庆中烟",
+"u": "http://cqgy.tobacco.com.cn/"
+},
+{
+"n": "四川中烟",
+"u": "http://scgy.tobacco.com.cn/information/informationAction.do?method=getIndexInfomationByColumnId"
+},
+{
+"n": "贵州中烟",
+"u": "http://gzgy.tobacco.com.cn/"
+},
+{
+"n": "云南中烟",
+"u": "http://yngy.tobacco.com.cn/"
+},
+{
+"n": "陕西中烟",
+"u": "https://sxgy.tobacco.com.cn/"
+}
+],
+"其他直属机构": [
+{
+"n": "南纤",
+"u": "http://ntcx.tobacco.com.cn/"
+},
+{
+"n": "昆纤",
+"u": "http://kmcx.tobacco.com.cn/"
+},
+{
+"n": "珠纤",
+"u": "https://www.zcfc.com/"
+},
+{
+"n": "郑州院",
+"u": "https://zzy.tobacco.com.cn/"
+},
+{
+"n": "烟草进修学院",
+"u": "https://www.ctt.cn/"
+},
+{
+"n": "合肥设计院",
+"u": "http://www.tobacco.gov.cn/gjyc/hfsjygsjj/sjzz_tt.shtml"
+}
+],
+"_国家局": {
+"u": "http://www.tobacco.gov.cn/",
+"xxgk": "http://www.tobacco.gov.cn/gjyc/jgzn/xxgk_gknr_list.shtml",
+"method": "curl_cffi"
+}
+}

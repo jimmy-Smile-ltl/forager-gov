@@ -1,0 +1,1 @@
+window.__R=window.__R||{};window.__R["青海省·省总工会"]={"portal":"https://www.qhszgh.com/","method":"独立门户（全总官网省级工会栏目权威来源）","sources":["https://www.qhszgh.com/"],"code":"# -*- coding: utf-8 -*-\n\"\"\"青海省 省总工会: 无独立公开门户（列名）。\"\"\"\n","depts":[{"n":"省总工会","u":"","o":0}],"cities":[]};

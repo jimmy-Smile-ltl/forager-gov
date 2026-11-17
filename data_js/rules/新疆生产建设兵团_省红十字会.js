@@ -1,0 +1,1 @@
+window.__R=window.__R||{};window.__R["新疆生产建设兵团·省红十字会"]={"portal":"","method":"无独立公开门户/未验证 → 列名参考","sources":[],"code":"# -*- coding: utf-8 -*-\n\"\"\"新疆生产建设兵团 省红十字会: 无独立公开门户（列名）。\"\"\"\n","depts":[{"n":"省红十字会","u":"http://hszh.xjbt.gov.cn/","o":0}],"cities":[]};

@@ -1,0 +1,1948 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>中国政府网站体系</title>
+<style>
+:root{
+  --ground:#f5f6f2; --surface:#ffffff; --surface2:#eef0ea;
+  --ink:#212529; --muted:#6e757c; --faint:#9aa0a6;
+  --line:#e4e7e0; --line2:#d6dad1;
+  --accent:#b23a2e; --accent-soft:#f6e8e5;
+  --ok:#2f7d4f; --ok-bg:#e7f2ea;
+  --warn:#a97b22; --warn-bg:#f6efdf;
+  --missing:#9aa0a6; --missing-bg:#eff0ee;
+  --chip-ink:#3a4a5c;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#16191e; --surface:#1d2127; --surface2:#232830;
+    --ink:#e8eaed; --muted:#98a1ab; --faint:#6d7680;
+    --line:#2b3037; --line2:#353b43;
+    --accent:#d4654f; --accent-soft:#3a2622;
+    --ok:#4c9a6a; --ok-bg:#20302a;
+    --warn:#c9a04a; --warn-bg:#332b1d;
+    --missing:#5e6670; --missing-bg:#242830;
+    --chip-ink:#b9c4d0;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#16191e; --surface:#1d2127; --surface2:#232830;
+  --ink:#e8eaed; --muted:#98a1ab; --faint:#6d7680;
+  --line:#2b3037; --line2:#353b43;
+  --accent:#d4654f; --accent-soft:#3a2622;
+  --ok:#4c9a6a; --ok-bg:#20302a;
+  --warn:#c9a04a; --warn-bg:#332b1d;
+  --missing:#5e6670; --missing-bg:#242830;
+  --chip-ink:#b9c4d0;
+}
+*{box-sizing:border-box}
+html,:root{--dotcol:#c8c2b4;--sel:#f1c40f}
+body{margin:0;padding:0}
+body{
+  background:var(--ground); color:var(--ink);
+  font:14px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  display:flex; flex-direction:column; height:100vh; overflow:hidden;
+}
+a{color:inherit}
+button{font:inherit; color:inherit; background:none; border:none; cursor:pointer; padding:0}
+input{font:inherit; color:inherit}
+
+/* ---------- 顶栏 ---------- */
+header{
+  display:flex; align-items:center; gap:10px 16px; flex-wrap:wrap;
+  padding:8px 22px 10px; border-bottom:1px solid var(--line); background:var(--surface);
+}
+.seal{
+  width:46px; height:46px; flex:none; background:var(--accent); color:#fff;
+  display:grid; place-items:center; border-radius:4px;
+  font-family:"Songti SC","STSong","SimSun",serif; font-size:20px;
+  box-shadow:inset 0 0 0 3px rgba(255,255,255,.18);
+}
+h1{
+  margin:0; font-family:"Songti SC","STSong","SimSun",serif;
+  font-size:21px; font-weight:700; letter-spacing:.5px; text-wrap:balance;
+}
+.sub{color:var(--muted); font-size:12.5px; margin-top:1px}
+.stats{display:flex; gap:8px; flex:1 1 100%; margin-left:0; flex-wrap:nowrap}
+.stat{
+  display:flex; flex-direction:column; align-items:center; flex:1;
+  padding:5px 8px; border:1px solid var(--line); border-radius:8px;
+  background:var(--surface); min-width:64px; cursor:pointer;
+  text-align:center; font-variant-numeric:tabular-nums;
+}
+.stat:hover{border-color:var(--line2); background:var(--surface2)}
+.stat b{font-size:15px; font-variant-numeric:tabular-nums; font-weight:700; white-space:nowrap}
+.stat span{font-size:10.5px; color:var(--muted)}
+.stat .hit{color:var(--ok)} .stat .miss{color:var(--warn)}
+
+/* ---------- 工具栏 ---------- */
+.toolbar{
+  display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  padding:8px 22px; border-bottom:1px solid var(--line); background:var(--surface);
+}
+.search{
+  flex:0 1 400px; max-width:100%; display:flex; align-items:center; gap:8px;
+  border:1px solid var(--line2); border-radius:8px; padding:7px 12px; background:var(--surface2);
+}
+.search:focus-within{border-color:var(--accent); box-shadow:0 0 0 2px var(--accent-soft)}
+.search input{border:none; outline:none; background:none; width:100%; font-size:13.5px}
+.viewswitch{display:flex; gap:0; border:1px solid var(--line2); border-radius:8px; overflow:hidden; flex:none}
+.viewbtn{border:none; border-radius:0; padding:7px 14px; background:var(--surface2); color:var(--muted)}
+.viewbtn.active{background:var(--accent); color:#fff; font-weight:600}
+.crossbox{margin:8px 0; padding:8px 10px; border:1px dashed var(--line2); border-radius:8px; background:var(--surface2); display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+.crossbtn{font-size:12.5px; padding:5px 12px}
+.crossnote{font-size:11.5px; color:var(--faint)}
+.filterrow{
+  display:flex; flex-wrap:wrap; align-items:center; gap:8px 10px;
+  padding:8px 22px; border-bottom:1px solid var(--line); background:var(--surface);
+}
+.flabel{font-size:12px; color:var(--muted); flex:none}
+.farrow{font-size:10px}
+.search .clear{display:none; border:none; background:none; color:var(--faint); font-size:17px; cursor:pointer; padding:0 6px; line-height:1}
+.search.has-text .clear{display:block}
+.search .count{font-size:11.5px; color:var(--muted); border-left:1px solid var(--line2); padding-left:10px; white-space:nowrap; font-variant-numeric:tabular-nums}
+.hshu{font-size:10px; margin-left:6px; padding:1px 6px; border-radius:99px; background:var(--warn-bg,#f6efdf); color:var(--warn,#a97b22); border:1px solid color-mix(in srgb,var(--warn,#a97b22) 40%,transparent); white-space:nowrap}
+.chips{display:flex; gap:6px; flex-wrap:wrap}
+.chip{
+  border:1px solid var(--line2); border-radius:999px; padding:4px 12px;
+  font-size:12.5px; color:var(--muted); background:var(--surface);
+}
+.chip:hover{background:var(--surface2)}
+.chip.on{background:var(--ink); color:var(--surface); border-color:var(--ink)}
+.btn{
+  border:1px solid var(--line2); border-radius:8px; padding:6px 12px; font-size:12.5px;
+  color:var(--muted); background:var(--surface);
+}
+.btn:hover{background:var(--surface2); color:var(--ink)}
+
+/* ---------- 主体 ---------- */
+main{flex:1; display:flex; min-height:0}
+.treepane{
+  flex:1 1 55%; min-width:0; overflow-y:auto; padding:12px 8px 40px 18px;
+}
+.detailpane{
+  flex:0 0 42%; max-width:640px; overflow-y:auto;
+  border-left:1px solid var(--line); background:var(--surface); padding:20px 22px;
+}
+/* ---------- 机构档案卡（树图/地图右侧详情） ---------- */
+.detailpane .vsd{position:relative}
+.detailpane .vsd-x{position:absolute;top:-8px;right:-8px;width:22px;height:22px;border-radius:50%;
+  border:1px solid var(--line);background:var(--surface);color:var(--muted);font-size:11px;
+  cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;z-index:2}
+.detailpane .vsd-x:hover{color:var(--ink);border-color:var(--accent,#7c4dff)}
+.detailpane .vsd-badge{display:inline-block;padding:2.5px 10px;border-radius:99px;font-size:10.5px;
+  color:#fff;letter-spacing:.06em;font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.detailpane .vsd-n{font-size:16px;font-weight:700;margin:9px 0 9px;line-height:1.4;word-break:break-all;color:var(--ink)}
+.detailpane .vsd-rows{border-top:1px solid var(--line);padding-top:8px}
+.detailpane .vsd-row{display:flex;gap:8px;margin:6px 0;font-size:12.5px;color:var(--ink);align-items:baseline}
+.detailpane .vsd-k{color:var(--muted);min-width:38px;flex:none;font-size:11.5px}
+.detailpane .vsd-urlv{color:var(--accent,#7c4dff);word-break:break-all;flex:1;min-width:0}
+.detailpane .vsd-urlv a{color:var(--accent,#7c4dff);text-decoration:none;border-bottom:1px dashed color-mix(in srgb,var(--accent,#7c4dff) 45%,transparent)}
+.detailpane .vsd-urlv a:hover{border-bottom-style:solid}
+.detailpane .vsd-none{color:var(--muted)}
+.detailpane .vsd-barcell{flex:1;display:flex;align-items:center;gap:8px;min-width:0}
+.detailpane .vsd-bar{flex:1;height:7px;border-radius:99px;background:var(--line);overflow:hidden}
+.detailpane .vsd-bar i{display:block;height:100%;border-radius:99px;transition:width .5s ease}
+.detailpane .vsd-bar~em{font-style:normal;font-size:11px;color:var(--muted);flex:none}
+.detailpane .vsd-note{margin:9px 0 2px;padding:9px 11px;border-left:3px solid var(--accent,#7c4dff);
+  background:color-mix(in srgb,var(--accent,#7c4dff) 7%,transparent);border-radius:0 8px 8px 0;
+  font-size:11.8px;color:var(--ink);line-height:1.6}
+.detailpane .vsd-urls{display:flex;flex-direction:column;gap:5px;margin:4px 0 6px}
+.detailpane .vsd-ur{display:flex;align-items:center;gap:7px;font-size:12.5px;flex-wrap:wrap}
+.detailpane .vsd-dot{width:7px;height:7px;border-radius:50%;flex:none}
+.detailpane .vsd-ur b{font-weight:500;color:var(--muted);min-width:38px;text-align:left;flex:none;font-size:11.5px}
+.detailpane .vsd-ur a{color:var(--accent,#7c4dff);word-break:break-all;flex:1;min-width:0;text-decoration:none}
+.detailpane .vsd-ur .no{color:var(--muted)}
+.detailpane .vsd-btns{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+.detailpane .vsd-btn{flex:1 1 auto;padding:7px 10px;border:1px solid var(--line);border-radius:9px;
+  background:var(--surface2);color:var(--ink);font-size:12px;cursor:pointer;text-align:center;white-space:nowrap}
+.detailpane .vsd-btn:hover{border-color:var(--accent,#7c4dff)}
+.detailpane .vsd-btn.vsd-pri{background:var(--accent,#7c4dff);border-color:var(--accent,#7c4dff);color:#fff;font-weight:600}
+.detailpane .vsd-btn.vsd-pri:hover{filter:brightness(1.1)}
+
+/* ---------- 树 ---------- */
+.tree details{display:block}
+.tree summary{
+  list-style:none; display:flex; align-items:center; gap:7px;
+  padding:3px 6px; border-radius:6px; cursor:pointer; user-select:none;
+  min-height:28px;
+}
+.tree summary::-webkit-details-marker{display:none}
+.tree summary:hover{background:var(--surface2)}
+.tree summary:focus-visible{outline:2px solid var(--accent); outline-offset:-1px}
+.tree summary .tw{
+  width:14px; flex:none; text-align:center; color:var(--faint); font-size:10px;
+  transition:transform .12s ease;
+}
+.tree details[open]>summary .tw{transform:rotate(90deg)}
+.dot{width:8px; height:8px; border-radius:50%; flex:none}
+.dot.ok{background:var(--ok)} .dot.warn{background:var(--warn)} .dot.missing{background:var(--missing)}
+.tree .name{overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.tree .name mark{background:var(--accent-soft); color:var(--accent); border-radius:3px; padding:0 1px}
+.lv{
+  flex:none; font-size:10.5px; padding:1px 6px; border-radius:4px;
+  background:var(--surface2); color:var(--chip-ink); border:1px solid var(--line);
+  font-variant-numeric:tabular-nums;
+}
+.cnt{flex:none; font-size:11px; color:var(--faint); font-variant-numeric:tabular-nums; white-space:nowrap}
+.cnt .g{color:var(--ok)}
+.cd{
+  flex:none; margin-left:auto; font-size:10px; color:var(--faint);
+  font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  font-variant-numeric:tabular-nums; letter-spacing:.2px;
+}
+.grprow .name{font-weight:600}
+.children{margin-left:20px; border-left:1px solid var(--line); padding-left:4px}
+.hint{color:var(--faint); font-size:12px; padding:6px 8px}
+
+/* 结果列表模式 */
+.reslist{padding:6px 2px}
+.resrow{
+  display:flex; align-items:center; gap:8px; padding:5px 8px; border-radius:6px; cursor:pointer;
+}
+.resrow:hover{background:var(--surface2)}
+.resrow.sel{background:var(--accent-soft)}
+.resrow .path{color:var(--faint); font-size:11.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:36%; flex:none}
+.resrow .name{flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.resmore{padding:10px 8px; color:var(--muted); font-size:12.5px}
+.resgroup{
+  font-size:12px; font-weight:600; color:var(--muted); padding:9px 8px 3px; margin-top:6px;
+  border-bottom:1px solid var(--line); position:sticky; top:0; background:var(--ground); z-index:2;
+}
+.locatebtn{flex:none; font-size:11px; color:var(--accent); border:1px solid var(--line2); border-radius:5px; padding:1px 8px; opacity:0; transition:opacity .12s; white-space:nowrap}
+.resrow:hover .locatebtn{opacity:1}
+.resrow.sel .locatebtn{opacity:1}
+.flash{animation:flashbg 1.8s ease}
+@keyframes flashbg{0%,40%{background:var(--accent-soft)}100%{background:transparent}}
+.navhint{font-size:11.5px; color:var(--faint); padding:2px 8px 6px}
+.empty{padding:24px 8px; color:var(--faint); font-size:13px; text-align:center}
+
+/* ---------- 详情 ---------- */
+.detail .dtitle{
+  font-family:"Songti SC","STSong","SimSun",serif; font-size:19px; font-weight:700;
+  margin:0 0 2px; text-wrap:balance;
+}
+.crumb{color:var(--faint); font-size:12px; margin:0 0 14px}
+.dchips{display:flex; gap:6px; flex-wrap:wrap; margin-bottom:16px}
+.dchip{
+  font-size:12px; padding:2px 9px; border-radius:5px;
+  background:var(--surface2); border:1px solid var(--line); color:var(--chip-ink);
+}
+.dchip.st-ok{background:var(--ok-bg); color:var(--ok); border-color:transparent}
+.dchip.st-warn{background:var(--warn-bg); color:var(--warn); border-color:transparent}
+.dchip.st-missing{background:var(--missing-bg); color:var(--missing); border-color:transparent}
+.dsection{margin-bottom:18px}
+.dlabel{
+  font-size:11.5px; letter-spacing:.08em; color:var(--muted); text-transform:uppercase;
+  margin:0 0 6px;
+}
+.durl{
+  display:flex; align-items:center; gap:8px; margin-bottom:8px;
+}
+.durl a{
+  font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace; font-size:12.5px;
+  color:var(--accent); word-break:break-all; text-decoration:none; border-bottom:1px dashed var(--line2);
+}
+.durl a:hover{border-bottom-style:solid}
+.copybtn{
+  flex:none; font-size:11.5px; color:var(--muted); border:1px solid var(--line2);
+  border-radius:5px; padding:2px 8px;
+}
+.copybtn:hover{color:var(--ink); background:var(--surface2)}
+.dtext{font-size:13px; color:var(--muted); margin:0}
+.dgroup-stats{display:flex; gap:10px; flex-wrap:wrap}
+.gstat{flex:1 1 120px; border:1px solid var(--line); border-radius:8px; padding:10px 12px; background:var(--surface)}
+.gstat b{display:block; font-size:18px; font-variant-numeric:tabular-nums}
+.gstat span{font-size:11.5px; color:var(--muted)}
+
+/* ---------- 提取规则（详情面板内子视图） ---------- */
+.rulebox{border:1px solid var(--line2); border-radius:10px; padding:14px 16px; background:var(--surface)}
+.rulebox .rmethod{font-size:13px; margin:6px 0 10px}
+.rulemeta{display:flex; flex-direction:column; gap:10px; margin-bottom:16px}
+.rulemeta .rlabel{font-size:11.5px; letter-spacing:.08em; color:var(--muted); text-transform:uppercase; margin:0}
+.rulemeta a{color:var(--accent); font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace; font-size:12.5px; word-break:break-all}
+.codewrap{position:relative; border:1px solid var(--line2); border-radius:10px; overflow:hidden; margin-bottom:16px}
+.codewrap .bar{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:6px 12px; background:var(--surface2); border-bottom:1px solid var(--line);
+  font-size:12px; color:var(--muted);
+}
+.codewrap pre{
+  margin:0; padding:14px 16px; max-height:420px; overflow:auto;
+  font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace; font-size:12px; line-height:1.55;
+  color:var(--ink); background:var(--surface); white-space:pre;
+}
+.samptable{width:100%; border-collapse:collapse; font-size:12.5px}
+.samptable th{text-align:left; font-weight:600; color:var(--muted); border-bottom:1px solid var(--line); padding:5px 8px; font-size:11.5px}
+.samptable td{padding:4px 8px; border-bottom:1px solid var(--line); font-variant-numeric:tabular-nums}
+.samptable td.url{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace; font-size:11.5px; word-break:break-all; color:var(--muted)}
+.sampcity{display:flex; flex-wrap:wrap; gap:6px}
+.sampcity a{border:1px solid var(--line2); border-radius:6px; padding:3px 10px; font-size:12px; color:var(--ink); text-decoration:none}
+.sampcity a:hover{background:var(--surface2)}
+.sampdept{width:100%; border-collapse:collapse; font-size:12.5px; cursor:pointer}
+.sampdept td{padding:4px 8px; border-bottom:1px solid var(--line); font-variant-numeric:tabular-nums}
+.sampdept tr:hover td{background:var(--surface2)}
+.sampdept td.url{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace; font-size:11.5px; word-break:break-all; color:var(--muted)}
+.backbtn{font-size:12px; color:var(--accent); border:1px solid var(--line2); border-radius:6px; padding:3px 12px; margin-bottom:12px}
+.backbtn:hover{background:var(--accent-soft)}
+/* 详情选项卡 */
+.dtabs{display:flex; gap:6px; margin-bottom:14px; border-bottom:1px solid var(--line); padding-bottom:8px}
+.dtab{
+  display:flex; align-items:center; gap:5px; font-size:13px; padding:4px 12px;
+  border-radius:6px; color:var(--muted);
+}
+.dtab:hover{background:var(--surface2)}
+.dtab.on{background:var(--ink); color:var(--surface)}
+.hintbtn{
+  width:15px; height:15px; border-radius:50%; border:1px solid var(--line2);
+  font-size:10px; color:var(--muted); display:inline-flex; align-items:center; justify-content:center;
+  line-height:1;
+}
+.dtab.on .hintbtn{border-color:var(--surface); color:var(--surface)}
+.hintpop{
+  position:fixed; max-width:320px; background:var(--surface); border:1px solid var(--line2);
+  border-radius:8px; padding:10px 12px; font-size:12px; color:var(--ink); line-height:1.6;
+  box-shadow:0 4px 16px rgba(0,0,0,.14); z-index:60;
+}
+/* JSON 树查看器 */
+.jsonbox{border:1px solid var(--line2); border-radius:10px; overflow:hidden; margin-top:8px}
+.jsonbox .jbar{display:flex; align-items:center; justify-content:space-between; padding:6px 12px; background:var(--surface2); border-bottom:1px solid var(--line); font-size:12px; color:var(--muted)}
+.jstats{display:flex; gap:8px; flex-wrap:wrap; margin:10px 0 4px}
+.jstat{flex:1 1 90px; border:1px solid var(--line); border-radius:8px; padding:8px 10px; background:var(--surface)}
+.jstat b{display:block; font-size:16px; font-variant-numeric:tabular-nums}
+.jstat span{font-size:11px; color:var(--muted)}
+.jtree{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace; font-size:12px; line-height:1.7; padding:8px 12px; overflow:auto; max-height:560px}
+.jnode details{display:block}
+.jnode summary{list-style:none; cursor:pointer; display:flex; align-items:center; gap:6px; padding:1px 4px; border-radius:4px}
+.jnode summary::-webkit-details-marker{display:none}
+.jnode summary:hover{background:var(--surface2)}
+.jnode summary .tw{width:12px; flex:none; color:var(--faint); font-size:9px; transition:transform .12s}
+.jnode details[open]>summary .tw{transform:rotate(90deg)}
+.jnode .children{margin-left:18px; border-left:1px dashed var(--line2); padding-left:6px}
+.jkey{color:var(--accent)}
+.jt{color:var(--faint); font-size:10.5px}
+.jcnt{color:var(--muted); font-size:10.5px; background:var(--surface2); border-radius:4px; padding:0 5px}
+.jstr{color:var(--ok)}
+.jcom{color:var(--faint); font-style:italic}
+.jkwd{color:#7a4ea3; font-weight:600}
+.jdef{color:var(--accent); font-weight:700}
+.jbuilt{color:#0f7b8a}
+.jdec{color:var(--accent)}
+.jnum{color:#2a6db5}
+.jbool{color:#7a4ea3}
+.jnull{color:var(--faint); font-style:italic}
+.jrow{display:flex; gap:6px; padding:1px 4px}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .jnum{color:#6aa7e8}
+  :root:not([data-theme="light"]) .jbool{color:#b78ce0}
+}
+:root[data-theme="dark"] .jnum{color:#6aa7e8}
+:root[data-theme="dark"] .jbool{color:#b78ce0}
+:root[data-theme="dark"] .jkwd{color:#b78ce0}
+:root[data-theme="dark"] .jbuilt{color:#4fb8c6}
+
+footer{padding:8px 22px; border-top:1px solid var(--line); font-size:11.5px; color:var(--faint); background:var(--surface); display:flex; gap:14px; flex-wrap:wrap}
+@media (max-width:900px){
+  main{flex-direction:column}
+  .detailpane{flex:0 0 auto; max-width:none; border-left:none; border-top:1px solid var(--line)}
+  .treepane{flex:1 1 45%}
+}
+</style>
+<style>
+.qpanel{position:fixed;top:70px;right:16px;background:var(--card,#fff);border:1px solid #e2e8f0;border-radius:14px;padding:18px;z-index:50;max-height:76vh;overflow:auto;width:420px;box-shadow:0 12px 32px rgba(0,0,0,.16);display:none}
+.qpanel h3{margin:0 0 12px;font-size:16px}
+.qpanel .kpis{display:flex;gap:10px;margin-bottom:14px}
+.qpanel .kpi{flex:1;background:#f6f9fe;border:1px solid #e3edfb;border-radius:10px;padding:10px 12px;text-align:center}
+.qpanel .kpi .v{font-size:19px;font-weight:700;color:#1d4ed8}
+.qpanel .kpi .k{font-size:11px;color:#64748b;margin-top:2px}
+.qpanel .sec{margin:13px 0 7px;font-size:12.5px;font-weight:600;color:#475569;letter-spacing:.3px}
+.qpanel .row{display:flex;align-items:center;gap:8px;padding:4.5px 0;font-size:12.5px}
+.qpanel .row .nm{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#334155}
+.qpanel .row .nm b{font-weight:600;color:#0f172a}
+.qpanel .bar{flex:1.6;height:9px;border-radius:5px;background:#eef2f7;overflow:hidden}
+.qpanel .bar i{display:block;height:100%;border-radius:5px}
+.qpanel .row .pct{width:58px;text-align:right;font-variant-numeric:tabular-nums;color:#475569}
+.qpanel .row .cnt{width:52px;text-align:right;font-variant-numeric:tabular-nums;color:#94a3b8}
+.qpanel .donuts{display:flex;gap:14px;justify-content:space-around;margin:6px 0 4px}
+.qpanel .donut{text-align:center}
+.qpanel .donut .cap{font-size:11px;color:#64748b;margin-top:4px}
+.qpanel .stackbar{display:flex;height:12px;border-radius:6px;overflow:hidden;margin:4px 0 2px}
+.qpanel .stackbar i{display:block;height:100%}
+.qpanel .legend{display:flex;gap:12px;font-size:11px;color:#64748b;margin:3px 0 8px;flex-wrap:wrap}
+.qpanel .legend span{display:flex;align-items:center;gap:4px}
+.qpanel .legend i{width:9px;height:9px;border-radius:2.5px;display:inline-block}
+.qbtn{border-color:#2563eb;color:#2563eb;font-weight:600}
+</style></head>
+<body>
+<header>
+  <div class="seal">公开</div>
+  <div>
+    <h1>中国政府网站体系</h1>
+    <div class="sub">中央 · 省 · 市 · 县四级人民政府与部委厅局 — 政府信息公开专栏全量名录</div>
+  </div>
+  <div class="stats" id="stats"></div>
+</header>
+<div class="toolbar">
+  <div class="viewswitch" id="viewSwitch" title="块=行政层级（中央/省/市/县+并列机关）；条=垂直管理系统；地图=区划×类型覆盖图（与块/条并列, 三态互斥）">
+    <button class="btn viewbtn active" data-view="块">块 · 行政层级</button>
+    <button class="btn viewbtn" data-view="条">条 · 垂直系统</button>
+    <button class="btn viewbtn" data-view="map">🗺 地图</button>
+  </div>
+  <div class="viewswitch" id="dispSwitch" title="列表=树行缩进列表；树图=思维导图式展开图（数据同源，自动同步）">
+    <button class="btn viewbtn active" data-disp="list">📋 列表</button>
+    <button class="btn viewbtn" data-disp="viz">🌳 树图</button>
+  </div>
+  <button class="btn" id="themeBtn" title="一键切换 白天/夜晚 主题">🌙</button>
+  <button class="btn qbtn" id="qbtn" onclick="toggleQ()">📊 数据健康</button>
+  <div class="search" id="searchBox">
+    <input id="q" type="search" placeholder="检索名称 / 路径 / 代码 · 空格分词" autocomplete="off"
+           title="支持空格分词（如：四川 商务厅）｜↑↓ 选择 · Enter 打开 · ESC 清空 · / 聚焦">
+    <button class="clear" id="qClear" title="清空">×</button>
+    <span class="count" id="resCount"></span>
+  </div>
+  <button class="btn" id="filterToggle">筛选条件 <span class="farrow">▾</span></button>
+  <button class="btn" id="expandAll">展开全部</button>
+  <button class="btn" id="collapseAll">收起</button>
+</div>
+<div class="filterrow" id="filterRow" style="display:none">
+  <span class="flabel">层级</span><div class="chips" id="levelChips"></div>
+  <span class="flabel">状态</span><div class="chips" id="statusChips"></div>
+</div>
+<main>
+  <div class="treepane" id="treepane">
+    <div id="treeList" style="height:100%"></div>
+    <div id="mapWrapOuter" style="position:relative;height:100%;display:none;border-radius:12px;overflow:hidden">
+      <button class="btn" id="mapBack" style="position:absolute;top:10px;right:12px;z-index:8;display:none">↑ 返回上级</button>
+      <div id="mapWrap" style="height:100%"></div>
+      <div id="mapCtrl" style="position:absolute;top:10px;left:12px;z-index:8;display:flex;gap:4px;
+        background:var(--card,#fff);border:1px solid #e2e8f0;border-radius:10px;padding:5px 8px">
+        <span style="font-size:11px;color:var(--muted);align-self:center;margin-right:2px">机构类型</span>
+        <button class="btn mtbtn" data-mt="gov" style="border-color:#2563eb;font-weight:600">🏛 政府</button>
+        <button class="btn mtbtn" data-mt="rd">🗳 人大</button>
+        <button class="btn mtbtn" data-mt="zx">🤝 政协</button>
+        <button class="btn mtbtn" data-mt="fy">⚖ 法院</button>
+        <button class="btn mtbtn" data-mt="jcy">🔍 检察</button>
+        <button class="btn mtbtn" data-mt="jw">🛡 监委</button>
+      </div>
+    </div>
+    <div id="treeVizWrap" style="position:relative;height:100%;display:none">
+      <div id="treeViz" style="height:100%"></div>
+      <div id="tvCtrl" style="position:absolute;right:12px;top:10px;display:flex;gap:6px;z-index:8">
+        <button class="btn" id="tvZoomIn">＋</button>
+        <button class="btn" id="tvZoomOut">－</button>
+        <button class="btn" id="tvFit">复位</button>
+        <button class="btn" id="tvFitView">⤢ 适应窗口</button>
+        <button class="btn" id="tvUp">↑ 上层</button>
+        <span id="tvCrumb" style="font-size:11.5px;color:var(--muted);max-width:420px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;align-self:center"></span>
+      </div>
+      <div id="tvMinimap" style="position:absolute;right:12px;bottom:12px;width:180px;height:112px;
+        background:var(--card,#fff);border:1px solid #e2e8f0;border-radius:10px;
+        box-shadow:0 4px 14px rgba(0,0,0,.12);overflow:hidden;z-index:8;opacity:.92"></div>
+    </div>
+  </div>
+  <aside class="detailpane" id="detail"></aside>
+</main>
+<footer>
+  <span>数据：中国政府网部门导航 · 民政部行政区划代码库（2025-12-31 版，6 位代码） · 各政府门户链式解析（2026-10-30）</span>
+  <span>状态：绿=专栏URL已收录 · 黄=门户在录专栏待核 · 灰=门户未解析</span>
+  <span>港澳台下级区划（48条）为列名参考，采集名单以内地口径为准</span>
+</footer>
+
+<script src="data_js/manifest.js?v=20261113"></script>
+<script>
+// 大一统: 列表/树图/地图共用 __GOV_DATA__（块树+条树合并; 无 file 字段,
+// 原 ensureModule 惰性加载逻辑自动跳过）
+const DATA=(window.__GOV_DATA__&&window.__GOV_DATA__.block)?{
+  n:"中国政府网站体系", l:"根", k:"分组", c:"",
+  ks:[...window.__GOV_DATA__.block.ks, window.__GOV_DATA__.tiao]
+}:window.__MANIFEST__.root;
+let viewMode="块";   // 块=行政层级（默认）；条=垂直管理系统
+const TIAO_ROOT_NAME="条（垂直管理系统）";
+const TIAO_SYS=["海关系统","税务系统","邮政系统","烟草系统","人民银行系统","铁路系统","金融监管系统","证监会系统","移民管理系统","自然资源督察系统","法院系统","检察院系统","人大系统","政协系统"];
+const CROSS_MAP={   // 块视图节点 → 条视图系统组
+  "海关总署":"海关系统（42）",
+  "国家税务总局":"税务系统（31）",
+  "国家邮政局":"邮政系统（29）",
+  "国家烟草专卖局":"烟草系统（5）",
+  "中国人民银行":"人民银行系统（33）",
+  "国家铁路局":"铁路系统（6）",
+  "国家金融监督管理总局":"金融监管系统（38）",
+  "中国证券监督管理委员会":"证监会系统（39）",
+  "国家移民管理局":"移民管理系统（32）",
+  "自然资源部":"自然资源督察系统（10）",
+  "最高人民法院":"法院系统（34）",
+  "最高人民检察院":"检察院系统（33）",
+  "全国人民代表大会（全国人大常委会）":"人大系统（33）",
+  "中国人民政治协商会议全国委员会":"政协系统（33）",
+  "中华全国总工会":"工会系统（中华全国总工会）"
+};
+const REVERSE_MAP={}; Object.entries(CROSS_MAP).forEach(([k,v])=>{REVERSE_MAP[v]=k;});
+const MANIFEST=window.__MANIFEST__;
+const BASE=new URL(".", document.baseURI).href;
+
+/* ---------- 数据工具 ---------- */
+const LEVELS=["中央","省","市","地级区","县","特别行政区","港澳台"];
+const LEVEL_LABELS={中央:"中央",省:"省级",市:"市级",地级区:"地级区",县:"县级",特别行政区:"特别行政区",港澳台:"港澳台下级"};
+function statusOf(n){
+  if(n.x) return "ok";
+  if(n.u) return "warn";
+  return "missing";
+}
+function hasKids(n){ return !!n.ks; }
+function isEntity(n){ return !n.ks || n.k!=="分组"; }
+
+/* ---------- 模块化加载器 ---------- */
+const loadedMods=new Set();
+const loadPromises={};
+function loadScript(src){
+  return new Promise((res,rej)=>{
+    const s=document.createElement("script");
+    s.src=BASE+"data_js/"+src; s.onload=res; s.onerror=()=>rej(new Error("加载失败 "+src));
+    document.head.append(s);
+  });
+}
+async function ensureModule(key){
+  if(loadedMods.has(key)) return;
+  if(!loadPromises[key]) loadPromises[key]=loadScript(MANIFEST.modules[key]).then(()=>{
+    loadedMods.add(key);
+  });
+  await loadPromises[key];
+}
+async function ensureRule(pname){
+  const f=MANIFEST.rulesFiles[pname];
+  if(!f) return null;
+  if(!window.__R || !window.__R[pname]){
+    await loadScript(f);
+  }
+  return window.__R[pname];
+}
+/* 把模块内容合并进桩节点 */
+function registerParents(n,parent){
+  if(parent!==null) parents.set(n,parent);
+  (n.ks||[]).forEach(c=>registerParents(c,n));
+}
+function attachModule(stub){
+  if(stub.__loaded || !stub.file) return;
+  const key=stub._key;
+  const m=window.__M[key];
+  if(m){
+    stub.ks=m.ks;
+    stub.__loaded=true;
+    registerParents(stub, parents.get(stub)||null);
+  }
+}
+async function loadAll(){
+  await Promise.all(Object.keys(MANIFEST.modules).map(ensureModule));
+  attachAll();
+  buildIndex();
+}
+function attachAll(){
+  const attach=(n)=>{
+    if(n.file && !n.__loaded) attachModule(n);
+    (n.ks||[]).forEach(attach);
+  };
+  attach(DATA);
+}
+
+/* ---------- 搜索索引 ---------- */
+const pathIndex=new Map();
+const parents=new Map();
+let indexReady=false;
+function buildIndex(){
+  pathIndex.clear(); parents.clear();
+  const walkPath=(n,accAll,accEnt,parent)=>{
+    if(parent!==null) parents.set(n,parent);
+    const all=[...accAll,n.n].join("");
+    const ent=n.k==="分组"?[...accEnt]:[...accEnt,n.n];
+    if(isEntity(n)) pathIndex.set(n,{all, ent:ent.join("")});
+    (n.ks||[]).forEach(c=>walkPath(c,[...accAll,n.n],ent,n));
+  };
+  walkPath(DATA,[],[],null);
+  indexReady=true;
+}
+function tokenize(q){ return q.trim().toLowerCase().split(/\s+/).filter(Boolean); }
+let hlRe=null;
+function buildHl(){
+  const toks=tokenize(filter.q);
+  hlRe = toks.length
+    ? new RegExp("("+toks.map(t=>t.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("|")+")","gi")
+    : null;
+}
+function matches(n,tokens){
+  if(!tokens.length) return true;
+  const name=n.n.toLowerCase();
+  const idx=pathIndex.get(n)||{all:"",ent:""};
+  const flat=((idx.all+idx.ent)+(n.cd||"")).toLowerCase();
+  return tokens.every(t=> name.includes(t)||flat.includes(t));
+}
+function breadcrumb(n){
+  const chain=[]; let p=parents.get(n);
+  while(p){ chain.unshift(p.n); p=parents.get(p); }
+  chain.push(n.n);
+  return chain.join(" › ");
+}
+
+/* ---------- 转义/高亮 ---------- */
+function esc(s){ return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+function hl(s){
+  const safe=esc(s);
+  if(!hlRe) return safe;
+  return safe.split(hlRe).map((part,i)=>i%2===1?`<mark>${part}</mark>`:part).join("");
+}
+
+/* ---------- 树渲染（惰性） ---------- */
+const pane=document.getElementById("treepane");
+const listBox=document.getElementById("treeList");
+const vizBox=document.getElementById("treeViz");
+const vizWrap=document.getElementById("treeVizWrap");
+let dispMode="list";   // list=树行列表 | viz=思维导图树图
+let filter={q:"", levels:new Set(LEVELS), status:new Set(["ok","warn","missing"])};
+let selectedNode=null;
+
+function statsOf(n){
+  const s={e:0,ok:0,warn:0,miss:0};
+  (function acc(x){
+    if(x.file && !x.__loaded){
+      const st=x._stats||{e:0,ok:0,warn:0,miss:0};
+      s.e+=st.e; s.ok+=st.ok; s.warn+=st.warn; s.miss+=st.miss;
+      return;
+    }
+    if(isEntity(x)){ s.e++; const t=statusOf(x); if(t==="ok")s.ok++; else if(t==="warn")s.warn++; else s.miss++; }
+    (x.ks||[]).forEach(acc);
+  })(n);
+  return s;
+}
+function totalStats(){
+  return {all:MANIFEST.total.e, allok:MANIFEST.total.ok, per:MANIFEST.perLevel};
+}
+
+function nodeRow(n, depth, opts={}){
+  const expandable=hasKids(n)||(n.file&&!n.__loaded);
+  const st=statusOf(n);
+  const nameEl=document.createElement("span");
+  nameEl.className="name";
+  nameEl.innerHTML=hl(n.n);
+  // 2026-11-16 合署办公特别标注（列表模式徽章, 与树图/地图一致）
+  if(n.m&&/合署|区政合一|镜像/.test(n.m)){
+    const hb=document.createElement("span");
+    hb.className="hshu";
+    hb.textContent="🤝合署";
+    hb.title=n.m;
+    nameEl.appendChild(hb);
+  }
+  const cntEl=document.createElement("span");
+  cntEl.className="cnt";
+  if(expandable){
+    const s=statsOf(n);
+    cntEl.innerHTML=`${s.e} 单位 · <span class="g">${s.ok}</span> 已收录`;
+  }
+  const dot=document.createElement("span"); dot.className="dot "+st; dot.title=st;
+  const lv=document.createElement("span"); lv.className="lv"; lv.textContent=n.l;
+  if(expandable){
+    const sum=document.createElement("summary");
+    sum.tabIndex=0;
+    const tw=document.createElement("span"); tw.className="tw"; tw.textContent="▶";
+    sum.append(tw,dot,nameEl,lv,cntEl);
+    if(n.cd){
+      const cd=document.createElement("span"); cd.className="cd"; cd.textContent=n.cd;
+      sum.append(cd);
+    }
+    sum.addEventListener("click",()=>{ select(n,sum); });
+    const det=document.createElement("details");
+    det.className="grprow";
+    det.append(sum);
+    if(opts.open===true) det.open=true;
+    const kidsBox=document.createElement("div");
+    kidsBox.className="children";
+    let rendered=false;
+    det.append(kidsBox);
+    const renderKids=()=>{
+      if(rendered) return;
+      if(n.file && !n.__loaded){
+        kidsBox.innerHTML='<div class="hint">数据加载中…</div>';
+        const key=n._key;
+        ensureModule(key).then(()=>{
+          attachModule(n);
+          if(!rendered){
+            rendered=true;
+            kidsBox.innerHTML="";
+            const kids=(n.ks||[]).filter(visible);
+            kids.forEach(k=>kidsBox.append(nodeRow(k,depth+1)));
+            if(!kids.length) kidsBox.innerHTML='<div class="hint">无符合筛选的条目</div>';
+          }
+        });
+        return;
+      }
+      rendered=true;
+      const kids=(n.ks||[]).filter(visible);
+      kids.forEach(k=>kidsBox.append(nodeRow(k,depth+1)));
+      if(!kids.length) kidsBox.innerHTML='<div class="hint">无符合筛选的条目</div>';
+    };
+    det.addEventListener("toggle",()=>{ if(det.open) renderKids(); });
+    if(det.open) renderKids();
+    n.__det=det; n.__sum=sum;
+    return det;
+  }
+  const row=document.createElement("div");
+  row.className="resrow";
+  row.tabIndex=0;
+  const spacer=document.createElement("span"); spacer.className="tw"; spacer.style.visibility="hidden";
+  spacer.textContent="▶";
+  row.append(spacer,dot,nameEl,lv);
+  if(n.cd){
+    const cd=document.createElement("span"); cd.className="cd"; cd.textContent=n.cd;
+    row.append(cd);
+  }
+  row.addEventListener("click",()=>select(n,row));
+  row.addEventListener("keydown",(e)=>{ if(e.key==="Enter") select(n,row); });
+  n.__el=row;
+  return row;
+}
+function visible(n){
+  if(hasKids(n)&&!isEntity(n)) return true;
+  if(!filter.levels.has(n.l)) return false;
+  if(!filter.status.has(statusOf(n))) return false;
+  return true;
+}
+async function renderTree(){
+  listBox.innerHTML="";
+  document.getElementById("resCount").textContent="";
+  window.__resRows=[]; window.__selIdx=-1;
+  const wrap=document.createElement("div");
+  wrap.className="tree";
+  let roots;
+  if(viewMode==="条"){
+    const stub=DATA.ks.find(g=>g.n===TIAO_ROOT_NAME);
+    if(stub){
+      if(stub.file&&!stub.__loaded){
+        await ensureModule(stub._key);
+        attachModule(stub);
+      }
+      roots=stub.ks||[];
+    }else roots=[];
+  }else{
+    roots=DATA.ks.filter(g=>g.n!==TIAO_ROOT_NAME);
+  }
+  const kids=roots.filter(visible);
+  kids.forEach(k=>wrap.append(nodeRow(k,0,{open:viewMode==="条"
+    ? k===roots[0] : k.n.startsWith("中央")})));
+  listBox.append(wrap);
+}
+function expandAll(){
+  document.querySelectorAll(".tree details").forEach(d=>{ d.open=true; });
+  document.querySelectorAll(".tree details").forEach(d=>d.dispatchEvent(new Event("toggle")));
+}
+function collapseAll(){
+  document.querySelectorAll(".tree details").forEach(d=>{ d.open=false; });
+}
+
+/* ---------- 结果列表（搜索/筛选模式） ---------- */
+function listMode(){
+  return filter.q.trim()!=="" || filter.levels.size<LEVELS.length || filter.status.size<3;
+}
+async function renderList(){
+  if(viewMode==="条"){   // 条模式先加载条模块（惰性）
+    const stub=DATA.ks.find(g=>g.n===TIAO_ROOT_NAME);
+    if(stub&&stub.file&&!stub.__loaded){
+      await ensureModule(stub._key);
+      attachModule(stub);
+      if(!indexReady) buildIndex();
+    }
+  }
+  const tokens=tokenize(filter.q);
+  const out=[];
+  (function walkEnt(n){
+    if(isEntity(n)){
+      if(filter.levels.has(n.l)&&filter.status.has(statusOf(n))&&matches(n,tokens)) out.push(n);
+    }
+    (n.ks||[]).forEach(walkEnt);
+  })(DATA);
+  listBox.innerHTML="";
+  const countEl=document.getElementById("resCount");
+  countEl.textContent=out.length? `${out.length} 条` : "";
+  const box=document.createElement("div");
+  box.className="reslist";
+  if(!out.length){
+    box.innerHTML=`<div class="empty">没有符合条件的结果<br><span style="font-size:12px">试试：缩短关键词 / 检查层级与状态筛选 / 空格分词（如「四川 商务厅」）</span></div>`;
+  }else{
+    const MAX=2000;
+    const shown=out.slice(0,MAX);
+    const groups=[];
+    LEVELS.forEach(l=>{
+      const g=shown.filter(n=>n.l===l);
+      if(g.length) groups.push([l,g]);
+    });
+    groups.forEach(([l,items])=>{
+      const hd=document.createElement("div");
+      hd.className="resgroup"; hd.textContent=`${LEVEL_LABELS[l]||l} · ${items.length}`;
+      box.append(hd);
+      items.forEach(n=>{
+        const row=document.createElement("div");
+        row.className="resrow"; row.tabIndex=-1;
+        const dot=document.createElement("span"); dot.className="dot "+statusOf(n);
+        const p=document.createElement("span"); p.className="path";
+        p.textContent=(pathIndex.get(n)||{ent:""}).ent||breadcrumb(n);
+        const nameEl=document.createElement("span"); nameEl.className="name"; nameEl.innerHTML=hl(n.n);
+        // 2026-11-16 合署办公特别标注（搜索结果行, 与列表树行一致）
+        if(n.m&&/合署|区政合一|镜像/.test(n.m)){
+          const hb=document.createElement("span");
+          hb.className="hshu"; hb.textContent="🤝合署"; hb.title=n.m;
+          nameEl.appendChild(hb);
+        }
+        const lv=document.createElement("span"); lv.className="lv"; lv.textContent=n.l;
+        row.append(dot,p,nameEl,lv);
+        if(n.cd){
+          const cd=document.createElement("span"); cd.className="cd"; cd.textContent=n.cd;
+          row.append(cd);
+        }
+        const loc=document.createElement("button"); loc.className="locatebtn"; loc.textContent="定位";
+        loc.addEventListener("click",(e)=>{ e.stopPropagation(); locateInTree(n); });
+        row.append(loc);
+        row.addEventListener("click",()=>{ select(n,row); });
+        box.append(row);
+      });
+    });
+    if(out.length>MAX){
+      const more=document.createElement("div");
+      more.className="resmore"; more.textContent=`共 ${out.length} 条，仅显示前 ${MAX} 条 — 请细化关键词`;
+      box.append(more);
+    }
+    window.__resRows=[...box.querySelectorAll(".resrow")];
+    const navHint=document.createElement("div");
+    navHint.className="navhint"; navHint.textContent=`↑↓ 移动选择 · Enter 打开详情 · 「定位」跳转树中位置`;
+    box.append(navHint);
+  }
+  listBox.append(box);
+}
+
+/* 树内定位：清空检索 → 展开祖先链 → 滚动高亮 */
+async function locateInTree(n){
+  qInput.value=""; filter.q=""; hlRe=null;
+  document.getElementById("searchBox").classList.remove("has-text");
+  document.getElementById("resCount").textContent="";
+  filter.levels=new Set(LEVELS); filter.status=new Set(["ok","warn","missing"]);
+  syncChips();
+  await renderTree();
+  const chain=[]; let p=parents.get(n);
+  while(p && p!==DATA){ chain.unshift(p); p=parents.get(p); }
+  chain.forEach(a=>{
+    const det=a.__det;
+    if(det && !det.open){
+      det.open=true;
+      det.dispatchEvent(new Event("toggle"));
+    }
+  });
+  if(n.__det && !n.__det.open){
+    n.__det.open=true;
+    n.__det.dispatchEvent(new Event("toggle"));
+  }
+  const el=n.__el||n.__sum;
+  if(el){
+    el.scrollIntoView({block:"center"});
+    el.classList.add("flash");
+    setTimeout(()=>el.classList.remove("flash"),2000);
+    select(n,el);
+  }
+}
+/* 按名称定位（提取规则样例点击联动）：先加载省模块，再定位 */
+async function locateByName(provName, targetName){
+  if(MANIFEST.modules[provName]) await ensureModule(provName);
+  attachAll();
+  if(!indexReady) buildIndex();
+  let found=null;
+  (function find(n){
+    if(n.n===targetName && isEntity(n)){ found=n; return; }
+    (n.ks||[]).forEach(find);
+    if(found) return;
+  })(DATA);
+  if(found) locateInTree(found);
+}
+
+/* ---------- 详情面板（选项卡：概况 / 提取规则 / 原始数据） ---------- */
+const detailEl=document.getElementById("detail");
+let curTab="概况";
+let hintPop=null;
+
+function copyText(t,btn){
+  const done=()=>{ const o=btn.textContent; btn.textContent="已复制"; setTimeout(()=>btn.textContent=o,1200); };
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).then(done).catch(()=>fallbackCopy(t,done));
+  }else fallbackCopy(t,done);
+}
+function fallbackCopy(t,done){
+  try{
+    const ta=document.createElement("textarea"); ta.value=t; ta.style.position="fixed"; ta.style.opacity="0";
+    document.body.append(ta); ta.select(); document.execCommand("copy"); ta.remove(); done();
+  }catch(e){}
+}
+function ruleKeyOf(n){
+  if(n.n==="中央（党中央、国务院及并列机关）") return "中央";
+  if(n.n==="工会系统（中华全国总工会）") return "工会系统";
+  const p=parents.get(n);
+  if(n.c==="工会系统"){
+    if(n.l==="省") return "工会系统·"+n.n;                 // 省工会节点
+    if(p && p.l==="省") return "工会系统·"+p.n;            // 市工会节点→省级规则
+    return "工会系统·"+n.n;                                // 全总/组节点
+  }
+  if(n.n.startsWith("专门委员会") && p) return p.n+"·"+n.n;
+  if(n.c==="并列机关" && p) return p.n+"·"+n.n;          // 省级并列机关组
+  if(n.c==="厅局" && p) return p.n+"·"+n.n;               // 省政府部门（厅局）组
+  if(n.c==="群团组织" && p && p.l!=="中央") return p.n+"·"+n.n;   // 省级群团组织组
+  if(n.k==="群团组织" && p && p.c==="群团组织" && p.l!=="中央"){
+    const prov=parents.get(p);
+    return (prov?prov.n:"")+"·"+n.n;                       // 省级群团成员
+  }
+  if(n.k==="群团组织" && p && p.l==="市") return p.n+"·"+n.n;  // 市总工会节点
+  if(n.k==="并列机关" && p && p.c==="并列机关"){
+    const prov=parents.get(p);
+    return (prov?prov.n:"")+"·"+n.n;                       // 省级并列机关成员
+  }
+  if(n.cd && (n.l==="县"||n.l==="地级区")) return n.cd;    // 县/地级区节点自身（键=区划代码）
+  if(TIAO_SYS.includes(n.c) && p && TIAO_SYS.includes(p.c) && n.l!=="条")
+    return p.n+"·"+n.n;                                    // 条系统成员→组·成员
+  return n.n.replace(/(省|市|特别行政区)$/,"").replace(/(壮族|回族|维吾尔)?自治区$/,"");
+}
+function hintBtn(text){
+  const b=document.createElement("button"); b.className="hintbtn"; b.textContent="?";
+  b.addEventListener("click",(e)=>{
+    e.stopPropagation();
+    if(hintPop){ hintPop.remove(); hintPop=null; }
+    hintPop=document.createElement("div"); hintPop.className="hintpop"; hintPop.textContent=text;
+    document.body.append(hintPop);
+    const r=b.getBoundingClientRect();
+    hintPop.style.left=Math.max(8, Math.min(r.left, innerWidth-hintPop.offsetWidth-12))+"px";
+    hintPop.style.top=(r.bottom+6)+"px";
+    setTimeout(()=>document.addEventListener("click",function h(){
+      if(hintPop){ hintPop.remove(); hintPop=null; }
+    },{once:true}),0);
+  });
+  return b;
+}
+function tabBar(n){
+  const rk=ruleKeyOf(n);
+  const hasRule=!!(MANIFEST.rulesFiles&&MANIFEST.rulesFiles[rk]);
+  const bar=document.createElement("div"); bar.className="dtabs";
+  const mk=(label,tab,extra)=>{
+    const b=document.createElement("button");
+    b.className="dtab"+(tab===curTab?" on":"");
+    const sp=document.createElement("span"); sp.textContent=label;
+    b.append(sp);
+    if(extra) b.append(extra);
+    b.addEventListener("click",()=>{ curTab=tab; switchTab(n); });
+    return b;
+  };
+  bar.append(mk("概况","概况"));
+  if(hasRule) bar.append(mk("提取规则","规则", hintBtn("下级机构网站与信息公开专栏如何提取——提取方法、来源页、完整 Python 提取代码与提取结果；提取结果即网站渲染提取的原始数据。")));
+  bar.append(mk("原始数据","数据", hintBtn("网站渲染提取的原始 JSON 数据：树结构展示、统计信息与一键复制原始 JSON。")));
+  return bar;
+}
+function switchTab(n){
+  const oldBar=detailEl.querySelector(".dtabs");
+  if(oldBar) oldBar.replaceWith(tabBar(n));
+  const body=document.getElementById("tabBody");
+  body.innerHTML="";
+  if(curTab==="概况") renderOverview(n,body);
+  else if(curTab==="规则") renderRuleTab(n,body);
+  else renderDataTab(n,body);
+}
+function select(n,rowEl){
+  selectedNode=n;
+  curTab="概况";
+  document.querySelectorAll(".resrow.selected,.tree summary.selected").forEach(el=>el.classList.remove("selected"));
+  if(rowEl) rowEl.classList.add("selected");
+  detailEl.innerHTML="";
+  detailEl.append(tabBar(n));
+  const body=document.createElement("div"); body.id="tabBody";
+  detailEl.append(body);
+  renderOverview(n,body);
+  // 树图入口: 以该节点为根单独查看子树
+  const vb=document.createElement("div");
+  vb.className="crossbox";
+  vb.innerHTML=`<span class="crossnote">树图</span><button class="btn crossbtn" id="vizRootBtn">🌳 以此节点为根看树图</button>`;
+  body.prepend(vb);
+  document.getElementById("vizRootBtn").addEventListener("click",()=>openVizAt(selectedNode.n));
+}
+/* 树图模式: 以节点 n 名为根打开子图 */
+async function openVizAt(nodeName){
+  dispMode="viz";
+  document.querySelectorAll("#dispSwitch .viewbtn").forEach(x=>x.classList.remove("active"));
+  document.querySelector('#dispSwitch [data-disp="viz"]').classList.add("active");
+  listBox.style.display="none";
+  document.getElementById("mapWrapOuter").style.display="none";
+  vizWrap.style.display="block";
+  const kind=viewMode==="条"?"tiao":"blk";
+  loadVizData(kind);
+  if(!window.TreeViz){
+    const s=document.createElement("script");
+    s.src="tree_view.js?v=20261116";
+    document.head.appendChild(s);
+  }
+  const t=setInterval(()=>{
+    if(!window.TreeViz)return;
+    const data=window[kind==="tiao"?"__TIAO__":"__TREE__"];
+    if(!data)return;
+    clearInterval(t);
+    function find(n){if(n.n===nodeName)return n;for(const k of n.ks||[]){const f=find(k);if(f)return f}return null}
+    // 条系统名 → viz 树节点名映射（列表「人大系统(33)」在树图里是「全国人民代表大会」等）
+    const ALIAS=[["人大系统","全国人民代表大会"],["政协系统","中国人民政治协商会议全国委员会"],
+      ["法院系统","最高人民法院"],["检察院系统","最高人民检察院"],["纪委系统","国家监察委员会"],
+      ["财经系统","中央财经委员会办公室"],["外交系统","外交系统（外交部体系）"],
+      ["群团组织系统","群团组织系统"],["垂直管理系统","国务院垂直管理系统"]];
+    let node=find(data);
+    if(!node){
+      for(const [k,v] of ALIAS){
+        if(nodeName.startsWith(k)){
+          node=find(data,v);break;
+        }
+      }
+    }
+    if(!node){   // 别名仍不中: 按「去系统后缀」模糊匹配
+      const stem=nodeName.replace(/系统（.*|系统$/,"");
+      if(stem.length>=2)node=findByStem(data,stem);
+    }
+    function findByStem(n,stem){
+      if(n.n.includes(stem))return n;
+      for(const k of n.ks||[]){const f=findByStem(k,stem);if(f)return f}
+      return null;
+    }
+    node=node||data;
+    if(window.__VIZ_KIND__===kind){TreeViz.setTree(data)}else{window.__VIZ_KIND__=kind;TreeViz.mount(vizBox,data)}
+    TreeViz.setRoot(node);
+  },80);
+  setTimeout(()=>clearInterval(t),6000);
+}
+function crossBox(n){
+  const t=CROSS_MAP[n.n], k=REVERSE_MAP[n.n];
+  if(!t&&!k) return "";
+  return `<div class="crossbox"><span class="crossnote">${t?"垂直管理系统（条）":"行政层级（块）"}</span>`+
+    (t?`<button class="btn crossbtn" data-tiao="${esc(t)}">查看条线【${esc(t)}】→</button>`:"")+
+    (k?`<button class="btn crossbtn" data-kuai="${esc(k)}">← 查看块视图【${esc(k)}】</button>`:"")+
+    `</div>`;
+}
+async function jumpToTiao(target){
+  viewMode="条";
+  document.querySelectorAll("#viewSwitch .viewbtn").forEach(x=>x.classList.toggle("active",x.dataset.view==="条"));
+  const root=DATA.ks.find(g=>g.n===TIAO_ROOT_NAME);
+  if(!root) return;
+  await renderTree();          // 条模式内部会加载条模块
+  attachAll(); if(!indexReady) buildIndex();
+  let found=null;
+  (function find(n){ if(n.n===target){found=n;return;} (n.ks||[]).forEach(find); if(found)return; })(root);
+  if(found) locateInTree(found);
+}
+async function jumpToKuai(target){
+  viewMode="块";
+  document.querySelectorAll("#viewSwitch .viewbtn").forEach(x=>x.classList.toggle("active",x.dataset.view==="块"));
+  if(target==="中华全国总工会"){
+    if(MANIFEST.modules&&MANIFEST.modules.central) await ensureModule("central");
+  }
+  attachAll(); if(!indexReady) buildIndex();
+  await renderTree();
+  let found=null;
+  (function find(n){
+    if(n.n===target&&n!==DATA){found=n;return;}
+    (n.ks||[]).forEach(find);
+    if(found)return;
+  })(DATA);
+  if(found) locateInTree(found);
+}
+function renderOverview(n,body){
+  const hasRule=!!(MANIFEST.rulesFiles&&MANIFEST.rulesFiles[ruleKeyOf(n)]);
+  if(hasKids(n)&&n.k==="分组"){
+    const s=statsOf(n);
+    body.innerHTML=`
+      <p class="dtitle">${esc(n.n)}</p>
+      <p class="crumb">${esc(breadcrumb(n))}</p>
+      ${crossBox(n)}
+      <div class="dchips">
+        <span class="dchip">分组节点</span>
+        <span class="dchip">${esc(n.c||"分组")}</span>
+      </div>
+      <div class="dsection"><p class="dlabel">下级构成</p>
+        <div class="dgroup-stats">
+          <div class="gstat"><b>${s.e}</b><span>单位总数</span></div>
+          <div class="gstat"><b style="color:var(--ok)">${s.ok}</b><span>专栏URL已收录</span></div>
+          <div class="gstat"><b style="color:var(--warn)">${s.warn}</b><span>门户在录 · 专栏待核</span></div>
+          <div class="gstat"><b style="color:var(--missing)">${s.miss}</b><span>门户未解析</span></div>
+        </div>
+      </div>
+      ${n.ks?`<div class="dsection"><p class="dlabel">直接下级</p>
+        <p class="dtext">${n.ks.slice(0,40).map(c=>esc(c.n)).join(" · ")}${n.ks.length>40?" · …":""}</p></div>`:""}
+      <p class="dtext" style="font-size:12px;color:var(--faint)">${hasRule
+        ?"顶部选项卡可切换 提取规则 / 原始数据 视图；点击左侧树节点浏览各级单位详情。"
+        :"点击左侧树节点浏览各级单位详情；顶部「原始数据」可查看本节点 JSON。"}</p>`;
+    return;
+  }
+  const st=statusOf(n);
+  const stLabel=st==="ok"?"专栏URL已收录":st==="warn"?"门户在录 · 专栏待核":"门户未解析";
+  body.innerHTML=`
+    <p class="dtitle">${esc(n.n)}</p>
+    <p class="crumb">${esc(breadcrumb(n))}</p>
+    ${crossBox(n)}
+    <div class="dchips">
+      <span class="dchip">${esc(n.l)}级</span>
+      ${n.c?`<span class="dchip">${esc(n.c)}</span>`:""}
+      ${n.p1?`<span class="dchip">归属 ${esc(n.p1)}</span>`:""}
+      ${n.cd?`<span class="dchip" style="font-family:ui-monospace,monospace">代码 ${esc(n.cd)}</span>`:""}
+      <span class="dchip st-${st}">${stLabel}</span>
+    </div>
+    <div class="dsection">
+      <p class="dlabel">门户网站</p>
+      ${n.u?`<div class="durl"><a href="${esc(n.u)}" target="_blank" rel="noopener">${esc(n.u)}</a><button class="copybtn">复制</button></div>`
+            :'<p class="dtext" style="color:var(--missing)">未解析</p>'}
+    </div>
+    <div class="dsection">
+      <p class="dlabel">政府信息公开专栏</p>
+      ${n.x?`<div class="durl"><a href="${esc(n.x)}" target="_blank" rel="noopener">${esc(n.x)}</a><button class="copybtn">复制</button></div>`
+            :'<p class="dtext" style="color:var(--warn)">待核 — 门户在录但专栏链接未确认</p>'}
+      ${n.s?`<p class="dtext" style="font-size:12px">URL来源：${esc(n.s)}</p>`:""}
+    </div>
+    ${n.m?`<div class="dsection"><p class="dlabel">备注</p><p class="dtext">${esc(n.m)}</p></div>`:""}
+  `;
+  body.querySelectorAll(".copybtn").forEach(b=>{
+    const a=b.previousElementSibling;
+    b.addEventListener("click",()=>copyText(a? a.href:"",b));
+  });
+}
+async function renderRuleTab(provNode,body){
+  const pname=provNode.n;
+  const rk=ruleKeyOf(provNode);
+  body.innerHTML='<p class="dtext">提取规则加载中…</p>';
+  const r=await ensureRule(rk);
+  if(!r){
+    body.innerHTML='<p class="dtext">该节点暂无提取规则数据</p>';
+    return;
+  }
+  const deptRows=r.depts.map((d)=>`<tr data-name="${esc(d.n)}"><td>${d.o<999?d.o:"—"}</td><td>${esc(d.n)}</td><td class="url">${esc(d.u)}</td></tr>`).join("");
+  const cityTags=r.cities.map(c=>`<a href="#" data-name="${esc(c.n)}">${esc(c.n)}</a>`).join("");
+  body.innerHTML=`
+    <p class="dtitle">${esc(pname)} · 提取规则</p>
+    <p class="crumb">对应目录节点：${esc(pname)} 下的下级机构网站提取流程</p>
+    <div class="rulemeta">
+      <div><p class="rlabel">来源门户</p><a href="${esc(r.portal)}" target="_blank" rel="noopener">${esc(r.portal)}</a></div>
+      <div><p class="rlabel">提取方法</p><p class="rmethod">${esc(r.method)}</p></div>
+      <div><p class="rlabel">来源页</p>${r.sources.map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u)}</a>`).join("<br>")}</div>
+    </div>
+    <div class="dsection">
+      <p class="rlabel">完整 Python 代码（URL 请求 + 网页解析提取）</p>
+      <div class="codewrap">
+        <div class="bar"><span>extract_${esc(pname.startsWith("中央")?"central":pname)}.py</span><button class="copybtn" id="copyCode">复制代码</button></div>
+        <pre id="codePre"></pre>
+      </div>
+    </div>
+    <div class="dsection">
+      <p class="rlabel">提取结果 · ${esc(pname.startsWith("中央")?"国务院部门机构":"省政府部门")}（官网原始顺序，点击在目录中定位）</p>
+      <div style="overflow-x:auto"><table class="samptable sampdept">
+        <tr><th>#</th><th>名称</th><th>门户</th></tr>${deptRows}</table></div>
+    </div>
+    ${r.cities&&r.cities.length?`
+    <div class="dsection">
+      <p class="rlabel">提取结果 · 市州政府网站（点击在目录中定位）</p>
+      <div class="sampcity">${cityTags}</div>
+    </div>`:""}`;
+  const pre=body.querySelector("#codePre");
+  pre.innerHTML=pyCode(r.code);
+  body.querySelector("#copyCode").addEventListener("click",function(){
+    const btn=this;
+    const done=()=>{ btn.textContent="已复制"; setTimeout(()=>btn.textContent="复制代码",1200); };
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(r.code).then(done).catch(()=>fallbackCopy(r.code,done)); }
+    else fallbackCopy(r.code,done);
+  });
+  body.querySelectorAll(".sampdept tr[data-name]").forEach(tr=>{
+    tr.addEventListener("click",()=>locateByName(pname, tr.dataset.name));
+  });
+  body.querySelectorAll(".sampcity a").forEach(a=>{
+    a.addEventListener("click",(e)=>{ e.preventDefault(); locateByName(pname, a.dataset.name); });
+  });
+}
+async function renderDataTab(n,body){
+  const pname=n.n;
+  const modKey=(pname==="中央（党中央、国务院及并列机关）")?"central":pname;
+  let obj=window.__M&&window.__M[modKey];
+  if(!obj && MANIFEST.modules[modKey]){
+    body.innerHTML='<p class="dtext">模块数据加载中…</p>';
+    try{
+      await ensureModule(modKey);
+      attachAll();
+      obj=window.__M[modKey];
+    }catch(e){}
+  }
+  if(!obj){
+    obj=n;   // 无独立模块的节点：直接展示节点自身 JSON
+  }
+  if(!obj){
+    body.innerHTML='<p class="dtext">原始数据加载失败</p>';
+    return;
+  }
+  const st=jsonStats(obj);
+  body.innerHTML=`
+    <p class="dtitle">${esc(pname)} · 原始数据</p>
+    <p class="crumb">网站渲染提取的原始 JSON（${esc(modKey)} 模块），树结构展示</p>
+    <div class="jstats">
+      <div class="jstat"><b>${st.nodes}</b><span>JSON 节点</span></div>
+      <div class="jstat"><b>${st.entities}</b><span>实体</span></div>
+      <div class="jstat"><b style="color:var(--ok)">${st.ok}</b><span>已收录专栏</span></div>
+      <div class="jstat"><b>${st.kb}KB</b><span>原始大小</span></div>
+    </div>
+    <div class="jsonbox">
+      <div class="jbar"><span>module JSON</span><button class="copybtn" id="copyJson">复制原始 JSON</button></div>
+      <div class="jtree" id="jsonTree"></div>
+    </div>`;
+  body.querySelector("#copyJson").addEventListener("click",function(){
+    const btn=this; const raw=JSON.stringify(obj,null,2);
+    const done=()=>{ btn.textContent="已复制"; setTimeout(()=>btn.textContent="复制原始 JSON",1200); };
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(raw).then(done).catch(()=>fallbackCopy(raw,done)); }
+    else fallbackCopy(raw,done);
+  });
+  body.querySelector("#jsonTree").append(jsonNode("root", obj, 0));
+}
+
+/* ---------- JSON 树查看器 ---------- */
+function jsonStats(obj){
+  let nodes=0, entities=0, ok=0;
+  (function walk(v){
+    nodes++;
+    if(v && typeof v==="object"){
+      if(!v.ks || v.k!=="分组"){ entities++; if(v.x) ok++; }
+      Object.values(v).forEach(walk);
+    }
+  })(obj);
+  return {nodes, entities, ok, kb:(JSON.stringify(obj).length/1024).toFixed(0)};
+}
+function jsonNode(key, val, depth){
+  const isObj=val && typeof val==="object";
+  if(!isObj){
+    const row=document.createElement("div"); row.className="jrow";
+    const k=document.createElement("span"); k.className="jkey"; k.textContent=key+": ";
+    const v=document.createElement("span");
+    if(typeof val==="string"){ v.className="jstr"; v.textContent=JSON.stringify(val); }
+    else if(typeof val==="number"){ v.className="jnum"; v.textContent=String(val); }
+    else if(typeof val==="boolean"){ v.className="jbool"; v.textContent=String(val); }
+    else { v.className="jnull"; v.textContent=String(val); }
+    row.append(k,v);
+    return row;
+  }
+  const arr=Array.isArray(val);
+  const det=document.createElement("details"); det.className="jnode";
+  const sum=document.createElement("summary");
+  const tw=document.createElement("span"); tw.className="tw"; tw.textContent="▶";
+  const k=document.createElement("span"); k.className="jkey"; k.textContent=key;
+  const t=document.createElement("span"); t.className="jt"; t.textContent=arr?"[…]":"{…}";
+  const cnt=document.createElement("span"); cnt.className="jcnt";
+  cnt.textContent=arr? val.length : Object.keys(val).length;
+  sum.append(tw,k,t,cnt);
+  det.append(sum);
+  const box=document.createElement("div"); box.className="children";
+  let rendered=false;
+  det.append(box);
+  det.addEventListener("toggle",()=>{
+    if(!det.open||rendered) return;
+    rendered=true;
+    if(arr){
+      val.forEach((item,i)=>box.append(jsonNode(String(i), item, depth+1)));
+    }else{
+      Object.entries(val).forEach(([kk,vv])=>box.append(jsonNode(kk, vv, depth+1)));
+    }
+  });
+  if(depth===0){ det.open=true; det.dispatchEvent(new Event("toggle")); }
+  return det;
+}
+
+/* ---------- Python 语法高亮 ---------- */
+const PY_BI=new Set("print len range str int float bool list dict set tuple enumerate sorted reversed zip map filter open input sum min max abs round isinstance type repr super Exception ValueError TypeError RuntimeError object bytes any all next iter json requests re socket time json".split(" "));
+function pyCode(code){
+  const E=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const re=/^(#.*)|('{3}[\s\S]*?'{3}|"{3}[\s\S]*?"{3}|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')|((?:^|\n)\s*@\w+)|(\b\d+(?:\.\d+)?\b)|((?:^|\n)[ \t]*(?:def|class)[ \t]+)(\w+)|(\b(?:and|as|assert|async|await|break|class|continue|def|del|elif|else|except|finally|for|from|global|if|import|in|is|lambda|nonlocal|not|or|pass|raise|return|try|while|with|yield|None|True|False)\b)|(\b[A-Za-z_]\w*\b)/gm;
+  let out="", last=0, m;
+  while((m=re.exec(code))){
+    out+=E(code.slice(last,m.index));
+    const t=m[0];
+    if(m[1]!==undefined) out+=`<span class="jcom">${E(t)}</span>`;
+    else if(m[2]!==undefined) out+=`<span class="jstr">${E(t)}</span>`;
+    else if(m[3]!==undefined) out+=`<span class="jdec">${E(t)}</span>`;
+    else if(m[4]!==undefined) out+=`<span class="jnum">${E(t)}</span>`;
+    else if(m[5]!==undefined) out+=`<span class="jkwd">${E(m[5])}</span><span class="jdef">${E(m[6])}</span>`;
+    else if(m[7]!==undefined) out+=`<span class="jkwd">${E(t)}</span>`;
+    else if(PY_BI.has(m[8])) out+=`<span class="jbuilt">${E(t)}</span>`;
+    else out+=E(t);
+    last=m.index+t.length;
+  }
+  out+=E(code.slice(last));
+  return out;
+}
+
+/* ---------- 顶栏统计 ---------- */
+function renderStats(){
+  const s=totalStats();
+  const el=document.getElementById("stats");
+  el.innerHTML="";
+  const mk=(label,key)=>{
+    const d=document.createElement("div"); d.className="stat";
+    d.title="有官网机构 / 实体总数";
+    const b=document.createElement("b");
+    const st=key? s.per[key] : {ok:s.allok,warn:s.allwarn||0,e:s.all};
+    const hit=st.ok+(st.warn||0);          // 有官网 = 有专栏 + 有门户无专栏
+    const total=st.e;
+    // 有官网(分子, 绿) / 总数(分母) —— 分子 ≤ 分母
+    b.innerHTML=`<span class="hit">${hit.toLocaleString()}</span><span style="font-size:12px;color:var(--faint)"> / </span>${total.toLocaleString()}`;
+    const sp=document.createElement("span"); sp.textContent=label;
+    d.append(b,sp);
+    if(key) d.addEventListener("click",()=>toggleLevel(key));
+    el.append(d);
+  };
+  mk("总计");
+  LEVELS.forEach(l=>mk(LEVEL_LABELS[l],l));
+}
+function toggleLevel(l){
+  if(filter.levels.has(l)) filter.levels.delete(l); else filter.levels.add(l);
+  syncChips(); refresh();
+}
+
+/* ---------- 筛选 chips ---------- */
+function filterBadge(){
+  const selLevels = filter.levels.size<LEVELS.length ? filter.levels.size : 0;
+  const selStatus = filter.status.size<3 ? filter.status.size : 0;
+  const total = selLevels+selStatus;
+  const tb=document.getElementById("filterToggle");
+  const arr=document.getElementById("filterRow").style.display!=="none";
+  if(tb) tb.innerHTML=`筛选条件${total?` · ${total}`:""} <span class="farrow">${arr?"▴":"▾"}</span>`;
+}
+document.getElementById("filterToggle").addEventListener("click",()=>{
+  const row=document.getElementById("filterRow");
+  const show=row.style.display==="none";
+  row.style.display=show?"":"none";
+  filterBadge();
+});
+function syncChips(){
+  const lc=document.getElementById("levelChips");
+  lc.innerHTML="";
+  [["全部",null]].concat(LEVELS.map(l=>[LEVEL_LABELS[l],l])).forEach(([label,lv])=>{
+    const c=document.createElement("button"); c.className="chip";
+    if(lv===null?filter.levels.size===LEVELS.length:filter.levels.has(lv)) c.classList.add("on");
+    c.textContent=label;
+    c.addEventListener("click",()=>{
+      if(lv===null) filter.levels=new Set(LEVELS);
+      else{ if(filter.levels.size===LEVELS.length&&filter.levels.has(lv)) filter.levels=new Set([lv]);
+            else if(filter.levels.has(lv)) filter.levels.delete(lv); else filter.levels.add(lv); }
+      syncChips(); refresh();
+    });
+    lc.append(c);
+  });
+  filterBadge();
+  const sc=document.getElementById("statusChips");
+  sc.innerHTML="";
+  [["全部",null],["已收录专栏","ok"],["专栏待核","warn"],["门户未解析","missing"]].forEach(([label,st])=>{
+    const c=document.createElement("button"); c.className="chip";
+    if(st===null?filter.status.size===3:filter.status.has(st)) c.classList.add("on");
+    c.textContent=label;
+    c.addEventListener("click",()=>{
+      if(st===null) filter.status=new Set(["ok","warn","missing"]);
+      else{ if(filter.status.size===3&&filter.status.has(st)) filter.status=new Set([st]);
+            else if(filter.status.has(st)) filter.status.delete(st); else filter.status.add(st); }
+      syncChips(); refresh();
+    });
+    sc.append(c);
+  });
+  filterBadge();
+}
+function refresh(){
+  if(listMode()) renderList(); else renderTree();
+}
+
+/* ---------- 事件 ---------- */
+const qInput=document.getElementById("q");
+const qClear=document.getElementById("qClear");
+const searchBox=document.getElementById("searchBox");
+let qTimer=null;
+let indexing=null;
+qInput.addEventListener("input",()=>{
+  searchBox.classList.toggle("has-text", !!qInput.value);
+  clearTimeout(qTimer);
+  qTimer=setTimeout(async ()=>{
+    if(qInput.value.trim() && !indexReady){
+      // 首次检索：加载全部模块构建索引
+      if(!indexing) indexing=loadAll().catch(()=>{});
+      await indexing;
+    }
+    filter.q=qInput.value; buildHl(); refresh();
+  },160);
+});
+qInput.addEventListener("keydown",(e)=>{
+  if(e.key==="Escape"){ clearSearch(); }
+  else if(e.key==="ArrowDown"||e.key==="ArrowUp"){
+    if(!window.__resRows||!window.__resRows.length) return;
+    e.preventDefault();
+    const delta=e.key==="ArrowDown"?1:-1;
+    const cur=window.__selIdx===undefined?-1:window.__selIdx;
+    let i=Math.max(-1, Math.min(window.__resRows.length-1, cur+delta));
+    window.__selIdx=i;
+    window.__resRows.forEach((r,j)=>r.classList.toggle("sel", j===i));
+    if(i>=0) window.__resRows[i].scrollIntoView({block:"nearest"});
+  }
+  else if(e.key==="Enter"){
+    e.preventDefault();
+    if(window.__resRows&&window.__resRows.length){
+      const i=window.__selIdx>=0?window.__selIdx:0;
+      window.__resRows[i].click();
+    }
+  }
+});
+qClear.addEventListener("click",clearSearch);
+document.addEventListener("keydown",(e)=>{
+  if(e.key==="/" && document.activeElement!==qInput
+     && !["INPUT","TEXTAREA"].includes(document.activeElement?.tagName||"")){
+    e.preventDefault(); qInput.focus();
+  }
+});
+function clearSearch(){
+  qInput.value=""; filter.q=""; hlRe=null;
+  searchBox.classList.remove("has-text");
+  document.getElementById("resCount").textContent="";
+  window.__resRows=[]; window.__selIdx=-1;
+  refresh();
+}
+document.getElementById("expandAll").addEventListener("click",expandAll);
+/* ---------- 视图切换: 块/条/地图三态并列互斥（2026-11-13 地图合并块条） ---------- */
+document.querySelectorAll("#viewSwitch .viewbtn").forEach(b=>{
+  b.addEventListener("click",()=>{
+    const v=b.dataset.view;
+    if(v==="map"){
+      // 进入地图: 块/条按钮全部熄灭, 仅地图亮（与块/条并列, 非组合关系）
+      if(dispMode==="map") return;
+      document.querySelectorAll("#viewSwitch .viewbtn").forEach(x=>x.classList.toggle("active",x===b));
+      selectedNode=null;
+      showMapMode();
+      tmplSyncHash();
+      return;
+    }
+    if(dispMode==="map"){
+      // 地图状态点块/条: 退出地图, 显示方式回到进入地图前的列表/树图
+      dispMode=(window.__preMapDisp==="viz")?"viz":"list";
+      document.querySelectorAll("#dispSwitch .viewbtn").forEach(x=>x.classList.toggle("active",x.dataset.disp===dispMode));
+      if(dispMode==="viz")showViz();else showList();
+    }
+    if(viewMode===v) return;
+    if(dispMode==="viz"){
+    const kind2=b.dataset.view==="条"?"tiao":"blk";
+    loadVizData(kind2);
+    const t2=setInterval(()=>{
+      if(window[kind2==="tiao"?"__TIAO__":"__TREE__"]){
+        clearInterval(t2);
+        if(window.__VIZ_KIND__===kind2){
+          TreeViz.setTree(window[kind2==="tiao"?"__TIAO__":"__TREE__"]);
+        }else{
+          window.__VIZ_KIND__=kind2;
+          TreeViz.mount(vizBox,window[kind2==="tiao"?"__TIAO__":"__TREE__"],
+            {minimap:document.getElementById("tvMinimap"),
+             sidePanel:document.getElementById("detail"),
+             onRoot:function(p){const c=document.getElementById("tvCrumb");if(c)c.textContent=p.join(" → ")}});
+        }
+        TreeViz.setExpanded(kind2==="tiao"?["root","root/0"]:["root","root/0","root/1","root/1/0"]);
+      }
+    },80);
+    setTimeout(()=>clearInterval(t2),6000);
+  }
+    viewMode=b.dataset.view;
+    document.querySelectorAll("#viewSwitch .viewbtn").forEach(x=>x.classList.toggle("active",x===b));
+    selectedNode=null;
+    renderTree();
+  });
+});
+detailEl.addEventListener("click",(e)=>{
+  const b=e.target.closest(".crossbtn");
+  if(!b) return;
+  if(b.dataset.tiao) jumpToTiao(b.dataset.tiao);
+  else if(b.dataset.kuai) jumpToKuai(b.dataset.kuai);
+});
+document.getElementById("collapseAll").addEventListener("click",collapseAll);
+
+/* ---------- 初始化 ---------- */
+(function liteParents(){
+  const walkLite=(n,parent)=>{
+    if(parent!==null) parents.set(n,parent);
+    (n.ks||[]).forEach(c=>walkLite(c,n));
+  };
+  walkLite(DATA,null);
+})();
+renderStats();
+syncChips();
+renderTree();
+select(DATA);   // 默认展示根节点总览
+</script>
+
+<div class="qpanel" id="qpanel"></div>
+<script src="data/geo/china.js?v=20261111c"></script>
+<script src="data/geo/adcode.js?v=20261111c"></script>
+<script src="data/geo/geo_index.js?v=20261111c"></script>
+<script src="gov_data.js?v=20261116a"></script>
+<script src="data_js/quality.js"></script>
+<script>
+function donutSVG(pct,color,size=74,stroke=8){
+  const r=(size-stroke)/2,c=2*Math.PI*r,off=c*(1-Math.min(pct,100)/100);
+  return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
+    <circle cx="${size/2}" cy="${size/2}" r="${r}" fill="none" stroke="#eef2f7" stroke-width="${stroke}"/>
+    <circle cx="${size/2}" cy="${size/2}" r="${r}" fill="none" stroke="${color}" stroke-width="${stroke}"
+      stroke-dasharray="${c}" stroke-dashoffset="${off}" stroke-linecap="round"
+      transform="rotate(-90 ${size/2} ${size/2})"/>
+    <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle"
+      font-size="${size*0.24}" font-weight="700" fill="${color}">${pct}%</text></svg>`;
+}
+/* ---------- 树图模式（共享 TreeViz 渲染, 数据与列表同源） ---------- */
+let __vizLoaded={};
+function loadVizData(kind){
+  // 统一数据 gov_data.js 已静态加载（__GOV_DATA__）, 无需动态注入
+  if(__vizLoaded[kind])return;
+  __vizLoaded[kind]=true;
+}
+function showViz(){
+  dispMode="viz";
+  listBox.style.display="none";
+  document.getElementById("mapWrapOuter").style.display="none";
+  vizWrap.style.display="block";
+  const kind=viewMode==="条"?"tiao":"blk";
+  loadVizData(kind);
+  if(window.TreeViz&&window.__VIZ_KIND__===kind){
+    TreeViz.setTree(kind==="tiao"?window.__TIAO__:window.__TREE__);
+    TreeViz.setExpanded(kind==="tiao"?["root","root/0"]:["root","root/0","root/1","root/1/0"]);
+    return;
+  }
+  if(window.TreeViz&&window[kind==="tiao"?"__TIAO__":"__TREE__"]){
+    window.__VIZ_KIND__=kind;
+    TreeViz.mount(vizBox,kind==="tiao"?window.__TIAO__:window.__TREE__,
+      {minimap:document.getElementById("tvMinimap"),
+       sidePanel:document.getElementById("detail"),
+       onRoot:function(p){const c=document.getElementById("tvCrumb");if(c)c.textContent=p.join(" → ")}});
+    bindTvCtrl();
+    TreeViz.setExpanded(kind==="tiao"?["root","root/0"]:["root","root/0","root/1","root/1/0"]);
+  }
+}
+function bindTvCtrl(){
+  if(window.__tvBound)return;window.__tvBound=true;
+  document.getElementById("tvZoomIn").onclick=()=>TreeViz.zoom(1.2);
+  document.getElementById("tvZoomOut").onclick=()=>TreeViz.zoom(1/1.2);
+  document.getElementById("tvFit").onclick=()=>TreeViz.fit();
+  document.getElementById("tvFitView").onclick=()=>TreeViz.fitView();
+  document.getElementById("tvUp").onclick=()=>TreeViz.up();
+}
+// 全国层级总览卡（层级切换动态跟随）
+function showChinaDetail(){
+  // 2026-11-13 用户指令: 全国状态下按当前类型展示全国最高机关档案卡
+  // （法院→最高人民法院… 政府→国务院; 综合=总览卡列全部最高机构）
+  const d=document.getElementById("detail");
+  if(!d)return;
+  const recRaw=(window.__GOV_DATA__&&window.__GOV_DATA__.records)||{};
+  const rec=Array.isArray(recRaw)?recRaw:Object.values(recRaw);
+  const ty=MapViz.getType();
+  const TN={gov:"人民政府",rd:"人大",zx:"政协",fy:"法院",jcy:"检察院",jw:"监委"};
+  const TCOL={gov:"#e53935",rd:"#f9a825",zx:"#c0a32c",fy:"#2e7d32",jcy:"#00838f",jw:"#1565c0",all:"#7c4dff"};
+  const TICO={gov:"🏛",rd:"🗳",zx:"🤝",fy:"⚖",jcy:"🔍",jw:"🛡",all:"🎨"};
+  const barRow=(u,total,col)=>{const pct=total?Math.round(u/total*100):0;
+    return `<div class="vsd-row"><span class="vsd-k">覆盖</span><span class="vsd-barcell"><i class="vsd-bar"><i style="width:${pct}%;background:${col}"></i></i><em>${u.toLocaleString()}/${total.toLocaleString()} 有官网</em></span></div>`};
+  function findTop(){
+    if(ty==="gov"){
+      const blk=(window.__GOV_DATA__&&window.__GOV_DATA__.block)||{};
+      let r=null;
+      (function f(n){if(r)return;if(n.u&&(n.n||"").indexOf("国务院")===0){r=n;return}for(const c of n.ks||[])f(c)})(blk);
+      return r;
+    }
+    // tiao 树按党的领导体制组织(法院/检察院挂中央政法委下), 用 t 字段
+    // 深度优先找该类型的最高机构(首个 u 非空节点)
+    const tiao=(window.__GOV_DATA__&&window.__GOV_DATA__.tiao)||{};
+    let r=null;
+    (function f(n){if(r)return;if(n.t===ty&&n.u){r=n;return}for(const c of n.ks||[])f(c)})(tiao);
+    return r;
+  }
+  if(ty!=="all"){
+    const top=findTop();
+    if(top){
+      const rs=rec.filter(x=>x.type===ty);
+      const uu=rs.filter(x=>x.u).length;
+      d.innerHTML=`<div class="vsd">
+        <button class="vsd-x" title="关闭">✕</button>
+        <div class="vsd-badge" style="background:${TCOL[ty]||"#8a7f70"}">${TICO[ty]||""} ${TN[ty]||ty}</div>
+        <div class="vsd-n">${top.n}</div>
+        <div class="vsd-rows">
+          <div class="vsd-row"><span class="vsd-k">官网</span><span class="vsd-urlv"><a href="${top.u}" target="_blank" rel="noopener">${top.u}</a></span></div>
+          ${barRow(uu,rs.length,TCOL[ty]||"#8a7f70")}
+        </div>
+        <div class="vsd-btns"><button class="vsd-btn vsd-pri" id="mzOpen">🔗 打开官网</button></div></div>`;
+      const x=d.querySelector(".vsd-x");if(x)x.addEventListener("click",()=>{d.style.display="none"});
+      const ob=d.querySelector("#mzOpen");if(ob)ob.addEventListener("click",()=>window.open(top.u,"_blank"));
+      return;
+    }
+  }
+  let u=0;
+  for(const r of rec)if(r.u)u++;
+  const total=rec.length,pct=total?Math.round(u/total*100):0;
+  // 综合: 总览卡列 5 系统最高机构
+  let topRows="";
+  {
+    const ICO={fy:"⚖",jcy:"🔍",rd:"🗳",zx:"🤝",jw:"🛡"};
+    const tiao=(window.__GOV_DATA__&&window.__GOV_DATA__.tiao)||{};
+    const rows=[];
+    for(const key of Object.keys(ICO)){
+      let top=null;
+      (function f(n){if(top)return;if(n.t===key&&n.u){top=n;return}for(const c of n.ks||[])f(c)})(tiao);
+      if(top)rows.push(`<div class="vsd-row"><span class="vsd-k">${ICO[key]} ${top.n}</span><span class="vsd-urlv"><a href="${top.u}" target="_blank" rel="noopener">${top.u}</a></span></div>`);
+    }
+    topRows=rows.join("");
+  }
+  d.innerHTML=`<div class="vsd">
+    <button class="vsd-x" title="关闭">✕</button>
+    <div class="vsd-badge" style="background:#b23a2e">🗺 全国</div>
+    <div class="vsd-n">中国政府网站体系 · 全国总览</div>
+    <div class="vsd-rows">
+      ${topRows}
+      <div class="vsd-row"><span class="vsd-k">覆盖</span><span class="vsd-barcell"><i class="vsd-bar"><i style="width:${pct}%;background:#b23a2e"></i></i><em>${u.toLocaleString()}/${total.toLocaleString()} 有官网</em></span></div>
+      <div class="vsd-row"><span class="vsd-k">操作</span><span class="vsd-none">点击省份下钻 · 切换机构类型看各系统覆盖</span></div>
+    </div></div>`;
+  const x=d.querySelector(".vsd-x");if(x)x.addEventListener("click",()=>{d.style.display="none"});
+}
+function showMapMode(){
+  if(dispMode!=="map")window.__preMapDisp=dispMode;   // 记录进入地图前的显示方式(退出时还原)
+  dispMode="map";
+  listBox.style.display="none";vizWrap.style.display="none";
+  const mw=document.getElementById("mapWrap");
+  document.getElementById("mapWrapOuter").style.display="block";
+  const isTiao=false;   // 2026-11-13 地图合并块/条: 地图恒用块数据, 不再区分
+  loadVizData(isTiao?"tiao":"blk");
+  if(!window.MapViz){
+    const s=document.createElement("script");
+    s.src="map_view.js?v=20261116j";
+    document.head.appendChild(s);
+  }
+  const t=setInterval(()=>{
+    if(!window.MapViz)return;
+    const data=window[isTiao?"__TIAO__":"__TREE__"];
+    if(!data)return;
+    clearInterval(t);
+    if(!window.__mapMounted){
+      window.__mapMounted=true;
+      const fillMapDetail=function(name){
+        const d=document.getElementById("detail");
+        const ty=MapViz.getType();
+        const TN={gov:"人民政府",rd:"人大",zx:"政协",fy:"法院",jcy:"检察院",jw:"监委"};
+        const TCOL={gov:"#e53935",rd:"#f9a825",zx:"#c0a32c",fy:"#2e7d32",jcy:"#00838f",jw:"#1565c0",all:"#7c4dff"};
+        const TICO={gov:"🏛",rd:"🗳",zx:"🤝",fy:"⚖",jcy:"🔍",jw:"🛡",all:"🎨"};
+        // 简称/全名归一（与地图匹配层同规则）: 木里藏族自治县↔木里县
+        const ETH2=/(哈萨克族?|维吾尔族?|柯尔克孜族?|朝鲜族?|蒙古族?|藏族?|回族?|壮族?|苗族?|黎族?|侗族?|满族?|白族?|傣族?|彝族?|哈尼族?|拉祜族?|傈僳族?|佤族?|水族?|羌族?|布依族?|仡佬族?|仫佬族?|毛南族?|瑶族?|畲族?|土家族?|锡伯族?|达斡尔族?|鄂温克族?|鄂伦春族?|赫哲族?|俄罗斯族?|塔塔尔族?|乌孜别克族?|塔吉克族?|撒拉族?|保安族?|裕固族?|东乡族?|纳西族?|景颇族?|阿昌族?|普米族?|怒族?|德昂族?|独龙族?|基诺族?|门巴族?|珞巴族?|京族?|自治)$/;
+        const baseOf=(nm)=>{let t=(nm||"").replace(/[（(][^（）)]*[）)]$/,"").replace(/(自治州|自治县|自治旗|地区|盟|市|县|区|旗)$/,"");for(let i=0;i<8;i++){const t2=t.replace(ETH2,"");if(t2===t||t2.length<2)break;t=t2;}return t};
+        const bar=(u,total,col)=>{const pct=total?Math.round(u/total*100):0;
+          return `<div class="vsd-row"><span class="vsd-k">覆盖</span><span class="vsd-barcell"><i class="vsd-bar"><i style="width:${pct}%;background:${col}"></i></i><em>${u}/${total} 有官网</em></span></div>`};
+        function find(n){
+          if(isTiao){if(n.t===ty&&n.n.indexOf(name)===0&&!n.ks)return n}
+          else if(n.n===name||baseOf(n.n)===baseOf(name))return n;
+          for(const k of n.ks||[]){const f=find(k);if(f)return f}
+          return null;
+        }
+        // 2026-11-16 港澳撞车根治: 当前省/市子树内优先查找（香港地图点「北区」
+        // 曾全树 DFS 命中北京市——「北京」被 ETH 京族?剥成「北」与香港北区同
+        // 基底; 攀枝花「东区」精确名撞香港「东区（区议会分区）」）。限定子树后
+        // 香港区必然命中香港节点。
+        const ri0=window.MapViz?MapViz.regionInfo():null;
+        let provRoot=null;
+        if(ri0&&ri0.prov){
+          (function f(n){if(provRoot||!n)return;if(n.n===ri0.prov){provRoot=n;return}for(const k of n.ks||[])f(k)})(data);
+        }
+        let hkmoAnc=false;
+        const findScoped=(root)=>{let path=[];let r=null;
+          (function f(n){if(r||!n)return;path.push(n.n||"");
+            if(isTiao){if(n.t===ty&&n.n.indexOf(name)===0&&!n.ks)r=n}
+            else if(n.n===name||baseOf(n.n)===baseOf(name))r=n;
+            if(!r)for(const k of n.ks||[]){f(k);if(r)break}
+            if(!r)path.pop();
+          })(root);
+          if(r)hkmoAnc=path.some(p=>/香港特别行政区|澳门特别行政区/.test(p));
+          return r;};
+        const toViz=(node)=>{
+          document.querySelector('#dispSwitch [data-disp="viz"]').click();
+          const t2=setInterval(()=>{
+            if(!window.TreeViz)return;
+            const dd=window[isTiao?"__TIAO__":"__TREE__"];
+            if(!dd)return;
+            clearInterval(t2);
+            if(window.__VIZ_KIND__!==(isTiao?"tiao":"blk")){window.__VIZ_KIND__=isTiao?"tiao":"blk";TreeViz.mount(vizBox,dd,{minimap:document.getElementById("tvMinimap"),sidePanel:d})}
+            TreeViz.setRoot(node);
+          },80);
+        };
+        const node=(provRoot&&!isTiao?findScoped(provRoot):null)||find(data);
+        if(!d)return;
+        if(!node){
+          // 区划未收录于数据树 → 兜底卡（避免残留上一张卡）
+          d.innerHTML=`<div class="vsd">
+            <button class="vsd-x" title="关闭">✕</button>
+            <div class="vsd-badge" style="background:#8a7f70">▪ 区划</div>
+            <div class="vsd-n">${name}</div>
+            <div class="vsd-rows">
+              <div class="vsd-row"><span class="vsd-k">说明</span><span class="vsd-none">该区划未收录于当前数据树</span></div>
+            </div></div>`;
+          const xf=d.querySelector(".vsd-x");if(xf)xf.addEventListener("click",()=>{d.style.display="none"});
+          return;
+        }
+        if(!isTiao&&ty==="all"){
+          // 综合: 政府 + 并列机关逐项列出（状态圆点 + 覆盖进度条）
+          // 2026-11-16 港澳特例: 无内地并列机关体系(人大/政协/监委/法院/检察),
+          // 区级入口=民政事务总署分区页, 不再显示「人民政府」与并列机关行
+          const rows=hkmoAnc
+            ?[{n:"区级入口（民政事务总署分区页）",u:node.u,t:"gov"}]
+            :[{n:"人民政府",u:node.u,t:"gov"}];
+          if(!hkmoAnc)for(const k of node.ks||[]){if(k.t==="binglie")for(const o of k.ks||[]){if(o.t&&TN[o.t])rows.push({n:TN[o.t],u:o.u,t:o.t})}}
+          const st=MapViz.statOf(name)||{u:0,total:0};
+          d.innerHTML=`<div class="vsd">
+            <button class="vsd-x" title="关闭">✕</button>
+            <div class="vsd-badge" style="background:${TCOL.all}">🎨 综合</div>
+            <div class="vsd-n">${name}</div>
+            <div class="vsd-rows">${bar(st.u,st.total,TCOL.all)}</div>
+            <div class="vsd-urls">${rows.map(r=>`<div class="vsd-ur"><i class="vsd-dot" style="background:${TCOL[r.t]||"#8a7f70"}"></i><b>${r.n}</b>${r.u?`<a href="${r.u}" target="_blank" rel="noopener">${r.u}</a>`:`<span class="no">无官网</span>`}</div>`).join("")}</div>
+            <div class="vsd-btns">
+              ${node.u?`<button class="vsd-btn vsd-pri" id="mzOpen">🔗 ${hkmoAnc?"打开区级入口":"打开政府官网"}</button>`:""}
+              <button class="vsd-btn ${node.u?"":"vsd-pri"}" id="mz2viz">🌳 以此节点为根</button>
+            </div></div>`;
+          const ob2=d.querySelector("#mzOpen");if(ob2)ob2.addEventListener("click",()=>window.open(node.u,"_blank"));
+          d.querySelector("#mz2viz").addEventListener("click",()=>toViz(node));
+          const x2=d.querySelector(".vsd-x");if(x2)x2.addEventListener("click",()=>{d.style.display="none"});
+          return;
+        }
+        let orgNode=node,u="";
+        if(!isTiao){
+          orgNode=null;
+          if(ty==="gov")orgNode=node;
+          else for(const k of node.ks||[]){if(k.t==="binglie")for(const o of k.ks||[]){if(o.t===ty){orgNode=o;break}}}
+          u=orgNode?orgNode.u:"";
+        }else u=node.u;
+        const st2=MapViz.statOf(name)||{u:0,total:0};
+        d.innerHTML=`<div class="vsd">
+          <button class="vsd-x" title="关闭">✕</button>
+          <div class="vsd-badge" style="background:${TCOL[ty]||"#8a7f70"}">${TICO[ty]||""} ${TN[ty]||ty}</div>
+          <div class="vsd-n">${isTiao?node.n:(orgNode?orgNode.n:name+" · "+TN[ty])}</div>
+          <div class="vsd-rows">
+            <div class="vsd-row"><span class="vsd-k">官网</span>${u?`<span class="vsd-urlv"><a href="${u}" target="_blank" rel="noopener">${u}</a></span>`:`<span class="vsd-none">（无官网 · 列名）</span>`}</div>
+            ${!isTiao?bar(st2.u,st2.total,TCOL[ty]||"#8a7f70"):""}
+          </div>
+          ${orgNode&&orgNode.m?`<div class="vsd-note">${orgNode.m}</div>`:""}
+          <div class="vsd-btns">
+            ${u?`<button class="vsd-btn vsd-pri" id="mzOpen">🔗 打开官网</button>`:""}
+            <button class="vsd-btn ${u?"":"vsd-pri"}" id="mz2viz">🌳 以此节点为根</button>
+          </div></div>`;
+        const ob=d.querySelector("#mzOpen");if(ob)ob.addEventListener("click",()=>window.open(u,"_blank"));
+        d.querySelector("#mz2viz").addEventListener("click",()=>toViz(node));
+        const x=d.querySelector(".vsd-x");if(x)x.addEventListener("click",()=>{d.style.display="none"});
+      };
+      MapViz.mount(mw,data,{
+        onLevel:function(lv){
+          const mb=document.getElementById("mapBack");
+          if(mb)mb.style.display=(lv==="province"||lv==="city")?"block":"none";
+          tmplSyncHash();
+        },
+        onSelect:fillMapDetail,
+        onRegion:function(nm){if(nm){fillMapDetail(nm);return;}showChinaDetail()}
+      });
+    }
+    const mc=document.getElementById("mapCtrl");
+    const bindMt=(b)=>b.onclick=()=>{
+      mc.querySelectorAll(".mtbtn").forEach(x=>{x.style.cssText=""});
+      b.style.cssText="border-color:#2563eb;font-weight:600";
+      MapViz.setType(b.dataset.mt);
+      tmplSyncHash();
+    };
+    if(isTiao){
+      MapViz.setTree(data,"tiao");MapViz.setType("fy");
+      mc.innerHTML=`<span style="font-size:11px;color:var(--muted);align-self:center;margin-right:2px">垂直系统</span>
+        <button class="btn mtbtn" data-mt="fy" style="border-color:#2563eb;font-weight:600">⚖ 法院</button>
+        <button class="btn mtbtn" data-mt="jcy">🔍 检察</button>
+        <button class="btn mtbtn" data-mt="rd">🗳 人大</button>
+        <button class="btn mtbtn" data-mt="zx">🤝 政协</button>
+        <button class="btn mtbtn" data-mt="jw">🛡 纪委</button>`;
+    }else{
+      MapViz.setTree(data,"block");MapViz.setType("all");
+      mc.innerHTML=`<span style="font-size:11px;color:var(--muted);align-self:center;margin-right:2px">机构类型</span>
+        <button class="btn mtbtn" data-mt="all" style="border-color:#2563eb;font-weight:600">🎨 综合</button>
+        <button class="btn mtbtn" data-mt="gov">🏛 政府</button>
+        <button class="btn mtbtn" data-mt="rd">🗳 人大</button>
+        <button class="btn mtbtn" data-mt="zx">🤝 政协</button>
+        <button class="btn mtbtn" data-mt="fy">⚖ 法院</button>
+        <button class="btn mtbtn" data-mt="jcy">🔍 检察</button>
+        <button class="btn mtbtn" data-mt="jw">🛡 监委</button>`;
+    }
+    mc.querySelectorAll(".mtbtn").forEach(bindMt);
+    document.getElementById("mapBack").onclick=()=>MapViz.back();
+    MapViz.fit();
+    tmplSyncHash();
+  },80);
+  setTimeout(()=>clearInterval(t),6000);
+}
+function showList(){
+  dispMode="list";
+  vizWrap.style.display="none";
+  document.getElementById("mapWrapOuter").style.display="none";
+  listBox.style.display="block";
+  if(listMode())renderList();else renderTree();
+}
+document.getElementById("dispSwitch").addEventListener("click",e=>{
+  const b=e.target.closest("[data-disp]");
+  if(!b)return;
+  document.querySelectorAll("#dispSwitch .viewbtn").forEach(x=>x.classList.remove("active"));
+  b.classList.add("active");
+  if(b.dataset.disp==="map"){
+    showMapMode();
+  }else if(b.dataset.disp==="viz"){
+    if(!window.TreeViz){
+      const s=document.createElement("script");
+      s.src="tree_view.js?v=20261116";
+      s.onload=()=>{loadVizData(viewMode==="条"?"tiao":"blk");
+        const d=document.createElement("script");
+        // 等数据脚本加载后挂载
+        const t=setInterval(()=>{
+          if(window[viewMode==="条"?"__TIAO__":"__TREE__"]){
+            clearInterval(t);showViz();
+          }
+        },80);
+        setTimeout(()=>clearInterval(t),6000);
+      };
+      document.head.appendChild(s);
+    }else showViz();
+  }else showList();
+  tmplSyncHash();
+});
+// ── 书签/分享: URL hash 深链（#块/list · #条/viz · #map/四川省/凉山?t=fy）──
+function tmplSyncHash(){
+  try{
+    if(dispMode==="map"){
+      if(window.MapViz&&window.__mapMounted){
+        const ri=MapViz.regionInfo(),t=MapViz.getType();
+        const h="#map"+(ri.prov?"/"+ri.prov:"")+(ri.city?"/"+ri.city:"")+(t&&t!=="all"?"?t="+t:"");
+        if(location.hash!==h)history.replaceState(null,"",h);
+        return;
+      }
+      // 地图尚未挂载完成: 保留传入的书签深链(#map/省/市), 仅把非 map 形态归一
+      if(!/^#map(?:\/|\?|$)/.test(location.hash))history.replaceState(null,"","#map");
+      return;
+    }
+    const v=viewMode==="条"?"条":"块";
+    const h="#"+v+"/"+dispMode;
+    if(location.hash!==h)history.replaceState(null,"",h);
+  }catch(e){}
+}
+function tmplApplyHash(){
+  const raw=location.hash.replace(/^#\/?/,"");
+  if(!raw)return;
+  const qi=raw.indexOf("?");
+  const parts=(qi>=0?raw.slice(0,qi):raw).split("/").filter(Boolean).map(decodeURIComponent);
+  const tm=(qi>=0?raw.slice(qi+1):"").match(/t=(\w+)/);
+  const mapForm=parts[0]==="map";                                // 新形态 #map/省/市
+  const provIdx=mapForm?1:2, cityIdx=mapForm?2:3;                // 旧书签 #块/map/省/市 偏移 1
+  const wait=()=>{
+    if(!window.__GOV_DATA__)return setTimeout(wait,150);
+    let disp=parts[1]||"list", view=parts[0];
+    if(view==="map"){view="块";disp="map";}                      // 新形态 #map/...
+    else if(parts[1]==="map"){disp="map";}                       // 旧书签 #块/map/...
+    if(disp==="map"){
+      const mb=document.querySelector('#viewSwitch .viewbtn[data-view="map"]');
+      if(mb)mb.click();
+      if(parts[provIdx]){
+        const t2=setInterval(()=>{
+          if(window.MapViz&&window.__mapMounted){
+            clearInterval(t2);
+            MapViz.goTo(parts[provIdx],parts[cityIdx],tm?tm[1]:null);
+          }
+        },200);
+      }
+      return;
+    }
+    if(view!=="条"&&view!=="块")return;
+    if(viewMode!==view){
+      const vb=document.querySelector('#viewSwitch .viewbtn[data-view="'+view+'"]');
+      if(vb)vb.click();
+    }
+    const db=document.querySelector('#dispSwitch [data-disp="'+disp+'"]');
+    if(db)db.click();
+  };
+  wait();
+  __tmplLastApplied=location.hash;
+}
+// 白天/夜晚主题一键切换（地图随 data-theme 自动重绘）
+(function(){
+  const MQ=window.matchMedia("(prefers-color-scheme: dark)");
+  function curTheme(){return document.documentElement.dataset.theme||(MQ.matches?"dark":"light")}
+  function applyTheme(){
+    const t=curTheme();
+    const b=document.getElementById("themeBtn");
+    if(b){b.textContent=t==="dark"?"☀️":"🌙";b.title=t==="dark"?"当前夜晚模式，点击切白天":"当前白天模式，点击切夜晚"}
+  }
+  applyTheme();
+  document.getElementById("themeBtn").onclick=()=>{
+    document.documentElement.dataset.theme=curTheme()==="dark"?"light":"dark";
+    try{localStorage.setItem("govTheme",document.documentElement.dataset.theme)}catch(e){}
+    applyTheme();
+  };
+  try{
+    const saved=localStorage.getItem("govTheme");
+    if(saved){document.documentElement.dataset.theme=saved;applyTheme()}
+  }catch(e){}
+})();
+let __tmplLastApplied="";
+window.addEventListener("hashchange",()=>{
+  if(location.hash!==__tmplLastApplied)tmplApplyHash();
+});
+tmplApplyHash();
+function toggleQ(){
+  const p=document.getElementById('qpanel');
+  if(p.style.display==='block'){p.style.display='none';return;}
+  const q=window.__QUALITY__||{systems:[],source_level:{},status:{},registry_total:0};
+  const xx=q.xxgk||{};
+  const urlN=q.systems.reduce((a,s)=>a+s.urls,0);
+  const nodeN=q.systems.reduce((a,s)=>a+s.nodes,0);
+  const urlPct=nodeN?Math.round(urlN/nodeN*100):0;
+  // 来源等级分布
+  const lv=q.source_level||{};const lvN=Object.values(lv).reduce((a,b)=>a+(+b||0),0)||1;
+  const LV={L1:"#16a34a",L2:"#2563eb",L3:"#f59e0b",L4:"#94a3b8"};
+  const lvSegs=Object.entries(lv).sort().map(([k,v])=>
+    `<i style="width:${Math.round(v/lvN*100)}%;background:${LV[k]||"#94a3b8"}" title="${k}: ${v}"></i>`).join("");
+  const lvLeg=Object.entries(lv).sort().map(([k,v])=>
+    `<span><i style="background:${LV[k]||"#94a3b8"}"></i>${k==="L1"?"官网名录":k==="L2"?"门户导航":k==="L3"?"搜索验证":k} ${v}</span>`).join("");
+  // 状态分布
+  const st=q.status||{};const stN=Object.values(st).reduce((a,b)=>a+(+b||0),0)||1;
+  const ST={ok:"#16a34a",dead:"#dc2626",maintain:"#f59e0b"};
+  const stSegs=Object.entries(st).map(([k,v])=>
+    `<i style="width:${Math.round(v/stN*100)}%;background:${ST[k]||"#94a3b8"}" title="${k}: ${v}"></i>`).join("");
+  const stLeg=Object.entries(st).map(([k,v])=>
+    `<span><i style="background:${ST[k]||"#94a3b8"}"></i>${k==="ok"?"正常":k==="dead"?"失效":k==="maintain"?"维护":k} ${v}</span>`).join("");
+  // 系统覆盖率表（按覆盖率降序）
+  const sys=[...q.systems].sort((a,b)=>(b.coverage||0)-(a.coverage||0));
+  const rows=sys.map(s=>{
+    const c=Math.min(100,s.coverage||0);
+    const col=c>=90?"#16a34a":c>=60?"#2563eb":c>=30?"#f59e0b":"#dc2626";
+    const xxPct=s.urls?Math.round((s.xxgk||0)/s.urls*100):0;
+    return `<div class="row"><span class="nm" title="${s.name}">${s.name}</span>
+      <div class="bar"><i style="width:${c}%;background:${col}"></i></div>
+      <span class="pct">${c}%</span>
+      <span class="cnt">${s.xxgk||0}专栏</span></div>`;
+  }).join("");
+  const xxPct=xx.coverage||0;
+  let h=`<h3>📊 数据健康</h3>
+  <div class="kpis">
+    <div class="kpi"><div class="v">${q.registry_total.toLocaleString()}</div><div class="k">注册机构</div></div>
+    <div class="kpi"><div class="v">${urlPct}%</div><div class="k">URL 覆盖率</div></div>
+    <div class="kpi"><div class="v">${xx.with_column||0}</div><div class="k">信息公开专栏</div></div>
+  </div>
+  <div class="sec">来源等级分布</div>
+  <div class="stackbar">${lvSegs}</div><div class="legend">${lvLeg}</div>
+  <div class="sec">URL 健康状态</div>
+  <div class="stackbar">${stSegs}</div><div class="legend">${stLeg}</div>
+  <div class="sec">信息公开专栏覆盖</div>
+  <div class="donuts">
+    <div class="donut">${donutSVG(xxPct,"#7c3aed",82,9)}<div class="cap">专栏覆盖率</div></div>
+    <div class="donut">${donutSVG(urlPct,"#2563eb",82,9)}<div class="cap">官网覆盖率</div></div>
+  </div>
+  <div class="sec">系统 URL 覆盖率（15 系统）</div>
+  ${rows}`;
+  p.innerHTML=h;p.style.display='block';
+}
+</script>
+</body>
+</html>

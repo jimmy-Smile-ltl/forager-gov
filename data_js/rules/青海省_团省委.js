@@ -1,0 +1,1 @@
+window.__R=window.__R||{};window.__R["青海省·团省委"]={"portal":"","method":"无独立公开门户/未验证 → 列名参考","sources":[],"code":"# -*- coding: utf-8 -*-\n\"\"\"青海省 团省委: 无独立公开门户（列名）。\"\"\"\n","depts":[{"n":"团省委","u":"","o":0}],"cities":[]};

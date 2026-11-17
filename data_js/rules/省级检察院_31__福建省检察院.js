@@ -1,0 +1,1 @@
+window.__R=window.__R||{};window.__R["省级检察院（31）·福建省检察院"]={"portal":"http://www.fj.jcy.gov.cn/","method":"市级院来自省检察院官网「市州分院」区块 HTML 提取；基层院来自市级院官网","sources":["http://www.fj.jcy.gov.cn/"],"code":"# -*- coding: utf-8 -*-\n\"\"\"省级检察院（31）·福建省检察院 提取规则。\n方法：市级院来自省检察院官网「市州分院」区块 HTML 提取；基层院来自市级院官网\n\"\"\"\n","depts":[{"n":"福建省检察院","u":"http://www.fj.jcy.gov.cn/","o":0}],"cities":[]};

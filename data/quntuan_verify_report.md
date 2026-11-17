@@ -1,0 +1,118 @@
+# 群团 URL 验证报告 2026-10-30 23:07
+
+- 总数 544，确凿错误清除 15，不可达保留 14，标题无证据待核 80
+
+## 确凿错误（已清空回列名）
+- 安徽省 省作协 候选 ['cnenc.net']
+- 福建省 省文联 候选 ['cnenc.net']
+- 江西省 省文联 候选 ['zzdh.net']
+- 湖北省 省工商联 候选 ['yeah.net']
+- 广西壮族自治区 省作协 候选 ['xinhua.org']
+- 四川省 团省委 候选 ['zzdh.net']
+- 四川省 省文联 候选 ['newssc.org']
+- 新疆生产建设兵团 省文联 候选 ['cnenc.net']
+- 天津市 省人民对外友好协会 候选 ['xinhua.org']
+- 海南省 省人民对外友好协会 候选 ['zebao.net']
+- 重庆市 省计划生育协会 候选 ['cqpfp.org']
+- 四川省 省记协 候选 ['newssc.org']
+- 贵州省 省欧美同学会 候选 ['gzswtzb.org.cn']
+- 云南省 省欧美同学会 候选 ['ynsy.org.cn']
+- 新疆生产建设兵团 省记协 候选 ['cnenc.net']
+
+## 不可达（保留待复查）
+- 江西省 团省委 https://www.jxyouth.org.cn [不可达[None]]
+- 江西省 省贸促会 https://www.ccpitjx.org.cn [不可达[None]]
+- 贵州省 省总工会 https://www.guizgh.org.cn [不可达[None]]
+- 河北省 省台联 https://www.fjtv.net [不可达[403]]
+- 辽宁省 省台联 https://www.fjtv.net [不可达[403]]
+- 江苏省 省台联 https://www.fjtv.net [不可达[403]]
+- 安徽省 省台联 https://www.fjtv.net [不可达[403]]
+- 福建省 省台联 https://www.fjtv.net [不可达[403]]
+- 江西省 省台联 https://www.fjtv.net [不可达[403]]
+- 山东省 省台联 https://www.fjtv.net [不可达[403]]
+- 河南省 省台联 https://www.fjtv.net [不可达[403]]
+- 陕西省 省台联 https://www.fjtv.net [不可达[403]]
+- 甘肃省 省台联 https://www.fjtv.net [不可达[403]]
+- 青海省 省台联 https://www.fjtv.net [不可达[403]]
+
+## 标题无证据（保留待核，多为 JS 渲染站）
+- 北京市 省作协 http://www.bjwl.org.cn
+- 北京市 省残联 https://www.bdpf.org.cn
+- 天津市 省贸促会 https://www.ccpittj.org
+- 河北省 省工商联 https://www.hebgsl.org.cn
+- 内蒙古自治区 省作协 https://www.littlewriter.org
+- 内蒙古自治区 省工商联 https://www.nmgfic.org.cn
+- 辽宁省 省文联 http://www.lnwyw.org.cn
+- 辽宁省 省作协 https://www.liaoningwriter.org.cn
+- 辽宁省 省工商联 https://www.lnsgsl.org
+- 黑龙江省 省总工会 https://www.hljgh.org.cn
+- 黑龙江省 省工商联 https://www.hljfic.org.cn
+- 上海市 团省委 https://www.shyouth.net
+- 上海市 省妇联 https://www.shwomen.org
+- 上海市 省工商联 http://www.sfic.org.cn
+- 上海市 省贸促会 https://www.cpitsh.org
+- 江苏省 省科协 https://www.jskx.org.cn
+- 浙江省 省科协 https://www.zast.org.cn
+- 浙江省 省文联 https://www.zjzj.org
+- 浙江省 省作协 https://www.zjzj.org
+- 浙江省 省工商联 https://www.zjfic.org.cn
+- 安徽省 团省委 https://www.ahyouth.org.cn
+- 福建省 省科协 https://www.fjkx.org
+- 山东省 省工商联 http://www.ficc.org.cn
+- 河南省 省总工会 https://www.hngh.org
+- 河南省 省科协 http://www.hast.net
+- 河南省 省工商联 https://www.hngsl.org.cn
+- 湖北省 省作协 https://www.hbzjw.org.cn
+- 湖南省 省作协 https://www.zjzj.org
+- 广西壮族自治区 省工商联 https://www.gxfic.org.cn
+- 海南省 省红十字会 https://www.blood.org.cn
+- 重庆市 省作协 https://www.chinadas.net
+- 四川省 省妇联 https://www.scfl.org.cn
+- 云南省 省作协 https://www.ynwy.org.cn
+- 西藏自治区 省妇联 https://www.sygoc.org.cn
+- 西藏自治区 省贸促会 https://www.xzzrzy.org.cn
+- 陕西省 团省委 http://www.sxstx.org.cn
+- 甘肃省 省作协 http://www.gsarts.org.cn
+- 青海省 省妇联 https://www.qhflh.org.cn
+- 宁夏回族自治区 省文联 http://www.nxwl.org.cn
+- 宁夏回族自治区 省作协 http://www.nxwl.org.cn
+- 新疆生产建设兵团 省科协 https://www.bacsi.org.cn
+- 北京市 省法学会 https://www.bjfxh.org.cn
+- 天津市 省台联 https://www.tjtzb.org.cn
+- 天津市 省欧美同学会 https://www.tjtzb.org.cn
+- 河北省 省欧美同学会 https://www.wrsf.org.cn
+- 内蒙古自治区 省台联 http://www.banyuetan.org
+- 吉林省 省台联 http://www.jltm.org.cn
+- 吉林省 省记协 https://www.chinadas.net
+- 黑龙江省 省台联 https://www.hljsql.org.cn
+- 黑龙江省 省人民对外友好协会 https://www.hljvisa.org.cn
+- 上海市 省计划生育协会 https://www.chinadas.net
+- 浙江省 省欧美同学会 https://www.hztyzx.org.cn
+- 安徽省 省欧美同学会 https://www.ahyouth.org.cn
+- 福建省 省侨联 http://fqworld.org
+- 福建省 省法学会 http://www.pafj.net
+- 江西省 省人民对外友好协会 https://www.jxhrda.org.cn
+- 河南省 省法学会 https://www.cfgw.net
+- 湖北省 省台联 http://www.whtsw.org.cn
+- 湖南省 省台联 https://www.hnswtzb.org
+- 湖南省 省欧美同学会 https://www.hnswtzb.org
+- 广西壮族自治区 省台联 http://www.zhongguotongcuhui.org.cn
+- 广西壮族自治区 省人民对外友好协会 https://www.iprcc.org.cn
+- 海南省 省台联 https://www.hntzb.org.cn
+- 重庆市 省台联 http://www.yut8.org.cn
+- 四川省 省台联 https://www.scfoce.org
+- 四川省 省欧美同学会 http://www.sczg.org.cn
+- 贵州省 省台联 https://www.gdql.org.cn
+- 云南省 省台联 http://www.ynzg.org
+- 云南省 省记协 https://www.ynskl.org.cn
+- 西藏自治区 省欧美同学会 https://www.wrsf.org.cn
+- 陕西省 省欧美同学会 https://www.sxql.org.cn
+- 甘肃省 省欧美同学会 http://www.ns.org.cn
+- 青海省 省欧美同学会 https://www.qhass.org.cn
+- 宁夏回族自治区 省台联 http://www.nxwsg.org.cn
+- 新疆维吾尔自治区 省侨联 https://www.xjjgdj.org.cn
+- 新疆维吾尔自治区 省台联 http://www.xjmg.org
+- 新疆维吾尔自治区 省法学会 http://www.mzyfz.org.cn
+- 新疆生产建设兵团 省侨联 https://www.btwmw.net
+- 新疆生产建设兵团 省台联 http://www.xjmg.org
+- 新疆生产建设兵团 省计划生育协会 https://www.btwmw.net

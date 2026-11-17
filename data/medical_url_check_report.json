@@ -1,0 +1,1855 @@
+{
+ "counts": {
+  "waf": 4,
+  "ok": 258,
+  "dead": 1
+ },
+ "results": [
+  {
+   "n": "国家卫生健康委员会",
+   "u": "http://www.nhc.gov.cn/",
+   "path": "",
+   "title": "",
+   "verdict": "waf",
+   "note": "HTTP 412 (3863B)"
+  },
+  {
+   "n": "国家中医药管理局",
+   "u": "http://www.natcm.gov.cn/",
+   "path": "",
+   "title": "国家中医药管理局政府网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "国家疾病预防控制局",
+   "u": "https://www.ndcpa.gov.cn/",
+   "path": "",
+   "title": "国家疾病预防控制局",
+   "verdict": "ok"
+  },
+  {
+   "n": "中国疾病预防控制中心",
+   "u": "https://www.chinacdc.cn/",
+   "path": "",
+   "title": "中国疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "北京市卫生健康委员会",
+   "u": "https://wjw.beijing.gov.cn/",
+   "path": "",
+   "title": "北京市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "朝阳区卫生健康委员会",
+   "u": "http://wjw.chaoyang.gov.cn/",
+   "path": "",
+   "title": "朝阳市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "天津市卫生健康委员会",
+   "u": "https://wsjk.tj.gov.cn/",
+   "path": "",
+   "title": "天津市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "滨海新区卫生健康委员会",
+   "u": "https://wjw.tjbh.gov.cn/",
+   "path": "",
+   "title": "天津市滨海新区卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "河北省卫生健康委员会",
+   "u": "http://wsjkw.hebei.gov.cn",
+   "path": "",
+   "title": "",
+   "verdict": "dead",
+   "note": "Timeout:Failed to perform, curl: (28) Connection timed out after 120"
+  },
+  {
+   "n": "石家庄市卫生健康委员会",
+   "u": "https://wsjk.sjz.gov.cn/",
+   "path": "",
+   "title": "石家庄市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "唐山市卫生健康委员会",
+   "u": "https://wsjkwyh.tangshan.gov.cn/",
+   "path": "",
+   "title": "唐山市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "秦皇岛市卫生健康委员会",
+   "u": "http://wjw.qhd.gov.cn/",
+   "path": "",
+   "title": "秦皇岛市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "邯郸市卫生健康委员会",
+   "u": "http://wjw.hd.gov.cn/",
+   "path": "",
+   "title": "邯郸市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "邢台市卫生健康委员会",
+   "u": "http://wsjkw.xingtai.gov.cn/",
+   "path": "",
+   "title": "邢台市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "保定市卫生健康委员会",
+   "u": "http://wjw.baoding.gov.cn/",
+   "path": "",
+   "title": "保定市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "张家口市卫生健康委员会",
+   "u": "http://wjw.zjk.gov.cn",
+   "path": "",
+   "title": "张家口市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "承德市卫生健康委员会",
+   "u": "https://wjw.chengde.gov.cn/",
+   "path": "",
+   "title": "承德市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "廊坊市卫生健康委员会",
+   "u": "http://wjw.lf.gov.cn",
+   "path": "",
+   "title": "廊坊市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "衡水市卫生健康委员会",
+   "u": "http://wjw.hengshui.gov.cn/",
+   "path": "",
+   "title": "衡水市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "山西省卫生健康委员会",
+   "u": "http://wjw.shanxi.gov.cn",
+   "path": "",
+   "title": "山西省卫生健康委员会网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "太原市卫生健康委员会",
+   "u": "https://wjw.taiyuan.gov.cn/",
+   "path": "",
+   "title": "太原市卫生健康委员会网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "长治市卫生健康委员会",
+   "u": "https://wjw.changzhi.gov.cn",
+   "path": "",
+   "title": "长治市卫生健康委员会网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "晋城市卫生健康委员会",
+   "u": "http://wjw.jcgov.gov.cn/",
+   "path": "",
+   "title": "晋城市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "晋中市卫生健康委员会",
+   "u": "https://wjw.sxjz.gov.cn/",
+   "path": "",
+   "title": "晋中市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "运城市卫生健康委员会",
+   "u": "https://wsjkw.yuncheng.gov.cn/",
+   "path": "",
+   "title": "运城市卫生健康委员会网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "忻州市卫生健康委员会",
+   "u": "https://wjw.sxxz.gov.cn/",
+   "path": "",
+   "title": "忻州市卫生健康委员会网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "临汾市卫生健康委员会",
+   "u": "http://wjw.linfen.gov.cn/",
+   "path": "",
+   "title": "临汾市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "内蒙古自治区卫生健康委员会",
+   "u": "http://wjw.nmg.gov.cn/",
+   "path": "",
+   "title": "内蒙古自治区卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "呼和浩特市卫生健康委员会",
+   "u": "http://wjw.huhhot.gov.cn/",
+   "path": "",
+   "title": "呼和浩特市卫生健康委员会门户网站_首页",
+   "verdict": "ok"
+  },
+  {
+   "n": "包头市卫生健康委员会",
+   "u": "http://wjw.baotou.gov.cn",
+   "path": "",
+   "title": "包头市卫生健康委员会_",
+   "verdict": "ok"
+  },
+  {
+   "n": "乌海市卫生健康委员会",
+   "u": "http://wjw.wuhai.gov.cn/",
+   "path": "",
+   "title": "乌海市卫生健康委员会-首页",
+   "verdict": "ok"
+  },
+  {
+   "n": "赤峰市卫生健康委员会",
+   "u": "http://wjw.chifeng.gov.cn",
+   "path": "",
+   "title": "赤峰市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "通辽市卫生健康委员会",
+   "u": "http://wjw.tongliao.gov.cn/",
+   "path": "",
+   "title": "通辽市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "鄂尔多斯市卫生健康委员会",
+   "u": "https://wjw.ordos.gov.cn/",
+   "path": "",
+   "title": "鄂尔多斯市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "呼伦贝尔市卫生健康委员会",
+   "u": "https://wjw.hlbe.gov.cn",
+   "path": "",
+   "title": "呼伦贝尔市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "巴彦淖尔市卫生健康委员会",
+   "u": "https://wjw.bynr.gov.cn/",
+   "path": "",
+   "title": "巴彦淖尔市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "乌兰察布市卫生健康委员会",
+   "u": "http://wjw.wulanchabu.gov.cn/",
+   "path": "",
+   "title": "乌兰察布市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "兴安盟卫生健康委员会",
+   "u": "http://wjw.xam.gov.cn/",
+   "path": "",
+   "title": "兴安盟卫生健康委员会-首页",
+   "verdict": "ok"
+  },
+  {
+   "n": "锡林郭勒盟卫生健康委员会",
+   "u": "http://wjw.xlgl.gov.cn/",
+   "path": "",
+   "title": "锡林郭勒盟卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "阿拉善盟卫生健康委员会",
+   "u": "https://wjw.als.gov.cn/",
+   "path": "",
+   "title": "阿拉善盟卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "辽宁省卫生健康委员会",
+   "u": "https://wsjk.ln.gov.cn/",
+   "path": "",
+   "title": "辽宁省卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "沈阳市卫生健康委员会",
+   "u": "https://wjw.shenyang.gov.cn/",
+   "path": "",
+   "title": "沈阳市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "大连市卫生健康委员会",
+   "u": "https://hcod.dl.gov.cn/",
+   "path": "",
+   "title": "大连市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "鞍山市卫生健康委员会",
+   "u": "http://wjw.anshan.gov.cn/",
+   "path": "",
+   "title": "鞍山市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "抚顺市卫生健康委员会",
+   "u": "https://fswjw.fushun.gov.cn/",
+   "path": "",
+   "title": "抚顺市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "本溪市卫生健康委员会",
+   "u": "http://wjw.benxi.gov.cn",
+   "path": "",
+   "title": "本溪市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "丹东市卫生健康委员会",
+   "u": "https://wsjsw.dandong.gov.cn/",
+   "path": "",
+   "title": "丹东市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "锦州市卫生健康委员会",
+   "u": "http://wjw.jz.gov.cn/",
+   "path": "",
+   "title": "锦州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "营口市卫生健康委员会",
+   "u": "https://wjw.yingkou.gov.cn/",
+   "path": "",
+   "title": "营口市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "阜新市卫生健康委员会",
+   "u": "https://wsjk.fuxin.gov.cn/",
+   "path": "",
+   "title": "阜新市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "辽阳市卫生健康委员会",
+   "u": "http://wjw.liaoyang.gov.cn/",
+   "path": "",
+   "title": "辽阳市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "盘锦市卫生健康委员会",
+   "u": "https://wjw.panjin.gov.cn/",
+   "path": "",
+   "title": "盘锦市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "葫芦岛市卫生健康委员会",
+   "u": "http://wsjk.hld.gov.cn/",
+   "path": "",
+   "title": "葫芦岛市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "吉林省卫生健康委员会",
+   "u": "http://wsjkw.jl.gov.cn/",
+   "path": "",
+   "title": "吉林省卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "吉林市卫生健康委员会",
+   "u": "http://www.jlcity.gov.cn/bmwz/wjw/",
+   "path": "",
+   "title": "吉林市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "四平市卫生健康委员会",
+   "u": "http://wjw.siping.gov.cn",
+   "path": "",
+   "title": "四平市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "白山市卫生健康委员会",
+   "u": "http://wsjkw.cbs.gov.cn/",
+   "path": "",
+   "title": "白山市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "松原市卫生健康委员会",
+   "u": "http://wsjkw.jlsy.gov.cn/",
+   "path": "",
+   "title": "松原市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "白城市卫生健康委员会",
+   "u": "http://www.jlbc.gov.cn/ztzl_3381/bcswsjkwyh/",
+   "path": "",
+   "title": "白城市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "黑龙江省卫生健康委员会",
+   "u": "http://wsjkw.hlj.gov.cn/wsjkw/index.shtml",
+   "path": "",
+   "title": "省卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "上海市卫生健康委员会",
+   "u": "https://wsjkw.sh.gov.cn/",
+   "path": "",
+   "title": "上海市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "江苏省卫生健康委员会",
+   "u": "https://wjw.jiangsu.gov.cn/",
+   "path": "",
+   "title": "江苏省卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "南京市卫生健康委员会",
+   "u": "http://wjw.nanjing.gov.cn",
+   "path": "",
+   "title": "南京市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "无锡市卫生健康委员会",
+   "u": "http://wjw.wuxi.gov.cn",
+   "path": "",
+   "title": "无锡市卫生健康委员会-首页",
+   "verdict": "ok"
+  },
+  {
+   "n": "徐州市卫生健康委员会",
+   "u": "http://ws.xz.gov.cn/",
+   "path": "",
+   "title": "徐州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "常州市卫生健康委员会",
+   "u": "https://wjw.changzhou.gov.cn/",
+   "path": "",
+   "title": "常州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "苏州市卫生健康委员会",
+   "u": "http://wsjkw.suzhou.gov.cn/",
+   "path": "",
+   "title": "苏州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "南通市卫生健康委员会",
+   "u": "http://wjw.nantong.gov.cn/",
+   "path": "",
+   "title": "南通市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "连云港市卫生健康委员会",
+   "u": "http://wjw.lyg.gov.cn/",
+   "path": "",
+   "title": "连云港市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "淮安市卫生健康委员会",
+   "u": "https://wjw.huaian.gov.cn/",
+   "path": "",
+   "title": "淮安市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "盐城市卫生健康委员会",
+   "u": "https://wsj.yancheng.gov.cn/",
+   "path": "",
+   "title": "盐城市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "扬州市卫生健康委员会",
+   "u": "https://wjw.yangzhou.gov.cn/",
+   "path": "",
+   "title": "扬州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "镇江市卫生健康委员会",
+   "u": "https://wjw.zhenjiang.gov.cn/",
+   "path": "",
+   "title": "镇江市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "泰州市卫生健康委员会",
+   "u": "http://wjw.taizhou.gov.cn/",
+   "path": "",
+   "title": "泰州市卫健委",
+   "verdict": "ok"
+  },
+  {
+   "n": "宿迁市卫生健康委员会",
+   "u": "https://wjw.suqian.gov.cn/",
+   "path": "",
+   "title": "宿迁市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "浙江省卫生健康委员会",
+   "u": "https://wsjkw.zj.gov.cn/",
+   "path": "",
+   "title": "浙江省卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "杭州市卫生健康委员会",
+   "u": "https://wsjkw.hangzhou.gov.cn/",
+   "path": "",
+   "title": "杭州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "宁波市卫生健康委员会",
+   "u": "https://wjw.ningbo.gov.cn/?from=groupmessage",
+   "path": "",
+   "title": "宁波市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "温州市卫生健康委员会",
+   "u": "https://wjw.wenzhou.gov.cn/",
+   "path": "",
+   "title": "温州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "湖州市卫生健康委员会",
+   "u": "https://wjw.huzhou.gov.cn/",
+   "path": "",
+   "title": "湖州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "绍兴市卫生健康委员会",
+   "u": "https://sxws.sx.gov.cn/",
+   "path": "",
+   "title": "绍兴市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "金华市卫生健康委员会",
+   "u": "http://wjw.jinhua.gov.cn/",
+   "path": "",
+   "title": "金华市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "舟山市卫生健康委员会",
+   "u": "http://wsjkw.zhoushan.gov.cn",
+   "path": "",
+   "title": "舟山市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "台州市卫生健康委员会",
+   "u": "http://wsjkw.zjtz.gov.cn/",
+   "path": "",
+   "title": "台州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "安徽省卫生健康委员会",
+   "u": "https://wjw.ah.gov.cn/",
+   "path": "",
+   "title": "安徽省卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "合肥市卫生健康委员会",
+   "u": "https://wjw.hefei.gov.cn",
+   "path": "",
+   "title": "",
+   "verdict": "waf",
+   "note": "HTTP 521 (875B)"
+  },
+  {
+   "n": "芜湖市卫生健康委员会",
+   "u": "https://wsjkw.wuhu.gov.cn/",
+   "path": "",
+   "title": "芜湖市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "蚌埠市卫生健康委员会",
+   "u": "https://wjw.bengbu.gov.cn/",
+   "path": "",
+   "title": "蚌埠市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "淮南市卫生健康委员会",
+   "u": "https://wjw.huainan.gov.cn/",
+   "path": "",
+   "title": "淮南市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "马鞍山市卫生健康委员会",
+   "u": "https://wjw.mas.gov.cn/",
+   "path": "",
+   "title": "马鞍山市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "淮北市卫生健康委员会",
+   "u": "https://wjw.huaibei.gov.cn/",
+   "path": "",
+   "title": "淮北市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "铜陵市卫生健康委员会",
+   "u": "https://wsjkw.tl.gov.cn/",
+   "path": "",
+   "title": "铜陵市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "安庆市卫生健康委员会",
+   "u": "https://wjw.anqing.gov.cn/",
+   "path": "",
+   "title": "安庆市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "滁州市卫生健康委员会",
+   "u": "http://wjw.chuzhou.gov.cn",
+   "path": "",
+   "title": "滁州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "阜阳市卫生健康委员会",
+   "u": "http://wjw.fy.gov.cn/",
+   "path": "",
+   "title": "阜阳市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "宿州市卫生健康委员会",
+   "u": "https://wjw.ahsz.gov.cn/",
+   "path": "",
+   "title": "宿州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "六安市卫生健康委员会",
+   "u": "https://wjw.luan.gov.cn/",
+   "path": "",
+   "title": "六安市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "亳州市卫生健康委员会",
+   "u": "https://wjw.bozhou.gov.cn/",
+   "path": "",
+   "title": "亳州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "池州市卫生健康委员会",
+   "u": "https://wjw.chizhou.gov.cn/",
+   "path": "",
+   "title": "池州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "宣城市卫生健康委员会",
+   "u": "http://wjw.xuancheng.gov.cn/",
+   "path": "",
+   "title": "宣城市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "福建省卫生健康委员会",
+   "u": "https://wjw.fujian.gov.cn/",
+   "path": "",
+   "title": "福建省卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "厦门市卫生健康委员会",
+   "u": "http://hfpc.xm.gov.cn/",
+   "path": "",
+   "title": "厦门市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "莆田市卫生健康委员会",
+   "u": "http://wjw.putian.gov.cn/",
+   "path": "",
+   "title": "莆田市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "三明市卫生健康委员会",
+   "u": "http://wjw.sm.gov.cn/",
+   "path": "",
+   "title": "三明市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "泉州市卫生健康委员会",
+   "u": "http://health.quanzhou.gov.cn",
+   "path": "",
+   "title": "泉州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "漳州市卫生健康委员会",
+   "u": "http://wjw.zhangzhou.gov.cn/",
+   "path": "",
+   "title": "漳州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "南平市卫生健康委员会",
+   "u": "https://wjw.np.gov.cn/",
+   "path": "",
+   "title": "南平市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "龙岩市卫生健康委员会",
+   "u": "http://wjw.longyan.gov.cn",
+   "path": "",
+   "title": "龙岩市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "宁德市卫生健康委员会",
+   "u": "https://wjw.ningde.gov.cn/",
+   "path": "",
+   "title": "宁德市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "江西省卫生健康委员会",
+   "u": "http://hc.jiangxi.gov.cn/",
+   "path": "",
+   "title": "江西省卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "南昌市卫生健康委员会",
+   "u": "http://hc.nc.gov.cn/",
+   "path": "",
+   "title": "南昌市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "景德镇市卫生健康委员会",
+   "u": "http://wsjs.jdz.gov.cn/",
+   "path": "",
+   "title": "景德镇市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "九江市卫生健康委员会",
+   "u": "https://wjw.jiujiang.gov.cn/",
+   "path": "",
+   "title": "九江市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "新余市卫生健康委员会",
+   "u": "https://wjw.xinyu.gov.cn",
+   "path": "",
+   "title": "新余市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "鹰潭市卫生健康委员会",
+   "u": "http://wjw.yingtan.gov.cn/",
+   "path": "",
+   "title": "鹰潭市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "赣州市卫生健康委员会",
+   "u": "http://wjw.ganzhou.gov.cn/",
+   "path": "",
+   "title": "赣州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "吉安市卫生健康委员会",
+   "u": "http://wsjk.jian.gov.cn",
+   "path": "",
+   "title": "吉安市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "宜春市卫生健康委员会",
+   "u": "http://wjw.yichun.gov.cn/",
+   "path": "",
+   "title": "宜春市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "抚州市卫生健康委员会",
+   "u": "http://wjw.jxfz.gov.cn/",
+   "path": "",
+   "title": "抚州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "山东省卫生健康委员会",
+   "u": "http://wsjkw.shandong.gov.cn/",
+   "path": "",
+   "title": "山东省卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "济南市卫生健康委员会",
+   "u": "https://jnmhc.jinan.gov.cn/",
+   "path": "",
+   "title": "济南市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "青岛市卫生健康委员会",
+   "u": "http://wsjkw.qingdao.gov.cn",
+   "path": "",
+   "title": "青岛市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "淄博市卫生健康委员会",
+   "u": "http://ws.zibo.gov.cn/",
+   "path": "",
+   "title": "淄博市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "枣庄市卫生健康委员会",
+   "u": "http://wsjkw.zaozhuang.gov.cn/",
+   "path": "",
+   "title": "枣庄市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "东营市卫生健康委员会",
+   "u": "http://dywsjk.dongying.gov.cn/",
+   "path": "",
+   "title": "东营市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "烟台市卫生健康委员会",
+   "u": "https://wjw.yantai.gov.cn/",
+   "path": "",
+   "title": "烟台市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "潍坊市卫生健康委员会",
+   "u": "http://wsjkw.weifang.gov.cn",
+   "path": "",
+   "title": "潍坊市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "济宁市卫生健康委员会",
+   "u": "http://wjw.jining.gov.cn",
+   "path": "",
+   "title": "济宁市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "泰安市卫生健康委员会",
+   "u": "https://wjw.taian.gov.cn/",
+   "path": "",
+   "title": "泰安市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "威海市卫生健康委员会",
+   "u": "http://wsjkw.weihai.gov.cn/",
+   "path": "",
+   "title": "威海市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "日照市卫生健康委员会",
+   "u": "http://wsjkw.rizhao.gov.cn/",
+   "path": "",
+   "title": "日照市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "临沂市卫生健康委员会",
+   "u": "http://wsjsw.linyi.gov.cn/",
+   "path": "",
+   "title": "临沂市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "德州市卫生健康委员会",
+   "u": "http://dzwjw.dezhou.gov.cn/",
+   "path": "",
+   "title": "德州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "聊城市卫生健康委员会",
+   "u": "http://wjw.liaocheng.gov.cn/",
+   "path": "",
+   "title": "聊城市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "滨州市卫生健康委员会",
+   "u": "http://wjw.binzhou.gov.cn/",
+   "path": "",
+   "title": "滨州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "菏泽市卫生健康委员会",
+   "u": "http://hzswsjkw.heze.gov.cn/",
+   "path": "",
+   "title": "菏泽市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "河南省卫生健康委员会",
+   "u": "https://wsjkw.henan.gov.cn/",
+   "path": "",
+   "title": "河南省卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "郑州市卫生健康委员会",
+   "u": "https://wjw.zhengzhou.gov.cn/",
+   "path": "",
+   "title": "郑州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "开封市卫生健康委员会",
+   "u": "https://wjw.kaifeng.gov.cn/",
+   "path": "",
+   "title": "开封市卫生健康委员会网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "洛阳市卫生健康委员会",
+   "u": "https://lyws.ly.gov.cn/",
+   "path": "",
+   "title": "洛阳市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "平顶山市卫生健康委员会",
+   "u": "https://wjw.pds.gov.cn/",
+   "path": "",
+   "title": "平顶山市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "安阳市卫生健康委员会",
+   "u": "https://aywjw.anyang.gov.cn/",
+   "path": "",
+   "title": "安阳市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "鹤壁市卫生健康委员会",
+   "u": "https://wsjkw.hebi.gov.cn/",
+   "path": "",
+   "title": "鹤壁市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "新乡市卫生健康委员会",
+   "u": "https://wjw.xinxiang.gov.cn",
+   "path": "",
+   "title": "新乡市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "焦作市卫生健康委员会",
+   "u": "https://wjw.jiaozuo.gov.cn/",
+   "path": "",
+   "title": "焦作市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "许昌市卫生健康委员会",
+   "u": "https://xcswjw.xuchang.gov.cn/",
+   "path": "",
+   "title": "许昌市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "漯河市卫生健康委员会",
+   "u": "https://wjw.luohe.gov.cn",
+   "path": "",
+   "title": "漯河市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "三门峡市卫生健康委员会",
+   "u": "http://wjw.smx.gov.cn/",
+   "path": "",
+   "title": "三门峡市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "商丘市卫生健康委员会",
+   "u": "https://wsjkw.shangqiu.gov.cn",
+   "path": "",
+   "title": "商丘市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "信阳市卫生健康委员会",
+   "u": "https://wsjkw.xinyang.gov.cn/",
+   "path": "",
+   "title": "信阳市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "驻马店市卫生健康委员会",
+   "u": "https://wjw.zhumadian.gov.cn/",
+   "path": "",
+   "title": "驻马店市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "湖北省卫生健康委员会",
+   "u": "https://wjw.hubei.gov.cn/",
+   "path": "",
+   "title": "湖北省卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "武汉市卫生健康委员会",
+   "u": "http://wjw.wuhan.gov.cn/",
+   "path": "",
+   "title": "武汉市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "十堰市卫生健康委员会",
+   "u": "http://wjw.shiyan.gov.cn/",
+   "path": "",
+   "title": "十堰市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "宜昌市卫生健康委员会",
+   "u": "http://wjw.yichang.gov.cn",
+   "path": "",
+   "title": "宜昌市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "襄阳市卫生健康委员会",
+   "u": "http://wjw.xiangyang.gov.cn/",
+   "path": "",
+   "title": "襄阳市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "鄂州市卫生健康委员会",
+   "u": "http://wjw.ezhou.gov.cn/",
+   "path": "",
+   "title": "鄂州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "荆门市卫生健康委员会",
+   "u": "http://wjw.jingmen.gov.cn",
+   "path": "",
+   "title": "荆门市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "孝感市卫生健康委员会",
+   "u": "http://wjw.xiaogan.gov.cn/",
+   "path": "",
+   "title": "孝感市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "荆州市卫生健康委员会",
+   "u": "http://wjw.jingzhou.gov.cn/",
+   "path": "",
+   "title": "荆州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "黄冈市卫生健康委员会",
+   "u": "https://wjw.hg.gov.cn/",
+   "path": "",
+   "title": "黄冈市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "咸宁市卫生健康委员会",
+   "u": "http://wjw.xianning.gov.cn/",
+   "path": "",
+   "title": "咸宁市卫生健康委员会门户网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "随州市卫生健康委员会",
+   "u": "http://wjw.suizhou.gov.cn/",
+   "path": "",
+   "title": "随州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "恩施土家族苗族自治州卫生健康委员会",
+   "u": "http://wjw.enshi.gov.cn/",
+   "path": "",
+   "title": "恩施土家族苗族自治州卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "湖南省卫生健康委员会",
+   "u": "http://wjw.hunan.gov.cn/",
+   "path": "",
+   "title": "湖南省卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "长沙市卫生健康委员会",
+   "u": "http://wsjkw.changsha.gov.cn/",
+   "path": "",
+   "title": "长沙市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "邵阳市卫生健康委员会",
+   "u": "https://wjw.shaoyang.gov.cn/",
+   "path": "",
+   "title": "市卫生健康委员会_邵阳市人民政府",
+   "verdict": "ok"
+  },
+  {
+   "n": "常德市卫生健康委员会",
+   "u": "https://wjw.changde.gov.cn/",
+   "path": "",
+   "title": "常德市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "张家界市卫生健康委员会",
+   "u": "https://wjw.zjj.gov.cn/",
+   "path": "",
+   "title": "张家界市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "永州市卫生健康委员会",
+   "u": "http://wjw.yzcity.gov.cn",
+   "path": "",
+   "title": "市卫生健康委员会 _永州市人民政府",
+   "verdict": "ok"
+  },
+  {
+   "n": "娄底市卫生健康委员会",
+   "u": "https://wjw.hnloudi.gov.cn/",
+   "path": "",
+   "title": "娄底市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "广东省卫生健康委员会",
+   "u": "http://wsjkw.gd.gov.cn",
+   "path": "",
+   "title": "广东省卫生健康委员会门户网站，广东省卫生健康委官方网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "广州市卫生健康委员会",
+   "u": "https://wjw.gz.gov.cn/",
+   "path": "",
+   "title": "广州市卫生健康委员会网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "深圳市卫生健康委员会",
+   "u": "http://wjw.sz.gov.cn",
+   "path": "",
+   "title": "深圳市卫生健康委员会网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "珠海市卫生健康委员会",
+   "u": "https://wsjkj.zhuhai.gov.cn/",
+   "path": "",
+   "title": "珠海市卫生健康局网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "佛山市卫生健康委员会",
+   "u": "https://wjj.foshan.gov.cn/",
+   "path": "",
+   "title": "佛山市卫生健康局",
+   "verdict": "ok"
+  },
+  {
+   "n": "茂名市卫生健康委员会",
+   "u": "http://wsjkj.maoming.gov.cn/",
+   "path": "",
+   "title": "茂名市卫生健康局网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "惠州市卫生健康委员会",
+   "u": "https://wjj.huizhou.gov.cn/",
+   "path": "",
+   "title": "惠州市卫生健康局公众信息网",
+   "verdict": "ok"
+  },
+  {
+   "n": "东莞市卫生健康委员会",
+   "u": "https://dghb.dg.gov.cn/",
+   "path": "",
+   "title": "东莞市卫生健康局",
+   "verdict": "ok"
+  },
+  {
+   "n": "中山市卫生健康委员会",
+   "u": "http://wjj.zs.gov.cn/",
+   "path": "",
+   "title": "中山市卫生健康局政务网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "广西壮族自治区卫生健康委员会",
+   "u": "https://wsjkw.gxzf.gov.cn/",
+   "path": "",
+   "title": "广西壮族自治区卫生健康委员会网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "南宁市卫生健康委员会",
+   "u": "https://wjw.nanning.gov.cn/",
+   "path": "",
+   "title": "首页_南宁市卫生健康委员会网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "柳州市卫生健康委员会",
+   "u": "http://wjw.liuzhou.gov.cn/",
+   "path": "",
+   "title": "广西柳州市卫生健康委员会网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "桂林市卫生健康委员会",
+   "u": "http://wjw.guilin.gov.cn",
+   "path": "",
+   "title": "桂林市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "梧州市卫生健康委员会",
+   "u": "http://wjw.wuzhou.gov.cn",
+   "path": "",
+   "title": "广西梧州市卫生健康委员会网站 - wjw.wuzhou.gov.cn",
+   "verdict": "ok"
+  },
+  {
+   "n": "玉林市卫生健康委员会",
+   "u": "http://wjw.yulin.gov.cn",
+   "path": "",
+   "title": "广西玉林市卫生健康委员会网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "河池市卫生健康委员会",
+   "u": "http://wjw.hechi.gov.cn/",
+   "path": "",
+   "title": "广西河池市卫生健康委员会网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "来宾市卫生健康委员会",
+   "u": "http://wjw.laibin.gov.cn/",
+   "path": "",
+   "title": "广西来宾市卫生健康委员会网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "海南省卫生健康委员会",
+   "u": "http://wst.hainan.gov.cn/",
+   "path": "",
+   "title": "海南省卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "海口市卫生健康委员会",
+   "u": "https://wjw.haikou.gov.cn/",
+   "path": "",
+   "title": "海口市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "三亚市卫生健康委员会",
+   "u": "https://ws.sanya.gov.cn",
+   "path": "",
+   "title": "三亚市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "重庆市卫生健康委员会",
+   "u": "https://wsjkw.cq.gov.cn/",
+   "path": "",
+   "title": "重庆市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "四川省卫生健康委员会",
+   "u": "https://wsjkw.sc.gov.cn/",
+   "path": "",
+   "title": "四川省卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "攀枝花市卫生健康委员会",
+   "u": "http://wjw.panzhihua.gov.cn",
+   "path": "",
+   "title": "攀枝花市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "泸州市卫生健康委员会",
+   "u": "http://wjw.luzhou.gov.cn",
+   "path": "",
+   "title": "泸州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "绵阳市卫生健康委员会",
+   "u": "http://wjw.my.gov.cn/",
+   "path": "",
+   "title": "绵阳市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "广元市卫生健康委员会",
+   "u": "https://wsjkw.cngy.gov.cn/",
+   "path": "",
+   "title": "广元市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "遂宁市卫生健康委员会",
+   "u": "http://swjw.suining.gov.cn/",
+   "path": "",
+   "title": "首页-遂宁市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "宜宾市卫生健康委员会",
+   "u": "http://ybwjw.yibin.gov.cn/",
+   "path": "",
+   "title": "宜宾市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "达州市卫生健康委员会",
+   "u": "http://wjw.dazhou.gov.cn/",
+   "path": "",
+   "title": "达州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "雅安市卫生健康委员会",
+   "u": "http://wjw.yaan.gov.cn/",
+   "path": "",
+   "title": "首页 - 雅安市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "巴中市卫生健康委员会",
+   "u": "https://wsjkw.cnbz.gov.cn/",
+   "path": "",
+   "title": "巴中市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "甘孜藏族自治州卫生健康委员会",
+   "u": "http://wjw.gzz.gov.cn",
+   "path": "",
+   "title": "甘孜藏族自治州卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "凉山彝族自治州卫生健康委员会",
+   "u": "http://wjw.lsz.gov.cn",
+   "path": "",
+   "title": "凉山彝族自治州卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "贵州省卫生健康委员会",
+   "u": "https://wjw.guizhou.gov.cn/",
+   "path": "",
+   "title": "贵州省卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "贵阳市卫生健康委员会",
+   "u": "http://wsjkj.guiyang.gov.cn",
+   "path": "",
+   "title": "贵阳市卫生健康局",
+   "verdict": "ok"
+  },
+  {
+   "n": "六盘水市卫生健康委员会",
+   "u": "http://swjj.gzlps.gov.cn/",
+   "path": "",
+   "title": "六盘水市卫生健康局",
+   "verdict": "ok"
+  },
+  {
+   "n": "遵义市卫生健康委员会",
+   "u": "https://wsjkj.zunyi.gov.cn/",
+   "path": "",
+   "title": "遵义市卫生健康局",
+   "verdict": "ok"
+  },
+  {
+   "n": "安顺市卫生健康委员会",
+   "u": "http://wjj.anshun.gov.cn/",
+   "path": "",
+   "title": "安顺市卫生健康局",
+   "verdict": "ok"
+  },
+  {
+   "n": "铜仁市卫生健康委员会",
+   "u": "http://wjj.trs.gov.cn/",
+   "path": "",
+   "title": "铜仁市卫生健康局",
+   "verdict": "ok"
+  },
+  {
+   "n": "黔东南苗族侗族自治州卫生健康委员会",
+   "u": "http://wsjkj.qdn.gov.cn/",
+   "path": "",
+   "title": "黔东南州卫生健康局",
+   "verdict": "ok"
+  },
+  {
+   "n": "云南省卫生健康委员会",
+   "u": "http://ynswsjkw.yn.gov.cn/",
+   "path": "",
+   "title": "云南省卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "西藏自治区卫生健康委员会",
+   "u": "http://wjw.xizang.gov.cn/",
+   "path": "",
+   "title": "西藏自治区卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "拉萨市卫生健康委员会",
+   "u": "https://jkw.lasa.gov.cn/",
+   "path": "",
+   "title": "拉萨市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "日喀则市卫生健康委员会",
+   "u": "http://wjw.rikaze.gov.cn/",
+   "path": "",
+   "title": "日喀则市卫生健康委员会·首页",
+   "verdict": "ok"
+  },
+  {
+   "n": "昌都市卫生健康委员会",
+   "u": "http://wjw.changdu.gov.cn/",
+   "path": "",
+   "title": "昌都市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "林芝市卫生健康委员会",
+   "u": "https://wjw.linzhi.gov.cn",
+   "path": "",
+   "title": "林芝市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "那曲市卫生健康委员会",
+   "u": "http://wjw.naqu.gov.cn",
+   "path": "",
+   "title": "那曲市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "陕西省卫生健康委员会",
+   "u": "https://sxwjw.shaanxi.gov.cn/",
+   "path": "",
+   "title": "陕西省卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "西安市卫生健康委员会",
+   "u": "http://xawjw.xa.gov.cn",
+   "path": "",
+   "title": "西安市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "宝鸡市卫生健康委员会",
+   "u": "https://wjw.baoji.gov.cn/",
+   "path": "",
+   "title": "宝鸡市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "咸阳市卫生健康委员会",
+   "u": "http://wjw.xianyang.gov.cn",
+   "path": "",
+   "title": "咸阳市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "延安市卫生健康委员会",
+   "u": "http://wjw.yanan.gov.cn/",
+   "path": "",
+   "title": "延安市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "榆林市卫生健康委员会",
+   "u": "http://wjw.yl.gov.cn/",
+   "path": "",
+   "title": "榆林市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "安康市卫生健康委员会",
+   "u": "https://wjw.ankang.gov.cn/",
+   "path": "",
+   "title": "安康市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "甘肃省卫生健康委员会",
+   "u": "http://wsjk.gansu.gov.cn/",
+   "path": "",
+   "title": "",
+   "verdict": "waf",
+   "note": "HTTP 412 (6398B)"
+  },
+  {
+   "n": "兰州市卫生健康委员会",
+   "u": "https://wjw.lanzhou.gov.cn",
+   "path": "",
+   "title": "兰州市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "金昌市卫生健康委员会",
+   "u": "http://wjw.jcs.gov.cn/",
+   "path": "",
+   "title": "金昌市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "平凉市卫生健康委员会",
+   "u": "https://wjw.pingliang.gov.cn/",
+   "path": "",
+   "title": "平凉市卫健委",
+   "verdict": "ok"
+  },
+  {
+   "n": "酒泉市卫生健康委员会",
+   "u": "https://wjw.jiuquan.gov.cn/",
+   "path": "",
+   "title": "酒泉市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "庆阳市卫生健康委员会",
+   "u": "https://wsjk.zgqingyang.gov.cn/",
+   "path": "",
+   "title": "庆阳市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "定西市卫生健康委员会",
+   "u": "http://wjw.dingxi.gov.cn/",
+   "path": "",
+   "title": "定西市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "甘南藏族自治州卫生健康委员会",
+   "u": "http://wsjk.gnzrmzf.gov.cn/",
+   "path": "",
+   "title": "甘南藏族自治州卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "青海省卫生健康委员会",
+   "u": "http://wsjkw.qinghai.gov.cn/",
+   "path": "",
+   "title": "",
+   "verdict": "waf",
+   "note": "HTTP 412 (2571B)"
+  },
+  {
+   "n": "西宁市卫生健康委员会",
+   "u": "https://wjw.xining.gov.cn/",
+   "path": "",
+   "title": "西宁市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "海北藏族自治州卫生健康委员会",
+   "u": "http://wjw.haibei.gov.cn/",
+   "path": "",
+   "title": "海北州卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "宁夏回族自治区卫生健康委员会",
+   "u": "http://wsjkw.nx.gov.cn/",
+   "path": "",
+   "title": "宁夏回族自治区卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "银川市卫生健康委员会",
+   "u": "https://wjw.yinchuan.gov.cn/",
+   "path": "",
+   "title": "银川市卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "新疆维吾尔自治区卫生健康委员会",
+   "u": "http://wjw.xinjiang.gov.cn/",
+   "path": "",
+   "title": "新疆维吾尔自治区卫生健康委员会",
+   "verdict": "ok"
+  },
+  {
+   "n": "北京市疾病预防控制中心",
+   "u": "https://www.bjcdc.org/",
+   "path": "",
+   "title": "北京市疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "天津市疾病预防控制中心",
+   "u": "https://www.cdctj.com.cn/",
+   "path": "",
+   "title": "天津市疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "河北省疾病预防控制中心",
+   "u": "https://www.hebeicdc.cn/",
+   "path": "",
+   "title": "首页 - 河北省疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "山西省疾病预防控制中心",
+   "u": "https://www.sxcdc.cn/",
+   "path": "",
+   "title": "山西省疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "内蒙古自治区疾病预防控制中心",
+   "u": "http://www.nmgcdc.org.cn/",
+   "path": "",
+   "title": "内蒙古自治区疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "黑龙江省疾病预防控制中心",
+   "u": "https://www.hljcdc.org/",
+   "path": "",
+   "title": "黑龙江省疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "上海市疾病预防控制中心",
+   "u": "https://www.scdc.sh.cn/",
+   "path": "",
+   "title": "上海市疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "江苏省疾病预防控制中心",
+   "u": "https://www.jscdc.cn/sjb/yqfb/",
+   "path": "",
+   "title": "江苏省疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "浙江省疾病预防控制中心",
+   "u": "https://www.cdc.zj.cn/",
+   "path": "",
+   "title": "浙江省疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "安徽省疾病预防控制中心",
+   "u": "https://www.ahcdc.cn/",
+   "path": "",
+   "title": "安徽省疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "福建省疾病预防控制中心",
+   "u": "https://www.fjcdc.com.cn/",
+   "path": "",
+   "title": "福建省疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "河南省疾病预防控制中心",
+   "u": "https://www.hncdc.com.cn/",
+   "path": "",
+   "title": "河南省疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "湖北省疾病预防控制中心",
+   "u": "https://www.hbcdc.cn/",
+   "path": "",
+   "title": "湖北省疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "湖南省疾病预防控制中心",
+   "u": "https://www.hncdc.com/",
+   "path": "",
+   "title": "湖南省疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "广东省疾病预防控制中心",
+   "u": "https://cdcp.gd.gov.cn/",
+   "path": "",
+   "title": "广东省疾病预防控制中心网站",
+   "verdict": "ok"
+  },
+  {
+   "n": "广西壮族自治区疾病预防控制中心",
+   "u": "http://www.gxcdc.com/",
+   "path": "",
+   "title": "广西壮族自治区疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "海南省疾病预防控制中心",
+   "u": "https://wst.hainan.gov.cn/sjkzx/",
+   "path": "",
+   "title": "海南省疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "重庆市疾病预防控制中心",
+   "u": "https://www.cqcdc.org/",
+   "path": "",
+   "title": "重庆市疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "四川省疾病预防控制中心",
+   "u": "https://www.sccdc.cn/",
+   "path": "",
+   "title": "四川省疾病预防控制中心-四川省疾控、省疾控、疾控中心、四川省卫生监测检验中心、四川省预防医学科学研究院；_ 四川省疾病预",
+   "verdict": "ok"
+  },
+  {
+   "n": "贵州省疾病预防控制中心",
+   "u": "https://www.gzscdc.org.cn/",
+   "path": "",
+   "title": "贵州省疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "云南省疾病预防控制中心",
+   "u": "https://www.yncdc.cn/",
+   "path": "",
+   "title": "云南省疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "甘肃省疾病预防控制中心",
+   "u": "https://www.gscdc.cn/",
+   "path": "",
+   "title": "甘肃省疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "宁夏回族自治区疾病预防控制中心",
+   "u": "https://nxcdc.org.cn/",
+   "path": "",
+   "title": "宁夏疾病预防控制中心",
+   "verdict": "ok"
+  },
+  {
+   "n": "新疆维吾尔自治区疾病预防控制中心",
+   "u": "https://www.xjcdc.com/",
+   "path": "",
+   "title": "新疆维吾尔自治区疾病预防控制中心",
+   "verdict": "ok"
+  }
+ ]
+}

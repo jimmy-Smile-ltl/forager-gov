@@ -1,0 +1,1 @@
+window.__R=window.__R||{};window.__R["群团组织系统（妇联·共青团·工会）"]={"portal":"https://www.women.org.cn/","method":"群团：妇联（women.org.cn 各地妇联+SERP验证 32）、共青团（gqt.org.cn 三下拉：32 省级团委+10 直属单位+学联青联少先队）、工会（acftu 权威并入）","sources":[],"code":"","depts":[],"cities":[]};
