@@ -341,15 +341,32 @@ def gen_viz(tree_path="tree.json"):
     except Exception:
         pass
     records = build_records(blk, tiao, registry) if registry else {}
+    # records（USR 扁平索引, 约 10MB raw / 1.3MB br）与树数据分离——慢网下
+    # 它占首屏 payload 2/3（2026-11-17 线上实测 1.94MB br 里约 1.35MB 是
+    # records），而首屏只有「全国总览卡」用得到；改为独立文件按需加载。
     s = json.dumps({"meta": {"version": "2026-11-11",
-                             "generated": "2026-11-11"},
-                    "block": blk, "tiao": tiao,
-                    "records": records},
+                             "generated": "2026-11-11",
+                             "recordsFile": "gov_data_records.js"},
+                    "block": blk, "tiao": tiao},
                    ensure_ascii=False, separators=(",", ":"))
     out = ("window.__GOV_DATA__=" + s + ";\n"
            "window.__TREE__=window.__GOV_DATA__.block;\n"   # 兼容别名(过渡期)
-           "window.__TIAO__=window.__GOV_DATA__.tiao;\n")
+           "window.__TIAO__=window.__GOV_DATA__.tiao;\n"
+           "window.__GOV_DATA__.loadRecords=function(cb){\n"
+           "  if(window.__GOV_DATA__.records){cb&&cb();return}\n"
+           "  var q=window.__recordsQ=window.__recordsQ||[];if(cb)q.push(cb);\n"
+           "  if(window.__recordsLoading)return;window.__recordsLoading=1;\n"
+           "  var s=document.createElement('script');\n"
+           "  s.src=window.__GOV_DATA__.meta.recordsFile+'?v='+(window.__GOV_DATA__.meta.generated||'');\n"
+           "  s.onload=function(){window.__GOV_DATA__.records=window.__GOV_DATA_RECORDS__||{};\n"
+           "    (window.__recordsQ||[]).forEach(function(f){try{f()}catch(e){}});window.__recordsQ=[]};\n"
+           "  s.onerror=function(){window.__recordsLoading=0};\n"
+           "  document.head.appendChild(s);\n"
+           "};\n")
     open(os.path.join(here, "..", "gov_data.js"), "w", encoding="utf-8").write(out)
+    rec = ("window.__GOV_DATA_RECORDS__="
+           + json.dumps(records, ensure_ascii=False, separators=(",", ":")) + ";\n")
+    open(os.path.join(here, "..", "gov_data_records.js"), "w", encoding="utf-8").write(rec)
     # 旧文件保留软引用（指向统一数据）, 页面迁移后可删
     for old_name, key in (("viz_tree_data.js", "__TREE__"),
                           ("viz_tiao_data.js", "__TIAO__")):

@@ -1482,7 +1482,7 @@ select(DATA);   // 默认展示根节点总览
 <script src="data/geo/china.js?v=20261117b"></script>
 <script src="data/geo/adcode.js?v=20261117b"></script>
 <script src="data/geo/geo_index.js?v=20261117b"></script>
-<script src="gov_data.js?v=20261116a"></script>
+<script src="gov_data.js?v=20261117c"></script>
 <script src="data_js/quality.js"></script>
 <script>
 function donutSVG(pct,color,size=74,stroke=8){
@@ -1538,8 +1538,15 @@ function showChinaDetail(){
   // （法院→最高人民法院… 政府→国务院; 综合=总览卡列全部最高机构）
   const d=document.getElementById("detail");
   if(!d)return;
-  const recRaw=(window.__GOV_DATA__&&window.__GOV_DATA__.records)||{};
-  const rec=Array.isArray(recRaw)?recRaw:Object.values(recRaw);
+  // 全国覆盖统计：直接遍历 block+tiao 叶子（records 索引 10MB 已拆为
+  // gov_data_records.js 按需加载, 首屏不再下载——2026-11-17 慢网优化）
+  function _leafWalk(fn){
+    const G=window.__GOV_DATA__||{};
+    for(const root of [G.block,G.tiao]){
+      if(!root)continue;
+      (function f(n){const ks=n.ks||[];if(!ks.length){fn(n);return}for(const c of ks)f(c)})(root);
+    }
+  }
   const ty=MapViz.getType();
   const TN={gov:"人民政府",rd:"人大",zx:"政协",fy:"法院",jcy:"检察院",jw:"监委"};
   const TCOL={gov:"#e53935",rd:"#f9a825",zx:"#c0a32c",fy:"#2e7d32",jcy:"#00838f",jw:"#1565c0",all:"#7c4dff"};
@@ -1563,15 +1570,15 @@ function showChinaDetail(){
   if(ty!=="all"){
     const top=findTop();
     if(top){
-      const rs=rec.filter(x=>x.type===ty);
-      const uu=rs.filter(x=>x.u).length;
+      let uu=0,tt=0;
+      _leafWalk(n=>{if((n.t||"group")!==ty)return;tt++;if(n.u)uu++});
       d.innerHTML=`<div class="vsd">
         <button class="vsd-x" title="关闭">✕</button>
         <div class="vsd-badge" style="background:${TCOL[ty]||"#8a7f70"}">${TICO[ty]||""} ${TN[ty]||ty}</div>
         <div class="vsd-n">${top.n}</div>
         <div class="vsd-rows">
           <div class="vsd-row"><span class="vsd-k">官网</span><span class="vsd-urlv"><a href="${top.u}" target="_blank" rel="noopener">${top.u}</a></span></div>
-          ${barRow(uu,rs.length,TCOL[ty]||"#8a7f70")}
+          ${barRow(uu,tt,TCOL[ty]||"#8a7f70")}
         </div>
         <div class="vsd-btns"><button class="vsd-btn vsd-pri" id="mzOpen">🔗 打开官网</button></div></div>`;
       const x=d.querySelector(".vsd-x");if(x)x.addEventListener("click",()=>{d.style.display="none"});
@@ -1580,8 +1587,8 @@ function showChinaDetail(){
     }
   }
   let u=0;
-  for(const r of rec)if(r.u)u++;
-  const total=rec.length,pct=total?Math.round(u/total*100):0;
+  _leafWalk(n=>{u+=n.u?1:0});
+  let total=0;_leafWalk(()=>{total++});const pct=total?Math.round(u/total*100):0;
   // 综合: 总览卡列 5 系统最高机构
   let topRows="";
   {

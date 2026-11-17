@@ -1,12 +1,12 @@
 {
  "generated": "2026-11-17",
- "scope": "块视图「省级」子树（31 省区市 + 新疆兵团 = 32 个单位）及其下辖市/县/直辖市辖区；民主党派省级组织取自中央子树。统计对象为机构节点（不含分组容器）；缺失 = 树中 u 为空（列名）。",
+ "scope": "块视图「省级」子树（31 省区市 + 新疆兵团 = 32 个单位）及其下辖市/县/直辖市辖区；民主党派省级组织取自中央子树。统计对象为机构节点（不含分组容器）；缺失 = 树中 u 为空（列名）。党委机关不设独立门户网站，不纳入统计。",
  "levels": {
   "省": {
-   "total": 2252,
+   "total": 2221,
    "with_url": 1913,
-   "missing": 339,
-   "missing_rate": 15.05,
+   "missing": 308,
+   "missing_rate": 13.87,
    "systems": {
     "gov": {
      "total": 32,
@@ -50,12 +50,6 @@
      "missing": 0,
      "missing_rate": 0.0
     },
-    "party": {
-     "total": 31,
-     "with_url": 0,
-     "missing": 31,
-     "missing_rate": 100.0
-    },
     "qt": {
      "total": 544,
      "with_url": 299,
@@ -77,10 +71,10 @@
    }
   },
   "市": {
-   "total": 12607,
+   "total": 12202,
    "with_url": 11675,
-   "missing": 932,
-   "missing_rate": 7.39,
+   "missing": 527,
+   "missing_rate": 4.32,
    "systems": {
     "gov": {
      "total": 407,
@@ -124,12 +118,6 @@
      "missing": 94,
      "missing_rate": 23.21
     },
-    "party": {
-     "total": 405,
-     "with_url": 0,
-     "missing": 405,
-     "missing_rate": 100.0
-    },
     "qt": {
      "total": 179,
      "with_url": 179,
@@ -151,10 +139,10 @@
    }
   },
   "县": {
-   "total": 19584,
+   "total": 16805,
    "with_url": 6307,
-   "missing": 13277,
-   "missing_rate": 67.8,
+   "missing": 10498,
+   "missing_rate": 62.47,
    "systems": {
     "gov": {
      "total": 2910,
@@ -197,12 +185,6 @@
      "with_url": 1231,
      "missing": 1548,
      "missing_rate": 55.7
-    },
-    "party": {
-     "total": 2779,
-     "with_url": 0,
-     "missing": 2779,
-     "missing_rate": 100.0
     },
     "qt": {
      "total": 0,
@@ -437,36 +419,6 @@
    }
   },
   {
-   "key": "party",
-   "label": "党委",
-   "levels": {
-    "省": {
-     "total": 31,
-     "with_url": 0,
-     "missing": 31,
-     "missing_rate": 100.0
-    },
-    "市": {
-     "total": 405,
-     "with_url": 0,
-     "missing": 405,
-     "missing_rate": 100.0
-    },
-    "县": {
-     "total": 2779,
-     "with_url": 0,
-     "missing": 2779,
-     "missing_rate": 100.0
-    }
-   },
-   "total": {
-    "total": 3215,
-    "with_url": 0,
-    "missing": 3215,
-    "missing_rate": 100.0
-   }
-  },
-  {
    "key": "qt",
    "label": "群团",
    "levels": {
@@ -558,9 +510,9 @@
   }
  ],
  "total": {
-  "total": 34443,
+  "total": 31228,
   "with_url": 19895,
-  "missing": 14548,
-  "missing_rate": 42.24
+  "missing": 11333,
+  "missing_rate": 36.29
  }
 }

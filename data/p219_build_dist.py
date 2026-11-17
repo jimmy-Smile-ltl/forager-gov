@@ -19,7 +19,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIST = os.path.join(ROOT, "dist")
 
 # 站点根文件（与 HTML/JS 引用一一对应）
-FILES = ["中国政府网站体系.html", "gov-tree.html", "map_view.js", "tree_view.js", "gov_data.js"]
+FILES = ["中国政府网站体系.html", "gov-tree.html", "map_view.js", "tree_view.js",
+         "gov_data.js", "gov_data_records.js"]
 # 站点数据目录（保持相对路径不变: data_js/... 与 data/geo/...）
 DIRS = ["data_js", os.path.join("data", "geo")]
 
@@ -31,6 +32,8 @@ HEADERS = """/data/geo/*
 /data_js/*
   Cache-Control: public, max-age=3600
 /gov_data.js
+  Cache-Control: public, max-age=86400
+/gov_data_records.js
   Cache-Control: public, max-age=86400
 /map_view.js
   Cache-Control: public, max-age=86400
@@ -153,7 +156,7 @@ def main():
     build_geo_bundles(os.path.join(DIST, "data", "geo"))
 
     # 动态加载目标: data_js/{manifest,quality} + modules/rules + geo 关键文件
-    for p in ("index.html", "data_js/manifest.js", "data_js/quality.js",
+    for p in ("index.html", "gov_data_records.js", "data_js/manifest.js", "data_js/quality.js",
               "data/geo/adcode.js", "data/geo/china.js", "data/geo/geo_index.js"):
         if not os.path.isfile(os.path.join(DIST, p)):
             print("❌ 动态数据缺失:", p)
