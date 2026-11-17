@@ -28646,8 +28646,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "河北省",
            "p2": "承德市",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "https://cdrd.hehechengde.cn/"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 https://cdrd.hehechengde.cn/ 已失效（站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 https://cdrd.hehechengde.cn/；站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代 → 列名"
           },
           {
            "n": "市政协",
@@ -35934,9 +35935,9 @@
          "p1": "山西省",
          "p2": "大同市",
          "cd": "140212",
-         "u": "http://www.dt.gov.cn/",
+         "u": "http://www.xr.gov.cn/",
          "x": "http://www.dt.gov.cn/dtszf/szfjg/ptlj.shtml",
-         "s": "导航链接",
+         "s": "来源:L2|大同市政府门户县区导航 HTML 提取, title=新荣区人民政府；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -36016,9 +36017,9 @@
          "p1": "山西省",
          "p2": "大同市",
          "cd": "140213",
-         "u": "http://www.dt.gov.cn/",
+         "u": "http://www.pingcheng.gov.cn/",
          "x": "http://www.dt.gov.cn/dtszf/szfjg/ptlj.shtml",
-         "s": "导航链接",
+         "s": "来源:L2|大同市政府门户县区导航 HTML 提取, title=平城区人民政府；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -36098,9 +36099,9 @@
          "p1": "山西省",
          "p2": "大同市",
          "cd": "140214",
-         "u": "http://www.dt.gov.cn/",
+         "u": "http://www.yungang.gov.cn/",
          "x": "http://www.dt.gov.cn/dtszf/szfjg/ptlj.shtml",
-         "s": "导航链接",
+         "s": "来源:L2|大同市政府门户县区导航 HTML 提取, title=云冈区人民政府；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -36180,9 +36181,9 @@
          "p1": "山西省",
          "p2": "大同市",
          "cd": "140215",
-         "u": "http://www.dt.gov.cn/",
+         "u": "http://www.yunzhou.gov.cn/",
          "x": "http://www.dt.gov.cn/dtszf/szfjg/ptlj.shtml",
-         "s": "导航链接",
+         "s": "来源:L2|大同市政府门户县区导航 HTML 提取, title=云州区人民政府；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -36262,9 +36263,9 @@
          "p1": "山西省",
          "p2": "大同市",
          "cd": "140221",
-         "u": "http://www.dt.gov.cn/",
+         "u": "http://www.dtyg.gov.cn/",
          "x": "http://www.dt.gov.cn/dtszf/szfjg/ptlj.shtml",
-         "s": "导航链接",
+         "s": "来源:L2|大同市政府门户县区导航 HTML 提取, title=阳高县人民政府；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -36344,9 +36345,9 @@
          "p1": "山西省",
          "p2": "大同市",
          "cd": "140222",
-         "u": "http://www.dt.gov.cn/",
+         "u": "http://www.dttz.gov.cn/",
          "x": "http://www.dt.gov.cn/dtszf/szfjg/ptlj.shtml",
-         "s": "导航链接",
+         "s": "来源:L2|大同市政府门户县区导航 HTML 提取, title=天镇县人民政府；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -36426,9 +36427,9 @@
          "p1": "山西省",
          "p2": "大同市",
          "cd": "140223",
-         "u": "http://www.dt.gov.cn/",
+         "u": "http://www.sx-guangling.gov.cn/",
          "x": "http://www.dt.gov.cn/dtszf/szfjg/ptlj.shtml",
-         "s": "导航链接",
+         "s": "来源:L2|大同市政府门户县区导航 HTML 提取, title=广灵县人民政府；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -36508,9 +36509,9 @@
          "p1": "山西省",
          "p2": "大同市",
          "cd": "140224",
-         "u": "http://www.dt.gov.cn/",
+         "u": "http://www.lingqiu.gov.cn/",
          "x": "http://www.dt.gov.cn/dtszf/szfjg/ptlj.shtml",
-         "s": "导航链接",
+         "s": "来源:L2|大同市政府门户县区导航 HTML 提取, title=灵丘县人民政府；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -36590,9 +36591,9 @@
          "p1": "山西省",
          "p2": "大同市",
          "cd": "140225",
-         "u": "http://www.dt.gov.cn/",
+         "u": "http://www.hunyuan.gov.cn/",
          "x": "http://www.dt.gov.cn/dtszf/szfjg/ptlj.shtml",
-         "s": "导航链接",
+         "s": "来源:L2|大同市政府门户县区导航 HTML 提取, title=浑源县人民政府；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -36672,9 +36673,9 @@
          "p1": "山西省",
          "p2": "大同市",
          "cd": "140226",
-         "u": "http://www.dt.gov.cn/",
+         "u": "http://www.zuoyun.gov.cn/",
          "x": "http://www.dt.gov.cn/dtszf/szfjg/ptlj.shtml",
-         "s": "导航链接",
+         "s": "来源:L2|大同市政府门户县区导航 HTML 提取, title=左云县人民政府；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -60968,8 +60969,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "内蒙古自治区",
            "p2": "阿拉善盟",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://www.alsrd.gov.cn/"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 http://www.alsrd.gov.cn/ 已失效（站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 http://www.alsrd.gov.cn/；站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代 → 列名"
           },
           {
            "n": "市政协",
@@ -72527,8 +72529,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "辽宁省",
            "p2": "铁岭市",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://www.tlrd.gov.cn/"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 http://www.tlrd.gov.cn/ 已失效（站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 http://www.tlrd.gov.cn/；站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代 → 列名"
           },
           {
            "n": "市政协",
@@ -79968,8 +79971,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "吉林省",
            "p2": "通化市",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://thszhengxie.gov.cn"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 http://thszhengxie.gov.cn 已失效（站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 http://thszhengxie.gov.cn；站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代 → 列名"
           },
           {
            "n": "市监委",
@@ -81397,8 +81401,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "吉林省",
            "p2": "松原市",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://www.songyuanzx.gov.cn/"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 http://www.songyuanzx.gov.cn/ 已失效（站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 http://www.songyuanzx.gov.cn/；站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代 → 列名"
           },
           {
            "n": "市监委",
@@ -106790,9 +106795,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "江苏省",
            "p2": "常州市",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://fy.changzhou.gov.cn",
-           "s": "来源:江苏省高级人民法院官网中院区块 HTML 提取"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 http://fy.changzhou.gov.cn 已失效（站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 http://fy.changzhou.gov.cn；站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代 → 列名"
           },
           {
            "n": "市人民检察院",
@@ -108286,8 +108291,8 @@
          "p2": "苏州市",
          "cd": "320576",
          "m": "功能区/管委会（非民政部区划序列，据政府门户实存）",
-         "u": "http://www.suzhou.gov.cn",
-         "s": "来源：苏州市政府门户(www.suzhou.gov.cn)区县导航 HTML 提取（title 验证）"
+         "u": "http://www.sipac.gov.cn/",
+         "s": "来源:L2|苏州市门户「苏州工业园区管委会」链接 HTML 提取, title=苏州工业园区管理委员会；2026-11-17 p220 死链/错挂修复"
         },
         {
          "n": "常熟市",
@@ -121243,8 +121248,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "浙江省",
            "p2": "温州市",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://www.wzrd.gov.cn"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 http://www.wzrd.gov.cn 已失效（站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 http://www.wzrd.gov.cn；站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代 → 列名"
           },
           {
            "n": "市政协",
@@ -194710,8 +194716,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "河南省",
            "p2": "平顶山市",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://www.pdszx.gov.cn/"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 http://www.pdszx.gov.cn/ 已失效（站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 http://www.pdszx.gov.cn/；站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代 → 列名"
           },
           {
            "n": "市监委",
@@ -200568,8 +200575,8 @@
            "p1": "河南省",
            "p2": "濮阳市",
            "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://hnpyfy.hncourt.gov.cn",
-           "s": "P189 条系统 URL 回填（法院elink/检察院等统一平台）"
+           "u": "https://pyzy.hncourt.gov.cn/",
+           "s": "来源:L1|河南高院官网中院导航/registry 已验 title=濮阳市中级人民法院（原 hnpyfy=濮阳县法院网，县级错挂）；2026-11-17 p220 死链/错挂修复"
           },
           {
            "n": "市人民检察院",
@@ -227146,8 +227153,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "湖南省",
            "p2": "衡阳市",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://www.hnhyzx.gov.cn/"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 http://www.hnhyzx.gov.cn/ 已失效（站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 http://www.hnhyzx.gov.cn/；站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代 → 列名"
           },
           {
            "n": "市监委",
@@ -227596,9 +227604,9 @@
          "p1": "湖南省",
          "p2": "衡阳市",
          "cd": "430421",
-         "u": "https://www.hengyang.gov.cn/",
+         "u": "http://www.hyx.gov.cn/",
          "x": "https://www.hengyang.gov.cn/hyjczwgk/index.html",
-         "s": "p7浏览器",
+         "s": "来源:L2|衡阳市政府门户「网站群-县市区人民政府」页 HTML 提取, title=衡阳县人民政府门户网站（原值误挂市门户）；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -238041,7 +238049,8 @@
            "p1": "湖南省",
            "p2": "娄底市",
            "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://www.ldzx.gov.cn/"
+           "u": "http://ldzx.hnloudi.gov.cn/",
+           "s": "来源:L2|娄底市政府门户首页「市政协」链接 HTML 提取, title=政协娄底市委员会（原 www.ldzx.gov.cn 域名 NXDOMAIN）；2026-11-17 p220 死链/错挂修复"
           },
           {
            "n": "市监委",
@@ -261064,9 +261073,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "广西壮族自治区",
            "p2": "桂林市",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://glzy.chinacourt.gov.cn",
-           "s": "来源:广西壮族自治区高级人民法院官网中院区块 HTML 提取"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 http://glzy.chinacourt.gov.cn 已失效（站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 http://glzy.chinacourt.gov.cn；站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代 → 列名"
           },
           {
            "n": "市人民检察院",
@@ -303490,8 +303499,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "四川省",
            "p2": "眉山市",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://www.msjcy.gov.cn/"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 http://www.msjcy.gov.cn/ 已失效（站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 http://www.msjcy.gov.cn/；站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代 → 列名"
           }
          ]
         },
@@ -312175,8 +312185,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "四川省",
            "p2": "凉山彝族自治州",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://zx.lsz.gov.cn"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 http://zx.lsz.gov.cn 已失效（站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 http://zx.lsz.gov.cn；站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代 → 列名"
           },
           {
            "n": "市监委",
@@ -329016,9 +329027,9 @@
          "p1": "云南省",
          "p2": "曲靖市",
          "cd": "530302",
-         "u": "https://www.qj.gov.cn/link.html?t=https://www.ql.gov.cn/",
+         "u": "https://www.ql.gov.cn/",
          "x": "https://www.qj.gov.cn/link.html?t=https://www.ql.gov.cn/zfxxgk/",
-         "s": "路径探测",
+         "s": "来源:L2|曲靖门户县区导航跳转目标展开, title=曲靖市麒麟区人民政府；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -329096,9 +329107,9 @@
          "p1": "云南省",
          "p2": "曲靖市",
          "cd": "530303",
-         "u": "https://www.qj.gov.cn/link.html?t=https://www.zhanyi.gov.cn/",
+         "u": "https://www.zhanyi.gov.cn/",
          "x": "https://www.qj.gov.cn/link.html?t=https://www.zhanyi.gov.cn/zfxxgk/",
-         "s": "路径探测",
+         "s": "来源:L2|曲靖门户县区导航跳转目标展开, title=曲靖市沾益区人民政府；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -329176,9 +329187,9 @@
          "p1": "云南省",
          "p2": "曲靖市",
          "cd": "530304",
-         "u": "https://www.qj.gov.cn/link.html?t=https://www.malong.gov.cn/",
+         "u": "https://www.malong.gov.cn/",
          "x": "https://www.qj.gov.cn/link.html?t=https://www.malong.gov.cn/zfxxgk/",
-         "s": "路径探测",
+         "s": "来源:L2|曲靖门户县区导航跳转目标展开, title=曲靖市马龙区人民政府；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -329256,9 +329267,9 @@
          "p1": "云南省",
          "p2": "曲靖市",
          "cd": "530322",
-         "u": "https://www.qj.gov.cn/link.html?t=https://www.luliang.gov.cn/",
+         "u": "https://www.luliang.gov.cn/",
          "x": "https://www.qj.gov.cn/link.html?t=https://www.luliang.gov.cn/zfxxgk/",
-         "s": "路径探测",
+         "s": "来源:L2|曲靖门户县区导航跳转目标展开, title=陆良县人民政府；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -329336,9 +329347,9 @@
          "p1": "云南省",
          "p2": "曲靖市",
          "cd": "530323",
-         "u": "https://www.qj.gov.cn/link.html?t=https://www.ynsz.gov.cn/",
+         "u": "https://www.ynsz.gov.cn/",
          "x": "https://www.qj.gov.cn/link.html?t=https://www.ynsz.gov.cn/zfxxgk/",
-         "s": "路径探测",
+         "s": "来源:L2|曲靖门户县区导航跳转目标展开, title=师宗县人民政府网；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -329416,9 +329427,9 @@
          "p1": "云南省",
          "p2": "曲靖市",
          "cd": "530324",
-         "u": "https://www.qj.gov.cn/link.html?t=https://www.luoping.gov.cn/",
+         "u": "https://www.luoping.gov.cn/",
          "x": "https://www.qj.gov.cn/link.html?t=https://www.luoping.gov.cn/zfxxgk/",
-         "s": "路径探测",
+         "s": "来源:L2|曲靖门户县区导航跳转目标展开, title=罗平县人民政府门户网站；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -329496,9 +329507,9 @@
          "p1": "云南省",
          "p2": "曲靖市",
          "cd": "530325",
-         "u": "https://www.qj.gov.cn/link.html?t=https://www.qjfy.gov.cn/",
+         "u": "https://www.qjfy.gov.cn/",
          "x": "https://www.qj.gov.cn/link.html?t=https://www.qjfy.gov.cn/zfxxgk/",
-         "s": "路径探测",
+         "s": "来源:L2|曲靖门户县区导航跳转目标展开, title=富源县人民政府门户网站；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -329576,9 +329587,9 @@
          "p1": "云南省",
          "p2": "曲靖市",
          "cd": "530326",
-         "u": "https://www.qj.gov.cn/link.html?t=https://www.huize.gov.cn/",
+         "u": "https://www.huize.gov.cn/",
          "x": "https://www.qj.gov.cn/link.html?t=https://www.huize.gov.cn/zfxxgk/",
-         "s": "路径探测",
+         "s": "来源:L2|曲靖门户县区导航跳转目标展开, title=会泽县人民政府门户网站；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -329656,9 +329667,9 @@
          "p1": "云南省",
          "p2": "曲靖市",
          "cd": "530381",
-         "u": "https://www.qj.gov.cn/link.html?t=https://www.xw.gov.cn/",
+         "u": "https://www.xw.gov.cn/",
          "x": "https://www.qj.gov.cn/link.html?t=https://www.xw.gov.cn/zfxxgk/",
-         "s": "路径探测",
+         "s": "来源:L2|曲靖门户县区导航跳转目标展开, title=宣威市人民政府；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -347459,9 +347470,9 @@
          "p1": "西藏自治区",
          "p2": "昌都市",
          "cd": "540328",
-         "u": "http://www.changdu.gov.cn/cdrmzf/zfdtr/202411/2c02d4de241a43f788a989bd8e0a2240.shtml",
+         "u": "http://mangkang.changdu.gov.cn",
          "x": "http://www.changdu.gov.cn/cdrmzf/c100366/2023zwgk.shtml",
-         "s": "导航链接",
+         "s": "来源:L2|昌都市政府门户「芒康县人民政府」链接 HTML 提取, title=芒康县人民政府；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -361148,10 +361159,10 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "陕西省",
            "p2": "汉中市",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "https://rd.hanzhong.gov.cn/",
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 https://rd.hanzhong.gov.cn/ 已失效（站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代）",
+           "u": "",
            "x": "https://rd.hanzhong.gov.cn/hzrdcwwz/xxgk/common_list.shtml",
-           "s": "p175c 第二轮官网首页真实提取"
+           "s": "2026-11-17 p220：原值 https://rd.hanzhong.gov.cn/；站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代 → 列名"
           },
           {
            "n": "市政协",
@@ -361160,8 +361171,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "陕西省",
            "p2": "汉中市",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "https://zx.hanzhong.gov.cn/"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 https://zx.hanzhong.gov.cn/ 已失效（站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 https://zx.hanzhong.gov.cn/；站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代 → 列名"
           },
           {
            "n": "市监委",
@@ -372753,7 +372765,8 @@
            "p1": "甘肃省",
            "p2": "酒泉市",
            "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://zx.jiuquan.gov.cn/"
+           "u": "https://www.jqzx.gov.cn/",
+           "s": "来源:L2|酒泉市政府门户首页「酒泉政协网」链接 HTML 提取（站点对自动请求超时/拦截，title 未取；原 zx.jiuquan.gov.cn NXDOMAIN）；2026-11-17 p220 死链/错挂修复"
           },
           {
            "n": "市监委",
@@ -374878,8 +374891,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "甘肃省",
            "p2": "定西市",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://www.dxrdw.gov.cn/"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 http://www.dxrdw.gov.cn/ 已失效（站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 http://www.dxrdw.gov.cn/；站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代 → 列名"
           },
           {
            "n": "市政协",
@@ -375525,8 +375539,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "甘肃省",
            "p2": "陇南市",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://www.lnszx.gov.cn/"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 http://www.lnszx.gov.cn/ 已失效（站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 http://www.lnszx.gov.cn/；站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代 → 列名"
           },
           {
            "n": "市监委",
@@ -376814,8 +376829,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "甘肃省",
            "p2": "临夏回族自治州",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://www.lxzzx.gov.cn"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 http://www.lxzzx.gov.cn 已失效（站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 http://www.lxzzx.gov.cn；站点域名 NXDOMAIN（系统 DNS + 阿里公共 DNS 双重复核），权威导航仍指向旧域，暂无合规在线替代 → 列名"
           },
           {
            "n": "市监委",
@@ -377100,9 +377116,9 @@
          "p1": "甘肃省",
          "p2": "临夏回族自治州",
          "cd": "622923",
-         "u": "https://www.linxia.gov.cn/lxz/lxly/jdzs/yjx/index.html",
+         "u": "http://www.gsyongjing.gov.cn",
          "x": "https://www.linxia.gov.cn/lxz/lxly/jdzs/yjx/zfxxgk/",
-         "s": "路径探测",
+         "s": "来源:L2|临夏州门户「永靖县政府网」链接 HTML 提取, title=永靖县人民政府；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -377179,9 +377195,9 @@
          "p1": "甘肃省",
          "p2": "临夏回族自治州",
          "cd": "622924",
-         "u": "https://www.linxia.gov.cn/lxz/lxly/jdzs/ghx/index.html",
+         "u": "http://www.ghx.gov.cn/",
          "x": "https://www.linxia.gov.cn/lxz/lxly/jdzs/ghx/zfxxgk/",
-         "s": "路径探测",
+         "s": "来源:L2|临夏州门户「广河县政府网」链接 HTML 提取, title=广河县人民政府；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -391372,9 +391388,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "新疆维吾尔自治区",
            "p2": "乌鲁木齐市",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "https://elink.chinacourt.cn/link?elid=http://www.urumqicourt.org/",
-           "s": "来源:新疆维吾尔自治区高级人民法院官网中院区块 HTML 提取"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 https://elink.chinacourt.cn/link?elid=http://www.urumqicourt.org/ 已失效（新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 https://elink.chinacourt.cn/link?elid=http://www.urumqicourt.org/；新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代 → 列名"
           },
           {
            "n": "市人民检察院",
@@ -393004,9 +393020,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "新疆维吾尔自治区",
            "p2": "吐鲁番市",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://tlfzy.chinacourt.gov.cn/index.shtml",
-           "s": "来源:新疆维吾尔自治区高级人民法院官网中院区块 HTML 提取"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 http://tlfzy.chinacourt.gov.cn/index.shtml 已失效（新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 http://tlfzy.chinacourt.gov.cn/index.shtml；新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代 → 列名"
           },
           {
            "n": "市人民检察院",
@@ -393748,9 +393764,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "新疆维吾尔自治区",
            "p2": "哈密市",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "https://elink.chinacourt.cn/link?elid=http://hmzy.xjcourt.org/",
-           "s": "来源:新疆维吾尔自治区高级人民法院官网中院区块 HTML 提取"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 https://elink.chinacourt.cn/link?elid=http://hmzy.xjcourt.org/ 已失效（新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 https://elink.chinacourt.cn/link?elid=http://hmzy.xjcourt.org/；新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代 → 列名"
           },
           {
            "n": "市人民检察院",
@@ -394345,8 +394361,8 @@
            "p1": "新疆维吾尔自治区",
            "p2": "昌吉回族自治州",
            "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://cjzy.chinacourt.gov.cn/index.shtml",
-           "s": "来源:新疆维吾尔自治区高级人民法院官网中院区块 HTML 提取"
+           "u": "https://cjzy.xjcourt.gov.cn/",
+           "s": "来源:L1|新疆法院网「法院网站群」导航旧域已死，昌吉中院现行站 title=昌吉回族自治州中级人民法院（registry 法院|昌吉州中院 同值）；2026-11-17 p220 死链/错挂修复"
           },
           {
            "n": "市人民检察院",
@@ -395406,9 +395422,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "新疆维吾尔自治区",
            "p2": "博尔塔拉蒙古自治州",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "https://elink.chinacourt.cn/link?elid=http://bzzy.xjcourt.org/",
-           "s": "来源:新疆维吾尔自治区高级人民法院官网中院区块 HTML 提取"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 https://elink.chinacourt.cn/link?elid=http://bzzy.xjcourt.org/ 已失效（新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 https://elink.chinacourt.cn/link?elid=http://bzzy.xjcourt.org/；新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代 → 列名"
           },
           {
            "n": "市人民检察院",
@@ -396272,9 +396288,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "新疆维吾尔自治区",
            "p2": "巴音郭楞蒙古自治州",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "https://www.rmfysszc.gov.cn/statichtml/rm_xmdetail/6213505-1.shtml",
-           "s": "来源:SERP线索+title严格验证(市名+机构词双验)"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 https://www.rmfysszc.gov.cn/statichtml/rm_xmdetail/6213505-1.shtml 已失效（新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 https://www.rmfysszc.gov.cn/statichtml/rm_xmdetail/6213505-1.shtml；新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代 → 列名"
           },
           {
            "n": "市人民检察院",
@@ -397058,9 +397074,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "新疆维吾尔自治区",
            "p2": "阿克苏地区",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://akss.xjcourt.org/",
-           "s": "P189 条系统 URL 回填（法院elink/检察院等统一平台）"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 http://akss.xjcourt.org/ 已失效（新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 http://akss.xjcourt.org/；新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代 → 列名"
           },
           {
            "n": "市人民检察院",
@@ -398344,9 +398360,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "新疆维吾尔自治区",
            "p2": "克孜勒苏柯尔克孜自治州",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "https://elink.chinacourt.cn/link?elid=http://kzzy.xjcourt.org/",
-           "s": "来源:新疆维吾尔自治区高级人民法院官网中院区块 HTML 提取"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 https://elink.chinacourt.cn/link?elid=http://kzzy.xjcourt.org/ 已失效（新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 https://elink.chinacourt.cn/link?elid=http://kzzy.xjcourt.org/；新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代 → 列名"
           },
           {
            "n": "市人民检察院",
@@ -399220,9 +399236,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "新疆维吾尔自治区",
            "p2": "喀什地区",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "https://elink.chinacourt.cn/link?elid=http://kszy.xjcourt.org/",
-           "s": "来源:新疆维吾尔自治区高级人民法院官网中院区块 HTML 提取"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 https://elink.chinacourt.cn/link?elid=http://kszy.xjcourt.org/ 已失效（新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 https://elink.chinacourt.cn/link?elid=http://kszy.xjcourt.org/；新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代 → 列名"
           },
           {
            "n": "市人民检察院",
@@ -400272,9 +400288,9 @@
          "p1": "新疆维吾尔自治区",
          "p2": "和田地区",
          "cd": "653201",
-         "u": "https://www.xjht.gov.cn/",
+         "u": "http://www.hts.gov.cn/",
          "x": "https://www.xjht.gov.cn/xjht/c128263/zfxxgk_list.shtml",
-         "s": "导航链接",
+         "s": "来源:L2|和田地区门户「和田市」链接 HTML 提取（站点对自动请求返回 403，title 未取）；2026-11-17 p220 死链/错挂修复",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -402617,9 +402633,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "新疆维吾尔自治区",
            "p2": "塔城地区",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "https://elink.chinacourt.cn/link?elid=http://tczy.xjcourt.org/",
-           "s": "来源:新疆维吾尔自治区高级人民法院官网中院区块 HTML 提取"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 https://elink.chinacourt.cn/link?elid=http://tczy.xjcourt.org/ 已失效（新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 https://elink.chinacourt.cn/link?elid=http://tczy.xjcourt.org/；新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代 → 列名"
           },
           {
            "n": "市人民检察院",
@@ -403528,9 +403544,9 @@
            "c": "市委/市人大/市政协/市监委/市中院/市检察院",
            "p1": "新疆维吾尔自治区",
            "p2": "阿勒泰地区",
-           "m": "与市人民政府并列，党委领导，门户待补",
-           "u": "http://alts.xjcourt.org/",
-           "s": "P189 条系统 URL 回填（法院elink/检察院等统一平台）"
+           "m": "与市人民政府并列，党委领导，门户待补；2026-11-17：原官网 http://alts.xjcourt.org/ 已失效（新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代）",
+           "u": "",
+           "s": "2026-11-17 p220：原值 http://alts.xjcourt.org/；新疆法院网（xjfy.xjcourt.gov.cn）「法院网站群」导航仍指向旧域 xjcourt.org/chinacourt.gov.cn，目标域全部 NXDOMAIN；各市政府门户首页无法院入口；无合规在线替代 → 列名"
           },
           {
            "n": "市人民检察院",
@@ -409452,9 +409468,9 @@
            "l": "市",
            "k": "人大系统",
            "c": "人大系统",
-           "u": "http://www.alsrd.gov.cn/",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 http://www.alsrd.gov.cn/ 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -424390,9 +424406,9 @@
            "l": "市",
            "k": "人大系统",
            "c": "人大系统",
-           "u": "https://cdrd.hehechengde.cn/",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 https://cdrd.hehechengde.cn/ 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -427290,9 +427306,9 @@
            "l": "市",
            "k": "人大系统",
            "c": "人大系统",
-           "u": "http://www.wzrd.gov.cn",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 http://www.wzrd.gov.cn 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -431546,9 +431562,9 @@
            "l": "市",
            "k": "人大系统",
            "c": "人大系统",
-           "u": "http://www.dxrdw.gov.cn/",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 http://www.dxrdw.gov.cn/ 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -435378,9 +435394,9 @@
            "l": "市",
            "k": "人大系统",
            "c": "人大系统",
-           "u": "http://www.tlrd.gov.cn/",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 http://www.tlrd.gov.cn/ 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -436152,9 +436168,9 @@
            "l": "市",
            "k": "人大系统",
            "c": "人大系统",
-           "u": "https://rd.hanzhong.gov.cn/",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 http://rd.hanzhong.gov.cn/ 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -442960,9 +442976,9 @@
            "l": "市",
            "k": "政协系统",
            "c": "政协系统",
-           "u": "http://thszhengxie.gov.cn",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 http://thszhengxie.gov.cn 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -443114,9 +443130,9 @@
            "l": "市",
            "k": "政协系统",
            "c": "政协系统",
-           "u": "http://www.songyuanzx.gov.cn/",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 http://www.songyuanzx.gov.cn/ 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -445252,9 +445268,9 @@
            "l": "市",
            "k": "政协系统",
            "c": "政协系统",
-           "u": "http://zx.lsz.gov.cn",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 http://zx.lsz.gov.cn 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -459108,9 +459124,9 @@
            "l": "市",
            "k": "政协系统",
            "c": "政协系统",
-           "u": "http://www.pdszx.gov.cn/",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 http://www.pdszx.gov.cn/ 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -463456,9 +463472,9 @@
            "l": "市",
            "k": "政协系统",
            "c": "政协系统",
-           "u": "http://www.hnhyzx.gov.cn/",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 http://www.hnhyzx.gov.cn/ 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -464514,9 +464530,9 @@
            "l": "市",
            "k": "政协系统",
            "c": "政协系统",
-           "u": "http://www.ldzx.gov.cn/",
+           "u": "http://ldzx.hnloudi.gov.cn/",
            "x": "",
-           "s": "",
+           "s": "来源:L2|娄底市政府门户首页「市政协」链接 HTML 提取, title=政协娄底市委员会（原 www.ldzx.gov.cn 域名 NXDOMAIN）；2026-11-17 p220 同步",
            "m": "",
            "ks": [
             {
@@ -465186,9 +465202,9 @@
            "l": "市",
            "k": "政协系统",
            "c": "政协系统",
-           "u": "http://zx.jiuquan.gov.cn/",
+           "u": "https://www.jqzx.gov.cn/",
            "x": "",
-           "s": "",
+           "s": "来源:L2|酒泉市政府门户首页「酒泉政协网」链接 HTML 提取（站点对自动请求超时/拦截，title 未取；原 zx.jiuquan.gov.cn NXDOMAIN）；2026-11-17 p220 同步",
            "m": "",
            "ks": [
             {
@@ -465442,9 +465458,9 @@
            "l": "市",
            "k": "政协系统",
            "c": "政协系统",
-           "u": "http://www.lnszx.gov.cn/",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 http://www.lnszx.gov.cn/ 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -465544,9 +465560,9 @@
            "l": "市",
            "k": "政协系统",
            "c": "政协系统",
-           "u": "http://www.lxzzx.gov.cn",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 http://www.lxzzx.gov.cn/ 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -470892,9 +470908,9 @@
            "l": "市",
            "k": "政协系统",
            "c": "政协系统",
-           "u": "https://zx.hanzhong.gov.cn/",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 http://zx.hanzhong.gov.cn/ 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -485101,9 +485117,9 @@
            "l": "市",
            "k": "法院系统",
            "c": "法院系统",
-           "u": "http://fy.changzhou.gov.cn",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 http://fy.changzhou.gov.cn 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -496486,9 +496502,9 @@
            "l": "市",
            "k": "法院系统",
            "c": "法院系统",
-           "u": "http://glzy.chinacourt.gov.cn",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 http://glzy.chinacourt.gov.cn 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -503671,9 +503687,9 @@
            "l": "市",
            "k": "法院系统",
            "c": "法院系统",
-           "u": "https://elink.chinacourt.cn/link?elid=http://kszy.xjcourt.org/",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 https://elink.chinacourt.cn/link?elid=http://kszy.xjcourt.org/ 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -503703,9 +503719,9 @@
            "l": "市",
            "k": "法院系统",
            "c": "法院系统",
-           "u": "https://elink.chinacourt.cn/link?elid=http://tczy.xjcourt.org/",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 https://elink.chinacourt.cn/link?elid=http://tczy.xjcourt.org/ 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -503767,9 +503783,9 @@
            "l": "市",
            "k": "法院系统",
            "c": "法院系统",
-           "u": "http://tlfzy.chinacourt.gov.cn/index.shtml",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 http://tlfzy.chinacourt.gov.cn/index.shtml 域名失效 → 列名",
            "m": "",
            "ks": [
             {
@@ -503820,9 +503836,9 @@
            "l": "市",
            "k": "法院系统",
            "c": "法院系统",
-           "u": "https://elink.chinacourt.cn/link?elid=http://www.urumqicourt.org/",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 https://elink.chinacourt.cn/link?elid=http://www.urumqicourt.org/ 域名失效 → 列名",
            "m": "",
            "ks": []
           },
@@ -503842,9 +503858,9 @@
            "l": "市",
            "k": "法院系统",
            "c": "法院系统",
-           "u": "https://elink.chinacourt.cn/link?elid=http://hmzy.xjcourt.org/",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 https://elink.chinacourt.cn/link?elid=http://hmzy.xjcourt.org/ 域名失效 → 列名",
            "m": "",
            "ks": []
           },
@@ -503853,9 +503869,9 @@
            "l": "省",
            "k": "法院系统",
            "c": "法院系统",
-           "u": "http://cjzy.chinacourt.gov.cn/index.shtml",
+           "u": "https://cjzy.xjcourt.gov.cn/",
            "x": "",
-           "s": "",
+           "s": "来源:L1|新疆法院网「法院网站群」导航旧域已死，昌吉中院现行站 title=昌吉回族自治州中级人民法院（registry 法院|昌吉州中院 同值）；2026-11-17 p220 同步",
            "m": "",
            "ks": []
           }
@@ -531093,9 +531109,9 @@
            "l": "市",
            "k": "检察院系统",
            "c": "检察院系统",
-           "u": "http://www.msjcy.gov.cn/",
+           "u": "",
            "x": "",
-           "s": "",
+           "s": "2026-11-17 p220：原值 http://www.msjcy.gov.cn/ 域名失效 → 列名",
            "m": "",
            "ks": [
             {

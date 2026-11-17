@@ -368,6 +368,9 @@ footer{padding:8px 22px; border-top:1px solid var(--line); font-size:11.5px; col
 .qpanel .bar i{display:block;height:100%;border-radius:5px}
 .qpanel .row .pct{width:58px;text-align:right;font-variant-numeric:tabular-nums;color:#475569}
 .qpanel .row .cnt{width:52px;text-align:right;font-variant-numeric:tabular-nums;color:#94a3b8}
+.qpanel .row.lvrow .nm{flex:0 0 auto;max-width:56%;font-size:12px}
+.qpanel .row.lvrow .nm .sub{color:#94a3b8;font-size:11px}
+.qpanel .row.lvrow .bar{min-width:40px}
 .qpanel .donuts{display:flex;gap:14px;justify-content:space-around;margin:6px 0 4px}
 .qpanel .donut{text-align:center}
 .qpanel .donut .cap{font-size:11px;color:#64748b;margin-top:4px}
@@ -1924,12 +1927,50 @@ function toggleQ(){
       <span class="cnt">${s.xxgk||0}专栏</span></div>`;
   }).join("");
   const xxPct=xx.coverage||0;
+  // URL 缺失率（p221 统计：块视图 省/市/县 × 系统）
+  const us=q.url_stats;
+  let usHtml="";
+  if(us){
+    const LV=["省","市","县"];
+    const colOf=p=>p>=50?"#dc2626":p>=20?"#f59e0b":p>0?"#2563eb":"#16a34a";
+    usHtml+=`<div class="sec">URL 缺失率 · 分等级（块视图）</div>`;
+    usHtml+=`<div class="kpis">`+LV.map(lv=>{
+      const d=us.levels[lv]||{};const p=+(d.missing_rate||0);
+      return `<div class="kpi"><div class="v" style="color:${colOf(p)}">${p}%</div><div class="k">${lv}级缺失率</div></div>`;
+    }).join("")+`</div>`;
+    usHtml+=LV.map(lv=>{
+      const d=us.levels[lv]||{};const p=+(d.missing_rate||0);
+      return `<div class="row lvrow"><span class="nm"><b>${lv}</b>级 <span class="sub">${(d.with_url||0).toLocaleString()}/${(d.total||0).toLocaleString()}</span></span>
+        <div class="bar" title="有官网 ${d.with_url||0} · 缺失 ${d.missing||0}"><i style="width:${100-p}%;background:#2563eb"></i></div>
+        <span class="pct" style="color:${colOf(p)};font-weight:600">${p}%</span>
+        <span class="cnt">缺 ${(d.missing||0).toLocaleString()}</span></div>`;
+    }).join("");
+    usHtml+=`<div class="legend"><span><i style="background:#2563eb"></i>有官网</span><span><i style="background:#eef2f7"></i>缺失（u 为空）</span></div>`;
+    usHtml+=`<div class="sec">分系统缺失率（省 / 市 / 县）</div>`;
+    const cell=d=>{
+      if(!d||!d.total) return `<td style="text-align:right;padding:2.5px 4px;color:#cbd5e1">—</td>`;
+      const p=+(d.missing_rate||0);
+      return `<td title="缺失 ${d.missing} / ${d.total}" style="text-align:right;padding:2.5px 4px;font-variant-numeric:tabular-nums;color:${colOf(p)};font-weight:${p>0?600:400}">${p}%</td>`;
+    };
+    usHtml+=`<table style="width:100%;border-collapse:collapse;font-size:11px;margin-top:2px">
+      <thead><tr style="color:#94a3b8">
+        <th style="text-align:left;padding:2px 4px;font-weight:500">系统</th>
+        <th style="text-align:right;padding:2px 4px;font-weight:500">省</th>
+        <th style="text-align:right;padding:2px 4px;font-weight:500">市</th>
+        <th style="text-align:right;padding:2px 4px;font-weight:500">县</th>
+        <th style="text-align:right;padding:2px 4px;font-weight:500">合计</th></tr></thead><tbody>`+
+      us.systems.filter(s=>s.total&&s.total.total).map(s=>
+        `<tr><td style="padding:2.5px 4px;color:#334155">${s.label}</td>${cell(s.levels["省"])}${cell(s.levels["市"])}${cell(s.levels["县"])}${cell(s.total)}</tr>`).join("")+
+      `</tbody></table>`;
+    usHtml+=`<div style="font-size:10.5px;color:#94a3b8;margin-top:5px">口径：块视图省级子树（32 个单位）；缺失=树中无官网（列名）。生成于 ${us.generated||""}</div>`;
+  }
   let h=`<h3>📊 数据健康</h3>
   <div class="kpis">
     <div class="kpi"><div class="v">${q.registry_total.toLocaleString()}</div><div class="k">注册机构</div></div>
-    <div class="kpi"><div class="v">${urlPct}%</div><div class="k">URL 覆盖率</div></div>
+    <div class="kpi"><div class="v">${urlPct}%</div><div class="k">条系统覆盖率</div></div>
     <div class="kpi"><div class="v">${xx.with_column||0}</div><div class="k">信息公开专栏</div></div>
   </div>
+  ${usHtml}
   <div class="sec">来源等级分布</div>
   <div class="stackbar">${lvSegs}</div><div class="legend">${lvLeg}</div>
   <div class="sec">URL 健康状态</div>
@@ -1939,7 +1980,7 @@ function toggleQ(){
     <div class="donut">${donutSVG(xxPct,"#7c3aed",82,9)}<div class="cap">专栏覆盖率</div></div>
     <div class="donut">${donutSVG(urlPct,"#2563eb",82,9)}<div class="cap">官网覆盖率</div></div>
   </div>
-  <div class="sec">系统 URL 覆盖率（15 系统）</div>
+  <div class="sec">条系统 URL 覆盖率（${sys.length} 系统）</div>
   ${rows}`;
   p.innerHTML=h;p.style.display='block';
 }

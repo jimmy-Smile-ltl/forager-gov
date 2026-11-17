@@ -208,10 +208,18 @@ def gen_quality():
             if x.get("x"): xx_all[1] += 1
         for k in x.get("ks", []): w2(k)
     w2(tree)
+    # URL 缺失率（省/市/县 × 系统，p221）——同时刷新 data/URL_STATS.md
+    url_stats = None
+    try:
+        from p221_url_stats import build_and_write as _build_url_stats
+        url_stats = _build_url_stats(tree)
+    except Exception as e:
+        print(f"[警告] URL 缺失率统计失败(不阻断管线): {e}")
     q = {"systems": rows, "source_level": dict(lvl), "status": dict(st),
          "registry_total": len(reg),
          "xxgk": {"leaves_with_url": xx_all[0], "with_column": xx_all[1],
-                  "coverage": round(xx_all[1] / xx_all[0] * 100, 1) if xx_all[0] else 0}}
+                  "coverage": round(xx_all[1] / xx_all[0] * 100, 1) if xx_all[0] else 0},
+         "url_stats": url_stats}
     with open("../data_js/quality.js", "w", encoding="utf-8") as f:
         f.write("window.__QUALITY__=" + _json.dumps(q, ensure_ascii=False) + ";")
     print(f"质量统计已生成: {len(rows)} 系统")

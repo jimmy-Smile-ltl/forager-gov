@@ -6598,14 +6598,14 @@
   "snapshot": ""
  },
  "人大|承德市人大": {
-  "u": "https://cdrd.hehechengde.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "市人大",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "dead",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "人大|承德市人民检察院": {
@@ -8811,14 +8811,14 @@
   "snapshot": ""
  },
  "人大|阿拉善盟人大": {
-  "u": "http://www.alsrd.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "市人大",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "dead",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "人大|阿拉善盟政协": {
@@ -9863,14 +9863,14 @@
   "xxgk_src": "p175c"
  },
  "人大|铁岭市人大": {
-  "u": "http://www.tlrd.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "市人大",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "dead",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "人大|铁岭市人民检察院": {
@@ -10823,14 +10823,14 @@
   "snapshot": ""
  },
  "人大|通化市政协": {
-  "u": "http://thszhengxie.gov.cn",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "市政协",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "dead",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "人大|通化市人民检察院": {
@@ -10900,14 +10900,14 @@
   "snapshot": ""
  },
  "人大|松原市政协": {
-  "u": "http://www.songyuanzx.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "市政协",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "dead",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "人大|松原市监委": {
@@ -14668,14 +14668,14 @@
   "snapshot": ""
  },
  "人大|温州市人大": {
-  "u": "http://www.wzrd.gov.cn",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "市人大",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "dead",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "人大|温州市人民检察院": {
@@ -21909,14 +21909,14 @@
   "snapshot": ""
  },
  "人大|平顶山市政协": {
-  "u": "http://www.pdszx.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "市政协",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "dead",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "人大|平顶山市人民检察院": {
@@ -24469,14 +24469,14 @@
   "snapshot": ""
  },
  "人大|衡阳市政协": {
-  "u": "http://www.hnhyzx.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "市政协",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "dead",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "人大|衡阳市人民检察院": {
@@ -25607,14 +25607,14 @@
   "snapshot": ""
  },
  "人大|娄底市政协": {
-  "u": "http://www.ldzx.gov.cn/",
+  "u": "http://ldzx.hnloudi.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "市政协",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "dead",
+  "verified_at": "2026-11-17",
+  "status": "ok",
   "snapshot": ""
  },
  "人大|娄星区人民检察院": {
@@ -33308,14 +33308,14 @@
   "snapshot": ""
  },
  "人大|眉山市人民检察院": {
-  "u": "http://www.msjcy.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "市人民检察院",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "人大|宜宾市人大": {
@@ -34017,14 +34017,14 @@
   "snapshot": ""
  },
  "人大|凉山彝族自治州政协": {
-  "u": "http://zx.lsz.gov.cn",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "市政协",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "dead",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "人大|凉山彝族自治州监委": {
@@ -38105,27 +38105,27 @@
   "snapshot": ""
  },
  "人大|汉中市人大": {
-  "u": "https://rd.hanzhong.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "市人大",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "dead",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": "",
   "xxgk": "https://rd.hanzhong.gov.cn/hzrdcwwz/xxgk/common_list.shtml",
   "xxgk_src": "p175c"
  },
  "人大|汉中市政协": {
-  "u": "https://zx.hanzhong.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "市政协",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "群团|榆林市总工会": {
@@ -39562,13 +39562,13 @@
   "snapshot": ""
  },
  "人大|酒泉市政协": {
-  "u": "http://zx.jiuquan.gov.cn/",
+  "u": "https://www.jqzx.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "市政协",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-17",
   "status": "ok",
   "snapshot": ""
  },
@@ -39757,14 +39757,14 @@
   "snapshot": ""
  },
  "人大|定西市人大": {
-  "u": "http://www.dxrdw.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "市人大",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "dead",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "人大|定西市人民检察院": {
@@ -39871,14 +39871,14 @@
   "snapshot": ""
  },
  "人大|陇南市政协": {
-  "u": "http://www.lnszx.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "市政协",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "dead",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "人大|陇南市人民检察院": {
@@ -39983,14 +39983,14 @@
   "snapshot": ""
  },
  "人大|临夏回族自治州政协": {
-  "u": "http://www.lxzzx.gov.cn",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "市政协",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "dead",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "人大|临夏回族自治州人民检察院": {
@@ -54206,15 +54206,15 @@
   "snapshot": ""
  },
  "法院|常州市中级人民法院": {
-  "u": "http://fy.changzhou.gov.cn",
+  "u": "",
   "n": "常州市中级人民法院",
   "locations": [
    "块",
    "条"
   ],
   "source_level": "L1",
-  "verified_at": "2026-11-16",
-  "status": "ok",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "法院|扬州市中级人民法院": {
@@ -58306,15 +58306,15 @@
   "snapshot": ""
  },
  "法院|濮阳市人民法院": {
-  "u": "http://hnpyfy.hncourt.gov.cn",
+  "u": "https://pyzy.hncourt.gov.cn/",
   "locations": [
    "块",
    "条"
   ],
   "n": "濮阳市人民法院",
   "source_level": "L1",
-  "verified_at": "2026-11-06",
-  "status": "dead",
+  "verified_at": "2026-11-17",
+  "status": "ok",
   "snapshot": ""
  },
  "法院|范县人民法院": {
@@ -64420,15 +64420,15 @@
   "snapshot": ""
  },
  "法院|桂林市中级人民法院": {
-  "u": "http://glzy.chinacourt.gov.cn",
+  "u": "",
   "n": "桂林市中级人民法院",
   "locations": [
    "块",
    "条"
   ],
   "source_level": "L1",
-  "verified_at": "2026-11-16",
-  "status": "ok",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "法院|万宁市人民法院": {
@@ -71680,15 +71680,15 @@
   "snapshot": ""
  },
  "法院|阿勒泰地区人民法院": {
-  "u": "http://alts.xjcourt.org/",
+  "u": "",
   "locations": [
    "块",
    "条"
   ],
   "n": "阿勒泰地区人民法院",
   "source_level": "L1",
-  "verified_at": "2026-11-06",
-  "status": "dead",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "法院|温宿县人民法院": {
@@ -71704,15 +71704,15 @@
   "snapshot": ""
  },
  "法院|阿克苏地区人民法院": {
-  "u": "http://akss.xjcourt.org/",
+  "u": "",
   "locations": [
    "块",
    "条"
   ],
   "n": "阿克苏地区人民法院",
   "source_level": "L1",
-  "verified_at": "2026-11-06",
-  "status": "dead",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "法院|阿瓦提县人民法院": {
@@ -71768,15 +71768,15 @@
   "snapshot": ""
  },
  "法院|乌鲁木齐市中级人民法院": {
-  "u": "https://elink.chinacourt.cn/link?elid=http://www.urumqicourt.org/",
+  "u": "",
   "n": "乌鲁木齐市中级人民法院",
   "locations": [
    "块",
    "条"
   ],
   "source_level": "L1",
-  "verified_at": "2026-11-16",
-  "status": "ok",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "法院|乌鲁木齐铁路运输中级法院": {
@@ -71792,26 +71792,26 @@
   "snapshot": ""
  },
  "法院|哈密市中级人民法院": {
-  "u": "https://elink.chinacourt.cn/link?elid=http://hmzy.xjcourt.org/",
+  "u": "",
   "n": "哈密市中级人民法院",
   "locations": [
    "块",
    "条"
   ],
   "source_level": "L1",
-  "verified_at": "2026-11-16",
-  "status": "ok",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "法院|昌吉州中级人民法院": {
-  "u": "http://cjzy.chinacourt.gov.cn/index.shtml",
+  "u": "https://cjzy.xjcourt.gov.cn/",
   "n": "昌吉州中级人民法院",
   "locations": [
    "块",
    "条"
   ],
   "source_level": "L1",
-  "verified_at": "2026-11-16",
+  "verified_at": "2026-11-17",
   "status": "ok",
   "snapshot": ""
  },
@@ -111222,14 +111222,14 @@
   "xxgk": "https://www.nanyue.gov.cn/zwgk/"
  },
  "县级人民政府|衡阳县": {
-  "u": "https://www.hengyang.gov.cn/",
+  "u": "http://www.hyx.gov.cn/",
   "n": "衡阳县",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
-  "status": "unknown",
+  "verified_at": "2026-11-17",
+  "status": "ok",
   "xxgk": "https://www.hengyang.gov.cn/hyjczwgk/index.html"
  },
  "县级人民政府|衡南县": {
@@ -116860,102 +116860,102 @@
   "xxgk": "https://www.qj.gov.cn/html/gkzn/zfgkzn/"
  },
  "县级人民政府|麒麟区": {
-  "u": "https://www.qj.gov.cn/link.html?t=https://www.ql.gov.cn/",
+  "u": "https://www.ql.gov.cn/",
   "n": "麒麟区",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
-  "status": "unknown",
+  "verified_at": "2026-11-17",
+  "status": "ok",
   "xxgk": "https://www.qj.gov.cn/link.html?t=https://www.ql.gov.cn/zfxxgk/"
  },
  "县级人民政府|沾益区": {
-  "u": "https://www.qj.gov.cn/link.html?t=https://www.zhanyi.gov.cn/",
+  "u": "https://www.zhanyi.gov.cn/",
   "n": "沾益区",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
-  "status": "unknown",
+  "verified_at": "2026-11-17",
+  "status": "ok",
   "xxgk": "https://www.qj.gov.cn/link.html?t=https://www.zhanyi.gov.cn/zfxxgk/"
  },
  "县级人民政府|马龙区": {
-  "u": "https://www.qj.gov.cn/link.html?t=https://www.malong.gov.cn/",
+  "u": "https://www.malong.gov.cn/",
   "n": "马龙区",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
-  "status": "unknown",
+  "verified_at": "2026-11-17",
+  "status": "ok",
   "xxgk": "https://www.qj.gov.cn/link.html?t=https://www.malong.gov.cn/zfxxgk/"
  },
  "县级人民政府|陆良县": {
-  "u": "https://www.qj.gov.cn/link.html?t=https://www.luliang.gov.cn/",
+  "u": "https://www.luliang.gov.cn/",
   "n": "陆良县",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
-  "status": "unknown",
+  "verified_at": "2026-11-17",
+  "status": "ok",
   "xxgk": "https://www.qj.gov.cn/link.html?t=https://www.luliang.gov.cn/zfxxgk/"
  },
  "县级人民政府|师宗县": {
-  "u": "https://www.qj.gov.cn/link.html?t=https://www.ynsz.gov.cn/",
+  "u": "https://www.ynsz.gov.cn/",
   "n": "师宗县",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
-  "status": "unknown",
+  "verified_at": "2026-11-17",
+  "status": "ok",
   "xxgk": "https://www.qj.gov.cn/link.html?t=https://www.ynsz.gov.cn/zfxxgk/"
  },
  "县级人民政府|罗平县": {
-  "u": "https://www.qj.gov.cn/link.html?t=https://www.luoping.gov.cn/",
+  "u": "https://www.luoping.gov.cn/",
   "n": "罗平县",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
-  "status": "unknown",
+  "verified_at": "2026-11-17",
+  "status": "ok",
   "xxgk": "https://www.qj.gov.cn/link.html?t=https://www.luoping.gov.cn/zfxxgk/"
  },
  "县级人民政府|富源县": {
-  "u": "https://www.qj.gov.cn/link.html?t=https://www.qjfy.gov.cn/",
+  "u": "https://www.qjfy.gov.cn/",
   "n": "富源县",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
-  "status": "unknown",
+  "verified_at": "2026-11-17",
+  "status": "ok",
   "xxgk": "https://www.qj.gov.cn/link.html?t=https://www.qjfy.gov.cn/zfxxgk/"
  },
  "县级人民政府|会泽县": {
-  "u": "https://www.qj.gov.cn/link.html?t=https://www.huize.gov.cn/",
+  "u": "https://www.huize.gov.cn/",
   "n": "会泽县",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
-  "status": "unknown",
+  "verified_at": "2026-11-17",
+  "status": "ok",
   "xxgk": "https://www.qj.gov.cn/link.html?t=https://www.huize.gov.cn/zfxxgk/"
  },
  "县级人民政府|宣威市": {
-  "u": "https://www.qj.gov.cn/link.html?t=https://www.xw.gov.cn/",
+  "u": "https://www.xw.gov.cn/",
   "n": "宣威市",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
-  "status": "unknown",
+  "verified_at": "2026-11-17",
+  "status": "ok",
   "xxgk": "https://www.qj.gov.cn/link.html?t=https://www.xw.gov.cn/zfxxgk/"
  },
  "地级市人民政府|玉溪市": {
@@ -118149,14 +118149,14 @@
   "xxgk": "http://zuogong.changdu.gov.cn/zgx/c101840/zfxxgk_gknrz.shtml"
  },
  "县级人民政府|芒康县": {
-  "u": "http://www.changdu.gov.cn/cdrmzf/zfdtr/202411/2c02d4de241a43f788a989bd8e0a2240.shtml",
+  "u": "http://mangkang.changdu.gov.cn",
   "n": "芒康县",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
-  "status": "unknown",
+  "verified_at": "2026-11-17",
+  "status": "ok",
   "xxgk": "http://www.changdu.gov.cn/cdrmzf/c100366/2023zwgk.shtml"
  },
  "县级人民政府|洛隆县": {
@@ -120471,25 +120471,25 @@
   "xxgk_src": ""
  },
  "县级人民政府|永靖县": {
-  "u": "https://www.linxia.gov.cn/lxz/lxly/jdzs/yjx/index.html",
+  "u": "http://www.gsyongjing.gov.cn",
   "n": "永靖县",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
-  "status": "unknown",
+  "verified_at": "2026-11-17",
+  "status": "ok",
   "xxgk": "https://www.linxia.gov.cn/lxz/lxly/jdzs/yjx/zfxxgk/"
  },
  "县级人民政府|广河县": {
-  "u": "https://www.linxia.gov.cn/lxz/lxly/jdzs/ghx/index.html",
+  "u": "http://www.ghx.gov.cn/",
   "n": "广河县",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
-  "status": "unknown",
+  "verified_at": "2026-11-17",
+  "status": "ok",
   "xxgk": "https://www.linxia.gov.cn/lxz/lxly/jdzs/ghx/zfxxgk/"
  },
  "地级市人民政府|甘南藏族自治州": {
@@ -124529,24 +124529,24 @@
   "status": "unknown"
  },
  "法院系统|喀什地区中级人民法院": {
-  "u": "https://elink.chinacourt.cn/link?elid=http://kszy.xjcourt.org/",
+  "u": "",
   "n": "喀什地区中级人民法院",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
-  "status": "unknown"
+  "verified_at": "2026-11-17",
+  "status": "cleared"
  },
  "法院系统|塔城地区中级人民法院": {
-  "u": "https://elink.chinacourt.cn/link?elid=http://tczy.xjcourt.org/",
+  "u": "",
   "n": "塔城地区中级人民法院",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
-  "status": "unknown"
+  "verified_at": "2026-11-17",
+  "status": "cleared"
  },
  "法院系统|阿勒泰地区中级人民法院": {
   "u": "https://elink.chinacourt.cn/link?elid=http://altzy.xjcourt.org/",
@@ -124559,14 +124559,14 @@
   "status": "unknown"
  },
  "法院系统|吐鲁番市中级人民法院": {
-  "u": "http://tlfzy.chinacourt.gov.cn/index.shtml",
+  "u": "",
   "n": "吐鲁番市中级人民法院",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
-  "status": "unknown"
+  "verified_at": "2026-11-17",
+  "status": "cleared"
  },
  "法院系统|新疆生产建设兵团高级人民法院": {
   "u": "http://btfy.btcourt.gov.cn/",
@@ -145092,13 +145092,13 @@
   "xxgk_src": ""
  },
  "县级人民政府|苏州工业园区": {
-  "u": "http://www.suzhou.gov.cn",
+  "u": "http://www.sipac.gov.cn/",
   "n": "苏州工业园区",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
+  "verified_at": "2026-11-17",
   "status": "ok",
   "snapshot": "",
   "xxgk": "",
@@ -218026,14 +218026,14 @@
   "snapshot": ""
  },
  "法院|市中级人民法院|巴音郭楞蒙古自治州": {
-  "u": "https://www.rmfysszc.gov.cn/statichtml/rm_xmdetail/6213505-1.shtml",
+  "u": "",
   "n": "巴音郭楞蒙古自治州市中级人民法院",
   "locations": [
    "块"
   ],
   "source_level": "L3",
-  "verified_at": "2026-11-16",
-  "status": "ok",
+  "verified_at": "2026-11-17",
+  "status": "cleared",
   "snapshot": ""
  },
  "法院|市人民检察院|巴音郭楞蒙古自治州": {
@@ -220133,6 +220133,127 @@
    "块"
   ],
   "source_level": "L1",
+  "verified_at": "2026-11-17",
+  "status": "ok",
+  "snapshot": ""
+ },
+ "县级人民政府|新荣区": {
+  "u": "http://www.xr.gov.cn/",
+  "n": "新荣区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-17",
+  "status": "ok",
+  "snapshot": ""
+ },
+ "县级人民政府|平城区": {
+  "u": "http://www.pingcheng.gov.cn/",
+  "n": "平城区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-17",
+  "status": "ok",
+  "snapshot": ""
+ },
+ "县级人民政府|云冈区": {
+  "u": "http://www.yungang.gov.cn/",
+  "n": "云冈区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-17",
+  "status": "ok",
+  "snapshot": ""
+ },
+ "县级人民政府|云州区": {
+  "u": "http://www.yunzhou.gov.cn/",
+  "n": "云州区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-17",
+  "status": "ok",
+  "snapshot": ""
+ },
+ "县级人民政府|阳高县": {
+  "u": "http://www.dtyg.gov.cn/",
+  "n": "阳高县",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-17",
+  "status": "ok",
+  "snapshot": ""
+ },
+ "县级人民政府|天镇县": {
+  "u": "http://www.dttz.gov.cn/",
+  "n": "天镇县",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-17",
+  "status": "ok",
+  "snapshot": ""
+ },
+ "县级人民政府|广灵县": {
+  "u": "http://www.sx-guangling.gov.cn/",
+  "n": "广灵县",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-17",
+  "status": "ok",
+  "snapshot": ""
+ },
+ "县级人民政府|灵丘县": {
+  "u": "http://www.lingqiu.gov.cn/",
+  "n": "灵丘县",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-17",
+  "status": "ok",
+  "snapshot": ""
+ },
+ "县级人民政府|浑源县": {
+  "u": "http://www.hunyuan.gov.cn/",
+  "n": "浑源县",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-17",
+  "status": "ok",
+  "snapshot": ""
+ },
+ "县级人民政府|左云县": {
+  "u": "http://www.zuoyun.gov.cn/",
+  "n": "左云县",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-17",
+  "status": "ok",
+  "snapshot": ""
+ },
+ "县级人民政府|和田市": {
+  "u": "http://www.hts.gov.cn/",
+  "n": "和田市",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
   "verified_at": "2026-11-17",
   "status": "ok",
   "snapshot": ""

@@ -1,0 +1,566 @@
+{
+ "generated": "2026-11-17",
+ "scope": "块视图「省级」子树（31 省区市 + 新疆兵团 = 32 个单位）及其下辖市/县/直辖市辖区；民主党派省级组织取自中央子树。统计对象为机构节点（不含分组容器）；缺失 = 树中 u 为空（列名）。",
+ "levels": {
+  "省": {
+   "total": 2252,
+   "with_url": 1913,
+   "missing": 339,
+   "missing_rate": 15.05,
+   "systems": {
+    "gov": {
+     "total": 32,
+     "with_url": 32,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "dept": {
+     "total": 1243,
+     "with_url": 1241,
+     "missing": 2,
+     "missing_rate": 0.16
+    },
+    "rd": {
+     "total": 31,
+     "with_url": 31,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "zx": {
+     "total": 31,
+     "with_url": 31,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "jw": {
+     "total": 31,
+     "with_url": 31,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "fy": {
+     "total": 31,
+     "with_url": 31,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "jcy": {
+     "total": 31,
+     "with_url": 31,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "party": {
+     "total": 31,
+     "with_url": 0,
+     "missing": 31,
+     "missing_rate": 100.0
+    },
+    "qt": {
+     "total": 544,
+     "with_url": 299,
+     "missing": 245,
+     "missing_rate": 45.04
+    },
+    "mzdp": {
+     "total": 247,
+     "with_url": 186,
+     "missing": 61,
+     "missing_rate": 24.7
+    },
+    "other": {
+     "total": 0,
+     "with_url": 0,
+     "missing": 0,
+     "missing_rate": 0.0
+    }
+   }
+  },
+  "市": {
+   "total": 12607,
+   "with_url": 11675,
+   "missing": 932,
+   "missing_rate": 7.39,
+   "systems": {
+    "gov": {
+     "total": 407,
+     "with_url": 406,
+     "missing": 1,
+     "missing_rate": 0.25
+    },
+    "dept": {
+     "total": 9591,
+     "with_url": 9591,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "rd": {
+     "total": 405,
+     "with_url": 314,
+     "missing": 91,
+     "missing_rate": 22.47
+    },
+    "zx": {
+     "total": 405,
+     "with_url": 243,
+     "missing": 162,
+     "missing_rate": 40.0
+    },
+    "jw": {
+     "total": 405,
+     "with_url": 278,
+     "missing": 127,
+     "missing_rate": 31.36
+    },
+    "fy": {
+     "total": 405,
+     "with_url": 353,
+     "missing": 52,
+     "missing_rate": 12.84
+    },
+    "jcy": {
+     "total": 405,
+     "with_url": 311,
+     "missing": 94,
+     "missing_rate": 23.21
+    },
+    "party": {
+     "total": 405,
+     "with_url": 0,
+     "missing": 405,
+     "missing_rate": 100.0
+    },
+    "qt": {
+     "total": 179,
+     "with_url": 179,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "mzdp": {
+     "total": 0,
+     "with_url": 0,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "other": {
+     "total": 0,
+     "with_url": 0,
+     "missing": 0,
+     "missing_rate": 0.0
+    }
+   }
+  },
+  "县": {
+   "total": 19584,
+   "with_url": 6307,
+   "missing": 13277,
+   "missing_rate": 67.8,
+   "systems": {
+    "gov": {
+     "total": 2910,
+     "with_url": 2833,
+     "missing": 77,
+     "missing_rate": 2.65
+    },
+    "dept": {
+     "total": 0,
+     "with_url": 0,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "rd": {
+     "total": 2779,
+     "with_url": 52,
+     "missing": 2727,
+     "missing_rate": 98.13
+    },
+    "zx": {
+     "total": 2779,
+     "with_url": 41,
+     "missing": 2738,
+     "missing_rate": 98.52
+    },
+    "jw": {
+     "total": 2779,
+     "with_url": 176,
+     "missing": 2603,
+     "missing_rate": 93.67
+    },
+    "fy": {
+     "total": 2779,
+     "with_url": 1974,
+     "missing": 805,
+     "missing_rate": 28.97
+    },
+    "jcy": {
+     "total": 2779,
+     "with_url": 1231,
+     "missing": 1548,
+     "missing_rate": 55.7
+    },
+    "party": {
+     "total": 2779,
+     "with_url": 0,
+     "missing": 2779,
+     "missing_rate": 100.0
+    },
+    "qt": {
+     "total": 0,
+     "with_url": 0,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "mzdp": {
+     "total": 0,
+     "with_url": 0,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "other": {
+     "total": 0,
+     "with_url": 0,
+     "missing": 0,
+     "missing_rate": 0.0
+    }
+   }
+  }
+ },
+ "systems": [
+  {
+   "key": "gov",
+   "label": "政府门户",
+   "levels": {
+    "省": {
+     "total": 32,
+     "with_url": 32,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "市": {
+     "total": 407,
+     "with_url": 406,
+     "missing": 1,
+     "missing_rate": 0.25
+    },
+    "县": {
+     "total": 2910,
+     "with_url": 2833,
+     "missing": 77,
+     "missing_rate": 2.65
+    }
+   },
+   "total": {
+    "total": 3349,
+    "with_url": 3271,
+    "missing": 78,
+    "missing_rate": 2.33
+   }
+  },
+  {
+   "key": "dept",
+   "label": "政府部门",
+   "levels": {
+    "省": {
+     "total": 1243,
+     "with_url": 1241,
+     "missing": 2,
+     "missing_rate": 0.16
+    },
+    "市": {
+     "total": 9591,
+     "with_url": 9591,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "县": {
+     "total": 0,
+     "with_url": 0,
+     "missing": 0,
+     "missing_rate": 0.0
+    }
+   },
+   "total": {
+    "total": 10834,
+    "with_url": 10832,
+    "missing": 2,
+    "missing_rate": 0.02
+   }
+  },
+  {
+   "key": "rd",
+   "label": "人大",
+   "levels": {
+    "省": {
+     "total": 31,
+     "with_url": 31,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "市": {
+     "total": 405,
+     "with_url": 314,
+     "missing": 91,
+     "missing_rate": 22.47
+    },
+    "县": {
+     "total": 2779,
+     "with_url": 52,
+     "missing": 2727,
+     "missing_rate": 98.13
+    }
+   },
+   "total": {
+    "total": 3215,
+    "with_url": 397,
+    "missing": 2818,
+    "missing_rate": 87.65
+   }
+  },
+  {
+   "key": "zx",
+   "label": "政协",
+   "levels": {
+    "省": {
+     "total": 31,
+     "with_url": 31,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "市": {
+     "total": 405,
+     "with_url": 243,
+     "missing": 162,
+     "missing_rate": 40.0
+    },
+    "县": {
+     "total": 2779,
+     "with_url": 41,
+     "missing": 2738,
+     "missing_rate": 98.52
+    }
+   },
+   "total": {
+    "total": 3215,
+    "with_url": 315,
+    "missing": 2900,
+    "missing_rate": 90.2
+   }
+  },
+  {
+   "key": "jw",
+   "label": "监委/纪委",
+   "levels": {
+    "省": {
+     "total": 31,
+     "with_url": 31,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "市": {
+     "total": 405,
+     "with_url": 278,
+     "missing": 127,
+     "missing_rate": 31.36
+    },
+    "县": {
+     "total": 2779,
+     "with_url": 176,
+     "missing": 2603,
+     "missing_rate": 93.67
+    }
+   },
+   "total": {
+    "total": 3215,
+    "with_url": 485,
+    "missing": 2730,
+    "missing_rate": 84.91
+   }
+  },
+  {
+   "key": "fy",
+   "label": "法院",
+   "levels": {
+    "省": {
+     "total": 31,
+     "with_url": 31,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "市": {
+     "total": 405,
+     "with_url": 353,
+     "missing": 52,
+     "missing_rate": 12.84
+    },
+    "县": {
+     "total": 2779,
+     "with_url": 1974,
+     "missing": 805,
+     "missing_rate": 28.97
+    }
+   },
+   "total": {
+    "total": 3215,
+    "with_url": 2358,
+    "missing": 857,
+    "missing_rate": 26.66
+   }
+  },
+  {
+   "key": "jcy",
+   "label": "检察院",
+   "levels": {
+    "省": {
+     "total": 31,
+     "with_url": 31,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "市": {
+     "total": 405,
+     "with_url": 311,
+     "missing": 94,
+     "missing_rate": 23.21
+    },
+    "县": {
+     "total": 2779,
+     "with_url": 1231,
+     "missing": 1548,
+     "missing_rate": 55.7
+    }
+   },
+   "total": {
+    "total": 3215,
+    "with_url": 1573,
+    "missing": 1642,
+    "missing_rate": 51.07
+   }
+  },
+  {
+   "key": "party",
+   "label": "党委",
+   "levels": {
+    "省": {
+     "total": 31,
+     "with_url": 0,
+     "missing": 31,
+     "missing_rate": 100.0
+    },
+    "市": {
+     "total": 405,
+     "with_url": 0,
+     "missing": 405,
+     "missing_rate": 100.0
+    },
+    "县": {
+     "total": 2779,
+     "with_url": 0,
+     "missing": 2779,
+     "missing_rate": 100.0
+    }
+   },
+   "total": {
+    "total": 3215,
+    "with_url": 0,
+    "missing": 3215,
+    "missing_rate": 100.0
+   }
+  },
+  {
+   "key": "qt",
+   "label": "群团",
+   "levels": {
+    "省": {
+     "total": 544,
+     "with_url": 299,
+     "missing": 245,
+     "missing_rate": 45.04
+    },
+    "市": {
+     "total": 179,
+     "with_url": 179,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "县": {
+     "total": 0,
+     "with_url": 0,
+     "missing": 0,
+     "missing_rate": 0.0
+    }
+   },
+   "total": {
+    "total": 723,
+    "with_url": 478,
+    "missing": 245,
+    "missing_rate": 33.89
+   }
+  },
+  {
+   "key": "mzdp",
+   "label": "民主党派",
+   "levels": {
+    "省": {
+     "total": 247,
+     "with_url": 186,
+     "missing": 61,
+     "missing_rate": 24.7
+    },
+    "市": {
+     "total": 0,
+     "with_url": 0,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "县": {
+     "total": 0,
+     "with_url": 0,
+     "missing": 0,
+     "missing_rate": 0.0
+    }
+   },
+   "total": {
+    "total": 247,
+    "with_url": 186,
+    "missing": 61,
+    "missing_rate": 24.7
+   }
+  },
+  {
+   "key": "other",
+   "label": "其他",
+   "levels": {
+    "省": {
+     "total": 0,
+     "with_url": 0,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "市": {
+     "total": 0,
+     "with_url": 0,
+     "missing": 0,
+     "missing_rate": 0.0
+    },
+    "县": {
+     "total": 0,
+     "with_url": 0,
+     "missing": 0,
+     "missing_rate": 0.0
+    }
+   },
+   "total": {
+    "total": 0,
+    "with_url": 0,
+    "missing": 0,
+    "missing_rate": 0.0
+   }
+  }
+ ],
+ "total": {
+  "total": 34443,
+  "with_url": 19895,
+  "missing": 14548,
+  "missing_rate": 42.24
+ }
+}

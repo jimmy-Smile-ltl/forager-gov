@@ -1,6 +1,6 @@
 # 提取规则脚本索引
 
-共 272 个脚本（data/*.py）。编号 p0-p219 = 开发顺序。
+共 274 个脚本（data/*.py）。编号 p0-p221 = 开发顺序。
 按主题分类，查找某板块的处理脚本直接看对应组；p116-p200 为中期批次，见文末概览。
 
 ## 中央/并列机关（11）
@@ -127,7 +127,9 @@
 - `p94_zx_batch.py` — 政协市级数据汇总 → rd_zx.jsonl。
 - `p95_zx_mount.py` — 政协市级挂载（政协系统条模块 + 老系统回填）。仿 p78。
 
-## 数据管线（8）
+## 数据管线（10）
+- `p221_url_stats.py` — URL 缺失率统计（省/市/县 × 政府/人大/政协/纪委/法院/检察/党委/群团/民主党派…）：块视图省级子树逐机构统计 u 是否为空，输出 `data/url_stats.json` + `data/URL_STATS.md`，并把结果嵌进 `data_js/quality.js`（站点「数据健康」面板消费）；p22 管线自动调用。
+- `p220_dead_link_fix.py` — 死域名清理 + 错挂修正：整站下线/迁域的存量 URL（DNS NXDOMAIN）替换或列名，衡阳县/濮阳中院错挂修复，同步 registry（写前备份）。
 - `p22_split_data.py` — 把 tree.json / extraction_rules.json 拆分为模块化数据文件（自动调用 gen_viz）。
 - `p219_build_dist.py` — 站点发布包构建：只拷 HTML/视图脚本 + gov_data.js + data_js + data/geo 到 dist/，校验引用完整性、Cloudflare Pages 限额（单文件 25MiB/20000 文件）与泄漏（不含 .py/.json/state）；纯标准库，可直接作为 Pages 构建命令。
 - `gen_viz.py` — 可视化数据生成：tree.json → gov_data.js（block/tiao/records）。

@@ -62,7 +62,7 @@ _dns_lock = threading.Lock()
 
 
 def dns_dead(host):
-    """域名是否 NXDOMAIN（2026-11-17 p218 加）。
+    """域名是否 NXDOMAIN（2026-11-17 p220 加）。
     权威来源也可能已整站下线/迁域——仅凭「来源权威」不能放过死域名。
     实测: 新疆 xjcourt.org 子域、glzy.chinacourt.gov.cn 等 23 个域名公共
     DNS 判定 NXDOMAIN，而 p205 旧版把它们归入「title空(权威源)」存疑，
@@ -230,8 +230,19 @@ def main():
             if src_serp and not re.search(OFEAT[o["n"]], dom):
                 return ("hard", pn, city, o["n"], u, "title空且域名无机构特征")
             return ("soft", pn, city, o["n"], u, "title空(权威源/原已验证)")
-        # 法院统一司法公开平台 elink: title 是安全中心, 链接即权威
-        if "elink.chinacourt.cn" in dom: return None
+        # 法院统一司法公开平台 elink: 旧版直接放行——2026-11-17 p220 起
+        # 解析 elid 目标做存活核验（乌鲁木齐 elink 目标全路径 404 曾被漏掉）
+        if "elink.chinacourt" in dom:
+            mq = re.search(r"[?&]elid=(.+)$", u)
+            tgt = urllib.parse.unquote(mq.group(1)) if mq else ""
+            if tgt.startswith(("http://", "https://")):
+                th = urlparse(tgt).netloc.split(":")[0]
+                if dns_dead(th):
+                    return ("hard", pn, city, o["n"], u, "elink目标域名已失效(NXDOMAIN)")
+                t_t = html.unescape(title_of(fetch(tgt)))
+                if t_t and re.search(r"404|not\s*found|页面没有找到|找不到", t_t, re.I):
+                    return ("hard", pn, city, o["n"], u, f"elink目标站404: {t_t[:24]}")
+            return None
         if known: return None
         # 县级机构误挂市级（长沙县法院挂长沙市）——城市节点本身是区/县/旗时豁免
         if not city.endswith(("区", "县", "旗", "市辖区")) and county_level(tt, o["n"]):
