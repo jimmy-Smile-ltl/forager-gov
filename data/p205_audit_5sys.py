@@ -3,7 +3,7 @@
 # 对 p203/p204 填充的五系统市节点 URL 全量复验:
 # ①本地规则(门户/上级域名、新闻路径、域名机构特征、old./m. 旧站子域)
 # ②title 复验(市名前字边界+机构词) ③可疑清单人工复核标记
-import json, os, re, sys, tempfile, threading, time, html, urllib.parse
+import json, os, re, socket, sys, tempfile, threading, time, html, urllib.parse
 from urllib.parse import urlparse
 from concurrent.futures import ThreadPoolExecutor
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -55,6 +55,32 @@ ARTICLE_ID = re.compile(r"/\d{6,}\.(s?html?|jsp|aspx)$", re.I)   # /ldjj/5791535
 NEUTRAL_TITLE = re.compile(r"^(首页|网站首页|门户网站|正在加载.*|加载中.*|.*维护.*|Welcome.*|-)?\s*$", re.I)
 ADMIN_SUF = "区县市旗"
 
+
+
+_dns_cache = {}
+_dns_lock = threading.Lock()
+
+
+def dns_dead(host):
+    """域名是否 NXDOMAIN（2026-11-17 p218 加）。
+    权威来源也可能已整站下线/迁域——仅凭「来源权威」不能放过死域名。
+    实测: 新疆 xjcourt.org 子域、glzy.chinacourt.gov.cn 等 23 个域名公共
+    DNS 判定 NXDOMAIN，而 p205 旧版把它们归入「title空(权威源)」存疑，
+    长期掩盖了站点已不存在的事实。"""
+    if not host:
+        return False
+    with _dns_lock:
+        v = _dns_cache.get(host)
+    if v is not None:
+        return v
+    try:
+        socket.getaddrinfo(host, 80, proto=socket.IPPROTO_TCP)
+        v = False
+    except Exception:
+        v = True
+    with _dns_lock:
+        _dns_cache[host] = v
+    return v
 
 
 def county_level(tt, sysn):
@@ -182,6 +208,8 @@ def main():
         known = dom in KNOWN_OK or dom[4:] in KNOWN_OK
         src_serp = "SERP" in (o.get("s") or "")
         # ①本地硬规则（取页前）
+        if dns_dead(dom.split(":")[0]):
+            return ("hard", pn, city, o["n"], u, "域名已失效(NXDOMAIN)")
         if dom in BAD_DOM: return ("hard", pn, city, o["n"], u, "上级/黑名单域名")
         if any(dom.endswith("." + d) for d in ("12388.gov.cn",)) and o["n"] != "市监委":
             return ("hard", pn, city, o["n"], u, "12388频道挂错系统")

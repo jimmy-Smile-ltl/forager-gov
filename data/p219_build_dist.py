@@ -27,6 +27,24 @@ MAX_FILE = 25 * 1024 * 1024      # Cloudflare Pages 单文件 25 MiB
 MAX_FILES = 20000                # 单次部署 20000 文件
 BAD_EXT = {".py", ".json", ".env", ".log", ".tmp", ".md", ".bak"}
 
+# 站点根入口: Pages 默认去 .html 后缀（/中国政府网站体系.html 会 308 到
+# /中国政府网站体系），根路径 "/" 需 index.html 才有响应——做一个跳转页。
+INDEX_HTML = """<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>中国政府网站体系</title>
+<meta http-equiv="refresh" content="0; url=./中国政府网站体系.html">
+<script>location.replace("./中国政府网站体系.html" + location.hash);</script>
+</head>
+<body>
+<p>正在进入 <a href="./中国政府网站体系.html">中国政府网站体系</a> …</p>
+<p>树图 / 地图：<a href="./gov-tree.html">gov-tree</a></p>
+</body>
+</html>
+"""
+
 
 def main():
     # 1) 清空并重建 dist
@@ -51,6 +69,10 @@ def main():
         print("❌ 缺少站点资产:", ", ".join(missing))
         sys.exit(1)
 
+    # 站点根入口（根路径 "/" → 主查看器）
+    with open(os.path.join(DIST, "index.html"), "w", encoding="utf-8") as f:
+        f.write(INDEX_HTML)
+
     # 2) 引用完整性: HTML/JS 静态引用
     refs = set()
     for f in ("中国政府网站体系.html", "gov-tree.html"):
@@ -63,7 +85,7 @@ def main():
         sys.exit(1)
 
     # 动态加载目标: data_js/{manifest,quality} + modules/rules + geo 关键文件
-    for p in ("data_js/manifest.js", "data_js/quality.js",
+    for p in ("index.html", "data_js/manifest.js", "data_js/quality.js",
               "data/geo/adcode.js", "data/geo/china.js", "data/geo/geo_index.js"):
         if not os.path.isfile(os.path.join(DIST, p)):
             print("❌ 动态数据缺失:", p)
