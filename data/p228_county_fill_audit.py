@@ -29,15 +29,45 @@ DATA = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(DATA)
 sys.path.insert(0, DATA)
 sys.path.insert(0, os.path.join(ROOT, "util"))
-from p223_county_5sys_fill import (BAD_COLUMN, CHANNEL_OK, NEWS_PATH,  # noqa: E402
-                                   TITLE_BAD, page_title)
+from p223_county_5sys_fill import (BAD_COLUMN, CHANNEL_OK, LEADER_PATH,  # noqa: E402
+                                   NEWS_PATH, TITLE_BAD, page_title)
 from site_contract import base as geo_base  # noqa: E402
+import hashlib  # noqa: E402
+import p223_county_5sys_fill as P  # noqa: E402
 
 TREE_F = os.path.join(DATA, "tree.json")
 TODAY = datetime.date.today().isoformat()
 DRY = "--dry" in sys.argv
 MARKS = ("辖区链接", "导航", "互链", "SERP")
 ORG_NAMES = {"县人大", "县政协", "县人民法院", "县人民检察院", "县监委"}
+CACHE = "/tmp/p228_cache"      # 复核是只读的：磁盘缓存让二次复核从小时级降到分钟级
+_ORIG_FETCH = P.fetch
+
+
+def _cached_fetch(u, timeout=15):
+    """p223.fetch 的磁盘缓存包装（标题复核专用；不写任何数据）。"""
+    if not u:
+        return ""
+    os.makedirs(CACHE, exist_ok=True)
+    f = os.path.join(CACHE, hashlib.sha1(u.encode()).hexdigest() + ".html")
+    if os.path.exists(f):
+        try:
+            h = open(f, encoding="utf-8", errors="ignore").read()
+            if h:
+                return h
+        except OSError:
+            pass
+    h = _ORIG_FETCH(u, timeout=timeout) or ""
+    try:
+        with open(f, "w", encoding="utf-8") as fh:
+            fh.write(h)
+    except OSError:
+        pass
+    return h
+
+
+P.fetch = _cached_fetch
+P.fetch_cached = _cached_fetch
 
 
 def walk(n, p=""):
@@ -61,7 +91,8 @@ def main():
                 continue
             if "p228 审计" in s:
                 continue
-            if BAD_COLUMN.search(u) or (NEWS_PATH.search(u) and not CHANNEL_OK.search(u)):
+            if (BAD_COLUMN.search(u) or LEADER_PATH.search(u)
+                    or (NEWS_PATH.search(u) and not CHANNEL_OK.search(u))):
                 hits.append((n, p, u, s))
 
     print(f"p228 审计：待查 {len(hits)} 条疑似文章页")
@@ -98,7 +129,7 @@ def main():
         nm = n.get("n") or ""
         if not t:
             return None
-        badw = TITLE_BAD.search(t)
+        badw = TITLE_BAD.search(t.replace("政治协商会议", ""))
         if badw:
             return (item, f"业务栏目页({badw.group(1)}) title={t[:34]}")
         up = re.search(r"(中级人民|高级人民|最高人民法院|州中级|地区中级|分院)", t)
@@ -139,9 +170,12 @@ def main():
         t = page_title(u) or ""
         if not t:
             return "empty", item
-        b = geo_base(n.get("n") or "")
-        seg = [x for x in p.split("/") if x][-2:]
-        nm_hit = bool(b) and (b in t or any(x and x[:2] in t for x in seg))
+        # 县名在路径末段（节点名是通用「县人民法院」，不含地名）
+        seg = [x for x in p.split("/") if x]
+        county = seg[-1] if seg else ""
+        b = geo_base(county) or county[:2]
+        sibs = seg[-2:]
+        nm_hit = bool(b) and (b in t or any(x[:2] in t for x in sibs if len(x) >= 2))
         return ("ok" if nm_hit else "noname"), item
 
     from collections import Counter
@@ -197,6 +231,59 @@ def main():
                 bad += 1
                 print("  SUSPECT", line)
     print(f"p228 抽样复验 {len(sample)} 条: title 相符 {ok}, 抓取失败 {unknown}, 可疑 {bad}")
+
+    # F 全量按 p223 现行严格校验复验（他机构/仅市名/领导建议栏目/媒体域…）
+    #   只报告默认；P228_FIX=1 才清除（明确错配类）
+    from p223_county_5sys_fill import collect as _collect, title_ok as _title_ok
+    from p223_county_5sys_fill import page_title as _ptitle
+    _blk, _tasks = _collect(tree)
+    filled = [t for t in _tasks if t["filled"]]
+    CLEAR_KINDS = ("他机构页面", "仅市名无县全名", "领导/建议类栏目",
+                   "文章标题", "领导之窗页", "非官网栏目页",
+                   "上级机构站点", "媒体/聚合域名")
+    freport, fclear = [], []
+
+    def fcheck(t):
+        u = (t["org"].get("u") or "").strip()
+        if not u:
+            return t, "", ""
+        tt = _ptitle(u) or ""
+        ok, note = _title_ok(tt, t, False)
+        if not ok and note.startswith("无县名"):
+            # 「无县名」只在标题出现上级地名（省/市）时才算错配——
+            # 「海淀纪检监察网」「首页_古韵正声」这类只丢县名的品牌站保留
+            pb = geo_base(t["prov"] or "")
+            cb = geo_base(t["parent"].get("n") or "")
+            if not ((pb and pb in tt) or (cb and cb in tt)):
+                note = ""
+        return t, tt, note
+
+    with ThreadPoolExecutor(8) as ex:
+        for t, tt, note in ex.map(fcheck, filled):
+            if not note:
+                continue
+            freport.append((t, tt, note))
+            if any(note.startswith(k) for k in CLEAR_KINDS):
+                fclear.append((t, tt, note))
+    from collections import Counter as _C
+    kc = _C(n.split("(")[0] for _, _, n in freport)
+    print(f"p228 F 复验 {len(filled)} 条：不符 {len(freport)}"
+          f"（其中可清除类 {len(fclear)}） {dict(kc)}")
+    for t, tt, note in freport[:30]:
+        print(f"  F-{note[:22]:<22} {t['prov']}/{t['parent'].get('n')}/{t['county'].get('n')}"
+              f"/{t['org_name']} {tt[:26]} {(t['org'].get('u') or '')[:56]}")
+    if os.environ.get("P228_FIX") == "1" and fclear and not DRY:
+        d = os.path.join(ROOT, "backups", TODAY)
+        os.makedirs(d, exist_ok=True)
+        ts = datetime.datetime.now().strftime("%H%M%S")
+        shutil.copy2(TREE_F, os.path.join(d, f"tree_before_p228f_{ts}.json"))
+        for t, tt, note in fclear:
+            t["org"]["s"] = (f"{t['org'].get('s') or ''}｜p228F: {note}，清除"
+                            f"（原 {(t['org'].get('u') or '')[:60]} title={tt[:30]}）")
+            t["org"]["u"] = ""
+        json.dump(tree, open(TREE_F, "w", encoding="utf-8"),
+                  ensure_ascii=False, indent=1)
+        print(f"p228 F 已清除 {len(fclear)} 条并写回 tree.json")
 
 
 if __name__ == "__main__":

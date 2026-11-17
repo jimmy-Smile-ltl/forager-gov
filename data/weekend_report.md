@@ -3246,3 +3246,25 @@
 - ✅ **屏山县 511529 采样**: 县直部门 deptSwitch URL: https://www.sczwfw.gov.cn/jiq/front/channel/deptSwitch?areaCode=511529000000
   - 屏山县法检: 1/2 有独立门户 URL
 - ✅ **总体**: 问题项 0 个
+
+## 自检 2026-11-17 18:48:19
+- ✅ **p29 进度**: 已完成 2955/2962 门户，命中 1219 条 （人大 349、政协 302、检察院 155、法院 159、监委 254）
+- ✅ **cc_parallel 一致性**: jsonl 1219 行 vs state 1219 行
+- ✅ **规则总量**: 共 7830 条，其中县级(6位码) 2980 条
+- ✅ **县级法院/检察院回填**: 1646/2980 个县已有法检独立门户 URL（随采集增长）
+- ✅ **data_js 拆分一致性**: rulesFiles 7830 条（rules 7830 条），缺失文件 0
+- ✅ **HTML 构建**: HTML 11-17 15:49 >= manifest 11-17 15:49
+- ✅ **屏山县 511529 采样**: 县直部门 deptSwitch URL: https://www.sczwfw.gov.cn/jiq/front/channel/deptSwitch?areaCode=511529000000
+  - 屏山县法检: 1/2 有独立门户 URL
+- ✅ **总体**: 问题项 0 个
+
+## 自检 2026-11-17 18:49:12
+- ✅ **p29 进度**: 已完成 2955/2962 门户，命中 1219 条 （人大 349、政协 302、检察院 155、法院 159、监委 254）
+- ✅ **cc_parallel 一致性**: jsonl 1219 行 vs state 1219 行
+- ✅ **规则总量**: 共 7830 条，其中县级(6位码) 2980 条
+- ✅ **县级法院/检察院回填**: 1646/2980 个县已有法检独立门户 URL（随采集增长）
+- ✅ **data_js 拆分一致性**: rulesFiles 7830 条（rules 7830 条），缺失文件 0
+- ✅ **HTML 构建**: HTML 11-17 18:49 >= manifest 11-17 18:48
+- ✅ **屏山县 511529 采样**: 县直部门 deptSwitch URL: https://www.sczwfw.gov.cn/jiq/front/channel/deptSwitch?areaCode=511529000000
+  - 屏山县法检: 1/2 有独立门户 URL
+- ✅ **总体**: 问题项 0 个

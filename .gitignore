@@ -24,8 +24,10 @@ data/backups/
 snapshots/
 data/snapshots/
 *.bak
+*.bak*
 *.tmp
 *_state*.json
+*_state*
 
 # ===== 获取层实现（浏览器/指纹/WAF 处理，不随仓库发布）=====
 util/*

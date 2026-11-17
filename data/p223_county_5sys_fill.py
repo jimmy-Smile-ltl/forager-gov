@@ -75,7 +75,8 @@ ORG5 = {
                 "feat": r"(court|fy|fayuan)"},
     "县人民检察院": {"cat": "县级人民检察院", "kws": ("人民检察院", "检察院"),
                  "feat": r"(jcy|jiancha|jc)"},
-    "县监委": {"cat": "县级监委", "kws": ("纪委监委", "监察委员会", "监委", "纪委"),
+    "县监委": {"cat": "县级监委",
+              "kws": ("纪委监委", "纪检监察", "监察委员会", "监委", "纪委"),
               "feat": r"(jjjc|jjw|jiwei|jijian|12388|jw|jc|lz|qf|cdi|di)"},
 }
 ORG_ORDER = ["县人民法院", "县人民检察院", "县人大", "县政协", "县监委"]
@@ -106,20 +107,31 @@ COUNTY_C = {
 # 新闻/文章/门户栏目路径（不是机构官网）
 NEWS_PATH = re.compile(
     r"/(news|content|article|detail|info|tzgg|art|Show|doc|Item|columns|channel)(/|_|\.)|"
-    r"/art\d+|/t\d{8}_|/\d{4}[-/]?\d{2}/|/c\d{6,}|/content_\d+|/\d{5,}\.s?html?"
-    r"|/(19|20)\d{6}/|/\d{8}\.s?html?|/static/",
+    r"/art\d+|/t\d{8}_|/\d{4}[-/]?\d{2}/|/c\d{6,}|/content_\d+|/content-\d+"
+    r"|/(19|20)\d{2}_\d{2}(_\d{2})?/|/\d{5,}\.s?html?"
+    r"|/(19|20)\d{6}/|/\d{8}\.s?html?|/static/|/contents/\d+/\d+",
     re.I)
+# 领导之窗/领导简介页——政府门户的领导栏目，不是机构官网
+# （实测：集贤县政协 ← www.jixian.gov.cn/jx/9/ldzc.shtml「集贤县政协」）
+LEADER_PATH = re.compile(
+    r"(^|[/_\-])(ldzc|ldjj|ldjjx|ldmp|lingdao|leader|ldcy|zxld|rdld|qzx)"
+    r"([/_\-.]|$)", re.I)
 # 门户频道页形态（UUID 栏目：/columns/<uuid>/index.html）——不是文章页，
 # 真实存在的人大/政协频道官方入口常是这一形态（p228 SERP 实测正定县）。
 CHANNEL_OK = re.compile(r"/columns/[0-9a-f][0-9a-f-]{7,}(/index\.html?)?/?(\?.*)?$", re.I)
 # 财政预决算 / 部门预算公示专栏（曾把「人大常委会办公室预算」页当区人大官网）
 BAD_COLUMN = re.compile(
     r"/(ysjs|czyjs|czxx|czbg|cwbg|caiheng|qyjsgk|czjsgk|cwys|yjsgk|"
-    r"czys|ysgk|jfzq|czgk)/", re.I)
+    r"czys|ysgk|jfzq|czgk|jyta|jytabl|zxta|taya|yajy|taql|zxwj)/", re.I)
 BAD_HOST = (
     "baidu.com", "weixin.qq.com", "weibo.com", "people.com.cn", "xinhuanet.com",
     "news.cn", "cctv.com", "mzfzw.net", "qq.com", "163.com", "sohu.com",
     "zhihu.com", "douyin.com", "baike.baidu.com", "wikipedia.org", "google.com",
+    # 媒体/新闻平台（「政协XX区委员会」专栏挂在新闻网也一律不是官网：
+    #  实测 hynews.zjol.com.cn 黄岩政协、ah.anhuinews.com 安徽新协）
+    "zjol.com.cn", "anhuinews", "eol.cn", "gmw.cn", "chinanews", "ce.cn",
+    "youth.cn", "cnr.cn", "cri.cn", "huanqiu", "chinadaily", "ifeng.com",
+    "sina.com", "toutiao", "doc88", "wenku",
 )
 NAV_KW = re.compile(
     r"(基层|辖区|下辖|下级|县区|市县|区县|法院导航|检察院导航|基层院|派出院|"
@@ -397,7 +409,10 @@ def has_name(t, nm):
             return False
         if j == 0 or t[j - 1] in "·-—－（(【[《|:：":
             return True
-        if t[:j].endswith(("省", "市", "州", "地区", "盟", "旗", "县", "区")):
+        # 机构名前缀也是合法前缀（「政协魏县委员会」「中共XX县纪委」）
+        if t[:j].endswith(("省", "市", "州", "地区", "盟", "旗", "县", "区",
+                           "政协", "人大", "中共", "县委", "市委", "党委",
+                           "党组", "纪委监委", "人民法院", "人民检察院")):
             return True
         i = j + 1
 
@@ -449,11 +464,32 @@ def match_link(text, url, task, allow_pure=False):
 NEUTRAL_TITLE = re.compile(
     r"^(首页|网站首页|欢迎访问.*|.*网站首页|.*门户网站|.*人民政府网?站?|.*人民政府)$")
 
+# 他机构标记——出现在 title 里说明抓到的是别的机构的站（人大↔政协↔政府…）
+OTHER_MARK = re.compile(r"(人民政府|政协|人民代表大会|人大常委会|纪委|监委|"
+                        r"人民法院|人民检察院|法院|检察院)")
+
+# 领导之窗/建议提案办理类栏目——政府门户的机构频道，不是机构官网
+KIND_BAD = re.compile(r"(领导之窗|领导简历|领导分工|领导班子|领导活动|领导|"
+                      r"建议办理|建议提案|提案办理|议案建议|代表建议|委员提案|提案)")
+# 门户栏目标题：机构词后紧跟这些后缀 = 政府门户的某某栏目，不是机构官网
+# （实测 S4：「东河区人民政府_政协提案」「政协声音-浑南区人民政府」
+#   「大连市甘井子区人民政府政协部门」「政协领导-察哈尔右翼前旗人民政府」）
+PORTAL_COL = re.compile(r"(政协|人大|纪委|监委|纪检|法院|检察)"
+                        r"(提案|领导|声音|之声|动态|工作|部门|信息|要闻|"
+                        r"会议|活动|建议|之窗|风采|履职)")
+
 # 业务栏目页特征（title 层）：预决算/三公经费/任免/公示/招标… 都不是机构官网
 TITLE_BAD = re.compile(
     r"(决算|预算|三公|经费|任免|招录|招考|招聘|中标|成交|招标|采购|"
     r"表彰|先进事迹|工作报告|述职|述廉|考核|公示|通知|公告|通告|会议|培训|"
     r"主题教育|专项整治|巡察|巡视|整改|民主生活会)")
+
+
+# 文章标题动词——「魏县政协组织开展…专题调研_邯郸市政协信息网」曾被当成
+# 魏县政协官网（zx.hd.gov.cn/List.asp?C-1-7048.html 其实是文章列表页）
+ARTICLE_TITLE = re.compile(
+    r"(开展|召开|举行|组织|调研|视察|座谈|部署|推进|督导|专访|纪实|侧记|"
+    r"通报|倡议|讲话|致词|致辞|访谈|系列报道|专题专栏)")
 
 
 def title_ok(title, task, anchor_exact):
@@ -462,13 +498,29 @@ def title_ok(title, task, anchor_exact):
     org_name = task["org_name"]
     nm = county.get("n", "")
     b = geo_base(nm)
+    # 官网首页标题≈机构名本身：明显超长或带文章动词的一律不是首页
+    if len(title) > len(nm) + 24:
+        return False, f"标题过长(疑文章页{len(title)})"
+    av = ARTICLE_TITLE.search(title)
+    if av:
+        return False, f"文章标题({av.group(1)})"
     if not title:
         return (anchor_exact, "title空(JS壳)") if anchor_exact else (False, "title空")
     # 业务栏目页（预决算/三公经费/任免/公示…）——实测「凉州区人民政府法院、
     # 检察院财务决算和“三公”经费」曾被当成凉州区人民法院官网（/col/col29244/）
-    badw = TITLE_BAD.search(title)
+    # 注：「中国人民政治协商会议XX委员会」是政协正式全称，先剥离再判
+    badw = TITLE_BAD.search(title.replace("政治协商会议", ""))
     if badw:
         return False, f"非官网栏目页({badw.group(1)})"
+    kb = KIND_BAD.search(title)
+    if kb:
+        return False, f"领导/建议类栏目({kb.group(1)})"
+    pc = PORTAL_COL.search(title)
+    if pc:
+        return False, f"门户栏目({pc.group(0)})"
+    # 标题带引号 = 新闻/活动标题（实测：「大庆市让胡路区政协“悦读”促履职」）
+    if re.search(r"[“”]", title):
+        return False, "文章标题(引号)"
     # 上级法院/检察院站点（中院官网「临夏法院网-临夏州中级人民法院」曾被
     # 当成临夏市/临夏县法院）——县级机构标题里出现上级字眼即驳回
     if org_name in ("县人民法院", "县人民检察院"):
@@ -477,11 +529,23 @@ def title_ok(title, task, anchor_exact):
             return False, f"上级机构站点({up.group(1)})"
     if not (has_name(title, nm) or (b != nm and has_name(title, b))):
         return False, "无县名"
+    cb = geo_base(city.get("n", "")) if city else ""
+    # 县名基底 == 本市基底（南昌县↔南昌市、衡阳县↔衡阳市）：基底不足以区分
+    # 市县两级，必须全名——「南昌政协」曾被当成南昌县政协
+    if b == cb:
+        if not has_name(title, nm):
+            return False, f"仅市名无县全名({b})"
+        # 同基底时县全名出现即可（「政协南昌县委员会」），但若同时又无市名，
+        # 仍可能是市站点的县栏目——交由下面机构词/路径规则继续判定
     if not text_has_org(title, org_name):
+        # 他机构标记（人民政府/政协/法院…）出现 → 直接驳回，绝不让中性标题
+        # 兜底放行（实测：大观区政协被填成「安庆市大观区人民政府」门户）
+        om = OTHER_MARK.search(title)
+        if om and not any(m in om.group(0) for m in ORG5[org_name]["kws"]):
+            return False, f"他机构页面({om.group(1)})"
         if NEUTRAL_TITLE.match(title) and anchor_exact:
             return True, "中性标题+精确锚文本"
         return False, "无机构词"
-    cb = geo_base(city.get("n", "")) if city else ""
     pb = prov_base(task["prov"]) if task["prov"] else ""
     # 跨省同名陷阱：县区基底=他省省名（天津河北区 ↔ 河北省）——须全名出现
     if b in ALL_PROV_BASES and b != pb and not has_name(title, nm):
@@ -495,12 +559,22 @@ def title_ok(title, task, anchor_exact):
     return True, "ok"
 
 
+# 后台/登录入口（实测 S4 命中「肥东县政协 -> czyz.ahfdzx.gov.cn/manage/login.php」）
+LOGIN_PATH = re.compile(r"(/manage/|/admin(?:/|\.|$)|/login|login\.(?:php|jsp|aspx?|do)"
+                        r"|/wp-login|/system/login|/cms/login|/user/login)", re.I)
+
+
 def valid_candidate(task, u, text, strict=True):
     """URL + title 双验。返回 (ok, note)。"""
     if not host_ok(u, strict=strict):
         return False, "非gov域名"
     if BAD_COLUMN.search(u):
         return False, "财政预决算/人事任免类栏目"
+    if LEADER_PATH.search(u):
+        return False, "领导之窗页"
+    lm = LOGIN_PATH.search(u)
+    if lm:
+        return False, f"后台登录页({lm.group(1)})"
     if (NEWS_PATH.search(u) or NEWS_QUERY.search(u)) and not CHANNEL_OK.search(u):
         return False, "新闻/栏目路径"
     t = page_title(u)
@@ -819,6 +893,11 @@ def _s4_q(t):
     return f"{t['prov']}{'' if pn == t['prov'] else pn}{t['county'].get('n', '')}{t['org_name'][1:]}"
 
 
+# S4 放宽开关：候选域名不含机构特征时，允许**路径**含机构特征
+# （/rd/、/zx/、/jjjc/ 等）——县级机构大量挂在县门户/市人大站的
+# 频道页上，域名是门户域名；title 双验仍是硬门槛。
+RELAX = os.environ.get("P223_S4_RELAX") == "1"
+
 S4_BAD_DOM = ("baidu.com", "weixin", "weibo", "people.com.cn", "xinhuanet", "news.cn",
               "cctv.com", "mzfzw", "qq.com", "163.com", "sohu.com", "chinacourt.org",
               "npc.gov.cn", "cppcc.gov.cn", "ccdi.gov.cn", "spp.gov.cn", "court.gov.cn")
@@ -845,7 +924,8 @@ def _s4_probe(t):
         # 本县政府门户上的机构频道页（/columns/<uuid>/）也算官方入口，
         # 但域名特征规则不适用——由 title 双验兜底（S2 同口径）。
         if not same_portal and not re.search(ORG5[org_name]["feat"], dom, re.I):
-            continue
+            if not (RELAX and ORG_PATH[org_name].search(urlparse(u).path or "")):
+                continue
         ok, note = valid_candidate(t, u, "")
         if not ok:
             continue
@@ -854,9 +934,13 @@ def _s4_probe(t):
 
 
 def run_s4(tasks, reg, dup_names, st, limit=None):
-    seen = st.setdefault("s4", {})
+    # 状态命名空间：第二轮（放宽/换查询式）用独立 key，不覆盖第一轮结论
+    seen = st.setdefault(os.environ.get("P223_S4_NS") or "s4", {})
     retry = os.environ.get("P223_S4_RETRY") == "1"   # 默认跳过已查过的，保证多轮推进
     pending = [t for t in tasks if not t["filled"]]
+    orgs = [x for x in (os.environ.get("P223_S4_ORG") or "").split(",") if x]
+    if orgs:      # 按机构类型定向轮次（政协 2,500+ 条从未跑过 SERP）
+        pending = [t for t in pending if t["org_name"] in orgs]
     if not retry:
         # 已明确查过无果（miss）的跳过；serp-fail 下轮重试
         pending = [t for t in pending if seen.get(_s4_q(t)) != "miss"]

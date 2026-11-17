@@ -87,6 +87,18 @@ def prov_of(name):
     return m.group(1) if m else ""
 
 
+def _path_of(root, target):
+    """root 子树里到 target 的路径字符串（判归属用）。"""
+    st = [(root, root.get("n") or "")]
+    while st:
+        cur, p = st.pop()
+        if cur is target:
+            return p
+        for c in cur.get("ks") or []:
+            st.append((c, p + "/" + (c.get("n") or "")[:10]))
+    return ""
+
+
 def tasks_of(tree):
     tiao = [g for g in tree["ks"] if g["n"].startswith("条")][0]
     out = []
@@ -106,6 +118,12 @@ def tasks_of(tree):
             core = next((k for k in QT_CORE if k in nm), None)
             pv = prov_of(nm)
             if not core or not pv:
+                # 欧美同学会省级组织节点名只有省名（「云南省」「内蒙古」）
+                if "欧美同学会" in _path_of(qt[0], c):
+                    core, pv = "欧美同学会", nm
+                    out.append({"node": c, "prov": pv, "core": core,
+                                "kind": "群团", "name": nm,
+                                "q": f"{nm}欧美同学会"})
                 continue
             out.append({"node": c, "prov": pv, "core": core, "kind": "群团",
                         "name": nm, "q": nm})

@@ -59,6 +59,10 @@ NATIONAL = re.compile(
     r"国家[^省市县区州盟旗]{1,20}?(总局|总署|局|委员会|银行|办公室|研究院|院)$)")
 
 
+# 明确的招标/企业信息聚合站——绝不是机构官网（实测 3 条 qianlima 命中）
+AGG_HOST = ("qianlima.com", "chinabidding", "bidcenter", "zhaobiao.cn")
+
+
 def main():
     tree = json.load(open(TREE_F, encoding="utf-8"))
     reg = json.load(open(REG_F, encoding="utf-8"))
@@ -89,9 +93,23 @@ def main():
                 if s and re.search(r"(部|总局|总署|署)$", s):
                     nat_short.add(s)
 
+    # 中央子树的**内部厅室**（办公厅/信访室/立案庭/政治部…）与市级部门重名，
+    # 但市级门户「部门导航」里也会出现「宣传部/组织部」这类真实条目——
+    # 一律不作为国家部委判定依据（宁可留一个陈旧节点，不可误删真节点）
+    # 同名但**确实是市级部门**的：机关事务管理局（国管局）、各专门委员会
+    # （人大/政协委员会在市门户部门导航里也是真实条目）
+    GENERIC = {"办公厅", "办公室", "信访室", "法规室", "研究室", "组织部",
+               "宣传部", "统战部", "政治部", "执行局", "立案庭", "机关党委",
+               "机关事务管理局", "财政经济委员会", "经济委员会",
+               "社会建设委员会", "华侨委员会", "外事委员会", "民族委员会",
+               "提案委员会", "港澳台侨委员会", "计划预算委员会"}
+    nat_safe = {x for x in nat if x not in GENERIC
+                and not re.search(r"(室|厅|庭|处|科|组|中心|队|所|站)$", x)}
+
     def is_national(nm):
         nm = (nm or "").strip()
-        return bool(NATIONAL.match(nm)) or nm in nat or nm in nat_short
+        return (bool(NATIONAL.match(nm)) or nm in nat_safe
+                or nm in nat_short)
 
     def walk(n):
         yield n
@@ -140,6 +158,16 @@ def main():
     for n in walk(tree):
         u = n.get("u") or ""
         if u:
+            h = urlparse(u).netloc.lower()
+            if any(a in h for a in AGG_HOST):
+                stat["agg_del"] = stat.get("agg_del", 0) + 1
+                if not DRY:
+                    n["s"] = (f"{n.get('s') or ''}｜p231: 聚合站({{h}})非官网，"
+                              f"清除（原 {u[:60]}）")
+                    n["u"] = ""
+                else:
+                    print("  AGG-DEL", n.get("n"), u[:70])
+                continue
             u2 = norm_url(u)
             if u2 != u:
                 stat["url_clean"] += 1
