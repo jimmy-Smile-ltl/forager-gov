@@ -521,8 +521,17 @@ window.MapViz=(function(){
         t.style.left=Math.max(4,x)+"px";t.style.top=Math.max(4,y)+"px";
       });
       g.addEventListener("mouseleave",()=>{if(tip)tip.style.display="none";applySel()});
-      g.addEventListener("click",()=>{
+      g.addEventListener("mouseenter",()=>{
+        // 悬停即预取: 线上慢网下把首字节等待藏进"鼠标移过去→点下去"的间隙
+        const ad=typeof p.adcode==="number"?String(p.adcode):p.adcode;
+        if(!ad)return;
+        if(level==="china")prefetchGeo(ad);
+        else if(level==="province"&&CITY_FILES.has(ad))prefetchGeo(ad);
+      });
+      g.addEventListener("pointerdown",e=>{ripple(e)});
+      g.addEventListener("click",e=>{
         selName=name;
+        ripple(e);
         const ad=typeof p.adcode==="number"?String(p.adcode):p.adcode;
         if(level==="china"&&ad){
           // 全国 → 省图（市级）
@@ -705,39 +714,184 @@ window.MapViz=(function(){
     if(onLevelChange)onLevelChange(level,{});
     try{if(onRegion)onRegion(null)}catch(e){console.warn(e)}
   }
+  // ---- geo 按需加载（2026-11-17 线上慢网优化）----
+  // 线上 Cloudflare Pages 首字节可达 1-2.5s（每文件一次请求），逐次点击等待感明显。
+  // 策略: ①hover/pointerdown 预取（点下去时已在途）②省内「县级边界包」省图
+  // 就绪后空闲预取（点任意市零请求）③promise 去重 + 15s 超时 ④点击序列号:
+  // 连点不同省/市时丢弃过期结果 ⑤加载胶囊（转圈+计时）与点击涟漪即时反馈。
+  const GEO_VER="20261117b";
+  const pendGeo={};      // adcode -> Promise（同文件并发去重）
+  const bundlePend={};   // 省 code -> Promise（县界包在途）
+  let loadSeq=0;
+  function geoOf(adcode){return window["__GEO_"+adcode+"__"]}
+  function bundleOf(adcode){
+    const B=window.__GEO_BUNDLE__;
+    if(!B)return null;
+    const prov=String(adcode).slice(0,2)+"0000";
+    const b=B[prov];
+    return (b&&b[adcode])||null;
+  }
+  function fetchGeoFile(adcode){
+    if(pendGeo[adcode])return pendGeo[adcode];
+    pendGeo[adcode]=new Promise((resolve,reject)=>{
+      const s=document.createElement("script");
+      s.src="data/geo/geo_"+adcode+".js?v="+GEO_VER;
+      let done=false;
+      const to=setTimeout(()=>{if(done)return;done=true;delete pendGeo[adcode];
+        try{s.remove()}catch(e){}
+        reject(new Error("timeout"))},15000);
+      s.onload=()=>{if(done)return;done=true;clearTimeout(to);delete pendGeo[adcode];
+        geoOf(adcode)?resolve(adcode):reject(new Error("empty"))};
+      s.onerror=()=>{if(done)return;done=true;clearTimeout(to);delete pendGeo[adcode];
+        reject(new Error("net"))};
+      document.head.appendChild(s);
+    });
+    return pendGeo[adcode];
+  }
+  function prefetchBundle(prov){
+    if(!prov||prov.length!==6)return Promise.reject(new Error("code"));
+    if(window.__GEO_BUNDLE__&&window.__GEO_BUNDLE__[prov])return Promise.resolve();
+    if(bundlePend[prov])return bundlePend[prov];
+    bundlePend[prov]=new Promise((resolve,reject)=>{
+      const s=document.createElement("script");
+      s.src="data/geo/geo_bundle_"+prov+".js?v="+GEO_VER;
+      let done=false;
+      const to=setTimeout(()=>{if(done)return;done=true;delete bundlePend[prov];
+        try{s.remove()}catch(e){};reject(new Error("timeout"))},20000);
+      s.onload=()=>{if(done)return;done=true;clearTimeout(to);delete bundlePend[prov];resolve()};
+      s.onerror=()=>{if(done)return;done=true;clearTimeout(to);delete bundlePend[prov];reject(new Error("net"))};
+      document.head.appendChild(s);
+    });
+    bundlePend[prov].catch(()=>{});   // 本地/旧包无 bundle → 静默回退单文件
+    return bundlePend[prov];
+  }
+  function ensureGeo(adcode){
+    if(geoOf(adcode))return Promise.resolve(adcode);
+    const hit=bundleOf(adcode);
+    if(hit){window["__GEO_"+adcode+"__"]=hit;return Promise.resolve(adcode);}
+    const prov=String(adcode).slice(0,2)+"0000";
+    if(adcode!==prov&&bundlePend[prov]){
+      // 县界包在途: 与单文件赛跑（谁先到用谁）——不让用户干等整包（约1MB）
+      const viaBundle=bundlePend[prov].then(()=>{
+        const b=bundleOf(adcode);
+        if(!b)throw new Error("no-bundle-hit");
+        window["__GEO_"+adcode+"__"]=b;return adcode;
+      });
+      const viaFile=fetchGeoFile(adcode);
+      if(Promise.any)return Promise.any([viaBundle,viaFile]);
+      return new Promise((res,rej)=>{let n=0;
+        const ok=v=>res(v),bad=()=>{if(++n===2)rej(new Error("all-failed"))};
+        viaBundle.then(ok,bad);viaFile.then(ok,bad);});
+    }
+    return fetchGeoFile(adcode);
+  }
+  function prefetchGeo(adcode){
+    if(!adcode||geoOf(adcode)||pendGeo[adcode])return;
+    ensureGeo(adcode).catch(()=>{});
+  }
   function loadProvince(adcode,name,next){
-    if(window["__GEO_"+adcode+"__"]){
-      setProvince(adcode,name);
-      if(next)next();
+    const seq=++loadSeq;
+    if(onLevelChange)onLevelChange("loading",{adcode,name});
+    if(geoOf(adcode)){
+      hideLoading();setProvince(adcode,name);if(next)next();
+      prefetchBundle(adcode);
       return;
     }
-    if(onLevelChange)onLevelChange("loading",{adcode,name});
-    const s=document.createElement("script");
-    s.src="data/geo/geo_"+adcode+".js?v=20261111c";
-    s.onload=()=>{setProvince(adcode,name);if(next)next();};
-    s.onerror=()=>{
-      console.warn("省数据加载失败: "+adcode);
-      render();
+    showLoading(name);
+    ensureGeo(adcode).then(()=>{
+      if(seq!==loadSeq)return;              // 已点别的区划 → 丢弃过期结果
+      hideLoading();setProvince(adcode,name);if(next)next();
+      // 省图渲染完 250ms 即预取县界包（rIC 在慢设备上可能长期不空闲,
+      // 曾导致整包迟迟不开始 → 点市时仍在等）
+      setTimeout(()=>prefetchBundle(adcode),250);
+    }).catch(()=>{
+      if(seq!==loadSeq)return;
+      hideLoading();render();
       if(onLevelChange)onLevelChange(level,{prov:curProv,city:curCity});
       if(onSelect)onSelect(name);   // 无市级边界数据的省（台湾/港澳）→ 直接看详情
-    };
-    document.head.appendChild(s);
+    });
   }
   function loadCity(adcode,name,next){
-    if(window["__GEO_"+adcode+"__"]){
-      setCity(adcode,name);
-      if(next)next();
+    const seq=++loadSeq;
+    if(onLevelChange)onLevelChange("loading",{adcode,name});
+    if(geoOf(adcode)){
+      hideLoading();setCity(adcode,name);if(next)next();
       return;
     }
-    if(onLevelChange)onLevelChange("loading",{adcode,name});
-    const s=document.createElement("script");
-    s.src="data/geo/geo_"+adcode+".js?v=20261111c";
-    s.onload=()=>{setCity(adcode,name);if(next)next();};
-    s.onerror=()=>{
-      console.warn("市数据加载失败: "+adcode);
+    showLoading(name);
+    ensureGeo(adcode).then(()=>{
+      if(seq!==loadSeq)return;
+      hideLoading();setCity(adcode,name);if(next)next();
+    }).catch(()=>{
+      if(seq!==loadSeq)return;
+      hideLoading();
       if(onLevelChange)onLevelChange("error",{adcode,name});
-    };
-    document.head.appendChild(s);
+      toast("「"+name+"」边界加载失败，请检查网络后重试");
+    });
+  }
+  // ---- 加载胶囊 / 点击涟漪 / 轻提示（纯 DOM, 无依赖）----
+  let loadEl=null,loadT0=0,loadTimer=0;
+  function injectMapCss(){
+    if(document.getElementById("mapv-ux-css"))return;
+    const st=document.createElement("style");st.id="mapv-ux-css";
+    st.textContent="@keyframes mapvspin{to{transform:rotate(360deg)}}"
+      +"@keyframes mapvpulse{0%{transform:scale(.35);opacity:.85}100%{transform:scale(7);opacity:0}}"
+      +"@keyframes mapvshine{0%{background-position:-160px 0}100%{background-position:160px 0}}"
+      +".mapv-load{position:absolute;left:50%;top:14px;transform:translateX(-50%);z-index:9;"
+      +"display:none;align-items:center;gap:8px;padding:7px 14px 9px;border-radius:20px;"
+      +"font-size:12px;font-weight:600;white-space:nowrap;background:var(--panel,#fff);"
+      +"color:var(--text,#222);border:1px solid var(--line,#e2e2e2);box-shadow:0 6px 22px rgba(0,0,0,.18)}"
+      +".mapv-load .sp{width:13px;height:13px;border-radius:50%;flex:none;"
+      +"border:2px solid rgba(120,120,120,.25);border-top-color:#2f6fd0;animation:mapvspin .7s linear infinite}"
+      +".mapv-load .t{font-weight:400;opacity:.7;font-variant-numeric:tabular-nums}"
+      +".mapv-load .bar{position:absolute;left:12px;right:12px;bottom:4px;height:2px;border-radius:2px;"
+      +"background:linear-gradient(90deg,rgba(47,111,208,0),rgba(47,111,208,.7),rgba(47,111,208,0));"
+      +"background-size:160px 100%;animation:mapvshine 1.05s linear infinite}"
+      +".mapv-toast{position:absolute;left:50%;top:52px;transform:translateX(-50%);z-index:9;"
+      +"display:none;padding:7px 13px;border-radius:9px;font-size:12px;color:#fff;"
+      +"background:rgba(30,30,30,.86);box-shadow:0 6px 22px rgba(0,0,0,.25);white-space:nowrap}";
+    document.head.appendChild(st);
+  }
+  function showLoading(name){
+    injectMapCss();
+    if(!loadEl){
+      loadEl=document.createElement("div");loadEl.className="mapv-load";
+      loadEl.innerHTML='<i class="sp"></i><span class="nm"></span><span class="t"></span><i class="bar"></i>';
+      el.appendChild(loadEl);
+    }
+    loadEl.querySelector(".nm").textContent="正在加载「"+name+"」边界…";
+    loadEl.querySelector(".t").textContent="";
+    loadEl.style.display="flex";
+    loadT0=Date.now();
+    if(loadTimer)clearInterval(loadTimer);
+    loadTimer=setInterval(()=>{
+      if(!loadEl||loadEl.style.display==="none")return;
+      loadEl.querySelector(".t").textContent=((Date.now()-loadT0)/1000).toFixed(1)+"s";
+    },200);
+  }
+  function hideLoading(){
+    if(loadTimer){clearInterval(loadTimer);loadTimer=0}
+    if(loadEl)loadEl.style.display="none";
+  }
+  function toast(msg){
+    injectMapCss();
+    let t=el.querySelector(".mapv-toast");
+    if(!t){t=document.createElement("div");t.className="mapv-toast";el.appendChild(t)}
+    t.textContent=msg;t.style.display="block";
+    if(t._h)clearTimeout(t._h);
+    t._h=setTimeout(()=>{t.style.display="none"},4200);
+  }
+  function ripple(e){
+    if(!e||typeof e.clientX!=="number")return;
+    injectMapCss();
+    const r=el.getBoundingClientRect();
+    const d=document.createElement("div");
+    const x=e.clientX-r.left,y=e.clientY-r.top;
+    d.style.cssText="position:absolute;left:"+(x-6)+"px;top:"+(y-6)+"px;width:12px;height:12px;"
+      +"border-radius:50%;z-index:8;pointer-events:none;background:rgba(231,185,60,.5);"
+      +"box-shadow:0 0 0 2px rgba(231,185,60,.55);animation:mapvpulse .5s ease-out forwards";
+    el.appendChild(d);
+    setTimeout(()=>{try{d.remove()}catch(_){}},560);
   }
   function setProvince(adcode,name){
     curProvCode=adcode;curProv=name;curCity=null;curCityCode="";

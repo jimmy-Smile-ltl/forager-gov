@@ -216,6 +216,18 @@ npx wrangler pages deploy dist --project-name=forager-gov
 - 每个 geo 文件打包为 `window.__GEO_{adcode}__ = {FeatureCollection}` 的 `<script>`，地图**按需惰性加载**（`<script src>` 动态插入）——因为 `file://` 下 `fetch()` 被 CORS 拦截，不能用 AJAX
 - 结构（与 DataV 一致）：`features[].properties = {adcode, name, center, centroid}`，`geometry = Polygon / MultiPolygon`
 
+#### 4. 慢网加载优化（预取 / 缓存 / 反馈）
+
+线上 pages.dev 的 TTFB 约 1–2.5s，单文件下钻等待明显。三层优化：
+
+- **缓存**：发布包 `dist/_headers` 给 `/data/geo/*` 一年 `immutable`（靠 `?v=` 版本戳失效）、
+  `/data_js/*` 1 小时、`gov_data.js` 与视图脚本 1 天。
+- **预取**：构建期把一省全部市级边界合并为 `geo_bundle_{省码}.js`（`window.__GEO_BUNDLE__`），
+  省图渲染完即预取 —— 点任意市**零请求**直接画县级图；包在途时与单文件赛跑（`Promise.any`）
+  取先到者。bundle 只在发布包生成，本地 `file://` 自动回退逐文件加载。
+- **反馈**：加载胶囊（spinner + 已等待秒数 + shimmer 进度条）、点击涟漪、失败 toast；
+  `loadSeq` 序号保证连点只渲染最后一次的目标，过期结果丢弃。
+
 ### 二、绘制地图的方法
 
 地图由 `map_view.js`（MapViz，约 700 行）**纯手写 SVG** 绘制，无 ECharts/D3 依赖（规避 CSP 与外链限制），两个查看器共用同一份代码。

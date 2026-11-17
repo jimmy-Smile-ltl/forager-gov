@@ -131,7 +131,7 @@
 - `p221_url_stats.py` — URL 缺失率统计（省/市/县 × 政府/人大/政协/纪委/法院/检察/党委/群团/民主党派…）：块视图省级子树逐机构统计 u 是否为空，输出 `data/url_stats.json` + `data/URL_STATS.md`，并把结果嵌进 `data_js/quality.js`（站点「数据健康」面板消费）；p22 管线自动调用。
 - `p220_dead_link_fix.py` — 死域名清理 + 错挂修正：整站下线/迁域的存量 URL（DNS NXDOMAIN）替换或列名，衡阳县/濮阳中院错挂修复，同步 registry（写前备份）。
 - `p22_split_data.py` — 把 tree.json / extraction_rules.json 拆分为模块化数据文件（自动调用 gen_viz）。
-- `p219_build_dist.py` — 站点发布包构建：只拷 HTML/视图脚本 + gov_data.js + data_js + data/geo 到 dist/，校验引用完整性、Cloudflare Pages 限额（单文件 25MiB/20000 文件）与泄漏（不含 .py/.json/state）；纯标准库，可直接作为 Pages 构建命令。
+- `p219_build_dist.py` — 站点发布包构建：只拷 HTML/视图脚本 + gov_data.js + data_js + data/geo 到 dist/，校验引用完整性、Cloudflare Pages 限额（单文件 25MiB/20000 文件）与泄漏（不含 .py/.json/state）；纯标准库，可直接作为 Pages 构建命令。另生成 `dist/_headers`（geo 一年 immutable、data_js 1h、脚本 1 天）与**省级县界包** `data/geo/geo_bundle_{省码}.js`（一省全部市级边界合并，27 省 21.6MB，仅入发布包）——省图打开后预取，点市下钻零请求，对慢网/高 RTT 环境是省→市等待的根治手段。
 - `gen_viz.py` — 可视化数据生成：tree.json → gov_data.js（block/tiao/records）。
 - `dl_geo.py` — 行政区划边界下载打包（DataV GeoAtlas + 港澳 + 台湾 p197），断点续跑。
 - `backup_now.py` — 数据快照：tree/rules/registry 备份到 backups/<日期>/。

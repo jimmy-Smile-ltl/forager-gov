@@ -23,6 +23,21 @@ FILES = ["中国政府网站体系.html", "gov-tree.html", "map_view.js", "tree_
 # 站点数据目录（保持相对路径不变: data_js/... 与 data/geo/...）
 DIRS = ["data_js", os.path.join("data", "geo")]
 
+# 静态资源缓存策略（Cloudflare Pages `_headers`）: 网络到 pages.dev 的 RTT 较高
+# （实测 geo 文件 TTFB 1-2.5s），重复访问必须命中浏览器缓存; 版本通过 HTML/JS
+# 里的 ?v= 戳控制——geo 改动时同步改 map_view.js 的 GEO_VER。
+HEADERS = """/data/geo/*
+  Cache-Control: public, max-age=31536000, immutable
+/data_js/*
+  Cache-Control: public, max-age=3600
+/gov_data.js
+  Cache-Control: public, max-age=86400
+/map_view.js
+  Cache-Control: public, max-age=86400
+/tree_view.js
+  Cache-Control: public, max-age=86400
+"""
+
 MAX_FILE = 25 * 1024 * 1024      # Cloudflare Pages 单文件 25 MiB
 MAX_FILES = 20000                # 单次部署 20000 文件
 BAD_EXT = {".py", ".json", ".env", ".log", ".tmp", ".md", ".bak"}
@@ -44,6 +59,54 @@ INDEX_HTML = """<!doctype html>
 </body>
 </html>
 """
+
+
+def build_geo_bundles(geo_dir):
+    """省级「县级边界包」: dist/data/geo/geo_bundle_{省码}.js =
+    {市级adcode: FeatureCollection}。省图打开后空闲预取该包 → 点任意市零请求
+    （线上 pages.dev 单文件 TTFB 1-2.5s，这是省→市下钻等待的根治手段）。
+    只在发布包生成（原始体积 +约22MB，与单文件内容重复，不进仓库）;
+    本地 file:// 没有 bundle → map_view.js 自动回退逐文件加载。"""
+    import glob
+    import json as _json
+    bundles = {}
+    for path in glob.glob(os.path.join(geo_dir, "geo_*.js")):
+        name = os.path.basename(path)
+        if name.startswith("geo_bundle_"):
+            continue
+        m = re.fullmatch(r"geo_(\d{6})\.js", name)
+        if not m:
+            continue
+        code = m.group(1)
+        if code.endswith("0000"):
+            continue                      # 省级文件自身（其内容=市级边界）
+        if not code.endswith("00"):
+            continue                      # 非市级文件（不存在, 防御）
+        try:
+            txt = open(path, encoding="utf-8").read()
+            mm = re.search(r"window\.__GEO_" + code + r"__\s*=\s*(\{.*\})\s*;?\s*$",
+                           txt, re.S)
+            if not mm:
+                continue
+            obj = _json.loads(mm.group(1))
+        except Exception as e:
+            print("  [bundle] 解析失败", name, e)
+            continue
+        prov = code[:2] + "0000"
+        bundles.setdefault(prov, {})[code] = obj
+    n = 0
+    total = 0
+    for prov, mp in sorted(bundles.items()):
+        out = os.path.join(geo_dir, "geo_bundle_%s.js" % prov)
+        js = ("window.__GEO_BUNDLE__=window.__GEO_BUNDLE__||{};"
+              "window.__GEO_BUNDLE__[%s]=%s;\n"
+              % (_json.dumps(prov), _json.dumps(mp, ensure_ascii=False,
+                                                separators=(",", ":"))))
+        with open(out, "w", encoding="utf-8") as f:
+            f.write(js)
+        n += 1
+        total += os.path.getsize(out)
+    print(f"geo 县界包: {n} 个省, {total / 1048576:.1f} MB（点市零请求）")
 
 
 def main():
@@ -83,6 +146,11 @@ def main():
     if absent:
         print("❌ HTML 引用缺失:", ", ".join(absent))
         sys.exit(1)
+
+    # `_headers`（缓存策略）+ 省级县界包（点市零请求）
+    with open(os.path.join(DIST, "_headers"), "w", encoding="utf-8") as f:
+        f.write(HEADERS)
+    build_geo_bundles(os.path.join(DIST, "data", "geo"))
 
     # 动态加载目标: data_js/{manifest,quality} + modules/rules + geo 关键文件
     for p in ("index.html", "data_js/manifest.js", "data_js/quality.js",
