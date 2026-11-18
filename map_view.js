@@ -144,22 +144,27 @@ window.MapViz=(function(){
   let theme="light";
   // 2026-11-16 配色方案（用户指令「浅一点 + 可自选」）: 图例区圆点点选,
   // localStorage 持久化; 每方案=色相范围(起点+跨度)×饱和×亮度, 黄金角
-  // 在该范围内展开——「每区划独立色」机制不变, 只换色系。夜晚主题亮度
-  // 自动 -11 保持温润低亮。
+  // 在该范围内展开——「每区划独立色」机制不变, 只换色系。
+  // 2026-11-18 用户指令「都要明亮一点」: 全部方案亮度上调 8-17 个点
+  // （pastel 72→81 / rainbow 64→74 / teal 62→75 / warm 62→74 /
+  // morandi 61→78）, 饱和度小幅上调保住色相区分——高亮度下低饱和会糊成
+  // 一片近白; 灰=无官网/无机构不变（米灰本就比色块亮, 靠低饱和区分）。
+  // 夜晚主题亮度 -17（下限 50）: 比旧 -11 略深, 抵消白昼基准提亮后
+  // 夜间不至于晃眼, 但仍比旧夜间色亮 3-10 个点。
   let schemeId="pastel";
   try{schemeId=localStorage.getItem("govMapScheme")||"pastel"}catch(e){}
   if(!({pastel:1,rainbow:1,teal:1,warm:1,morandi:1})[schemeId])schemeId="pastel";
   const SCHEMES={
-    pastel:{name:"粉彩",start:0,span:360,sat:38,lum:72},
-    rainbow:{name:"彩虹",start:0,span:360,sat:56,lum:64},
-    teal:{name:"青绿",start:150,span:180,sat:50,lum:62},
-    warm:{name:"暖阳",start:340,span:150,sat:56,lum:62},
-    morandi:{name:"莫兰迪",start:0,span:360,sat:22,lum:61},
+    pastel:{name:"粉彩",start:0,span:360,sat:42,lum:81},
+    rainbow:{name:"彩虹",start:0,span:360,sat:60,lum:74},
+    teal:{name:"青绿",start:150,span:180,sat:54,lum:75},
+    warm:{name:"暖阳",start:340,span:150,sat:60,lum:74},
+    morandi:{name:"莫兰迪",start:0,span:360,sat:28,lum:76},
   };
   function schemeVal(){
     const s=SCHEMES[schemeId]||SCHEMES.pastel;
     return theme==="dark"
-      ?{start:s.start,span:s.span,sat:Math.min(100,s.sat+8),lum:s.lum-11}
+      ?{start:s.start,span:s.span,sat:Math.min(100,s.sat+8),lum:Math.max(50,s.lum-17)}
       :{start:s.start,span:s.span,sat:s.sat,lum:s.lum};
   }
   function shade(hex,f){
@@ -413,7 +418,7 @@ window.MapViz=(function(){
         const deg=sc.start+(n>1?(i*137.508)%sc.span:sc.span/2);
         const base=hslToHex(deg,sc.sat,sc.lum);
         const id="mzx"+i;
-        grad(id,shade(base,0.10),shade(base,-0.12));
+        grad(id,shade(base,0.12),shade(base,-0.08));
         shiftDefs.set(names[i][0],id);
       }
     }
