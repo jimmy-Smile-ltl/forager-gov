@@ -4654,13 +4654,13 @@
   "snapshot": ""
  },
  "纪委|石景山区监委": {
-  "u": "http://www.bjsupervision.gov.cn/",
+  "u": "https://jw.bjsjs.gov.cn/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "石景山区监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "https://www.bjsupervision.gov.cn/xxgk/",
@@ -4718,14 +4718,14 @@
   "snapshot": ""
  },
  "人大|通州区人大": {
-  "u": "http://renda.bjtzh.gov.cn/",
+  "u": "http://www.tzrd.gov.cn/tzrd/",
   "locations": [
    "块",
    "条"
   ],
-  "n": "县人大",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "通州区人大",
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": ""
  },
@@ -7039,14 +7039,14 @@
   "snapshot": ""
  },
  "群团|山西省侨联": {
-  "u": "",
+  "u": "https://www.shanxiql.gov.cn/",
   "locations": [
    "块"
   ],
-  "n": "省侨联",
+  "n": "山西省省侨联",
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "note": " | p240 全量核查清除"
  },
@@ -7934,37 +7934,39 @@
  "政协|赤峰市政协": {
   "u": "",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "赤峰市政协",
+  "n": "内蒙古自治区赤峰市政协",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
   "snapshot": "",
   "xxgk": "",
   "xxgk_src": "p173",
-  "note": "p226 迁移自 人大|赤峰市政协 | p240 全量核查清除: 门户根址（赤峰市政府），非政协官网（原 http://www.chifeng.gov.cn/）"
+  "note": "p226 迁移自 人大|赤峰市政协 | p240 全量核查清除: 门户根址（赤峰市政府），非政协官网（原 http://www.chifeng.gov.cn/）",
+  "source": "p241b 复核清除(2026-11-18)"
  },
  "纪委|元宝山区监委": {
-  "u": "https://www.ccdi.gov.cn/",
+  "u": "http://ybsq.cf.nmgjjjc.gov.cn/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "元宝山区监委",
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|元宝山区监委"
  },
  "纪委|翁牛特旗监委": {
-  "u": "https://www.ccdi.gov.cn/",
+  "u": "http://wntq.cf.nmgjjjc.gov.cn/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "翁牛特旗监委",
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|翁牛特旗监委"
@@ -8037,13 +8039,13 @@
   "snapshot": ""
  },
  "纪委|牙克石市监委": {
-  "u": "http://www.ccdi.gov.cn/",
+  "u": "http://yks.hlbe.nmgjjjc.gov.cn/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "牙克石市监委",
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|牙克石市监委"
@@ -8979,16 +8981,17 @@
   "snapshot": ""
  },
  "纪委|龙港区监委": {
-  "u": "http://jw.zjlg.gov.cn/",
+  "u": "http://jjjc.hld.gov.cn/xqdt/lgq/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "龙港区监委",
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
-  "note": "p226 迁移自 人大|龙港区监委"
+  "note": "p226 迁移自 人大|龙港区监委",
+  "source": "p243 跨地区串站清除(2026-11-18)"
  },
  "人大|吉林省人大": {
   "u": "http://www.jlrd.gov.cn/",
@@ -10014,14 +10017,14 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|黑龙江省应急管理厅": {
-  "u": "",
+  "u": "http://yjglt.jiangxi.gov.cn",
   "locations": [
    "块"
   ],
-  "n": "省应急管理厅",
+  "n": "江西省省应急管理厅",
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "xxgk": "http://yjgl.hlj.gov.cn/yjgl/zwgk/zwgk.shtml",
   "xxgk_src": "p173",
@@ -10330,14 +10333,14 @@
   "snapshot": ""
  },
  "群团|黑龙江省侨联": {
-  "u": "",
+  "u": "https://www.hljsql.org.cn/",
   "locations": [
    "块"
   ],
-  "n": "省侨联",
+  "n": "黑龙江省省侨联",
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "note": " | p240 全量核查清除"
  },
@@ -13068,14 +13071,14 @@
   "snapshot": ""
  },
  "纪委|上城区监委": {
-  "u": "",
+  "u": "http://zhejiang.12388.gov.cn/hangzhou/shangcheng/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
+  "n": "上城区监委",
+  "source_level": "L3",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|上城区监委 | p240 全量核查清除"
  },
@@ -13124,14 +13127,14 @@
   "snapshot": ""
  },
  "纪委|泰顺县监委": {
-  "u": "",
+  "u": "http://lz.ts.gov.cn/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "泰顺县监委",
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|泰顺县监委 | p240 全量核查清除"
  },
@@ -13142,10 +13145,11 @@
   ],
   "n": "县监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
-  "note": "p226 迁移自 人大|龙港市监委"
+  "note": "p226 迁移自 人大|龙港市监委",
+  "source": "p243 跨地区串站清除(2026-11-18)"
  },
  "群团|嘉兴市总工会": {
   "u": "http://www.jxzgh.gov.cn/",
@@ -13985,14 +13989,14 @@
   "snapshot": ""
  },
  "纪委|博望区监委": {
-  "u": "",
+  "u": "http://bwq.masdl.gov.cn/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
+  "n": "博望区监委",
+  "source_level": "L1",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "xxgk": "https://www.masbwq.gov.cn/xxgk/",
   "xxgk_src": "p175c",
@@ -15253,13 +15257,13 @@
   "snapshot": ""
  },
  "纪委|宁化县监委": {
-  "u": "http://www.ccdi.gov.cn/",
+  "u": "http://www.smcdi.gov.cn/qxzz/nhxjw/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "宁化县监委",
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|宁化县监委"
@@ -15301,25 +15305,25 @@
   "note": "p226 迁移自 人大|惠安县监委"
  },
  "纪委|晋江市监委": {
-  "u": "http://www.ccdi.gov.cn/",
+  "u": "http://www.jjcdi.gov.cn/index.htm",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "晋江市监委",
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|晋江市监委"
  },
  "纪委|南安市监委": {
-  "u": "http://www.ccdi.gov.cn/",
+  "u": "http://www.nascdi.gov.cn/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "南安市监委",
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|南安市监委"
@@ -16403,13 +16407,13 @@
   "snapshot": ""
  },
  "纪委|临川区监委": {
-  "u": "http://www.fzlz.gov.cn/",
+  "u": "https://jiangxi.12388.gov.cn/fuzhoushi/linchuanqu/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "临川区监委",
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|临川区监委"
@@ -16427,37 +16431,37 @@
   "note": "p226 迁移自 人大|东乡区监委"
  },
  "纪委|南城县监委": {
-  "u": "http://www.fzlz.gov.cn/",
+  "u": "https://jiangxi.12388.gov.cn/fuzhoushi/nanchengxian/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "南城县监委",
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|南城县监委"
  },
  "纪委|黎川县监委": {
-  "u": "http://www.fzlz.gov.cn/",
+  "u": "https://jiangxi.12388.gov.cn/fuzhoushi/lichuanxian/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "黎川县监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|黎川县监委"
  },
  "纪委|崇仁县监委": {
-  "u": "http://www.fzlz.gov.cn/",
+  "u": "https://jiangxi.12388.gov.cn/fuzhoushi/chongrenxian/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "崇仁县监委",
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|崇仁县监委"
@@ -16475,25 +16479,25 @@
   "note": "p226 迁移自 人大|乐安县监委"
  },
  "纪委|宜黄县监委": {
-  "u": "http://www.fzlz.gov.cn/",
+  "u": "https://jiangxi.12388.gov.cn/fuzhoushi/yihuangxian/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "宜黄县监委",
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|宜黄县监委"
  },
  "纪委|金溪县监委": {
-  "u": "http://www.fzlz.gov.cn/",
+  "u": "https://jiangxi.12388.gov.cn/fuzhoushi/jinxixian/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "金溪县监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|金溪县监委"
@@ -17316,13 +17320,13 @@
   "snapshot": ""
  },
  "纪委|梁山县监委": {
-  "u": "http://www.ccdi.gov.cn/",
+  "u": "https://shandong.12388.gov.cn/jining/liangshan/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "梁山县监委",
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|梁山县监委"
@@ -17474,26 +17478,26 @@
   "snapshot": ""
  },
  "纪委|宁津县监委": {
-  "u": "",
+  "u": "http://www.njlzw.gov.cn/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "宁津县监委",
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|宁津县监委 | p240 全量核查清除"
  },
  "纪委|夏津县监委": {
-  "u": "",
+  "u": "http://jjw.xiajin.gov.cn/n35849839/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "夏津县监委",
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|夏津县监委 | p240 全量核查清除"
  },
@@ -17594,13 +17598,13 @@
   "note": "p226 迁移自 人大|定陶区监委"
  },
  "纪委|曹县监委": {
-  "u": "http://www.hzsjwjcj.gov.cn/",
+  "u": "https://shandong.12388.gov.cn/heze/caoxian/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "曹县监委",
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://www.hzsjwjcj.gov.cn/xxgk2/",
@@ -17608,13 +17612,13 @@
   "note": "p226 迁移自 人大|曹县监委"
  },
  "纪委|单县监委": {
-  "u": "http://www.hzsjwjcj.gov.cn/",
+  "u": "http://shandong.12388.gov.cn/heze/shanxian/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "单县监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://www.hzsjwjcj.gov.cn/xxgk2/",
@@ -17622,13 +17626,13 @@
   "note": "p226 迁移自 人大|单县监委"
  },
  "纪委|巨野县监委": {
-  "u": "http://www.hzsjwjcj.gov.cn/",
+  "u": "http://shandong.12388.gov.cn/heze/juye/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "巨野县监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://www.hzsjwjcj.gov.cn/xxgk2/",
@@ -17636,13 +17640,13 @@
   "note": "p226 迁移自 人大|巨野县监委"
  },
  "纪委|郓城县监委": {
-  "u": "http://www.hzsjwjcj.gov.cn/",
+  "u": "https://shandong.12388.gov.cn/heze/yuncheng/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "郓城县监委",
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://www.hzsjwjcj.gov.cn/xxgk2/",
@@ -17650,13 +17654,13 @@
   "note": "p226 迁移自 人大|郓城县监委"
  },
  "纪委|鄄城县监委": {
-  "u": "http://www.hzsjwjcj.gov.cn/",
+  "u": "http://shandong.12388.gov.cn/heze/juancheng/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "鄄城县监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://www.hzsjwjcj.gov.cn/xxgk2/",
@@ -17664,18 +17668,19 @@
   "note": "p226 迁移自 人大|鄄城县监委"
  },
  "纪委|东明县监委": {
-  "u": "http://www.hzsjwjcj.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "东明县监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-18",
+  "status": "cleared",
   "snapshot": "",
   "xxgk": "http://www.hzsjwjcj.gov.cn/xxgk2/",
   "xxgk_src": "p175c",
-  "note": "p226 迁移自 人大|东明县监委"
+  "note": "p226 迁移自 人大|东明县监委",
+  "source": "p241b 复核清除(2026-11-18)"
  },
  "人大|河南省人大": {
   "u": "http://www.henanrd.gov.cn/",
@@ -18450,14 +18455,14 @@
   "snapshot": ""
  },
  "纪委|解放区监委": {
-  "u": "",
+  "u": "http://henan.12388.gov.cn/jiaozuo/jiefangqu/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "解放区监委",
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|解放区监委 | p240 全量核查清除"
  },
@@ -18528,14 +18533,14 @@
   "snapshot": ""
  },
  "纪委|方城县监委": {
-  "u": "",
+  "u": "https://henan.12388.gov.cn/nanyang/fangchengxian/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
+  "n": "方城县监委",
+  "source_level": "L3",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|方城县监委 | p240b 文章页处置: 根页亦不合格（mismatch: 机构类型冲突: 期望监委 标题为政府）"
  },
@@ -19162,13 +19167,13 @@
   "snapshot": ""
  },
  "纪委|石首市监委": {
-  "u": "http://www.ccdi.gov.cn/",
+  "u": "https://hubei.12388.gov.cn/jingzhoushi/shishoushi/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "石首市监委",
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|石首市监委"
@@ -19230,13 +19235,13 @@
   "snapshot": ""
  },
  "纪委|利川市监委": {
-  "u": "http://www.eslzw.gov.cn/",
+  "u": "http://www.lichuan.gov.cn/xxgk/zdlyxxg/czyjsx/zglcsjl/?jcldgdnhfbcvxbmp?tkuotmwsrpclgkuv",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "利川市监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://www.eslzw.gov.cn/xxgk/",
@@ -19244,13 +19249,13 @@
   "note": "p226 迁移自 人大|利川市监委"
  },
  "纪委|建始县监委": {
-  "u": "http://www.eslzw.gov.cn/",
+  "u": "https://hubei.12388.gov.cn/enshizhou/jianshixian/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "建始县监委",
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://www.eslzw.gov.cn/xxgk/",
@@ -19258,69 +19263,73 @@
   "note": "p226 迁移自 人大|建始县监委"
  },
  "纪委|巴东县监委": {
-  "u": "http://www.eslzw.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "县监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-18",
+  "status": "cleared",
   "snapshot": "",
   "xxgk": "http://www.eslzw.gov.cn/xxgk/",
   "xxgk_src": "p175c",
-  "note": "p226 迁移自 人大|巴东县监委"
+  "note": "p226 迁移自 人大|巴东县监委",
+  "source": "p243 跨地区串站清除(2026-11-18)"
  },
  "纪委|宣恩县监委": {
-  "u": "http://www.eslzw.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "县监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-18",
+  "status": "cleared",
   "snapshot": "",
   "xxgk": "http://www.eslzw.gov.cn/xxgk/",
   "xxgk_src": "p175c",
-  "note": "p226 迁移自 人大|宣恩县监委"
+  "note": "p226 迁移自 人大|宣恩县监委",
+  "source": "p243 跨地区串站清除(2026-11-18)"
  },
  "纪委|咸丰县监委": {
-  "u": "http://www.eslzw.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "县监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-18",
+  "status": "cleared",
   "snapshot": "",
   "xxgk": "http://www.eslzw.gov.cn/xxgk/",
   "xxgk_src": "p175c",
-  "note": "p226 迁移自 人大|咸丰县监委"
+  "note": "p226 迁移自 人大|咸丰县监委",
+  "source": "p243 跨地区串站清除(2026-11-18)"
  },
  "纪委|来凤县监委": {
-  "u": "http://www.eslzw.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "来凤县监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-18",
+  "status": "cleared",
   "snapshot": "",
   "xxgk": "http://www.eslzw.gov.cn/xxgk/",
   "xxgk_src": "p175c",
-  "note": "p226 迁移自 人大|来凤县监委"
+  "note": "p226 迁移自 人大|来凤县监委",
+  "source": "p241b 复核清除(2026-11-18)"
  },
  "纪委|鹤峰县监委": {
-  "u": "http://www.eslzw.gov.cn/",
+  "u": "https://hubei.12388.gov.cn/enshizhou/hefengxian/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "鹤峰县监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://www.eslzw.gov.cn/xxgk/",
@@ -20709,14 +20718,14 @@
   "note": "p226 迁移自 人大|韶关市监委"
  },
  "纪委|始兴县监委": {
-  "u": "",
+  "u": "https://guangdong.12388.gov.cn/shaoguanshi/shixingxian/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
+  "n": "始兴县监委",
+  "source_level": "L3",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|始兴县监委 | p240 全量核查清除"
  },
@@ -21960,13 +21969,13 @@
   "snapshot": ""
  },
  "纪委|鱼峰区监委": {
-  "u": "http://jcw.liuzhou.gov.cn",
+  "u": "http://jcw.liuzhou.gov.cn/yfqjw",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "鱼峰区监委",
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://jcw.liuzhou.gov.cn/sjwxxgk/",
@@ -21974,13 +21983,13 @@
   "note": "p226 迁移自 人大|鱼峰区监委"
  },
  "纪委|柳南区监委": {
-  "u": "http://jcw.liuzhou.gov.cn",
+  "u": "http://jcw.liuzhou.gov.cn/lnqjw/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "柳南区监委",
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://jcw.liuzhou.gov.cn/sjwxxgk/",
@@ -21988,13 +21997,13 @@
   "note": "p226 迁移自 人大|柳南区监委"
  },
  "纪委|柳北区监委": {
-  "u": "http://jcw.liuzhou.gov.cn",
+  "u": "http://jcw.liuzhou.gov.cn/lbqjw",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "柳北区监委",
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://jcw.liuzhou.gov.cn/sjwxxgk/",
@@ -22016,13 +22025,13 @@
   "note": "p226 迁移自 人大|柳江区监委"
  },
  "纪委|柳城县监委": {
-  "u": "http://jcw.liuzhou.gov.cn",
+  "u": "http://jcw.liuzhou.gov.cn/lcxjw",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "柳城县监委",
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://jcw.liuzhou.gov.cn/sjwxxgk/",
@@ -22030,13 +22039,13 @@
   "note": "p226 迁移自 人大|柳城县监委"
  },
  "纪委|鹿寨县监委": {
-  "u": "http://jcw.liuzhou.gov.cn",
+  "u": "http://jcw.liuzhou.gov.cn/lzxjw",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "鹿寨县监委",
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://jcw.liuzhou.gov.cn/sjwxxgk/",
@@ -22044,13 +22053,13 @@
   "note": "p226 迁移自 人大|鹿寨县监委"
  },
  "纪委|融安县监委": {
-  "u": "http://jcw.liuzhou.gov.cn",
+  "u": "http://jcw.liuzhou.gov.cn/raxjw",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "融安县监委",
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://jcw.liuzhou.gov.cn/sjwxxgk/",
@@ -22058,13 +22067,13 @@
   "note": "p226 迁移自 人大|融安县监委"
  },
  "纪委|融水苗族自治县监委": {
-  "u": "http://jcw.liuzhou.gov.cn",
+  "u": "http://jcw.liuzhou.gov.cn/rsxjw/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "融水苗族自治县监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://jcw.liuzhou.gov.cn/sjwxxgk/",
@@ -22072,13 +22081,13 @@
   "note": "p226 迁移自 人大|融水苗族自治县监委"
  },
  "纪委|三江侗族自治县监委": {
-  "u": "http://jcw.liuzhou.gov.cn",
+  "u": "http://jcw.liuzhou.gov.cn/sjxjw/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "三江侗族自治县监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://jcw.liuzhou.gov.cn/sjwxxgk/",
@@ -22164,14 +22173,14 @@
   "snapshot": ""
  },
  "纪委|覃塘区监委": {
-  "u": "",
+  "u": "http://guangxi.12388.gov.cn/guigangshi/qintangqu/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
+  "n": "覃塘区监委",
+  "source_level": "L3",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|覃塘区监委 | p240 全量核查清除"
  },
@@ -23936,14 +23945,14 @@
   "note": " | p240 全量核查清除"
  },
  "纪委|铜梁区监委": {
-  "u": "",
+  "u": "https://chongqing.12388.gov.cn/tongliangqu/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "铜梁区监委",
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|铜梁区监委 | p240 全量核查清除"
  },
@@ -24056,14 +24065,14 @@
   "snapshot": ""
  },
  "纪委|云阳县监委": {
-  "u": "",
+  "u": "https://chongqing.12388.gov.cn/yunyangxian/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "云阳县监委",
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|云阳县监委 | p240 全量核查清除"
  },
@@ -24738,14 +24747,14 @@
   "note": "p226 迁移自 人大|青羊区监委"
  },
  "纪委|金牛区监委": {
-  "u": "",
+  "u": "https://sichuan.12388.gov.cn/chengdushi/jingniuqu/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "金牛区监委",
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "xxgk": "http://www.scjc.gov.cn/scjc/xxgk/xxgk.shtml",
   "xxgk_src": "p175c",
@@ -24834,13 +24843,13 @@
   "note": "p226 迁移自 人大|蒲江县监委"
  },
  "纪委|彭州市监委": {
-  "u": "http://www.ccdi.gov.cn/",
+  "u": "https://sichuan.12388.gov.cn/chengdushi/pengzhoushi/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "彭州市监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|彭州市监委"
@@ -25195,16 +25204,17 @@
   "snapshot": ""
  },
  "纪委|金川县监委": {
-  "u": "https://www.ccdi.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "金川县监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-18",
+  "status": "cleared",
   "snapshot": "",
-  "note": "p226 迁移自 人大|金川县监委"
+  "note": "p226 迁移自 人大|金川县监委",
+  "source": "p243 跨地区串站清除(2026-11-18) | p241 主机归属复核清除(2026-11-18)"
  },
  "人大|甘孜藏族自治州人大": {
   "u": "http://www.gzzrd.gov.cn/#/index",
@@ -25253,13 +25263,13 @@
   "note": "p226 迁移自 人大|会东县监委"
  },
  "纪委|甘洛县监委": {
-  "u": "https://www.ccdi.gov.cn/",
+  "u": "https://sichuan.12388.gov.cn/liangshanzhou/ganluoxian",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "甘洛县监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|甘洛县监委"
@@ -26119,14 +26129,14 @@
   "snapshot": ""
  },
  "纪委|纳雍县监委": {
-  "u": "",
+  "u": "https://ny.bjsjw.gov.cn/n457/index.html",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "纳雍县监委",
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "xxgk": "https://www.gzdis.gov.cn/xxgk/",
   "xxgk_src": "p175c",
@@ -26953,28 +26963,28 @@
   "note": "p226 迁移自 人大|五华区监委"
  },
  "纪委|呈贡区监委": {
-  "u": "",
+  "u": "http://jw.km.gov.cn/cgq/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
+  "n": "呈贡区监委",
+  "source_level": "L1",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "xxgk": "http://jw.km.gov.cn/kms/",
   "xxgk_src": "p175c",
   "note": "p226 迁移自 人大|呈贡区监委 | p240 全量核查清除"
  },
  "纪委|富民县监委": {
-  "u": "",
+  "u": "http://jw.km.gov.cn/fmx/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
+  "n": "富民县监委",
+  "source_level": "L1",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "xxgk": "http://jw.km.gov.cn/kms/",
   "xxgk_src": "p175c",
@@ -29146,13 +29156,13 @@
   "snapshot": ""
  },
  "纪委|金川区监委": {
-  "u": "https://www.ccdi.gov.cn/",
+  "u": "http://www.jinchuanjcjjjc.gov.cn/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "金川区监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|金川区监委"
@@ -29180,14 +29190,14 @@
   "snapshot": ""
  },
  "纪委|张家川回族自治县监委": {
-  "u": "",
+  "u": "http://gansu.12388.gov.cn/tianshuishi/zhangjiaxian",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "张家川回族自治县监委",
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|张家川回族自治县监委 | p240 全量核查清除"
  },
@@ -30438,37 +30448,37 @@
   "note": "p226 迁移自 人大|贺兰县监委"
  },
  "纪委|红寺堡区监委": {
-  "u": "",
+  "u": "http://www.hspqjjjc.gov.cn/gzzc/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "红寺堡区监委",
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|红寺堡区监委 | p240 全量核查清除"
  },
  "纪委|同心县监委": {
-  "u": "",
+  "u": "http://www.txxjjw.gov.cn/?cate_type=all",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "同心县监委",
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|同心县监委 | p240 全量核查清除"
  },
  "纪委|西吉县监委": {
-  "u": "http://www.nxjjjc.gov.cn/",
+  "u": "http://xjxjjjc.gov.cn/xjjwxxgk/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "西吉县监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|西吉县监委"
@@ -30815,25 +30825,25 @@
   "xxgk_src": "p173"
  },
  "纪委|洛浦县监委": {
-  "u": "https://www.ccdi.gov.cn/",
+  "u": "https://www.htlz.gov.cn/luopx77/index.jhtml",
   "locations": [
    "块"
   ],
-  "n": "县监委",
+  "n": "洛浦县监委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|洛浦县监委"
  },
  "纪委|民丰县监委": {
-  "u": "https://www.ccdi.gov.cn/",
+  "u": "https://xinjiang.12388.gov.cn/hetian/minfengxian/",
   "locations": [
    "块"
   ],
-  "n": "县监委",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "n": "民丰县监委",
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|民丰县监委"
@@ -31547,7 +31557,7 @@
   "snapshot": ""
  },
  "人大|杨陵区人大": {
-  "u": "",
+  "u": "http://qrd.ylq.gov.cn/",
   "locations": [
    "块",
    "条"
@@ -31555,7 +31565,7 @@
   "n": "杨陵区人大",
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "note": " | p240 全量核查清除"
  },
@@ -31697,14 +31707,14 @@
   "note": "p226 迁移自 人大|房山区政协"
  },
  "政协|通州区政协": {
-  "u": "http://zhengxie.bjtzh.gov.cn/",
+  "u": "http://tzzx.tongzhou.gov.cn/tzzx/",
   "locations": [
    "块",
    "条"
   ],
   "n": "通州区政协",
-  "source_level": "L2",
-  "verified_at": "2026-11-11",
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|通州区政协"
@@ -35932,64 +35942,69 @@
   "note": "p226 迁移自 法院|阳高县人民法院"
  },
  "法院|阳泉城区法院": {
-  "u": "https:https://yqcqfy.shanxify.gov.cn",
+  "u": "https://yqcqfy.shanxify.gov.cn",
   "locations": [
    "块",
    "条"
   ],
   "n": "阳泉城区法院",
   "source_level": "L1",
-  "verified_at": "2026-11-06",
-  "status": "dead",
-  "snapshot": ""
+  "verified_at": "2026-11-18",
+  "status": "ok",
+  "snapshot": "",
+  "source": "p244 重复协议头修复(2026-11-18)"
  },
  "法院|阳泉矿区法院": {
-  "u": "https:https://yqkqfy.shanxify.gov.cn",
+  "u": "https://yqkqfy.shanxify.gov.cn",
   "locations": [
    "块",
    "条"
   ],
   "n": "阳泉矿区法院",
   "source_level": "L1",
-  "verified_at": "2026-11-06",
-  "status": "dead",
-  "snapshot": ""
+  "verified_at": "2026-11-18",
+  "status": "ok",
+  "snapshot": "",
+  "source": "p244 重复协议头修复(2026-11-18)"
  },
  "法院|阳泉市郊区法院": {
-  "u": "https:https://yqjqfy.shanxify.gov.cn",
+  "u": "https://yqjqfy.shanxify.gov.cn",
   "locations": [
    "块",
    "条"
   ],
   "n": "阳泉市郊区法院",
   "source_level": "L1",
-  "verified_at": "2026-11-06",
-  "status": "dead",
-  "snapshot": ""
+  "verified_at": "2026-11-18",
+  "status": "ok",
+  "snapshot": "",
+  "source": "p244 重复协议头修复(2026-11-18)"
  },
  "法院|平定县法院": {
-  "u": "https:https://yqpdfy.shanxify.gov.cn",
+  "u": "https://yqpdfy.shanxify.gov.cn",
   "locations": [
    "块",
    "条"
   ],
   "n": "平定县法院",
   "source_level": "L1",
-  "verified_at": "2026-11-06",
-  "status": "dead",
-  "snapshot": ""
+  "verified_at": "2026-11-18",
+  "status": "ok",
+  "snapshot": "",
+  "source": "p244 重复协议头修复(2026-11-18)"
  },
  "法院|盂县法院": {
-  "u": "https:https://yqyxfy.shanxify.gov.cn",
+  "u": "https://yqyxfy.shanxify.gov.cn",
   "locations": [
    "块",
    "条"
   ],
   "n": "盂县法院",
   "source_level": "L1",
-  "verified_at": "2026-11-06",
-  "status": "dead",
-  "snapshot": ""
+  "verified_at": "2026-11-18",
+  "status": "ok",
+  "snapshot": "",
+  "source": "p244 重复协议头修复(2026-11-18)"
  },
  "县级人民法院|长治市潞": {
   "u": "https://czlzfy.shanxify.gov.cn",
@@ -65698,15 +65713,15 @@
   "note": "p226 迁移自 人大|龙岗区人民检察院"
  },
  "检察|龙华区人民检察院": {
-  "u": "",
+  "u": "https://www.hi.jcy.gov.cn/longhua.html",
   "locations": [
    "块",
    "条"
   ],
-  "n": "龙华区人民检察院",
+  "n": "海南省龙华区人民检察院",
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "note": "p226 迁移自 人大|龙华区人民检察院 | p240 全量核查清除"
  },
@@ -66162,19 +66177,20 @@
   "note": "p226 迁移自 人大|荔浦市人民检察院"
  },
  "检察|海城区人民检察院": {
-  "u": "http://www.haicheng.jcy.gov.cn/",
+  "u": "http://www.beihaihc.jcy.gov.cn/",
   "locations": [
    "块",
    "条"
   ],
-  "n": "海城区人民检察院",
+  "n": "广西壮族自治区海城区人民检察院",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://www.haicheng.jcy.gov.cn/jwgk/",
   "xxgk_src": "p175h",
-  "note": "p226 迁移自 人大|海城区人民检察院"
+  "note": "p226 迁移自 人大|海城区人民检察院",
+  "source": "p243 跨地区串站清除(2026-11-18)"
  },
  "检察|港口区人民检察院": {
   "u": "http://www.fangchengganggk.jcy.gov.cn/",
@@ -123779,13 +123795,13 @@
   "xxgk_src": ""
  },
  "县级人民法院|河东区": {
-  "u": "https://fy.tjhdcourt.gov.cn",
+  "u": "http://lyhdqfy.sdcourt.gov.cn",
   "n": "河东区",
   "locations": [
    "块"
   ],
   "source_level": "L1",
-  "verified_at": "2026-11-12",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "",
@@ -124650,56 +124666,60 @@
   "xxgk_src": ""
  },
  "县级人民法院|矿区": {
-  "u": "https:https://yqkqfy.shanxify.gov.cn",
+  "u": "https://yqkqfy.shanxify.gov.cn",
   "n": "矿区",
   "locations": [
    "块"
   ],
   "source_level": "L1",
-  "verified_at": "2026-11-12",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p244 重复协议头修复(2026-11-18)"
  },
  "县级人民法院|郊区": {
-  "u": "https:https://yqjqfy.shanxify.gov.cn",
+  "u": "https://yqjqfy.shanxify.gov.cn",
   "n": "郊区",
   "locations": [
    "块"
   ],
   "source_level": "L1",
-  "verified_at": "2026-11-12",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p244 重复协议头修复(2026-11-18)"
  },
  "县级人民法院|平定县": {
-  "u": "https:https://yqpdfy.shanxify.gov.cn",
+  "u": "https://yqpdfy.shanxify.gov.cn",
   "n": "平定县",
   "locations": [
    "块"
   ],
   "source_level": "L1",
-  "verified_at": "2026-11-12",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p244 重复协议头修复(2026-11-18)"
  },
  "县级人民法院|盂县": {
-  "u": "https:https://yqyxfy.shanxify.gov.cn",
+  "u": "https://yqyxfy.shanxify.gov.cn",
   "n": "盂县",
   "locations": [
    "块"
   ],
   "source_level": "L1",
-  "verified_at": "2026-11-12",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p244 重复协议头修复(2026-11-18)"
  },
  "县级人民法院|潞州区": {
   "u": "https://czlzfy.shanxify.gov.cn",
@@ -124767,13 +124787,13 @@
   "xxgk_src": ""
  },
  "县级人民法院|青山区": {
-  "u": "http://btqsfy.nmgfy.gov.cn/index.shtml",
+  "u": "http://qsqfy.hbfy.gov.cn",
   "n": "青山区",
   "locations": [
    "块"
   ],
   "source_level": "L1",
-  "verified_at": "2026-11-12",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "",
@@ -126015,13 +126035,13 @@
   "xxgk_src": ""
  },
  "县级人民法院|西湖区": {
-  "u": "http://court.hzxh.gov.cn/",
+  "u": "https://ncxhqfy.jxfy.gov.cn/index.shtml",
   "n": "西湖区",
   "locations": [
    "块"
   ],
   "source_level": "L1",
-  "verified_at": "2026-11-12",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "",
@@ -135873,13 +135893,13 @@
   "xxgk_src": ""
  },
  "市级政府部门|湖南省统计局": {
-  "u": "http://www.stats.gov.cn/",
-  "n": "统计局",
+  "u": "http://tjj.yiyang.gov.cn/",
+  "n": "湖南省统计局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
+  "verified_at": "2026-11-18",
   "status": "ok",
   "snapshot": "",
   "xxgk": "",
@@ -135940,19 +135960,6 @@
  "市级政府部门|湖南省国有资产监督管理委员会": {
   "u": "http://www.sasac.gov.cn/",
   "n": "国有资产监督管理委员会",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": ""
- },
- "市级政府部门|湖南省宁远县人民政府网站": {
-  "u": "http://www.nyx.gov.cn/",
-  "n": "宁远县人民政府网站",
   "locations": [
    "块"
   ],
@@ -140888,7 +140895,7 @@
  },
  "市级政府部门|广西壮族自治区信访局": {
   "u": "",
-  "n": "信访局",
+  "n": "新疆维吾尔自治区信访局",
   "locations": [
    "块"
   ],
@@ -140898,7 +140905,8 @@
   "snapshot": "",
   "xxgk": "",
   "xxgk_src": "",
-  "note": " | p240 全量核查清除"
+  "note": " | p240 全量核查清除",
+  "source": "p241b 复核清除(2026-11-18)"
  },
  "市级政府部门|广西壮族自治区公安部": {
   "u": "http://www.mps.gov.cn",
@@ -145650,20 +145658,6 @@
   "xxgk": "",
   "xxgk_src": ""
  },
- "市级政府部门|天津市2026年全国两会": {
-  "u": "",
-  "n": "2026年全国两会",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "cleared",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": "",
-  "note": " | p240 全量核查清除"
- },
  "市级政府部门|天津市中国气象局": {
   "u": "https://www.cma.gov.cn/",
   "n": "中国气象局",
@@ -147515,19 +147509,6 @@
  "市级政府部门|河北省市财政局": {
   "u": "https://czj.lf.gov.cn",
   "n": "市财政局",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": ""
- },
- "市级政府部门|河北省中联办": {
-  "u": "http://www.locpg.gov.cn/",
-  "n": "中联办",
   "locations": [
    "块"
   ],
@@ -153085,20 +153066,6 @@
   "xxgk": "",
   "xxgk_src": ""
  },
- "市级政府部门|辽宁省全国两会": {
-  "u": "",
-  "n": "全国两会",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "cleared",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": "",
-  "note": " | p240 全量核查清除"
- },
  "市级政府部门|辽宁省本溪市人力资源和社会保障局": {
   "u": "http://rsj.benxi.gov.cn",
   "n": "本溪市人力资源和社会保障局",
@@ -155734,14 +155701,14 @@
   "xxgk_src": ""
  },
  "市级政府部门|吉林省信访局": {
-  "u": "",
-  "n": "信访局",
+  "u": "http://xfj.nmg.gov.cn/",
+  "n": "内蒙古自治区信访局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "xxgk": "",
   "xxgk_src": "",
@@ -155930,14 +155897,14 @@
   "xxgk_src": ""
  },
  "市级政府部门|吉林省档案局": {
-  "u": "",
-  "n": "档案局",
+  "u": "http://daj.anshun.gov.cn/",
+  "n": "贵州省档案局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "xxgk": "",
   "xxgk_src": "",
@@ -157094,14 +157061,14 @@
   "xxgk_src": ""
  },
  "市级政府部门|黑龙江省信访局": {
-  "u": "",
-  "n": "信访局",
+  "u": "http://bs.gxxf.gov.cn/",
+  "n": "广西壮族自治区信访局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "xxgk": "",
   "xxgk_src": "",
@@ -166902,20 +166869,6 @@
   "xxgk": "",
   "xxgk_src": ""
  },
- "市级政府部门|福建省2026年全国两会": {
-  "u": "",
-  "n": "2026年全国两会",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "cleared",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": "",
-  "note": " | p240 全量核查清除"
- },
  "市级政府部门|福建省交通运输局": {
   "u": "http://jtysj.putian.gov.cn/",
   "n": "交通运输局",
@@ -171152,20 +171105,6 @@
   "snapshot": "",
   "xxgk": "",
   "xxgk_src": ""
- },
- "市级政府部门|山东省建设部": {
-  "u": "",
-  "n": "建设部",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "cleared",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": "",
-  "note": " | p240 全量核查清除"
  },
  "检察|山东省最高人民检察院": {
   "u": "http://www.spp.gov.cn/",
@@ -179095,19 +179034,6 @@
   "xxgk": "",
   "xxgk_src": ""
  },
- "市级政府部门|四川省四川省人民政府网站": {
-  "u": "http://www.sc.gov.cn",
-  "n": "四川省人民政府网站",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": ""
- },
  "市级政府部门|四川省高新区管委会": {
   "u": "http://www.zggx.gov.cn/",
   "n": "高新区管委会",
@@ -179120,20 +179046,6 @@
   "snapshot": "",
   "xxgk": "",
   "xxgk_src": ""
- },
- "市级政府部门|四川省2026年全国两会": {
-  "u": "",
-  "n": "2026年全国两会",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "cleared",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": "",
-  "note": " | p240 全量核查清除"
  },
  "市级政府部门|四川省国家钒钛高新区管委会": {
   "u": "http://ft.panzhihua.gov.cn/",
@@ -186285,7 +186197,7 @@
  },
  "市级政府部门|贵州省信访局": {
   "u": "",
-  "n": "信访局",
+  "n": "湖南省信访局",
   "locations": [
    "块"
   ],
@@ -186295,7 +186207,8 @@
   "snapshot": "",
   "xxgk": "",
   "xxgk_src": "",
-  "note": " | p240 全量核查清除"
+  "note": " | p240 全量核查清除",
+  "source": "p241b 复核清除(2026-11-18)"
  },
  "市级政府部门|贵州省卫生健康委": {
   "u": "http://www.nhc.gov.cn/",
@@ -188174,20 +188087,6 @@
   "xxgk": "",
   "xxgk_src": "",
   "note": "p226 迁移自 市级政府部门|云南省保山市纪委市监委"
- },
- "市级政府部门|云南省四川省人民政府网站": {
-  "u": "",
-  "n": "四川省人民政府网站",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "cleared",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": "",
-  "note": " | p240 全量核查清除"
  },
  "市级政府部门|云南省丽江市人力资源和社会保障局": {
   "u": "http://ljhrss.lijiang.gov.cn/",
@@ -190638,14 +190537,14 @@
   "xxgk_src": ""
  },
  "市级政府部门|西藏自治区信访局": {
-  "u": "",
-  "n": "信访局",
+  "u": "http://xfj.anshun.gov.cn/",
+  "n": "贵州省信访局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "xxgk": "",
   "xxgk_src": "",
@@ -194052,14 +193951,14 @@
   "xxgk_src": ""
  },
  "市级政府部门|甘肃省地震局": {
-  "u": "",
-  "n": "地震局",
+  "u": "http://dzj.jlsy.gov.cn/",
+  "n": "吉林省地震局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "xxgk": "",
   "xxgk_src": "",
@@ -196605,14 +196504,14 @@
   "xxgk_src": ""
  },
  "市级政府部门|青海省信访局": {
-  "u": "",
-  "n": "信访局",
+  "u": "http://gg.gxxf.gov.cn/",
+  "n": "广西壮族自治区信访局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
   "verified_at": "2026-11-18",
-  "status": "cleared",
+  "status": "ok",
   "snapshot": "",
   "xxgk": "",
   "xxgk_src": "",
@@ -204043,15 +203942,17 @@
   "snapshot": ""
  },
  "检察|阿勒泰地区人民检察院": {
-  "u": "http://www.xjaletai.jcy.gov.cn/",
-  "n": "阿勒泰地区人民检察院",
+  "u": "http://www.aletai.jcy.gov.cn/",
+  "n": "新疆维吾尔自治区阿勒泰地区人民检察院",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
+  "verified_at": "2026-11-18",
   "status": "ok",
-  "snapshot": ""
+  "snapshot": "",
+  "source": "p243 跨地区串站清除(2026-11-18)"
  },
  "纪委|石家庄市监委": {
   "u": "https://www.zgsjzsjw.gov.cn/",
@@ -224907,14 +224808,14 @@
   "snapshot": ""
  },
  "县级人民检察院|梨树县": {
-  "u": "https://jxlsq.hljjcy.gov.cn/",
+  "u": "http://www.jllishu.jcy.gov.cn/",
   "status": "ok",
   "n": "梨树县",
   "locations": [
    "块"
   ],
   "source_level": "L3",
-  "verified_at": "2026-11-17",
+  "verified_at": "2026-11-18",
   "snapshot": ""
  },
  "县级人民检察院|龙山区": {
@@ -240060,13 +239961,13 @@
   "note": "p228/p238 审计清除：: 文章/新闻页路径非机构官网，清除（原 https://www.ximeng.gov.cn/zfxxgk1/fdzdg"
  },
  "人大|云县人大": {
-  "u": "",
-  "status": "cleared",
+  "u": "http://www.lcsrd.gov.cn/xord/yx/",
+  "status": "ok",
   "n": "云县人大",
   "locations": [
    "块"
   ],
-  "source_level": "L3",
+  "source_level": "L1",
   "verified_at": "2026-11-18",
   "snapshot": "",
   "note": " | p240 全量核查清除"
@@ -243726,8 +243627,8 @@
   "snapshot": ""
  },
  "政协|大英县政协": {
-  "u": "",
-  "status": "cleared",
+  "u": "http://dyx.snzx.gov.cn/",
+  "status": "ok",
   "n": "大英县政协",
   "locations": [
    "块"
@@ -272652,13 +272553,13 @@
   "snapshot": ""
  },
  "人大|东区人大": {
-  "u": "",
-  "status": "cleared",
+  "u": "http://www.scdongqu.gov.cn/wlwz/mydc/rdjy/index.shtml",
+  "status": "ok",
   "n": "东区人大",
   "locations": [
    "块"
   ],
-  "source_level": "L3",
+  "source_level": "L2",
   "verified_at": "2026-11-18",
   "snapshot": "",
   "note": " | p240 全量核查清除"
@@ -280545,12 +280446,12 @@
   "note": "p239 补登（沿用树内 URL）"
  },
  "县级人民法院|山西省郊区": {
-  "u": "https:https://yqjqfy.shanxify.gov.cn",
+  "u": "https://yqjqfy.shanxify.gov.cn",
   "n": "山西省郊区",
   "status": "ok",
   "source_level": "L2",
-  "source": "来源：法院系统条系统同源回填（p196）",
-  "verified_at": "",
+  "source": "来源：法院系统条系统同源回填（p196） | p244 重复协议头修复(2026-11-18)",
+  "verified_at": "2026-11-18",
   "locations": [
    "块"
   ],
@@ -284328,12 +284229,12 @@
   "note": "p239 补登（沿用树内 URL）"
  },
  "县级人民检察院|中山区": {
-  "u": "https://www.zhongshan.jcy.gov.cn/",
+  "u": "http://www.dalianzs.jcy.gov.cn/",
   "n": "中山区",
   "status": "ok",
   "source_level": "L1",
   "source": "p175c 第二轮官网首页真实提取",
-  "verified_at": "",
+  "verified_at": "2026-11-18",
   "locations": [
    "块"
   ],
@@ -287201,12 +287102,12 @@
   "note": "p239 补登（沿用树内 URL）"
  },
  "县级人民检察院|甘南县": {
-  "u": "http://www.gannan.jcy.gov.cn/",
+  "u": "https://qqhrgn.hljjcy.gov.cn/",
   "n": "甘南县",
   "status": "ok",
-  "source_level": "L2",
+  "source_level": "L1",
   "source": "",
-  "verified_at": "",
+  "verified_at": "2026-11-18",
   "locations": [
    "块"
   ],
@@ -287877,12 +287778,12 @@
   "note": "p239 补登（沿用树内 URL）"
  },
  "县级人民检察院|大同区": {
-  "u": "https://www.datong.jcy.gov.cn/",
+  "u": "https://dqdtq.hljjcy.gov.cn/",
   "n": "大同区",
   "status": "ok",
   "source_level": "L1",
   "source": "p175c 第二轮官网首页真实提取",
-  "verified_at": "",
+  "verified_at": "2026-11-18",
   "locations": [
    "块"
   ],
@@ -290048,12 +289949,12 @@
   "note": "p239 补登（沿用树内 URL）"
  },
  "人大|江苏省通州区人大": {
-  "u": "http://renda.bjtzh.gov.cn/",
+  "u": "http://www.tzrd.gov.cn/tzrd/",
   "n": "江苏省通州区人大",
   "status": "ok",
-  "source_level": "L2",
+  "source_level": "L1",
   "source": "",
-  "verified_at": "",
+  "verified_at": "2026-11-18",
   "locations": [
    "块"
   ],
@@ -290061,12 +289962,12 @@
   "note": "p239 补登（沿用树内 URL）"
  },
  "政协|江苏省通州区政协": {
-  "u": "http://zhengxie.bjtzh.gov.cn/",
+  "u": "http://tzzx.tongzhou.gov.cn/tzzx/",
   "n": "江苏省通州区政协",
   "status": "ok",
-  "source_level": "L2",
+  "source_level": "L1",
   "source": "",
-  "verified_at": "",
+  "verified_at": "2026-11-18",
   "locations": [
    "块"
   ],
@@ -295482,12 +295383,12 @@
   "note": "p239 补登（沿用树内 URL）"
  },
  "县级人民法院|江西省西湖区": {
-  "u": "http://court.hzxh.gov.cn/",
+  "u": "https://ncxhqfy.jxfy.gov.cn/index.shtml",
   "n": "江西省西湖区",
   "status": "ok",
-  "source_level": "L2",
+  "source_level": "L1",
   "source": "P189 条系统 URL 回填（法院elink/检察院等统一平台）",
-  "verified_at": "",
+  "verified_at": "2026-11-18",
   "locations": [
    "块"
   ],
@@ -297055,12 +296956,12 @@
   "note": "p239 补登（沿用树内 URL）"
  },
  "县级人民法院|山东省河东区": {
-  "u": "https://fy.tjhdcourt.gov.cn",
+  "u": "http://lyhdqfy.sdcourt.gov.cn",
   "n": "山东省河东区",
   "status": "ok",
-  "source_level": "L2",
+  "source_level": "L1",
   "source": "P189 条系统 URL 回填（法院elink/检察院等统一平台）",
-  "verified_at": "",
+  "verified_at": "2026-11-18",
   "locations": [
    "块"
   ],
@@ -297822,12 +297723,12 @@
   "note": "p239 补登（沿用树内 URL）"
  },
  "县级人民检察院|温县": {
-  "u": "http://www.wenxian.jcy.gov.cn/",
+  "u": "http://www.hawenxian.jcy.gov.cn/",
   "n": "温县",
   "status": "ok",
   "source_level": "L2",
   "source": "",
-  "verified_at": "",
+  "verified_at": "2026-11-18",
   "locations": [
    "块"
   ],
@@ -299564,12 +299465,12 @@
   "note": "p239 补登（沿用树内 URL）"
  },
  "县级人民法院|湖北省青山区": {
-  "u": "http://btqsfy.nmgfy.gov.cn/index.shtml",
+  "u": "http://qsqfy.hbfy.gov.cn",
   "n": "湖北省青山区",
   "status": "ok",
-  "source_level": "L2",
+  "source_level": "L1",
   "source": "P189 条系统 URL 回填（法院elink/检察院等统一平台）",
-  "verified_at": "",
+  "verified_at": "2026-11-18",
   "locations": [
    "块"
   ],
@@ -305427,12 +305328,12 @@
   "note": "p239 补登（沿用树内 URL）"
  },
  "县级人民检察院|海城区": {
-  "u": "http://www.haicheng.jcy.gov.cn/",
+  "u": "http://www.beihaihc.jcy.gov.cn/",
   "n": "海城区",
   "status": "ok",
   "source_level": "L1",
   "source": "p175c 第二轮官网首页真实提取",
-  "verified_at": "",
+  "verified_at": "2026-11-18",
   "locations": [
    "块"
   ],
@@ -306532,9 +306433,9 @@
   "note": "p239 补登（沿用树内 URL）"
  },
  "县级人民检察院|海南省龙华区": {
-  "u": "",
-  "n": "海南省龙华区",
-  "status": "cleared",
+  "u": "https://www.hi.jcy.gov.cn/longhua.html",
+  "n": "龙华区",
+  "status": "ok",
   "source_level": "L2",
   "source": "",
   "verified_at": "2026-11-18",
@@ -313359,12 +313260,12 @@
   "note": "p239 补登（沿用树内 URL）"
  },
  "县级人民检察院|西藏自治区城关区": {
-  "u": "http://www.chengguan.jcy.gov.cn/",
+  "u": "https://www.lasacg.jcy.gov.cn/",
   "n": "西藏自治区城关区",
   "status": "ok",
-  "source_level": "L2",
+  "source_level": "L3",
   "source": "",
-  "verified_at": "",
+  "verified_at": "2026-11-18",
   "locations": [
    "块"
   ],
@@ -315166,12 +315067,12 @@
   "note": "p239 补登（沿用树内 URL）"
  },
  "人大|宁县人大": {
-  "u": "http://www.nxrd.gov.cn",
+  "u": "",
   "n": "宁县人大",
-  "status": "ok",
+  "status": "cleared",
   "source_level": "L1",
-  "source": "来源:庆阳市官网(https://www.qysrd.gov.cn/)辖区链接 HTML 提取+title验证(title空(JS壳)+锚文本严格校验)",
-  "verified_at": "",
+  "source": "来源:庆阳市官网(https://www.qysrd.gov.cn/)辖区链接 HTML 提取+title验证(title空(JS壳)+锚文本严格校验) | p243 跨地区串站清除(2026-11-18)",
+  "verified_at": "2026-11-18",
   "locations": [
    "块"
   ],
@@ -316393,6 +316294,1176 @@
   "status": "ok",
   "source_level": "L2",
   "source": "P189 条系统 URL 回填（法院elink/检察院等统一平台）",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "市辖区（地级行政区划）|天津市河北区": {
+  "u": "http://www.tjhb.gov.cn/",
+  "status": "ok",
+  "n": "天津市河北区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "县级人民政府|河北省长安区": {
+  "u": "https://www.sjzca.gov.cn/",
+  "status": "ok",
+  "n": "河北省长安区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "县级人民政府|山西省城区": {
+  "u": "http://www.yqcq.gov.cn/",
+  "status": "ok",
+  "n": "山西省城区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "县级人民政府|山西省沁水县": {
+  "u": "http://www.qinshui.gov.cn/",
+  "status": "ok",
+  "n": "山西省沁水县",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "省政府组成部门|内蒙古自治区应急管理厅": {
+  "u": "http://yjglt.nmg.gov.cn/",
+  "status": "ok",
+  "n": "内蒙古自治区应急管理厅",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "省政府直属机构/部门管理机构|内蒙古自治区广播电视局": {
+  "u": "http://gbdsj.nmg.gov.cn/",
+  "status": "ok",
+  "n": "内蒙古自治区广播电视局",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "省政府直属机构/部门管理机构|内蒙古自治区统计局": {
+  "u": "http://tj.nmg.gov.cn/",
+  "status": "ok",
+  "n": "内蒙古自治区统计局",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "省政府直属机构/部门管理机构|内蒙古自治区能源局": {
+  "u": "http://nyj.nmg.gov.cn/",
+  "status": "ok",
+  "n": "内蒙古自治区能源局",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "县级人民政府|辽宁省铁东区": {
+  "u": "http://www.tiedong.gov.cn/",
+  "status": "ok",
+  "n": "辽宁省铁东区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "县级人民政府|辽宁省铁西区": {
+  "u": "http://www.astxqzf.gov.cn/",
+  "status": "ok",
+  "n": "辽宁省铁西区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "县级人民政府|吉林省铁西区": {
+  "u": "http://txq.siping.gov.cn/",
+  "status": "ok",
+  "n": "吉林省铁西区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "省政府组成部门/直属机构|黑龙江省省知识产权局": {
+  "u": "http://hlipa.hlj.gov.cn/",
+  "status": "ok",
+  "n": "黑龙江省省知识产权局",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "省政府组成部门/直属机构|黑龙江省省疾病预防控制局": {
+  "u": "https://jkj.hlj.gov.cn",
+  "status": "ok",
+  "n": "黑龙江省省疾病预防控制局",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "县级人民政府|黑龙江省向阳区": {
+  "u": "http://www.xyq.gov.cn/",
+  "status": "ok",
+  "n": "黑龙江省向阳区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "县级人民政府|黑龙江省郊区": {
+  "u": "https://www.jmsjqzf.gov.cn/",
+  "status": "ok",
+  "n": "黑龙江省郊区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "市辖区（地级行政区划）|上海市宝山区": {
+  "u": "http://www.shbsq.gov.cn/",
+  "status": "ok",
+  "n": "上海市宝山区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "县级人民政府|江苏省鼓楼区": {
+  "u": "http://www.xzgl.gov.cn/",
+  "status": "ok",
+  "n": "江苏省鼓楼区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "县级人民政府|安徽省郊区": {
+  "u": "",
+  "status": "cleared",
+  "n": "安徽省郊区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": "",
+  "source": "p241b 复核清除(2026-11-18)"
+ },
+ "省政府组成部门|江西省省发展和改革委员会": {
+  "u": "http://drc.jiangxi.gov.cn/",
+  "status": "ok",
+  "n": "江西省省发展和改革委员会",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "省政府直属机构/部门管理机构|江西省省广播电视局": {
+  "u": "http://gdj.jiangxi.gov.cn/",
+  "status": "ok",
+  "n": "江西省省广播电视局",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "省政府直属机构/部门管理机构|江西省省机关事务管理局": {
+  "u": "http://sgj.jiangxi.gov.cn",
+  "status": "ok",
+  "n": "江西省省机关事务管理局",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "县级人民政府|山东省河东区": {
+  "u": "http://www.hedong.gov.cn/",
+  "status": "ok",
+  "n": "山东省河东区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "县级人民政府|河南省鼓楼区": {
+  "u": "http://www.gulou.gov.cn/",
+  "status": "ok",
+  "n": "河南省鼓楼区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "县级人民政府|湖南省永定区": {
+  "u": "http://www.zjjyd.gov.cn/",
+  "status": "ok",
+  "n": "湖南省永定区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "县级人民政府|广东省白云区": {
+  "u": "http://www.by.gov.cn/",
+  "status": "ok",
+  "n": "广东省白云区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "县级人民政府|广东省城区": {
+  "u": "http://www.swchengqu.gov.cn/",
+  "status": "ok",
+  "n": "广东省城区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "县级人民政府|广西壮族自治区城中区": {
+  "u": "http://www.czq.gov.cn/",
+  "status": "ok",
+  "n": "广西壮族自治区城中区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "省政府组成部门/直属机构|贵州省省机关事务局": {
+  "u": "http://jgsw.guizhou.gov.cn/",
+  "status": "ok",
+  "n": "贵州省省机关事务局",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "省政府组成部门/直属机构|贵州省省疾病预防控制局": {
+  "u": "https://jkj.guizhou.gov.cn/",
+  "status": "ok",
+  "n": "贵州省省疾病预防控制局",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "省政府直属机构/部门管理机构|新疆维吾尔自治区广播电视局": {
+  "u": "http://gdj.xinjiang.gov.cn/",
+  "status": "ok",
+  "n": "新疆维吾尔自治区广播电视局",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "省政府组成部门|新疆维吾尔自治区应急管理厅": {
+  "u": "http://yjgl.xinjiang.gov.cn/",
+  "status": "ok",
+  "n": "新疆维吾尔自治区应急管理厅",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "省政府直属机构/部门管理机构|新疆维吾尔自治区统计局": {
+  "u": "http://tjj.xinjiang.gov.cn/",
+  "status": "ok",
+  "n": "新疆维吾尔自治区统计局",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "人大系统|上海市松江区人大": {
+  "u": "",
+  "status": "cleared",
+  "n": "上海市松江区人大",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": "",
+  "source": "p241b 复核清除(2026-11-18)"
+ },
+ "人大系统|四川省金口河区人大": {
+  "u": "",
+  "status": "cleared",
+  "n": "四川省金口河区人大",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": "",
+  "source": "p241b 复核清除(2026-11-18)"
+ },
+ "人大系统|江苏省通州区人大": {
+  "u": "http://www.tzrd.gov.cn/tzrd/",
+  "status": "ok",
+  "n": "江苏省通州区人大",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "政协系统|吉林省延边朝鲜族自治州政协": {
+  "u": "http://www.ybzx.gov.cn/",
+  "status": "ok",
+  "n": "吉林省延边朝鲜族自治州政协",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "基层法院|辽宁省铁西区法院": {
+  "u": "https://astx.lncourt.gov.cn",
+  "status": "ok",
+  "n": "辽宁省铁西区法院",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "检察院系统|黑龙江省大同区人民检察院": {
+  "u": "https://dqdtq.hljjcy.gov.cn/",
+  "status": "ok",
+  "n": "黑龙江省大同区人民检察院",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "检察院系统|河南省温县人民检察院": {
+  "u": "http://www.hawenxian.jcy.gov.cn/",
+  "status": "ok",
+  "n": "河南省温县人民检察院",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "纪委系统|吉林省松原市纪委监委": {
+  "u": "http://www.jlsyjj.gov.cn/",
+  "status": "ok",
+  "n": "吉林省松原市纪委监委",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "纪委系统|广东省韶关市纪委监委": {
+  "u": "https://www.sglz.gov.cn/",
+  "status": "ok",
+  "n": "广东省韶关市纪委监委",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "纪委系统|新疆维吾尔自治区和田地区纪委监委": {
+  "u": "https://www.htlz.gov.cn/",
+  "status": "ok",
+  "n": "新疆维吾尔自治区和田地区纪委监委",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "纪委系统|新疆维吾尔自治区塔城地区纪委监委": {
+  "u": "",
+  "status": "cleared",
+  "n": "新疆维吾尔自治区塔城地区纪委监委",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": "",
+  "source": "p241b 复核清除(2026-11-18)"
+ },
+ "县级人民检察院|城关区": {
+  "u": "https://www.lasacg.jcy.gov.cn/",
+  "status": "ok",
+  "n": "城关区",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "检察院系统|山东省市中区人民检察院": {
+  "u": "http://www.szq.ls-jcy.gov.cn",
+  "status": "ok",
+  "n": "山东省市中区人民检察院",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "检察院系统|辽宁省中山区人民检察院": {
+  "u": "http://www.dalianzs.jcy.gov.cn/",
+  "status": "ok",
+  "n": "辽宁省中山区人民检察院",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "检察院系统|黑龙江省甘南县人民检察院": {
+  "u": "https://qqhrgn.hljjcy.gov.cn/",
+  "status": "ok",
+  "n": "黑龙江省甘南县人民检察院",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "检察院系统|黑龙江省兴安区人民检察院": {
+  "u": "https://hgxaq.hljjcy.gov.cn/",
+  "status": "ok",
+  "n": "黑龙江省兴安区人民检察院",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "检察院系统|云南省大理市人民检察院": {
+  "u": "http://www.yndali.jcy.gov.cn/",
+  "status": "ok",
+  "n": "云南省大理市人民检察院",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "检察院系统|甘肃省临夏市人民检察院": {
+  "u": "http://www.linxiashi.jcy.gov.cn/",
+  "status": "ok",
+  "n": "甘肃省临夏市人民检察院",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "检察院系统|新疆维吾尔自治区昌吉市人民检察院": {
+  "u": "http://www.xjchangji.jcy.gov.cn/",
+  "status": "ok",
+  "n": "新疆维吾尔自治区昌吉市人民检察院",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "检察院系统|新疆维吾尔自治区塔城市人民检察院": {
+  "u": "http://www.xjtacheng.jcy.gov.cn/",
+  "status": "ok",
+  "n": "新疆维吾尔自治区塔城市人民检察院",
+  "locations": [
+   "条"
+  ],
+  "source_level": "L1",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "纪委|恩施市监委": {
+  "u": "https://hubei.12388.gov.cn/enshizhou/enshishi/",
+  "status": "ok",
+  "n": "恩施市监委",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L3",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "市委/市人大/市政协/市监委/市中院/市检察院|新疆维吾尔自治区市人民检察院": {
+  "u": "http://www.aletai.jcy.gov.cn/",
+  "status": "ok",
+  "n": "新疆维吾尔自治区市人民检察院",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-18",
+  "snapshot": ""
+ },
+ "纪委|海南区监委": {
+  "u": "http://neimeng.12388.gov.cn/whs/hainanqu",
+  "n": "海南区监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:内蒙古自治区乌海市纪委监委 12388 举报网站名录（乌海市）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "人大|中山区人大": {
+  "u": "http://rd.dlzs.gov.cn/",
+  "n": "中山区人大",
+  "status": "ok",
+  "source_level": "L3",
+  "source": "来源:SERP线索+title严格验证(title=大连市中山区人大常委会|ok)",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|中山区监委": {
+  "u": "http://liaoning.12388.gov.cn/dalian/zhongshan",
+  "n": "中山区监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:辽宁省纪委监委 12388 举报网站名录（大连市）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|辽阳县监委": {
+  "u": "http://www.lyjjjc.gov.cn/xxgk_bg2.aspx?c=354",
+  "n": "辽阳县监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:市监委官网(http://www.lyjjjc.gov.cn/xxgk_bg2.aspx?c=353) 县区栏目 HTML 提取+title验证(title=辽阳县纪委监委-辽阳纪检监察网|ok)·p235",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|甘南县监委": {
+  "u": "http://heilongjiang.12388.gov.cn/qiqihaershi/gannanxian",
+  "n": "甘南县监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:黑龙江省纪委监委 12388 举报网站名录（齐齐哈尔市）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|兴安区监委": {
+  "u": "http://heilongjiang.12388.gov.cn/hegangshi/xinganqu",
+  "n": "兴安区监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:黑龙江省纪委监委 12388 举报网站名录（鹤岗市）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|大同区监委": {
+  "u": "http://heilongjiang.12388.gov.cn/daqingshi/datongqu",
+  "n": "大同区监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:黑龙江省纪委监委 12388 举报网站名录（大庆市）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|淮安区监委": {
+  "u": "http://jiangsu.12388.gov.cn/huaianshi/huaianqu",
+  "n": "淮安区监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:江苏省纪委监委 12388 举报网站名录（淮安市）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "人大|南昌县人大": {
+  "u": "https://www.ncsrd.gov.cn/column/446.html",
+  "n": "南昌县人大",
+  "status": "ok",
+  "source_level": "L3",
+  "source": "来源:SERP线索+title严格验证(title=南昌县人大-南昌人大新闻网|ok)",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|南昌县监委": {
+  "u": "http://jiangxi.12388.gov.cn/nanchangshi/nanchangxian",
+  "n": "南昌县监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:江西省纪委监委 12388 举报网站名录（南昌市）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|吉安县监委": {
+  "u": "http://jiangxi.12388.gov.cn/jianshi/jianxian",
+  "n": "吉安县监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:江西省纪委监委 12388 举报网站名录（吉安市）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "人大|东营区人大": {
+  "u": "http://www.dyqrd.gov.cn/",
+  "n": "东营区人大",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:东营市官网(http://renda.dongying.gov.cn/)辖区链接 HTML 提取+title验证(title空(JS壳)+锚文本严格校验)",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "人大|安阳县人大": {
+  "u": "https://aysrd.henanrd.gov.cn/",
+  "n": "安阳县人大",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:安阳市官网(https://aysrd.henanrd.gov.cn/)辖区链接 HTML 提取+title验证(title=安阳人大信息网-安阳市人大|ok)",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|安阳县监委": {
+  "u": "http://henan.12388.gov.cn/anyang/anyangxian",
+  "n": "安阳县监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:河南省纪委监委 12388 举报网站名录（安阳市）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|新乡县监委": {
+  "u": "http://henan.12388.gov.cn/xinxiang/xinxiangxian",
+  "n": "新乡县监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:河南省新乡市纪委监委 12388 举报网站名录（新乡市）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "人大|濮阳县人大": {
+  "u": "http://pyxrenda.henanrd.gov.cn/",
+  "n": "濮阳县人大",
+  "status": "ok",
+  "source_level": "L3",
+  "source": "来源:SERP线索+title严格验证(title=濮阳县人大|ok)",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|濮阳县监委": {
+  "u": "http://henan.12388.gov.cn/puyang/puyangxian",
+  "n": "濮阳县监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:河南省濮阳市纪委监委 12388 举报网站名录（濮阳市）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "政协|荆州区政协": {
+  "u": "http://www.jzqzx.gov.cn/",
+  "n": "荆州区政协",
+  "status": "ok",
+  "source_level": "L2",
+  "source": "P189 条系统 URL 回填（法院elink/检察院等统一平台）",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|荆州区监委": {
+  "u": "http://hubei.12388.gov.cn/jingzhoushi/jingzhouqu",
+  "n": "荆州区监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:湖北省纪委监委 12388 举报网站名录（荆州市）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "人大|长沙县人大": {
+  "u": "http://www.csxrd.gov.cn/",
+  "n": "长沙县人大",
+  "status": "ok",
+  "source_level": "L3",
+  "source": "来源:SERP线索+title严格验证(title=长沙县人大常委会|ok)",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "政协|长沙县政协": {
+  "u": "http://csxzx.csx.gov.cn/",
+  "n": "长沙县政协",
+  "status": "ok",
+  "source_level": "L3",
+  "source": "来源:SERP线索+title严格验证(title=长沙县政协网|ok)",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "人大|岳阳县人大": {
+  "u": "https://www.yyx.gov.cn/37584/38146/38335/index.htm",
+  "n": "岳阳县人大",
+  "status": "ok",
+  "source_level": "L3",
+  "source": "来源:SERP线索+title严格验证(title=人大-岳阳县人民政府|ok)",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "政协|岳阳县政协": {
+  "u": "https://www.yyx.gov.cn/37584/38146/38336/index.htm",
+  "n": "岳阳县政协",
+  "status": "ok",
+  "source_level": "L3",
+  "source": "来源:SERP线索+title严格验证(title=政协-岳阳县人民政府|ok)",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "政协|资阳区政协": {
+  "u": "http://www.sczyzx.gov.cn/zyzx/jczx/pc/list.html",
+  "n": "资阳区政协",
+  "status": "ok",
+  "source_level": "L3",
+  "source": "来源:SERP线索+title严格验证(title=基层政协-资阳政协|ok)",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|资阳区监委": {
+  "u": "http://hunan.12388.gov.cn/yiyangshi/ziyangqu",
+  "n": "资阳区监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:湖南省纪委监委 12388 举报网站名录（益阳市）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|兴安县监委": {
+  "u": "http://guangxi.12388.gov.cn/guilinshi/xinganxian",
+  "n": "兴安县监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:广西壮族自治区桂林市纪委监委 12388 举报网站名录（桂林市）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "人大|广安区人大": {
+  "u": "https://www.gard.gov.cn/page/county-town/kqQ1r2qr.html",
+  "n": "广安区人大",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:广安市官网(https://www.gard.gov.cn/)辖区链接 HTML 提取+title验证(title=广安区部分人大代表走进龙安柚基地：为“柚王”评选和产品质量“把关”-广安人大网|ok)",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|阿坝县监委": {
+  "u": "http://sichuan.12388.gov.cn/abazhou",
+  "n": "阿坝县监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:四川省纪委监委 12388 举报网站名录（阿坝藏族羌族自治州）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|甘孜县监委": {
+  "u": "http://sichuan.12388.gov.cn/ganzizhou",
+  "n": "甘孜县监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:四川省纪委监委 12388 举报网站名录（甘孜藏族自治州）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|楚雄市监委": {
+  "u": "http://www.cxlz.gov.cn/",
+  "n": "楚雄市监委",
+  "status": "ok",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|红河县监委": {
+  "u": "http://yunnan.12388.gov.cn/honghezhou/honghexian",
+  "n": "红河县监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:云南省纪委监委 12388 举报网站名录（红河哈尼族彝族自治州）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|文山市监委": {
+  "u": "https://yunnan.12388.gov.cn/wenshanzhou/wenshanshi",
+  "n": "文山市监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:云南省文山壮族苗族自治州纪委监委 12388 举报网站名录（文山壮族苗族自治州）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|大理市监委": {
+  "u": "http://yunnan.12388.gov.cn/dalizhou/dalishi",
+  "n": "大理市监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:云南省纪委监委 12388 举报网站名录（大理白族自治州）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|白银区监委": {
+  "u": "http://gansu.12388.gov.cn/baiyinshi/baiyinqu",
+  "n": "白银区监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:甘肃省纪委监委 12388 举报网站名录（白银市）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|临夏市监委": {
+  "u": "http://gansu.12388.gov.cn/linxiazhou/linxiashi",
+  "n": "临夏市监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:甘肃省纪委监委 12388 举报网站名录（临夏回族自治州）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|临夏县监委": {
+  "u": "http://gansu.12388.gov.cn/linxiazhou/linxiaxian",
+  "n": "临夏县监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:甘肃省纪委监委 12388 举报网站名录（临夏回族自治州）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "人大|玉树市人大": {
+  "u": "http://111.12.155.14/yszyss/index.html",
+  "n": "玉树市人大",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:省人大官网(http://www.qhrd.gov.cn) 县区栏目 HTML 提取+title验证(title=玉树市人民代表大会常务委员会|ok)·p235",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|乌鲁木齐县监委": {
+  "u": "https://www.wlmqjw.gov.cn/p10035/index.html",
+  "n": "乌鲁木齐县监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:乌鲁木齐市官网(https://www.wlmqjw.gov.cn/p10017/index.html)辖区链接 HTML 提取+title验证(title=乌鲁木齐县-乌鲁木齐市纪委监委网站|ok)",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|克拉玛依区监委": {
+  "u": "http://xinjiang.12388.gov.cn/klmy/kelamayiqu",
+  "n": "克拉玛依区监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:新疆维吾尔自治区纪委监委 12388 举报网站名录（克拉玛依市）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|昌吉市监委": {
+  "u": "http://xinjiang.12388.gov.cn/changji/changjishi",
+  "n": "昌吉市监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:新疆维吾尔自治区纪委监委 12388 举报网站名录（昌吉州）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|阿克苏市监委": {
+  "u": "http://xinjiang.12388.gov.cn/aks/akesushi",
+  "n": "阿克苏市监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:新疆维吾尔自治区纪委监委 12388 举报网站名录（阿克苏地区）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|喀什市监委": {
+  "u": "http://xinjiang.12388.gov.cn/kashi/kashishi",
+  "n": "喀什市监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:新疆维吾尔自治区纪委监委 12388 举报网站名录（喀什地区）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|塔城市监委": {
+  "u": "http://xinjiang.12388.gov.cn/tacheng/tachengshi",
+  "n": "塔城市监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:新疆维吾尔自治区纪委监委 12388 举报网站名录（塔城地区）HTML 名录提取+title验证·p237",
+  "verified_at": "",
+  "locations": [
+   "块"
+  ],
+  "snapshot": "",
+  "note": "p239 补登（沿用树内 URL）"
+ },
+ "纪委|阿勒泰市监委": {
+  "u": "http://xinjiang.12388.gov.cn/alt/aletaishi",
+  "n": "阿勒泰市监委",
+  "status": "ok",
+  "source_level": "L1",
+  "source": "来源:新疆维吾尔自治区纪委监委 12388 举报网站名录（阿勒泰地区）HTML 名录提取+title验证·p237",
   "verified_at": "",
   "locations": [
    "块"

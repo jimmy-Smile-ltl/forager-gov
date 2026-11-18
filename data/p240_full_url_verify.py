@@ -407,6 +407,11 @@ CITY_OF_COUNTY = {}  # 县/区全名 -> 所属地级市全名（条树叶子只�
 ALL_BASE_SET = set()  # 全部基底（复合名尾段匹配用）
 PLACES_READY = False  # 地名表建好后，place_of 才启用「已知地名最长后缀」回退
 
+# 上级站点名在标题里属正常层级表述（不是跨地区错配）：
+# 伊犁哈萨克自治州（副省级自治州）下辖阿勒泰地区、塔城地区，两地的检察分院/
+# 地区站点标题常写「伊犁哈萨克自治州人民检察院阿勒泰分院」。
+TITLE_SELF_PARENT = {"伊犁哈萨克自治州": ("阿勒泰地区", "塔城地区")}
+
 
 def collect_all_places(tree):
     """全树收集行政区全名（省/市/县/港澳台），用于「标题里出现了别的地区」。"""
@@ -680,6 +685,10 @@ def drop_nonconflicting(others, exp_full, deep_full):
             continue                       # o 是本级的下辖县区
         if not exp_cities and o in (CITY_OF_COUNTY.get(deep_full) or set()):
             continue                       # 路径缺市一级，标题的父市不算错配
+        # 伊犁哈萨克自治州是副省级自治州，下辖阿勒泰地区/塔城地区：分院站点标题
+        # 「伊犁哈萨克自治州人民检察院阿勒泰分院」是正常层级表述，不是跨地区错配
+        if o in TITLE_SELF_PARENT and deep_full in TITLE_SELF_PARENT[o]:
+            continue
         keep.append(o)
     return keep
 

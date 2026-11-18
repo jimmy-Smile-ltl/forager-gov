@@ -1,6 +1,6 @@
 # 提取规则脚本索引
 
-共 276 个脚本（data/*.py）。编号 p0-p222 = 开发顺序。
+共 295 个脚本（data/*.py）。编号 p0-p242 = 开发顺序。
 按主题分类，查找某板块的处理脚本直接看对应组；p116-p200 为中期批次，见文末概览。
 
 ## 中央/并列机关（11）
@@ -229,6 +229,13 @@
 - `p237_12388_counties.py` — 县级监委 12388 名录补采（省纪委 12388 子站的县区目录 + root_hint 归一）。
 - `p238_city_5sys_fill.py` — 市级五系统补采（复用 p223 四档渠道，task 里 county=市级节点、parent=省级节点）+ `--audit` 市级复核（省站栏目页 / 区县机构页 / 门户专题页 / 移动版归一等）。SERP 轮已加「区县机构顶替市级」「门户类目页」两条拒绝规则。
 - `p239_registry_five_sync.py` — 五系统 registry 同步（省/市/县全量叶子）：树有 URL 而 registry 不同 → 以树为准；树因审计清空且 s 留痕 → registry 置 cleared；树有 URL 而 registry 缺记录 → 补登（verified_at 留空，不冒充当日复验）。
+
+## 错误 URL 回填与垃圾节点清理（p241 系列，2026-11-18）
+- `p241_wrong_url_backfill.py` — p240 清除节点（u 为空 + `p240` 清除痕迹）的**正确 URL 回填**：Phase B 通用（官方页面导航 + 百度 SERP 严格验证）→ Phase A 五系统（复用 p223 四档渠道，落库后逐条过 p240 复核，不过即回滚+还原 registry）→ Phase C 条块同步（块树同机构唯一 URL，只填空）。候选一律过 `verify()`：文章/栏目/门户栏目/群团站/重名区县证据/上级门户域名栏目等负向规则；不过的留空列名。环境开关 `P241_ONLY`（five,generic,sync）/`P241_LIMIT`/`P241_WORKERS`/`P241_FILTER`；断点 `p241_state.json`、报告 `p241_report.json`（不入库）。
+- `p241b_new_url_audit.py` — p241 回填结果的**独立复核**：新进程重抓每个 s 带 p241 痕迹的 URL，用同一套 `verify()` 再判一次（硬通过/软通过=封锁默认正确/失败），`--apply` 清除失败项并做 http/https 协议升级；报告不入库。
+- `p242_junk_nodes_clean.py` — 「市级政府部门」组**垃圾节点清理**：两会专题/中联办/建设部/省县政府门户冒充市级部门（13 个节点 + 9 个 registry 键），树与 registry 同步删除，写前备份，默认 dry-run。
+- `p243_dup_url_adjudicate.py` — **同一 URL 跨地区串站裁决**：五系统节点按 URL 分组，组内 ≥2 个地区身份即冲突组；用 title/snippet 给每个身份打分（地区链 3/2/1 分），唯一归属保留、其余清空留名。结构变体（条树简称/旧名、州↔同名市）靠地名形态集合保护。`--apply` 清除 24 节点 + 9 registry（2026-11-18）。
+- `p244_url_form_fix.py` — **URL 形态修复**：`https:https://…` 重复协议头（山西法院网 elink 解码残留，阳泉 5 站 9 节点），去头后按节点身份复核再落库，tree/registry 同步。
 
 ## 全量 URL 核查与治理（p240 系列）
 - `p240_full_url_verify.py` — **全站 URL 身份全量核查**：树节点 + registry-only 共 2.3 万唯一 URL 逐条实抓，按「地区/机构类型/文章页」三维判身份，分档 `ok / ok_neutral / waf / dead / suspect / mismatch`。要点：WAF/IP 封锁（含 4xx 反爬）**默认正确**并走隧道代理复验；标题取最深层行政区比对（上级地名顶替判错配）；跨省同基底（天津河北区 vs 河北省）专判；功能区名归一（经开区/综改示范区/西海岸新区）；合署办公（黄岛=西海岸、汉南=武汉经开、金州=金普）与省级平台市级频道（wx.jsjc「江苏检察网」）列入复核例外。`--report` 出报告、`--prune` 清「省级部门误挂市级组」结构垃圾、`--apply` 按节点清除 mismatch（同 URL 在别的节点正确则不清树、registry 仅在无任何存活节点时清除）。

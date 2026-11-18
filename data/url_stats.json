@@ -4,9 +4,9 @@
  "levels": {
   "省": {
    "total": 2216,
-   "with_url": 1980,
-   "missing": 236,
-   "missing_rate": 10.65,
+   "with_url": 1998,
+   "missing": 218,
+   "missing_rate": 9.84,
    "systems": {
     "gov": {
      "total": 32,
@@ -16,9 +16,9 @@
     },
     "dept": {
      "total": 1238,
-     "with_url": 1217,
-     "missing": 21,
-     "missing_rate": 1.7
+     "with_url": 1233,
+     "missing": 5,
+     "missing_rate": 0.4
     },
     "rd": {
      "total": 31,
@@ -52,9 +52,9 @@
     },
     "qt": {
      "total": 544,
-     "with_url": 390,
-     "missing": 154,
-     "missing_rate": 28.31
+     "with_url": 392,
+     "missing": 152,
+     "missing_rate": 27.94
     },
     "mzdp": {
      "total": 247,
@@ -71,22 +71,22 @@
    }
   },
   "市": {
-   "total": 8348,
-   "with_url": 7933,
-   "missing": 415,
-   "missing_rate": 4.97,
+   "total": 8335,
+   "with_url": 7938,
+   "missing": 397,
+   "missing_rate": 4.76,
    "systems": {
     "gov": {
      "total": 407,
-     "with_url": 403,
-     "missing": 4,
-     "missing_rate": 0.98
+     "with_url": 405,
+     "missing": 2,
+     "missing_rate": 0.49
     },
     "dept": {
-     "total": 5737,
-     "with_url": 5661,
-     "missing": 76,
-     "missing_rate": 1.32
+     "total": 5724,
+     "with_url": 5662,
+     "missing": 62,
+     "missing_rate": 1.08
     },
     "rd": {
      "total": 405,
@@ -102,9 +102,9 @@
     },
     "jw": {
      "total": 405,
-     "with_url": 367,
-     "missing": 38,
-     "missing_rate": 9.38
+     "with_url": 369,
+     "missing": 36,
+     "missing_rate": 8.89
     },
     "fy": {
      "total": 405,
@@ -140,15 +140,15 @@
   },
   "县": {
    "total": 16805,
-   "with_url": 11410,
-   "missing": 5395,
-   "missing_rate": 32.1,
+   "with_url": 11484,
+   "missing": 5321,
+   "missing_rate": 31.66,
    "systems": {
     "gov": {
      "total": 2910,
-     "with_url": 2811,
-     "missing": 99,
-     "missing_rate": 3.4
+     "with_url": 2827,
+     "missing": 83,
+     "missing_rate": 2.85
     },
     "dept": {
      "total": 0,
@@ -164,27 +164,27 @@
     },
     "zx": {
      "total": 2779,
-     "with_url": 472,
-     "missing": 2307,
-     "missing_rate": 83.02
+     "with_url": 471,
+     "missing": 2308,
+     "missing_rate": 83.05
     },
     "jw": {
      "total": 2779,
-     "with_url": 2585,
-     "missing": 194,
-     "missing_rate": 6.98
+     "with_url": 2637,
+     "missing": 142,
+     "missing_rate": 5.11
     },
     "fy": {
      "total": 2779,
-     "with_url": 2393,
-     "missing": 386,
-     "missing_rate": 13.89
+     "with_url": 2396,
+     "missing": 383,
+     "missing_rate": 13.78
     },
     "jcy": {
      "total": 2779,
-     "with_url": 2305,
-     "missing": 474,
-     "missing_rate": 17.06
+     "with_url": 2309,
+     "missing": 470,
+     "missing_rate": 16.91
     },
     "qt": {
      "total": 0,
@@ -220,22 +220,22 @@
     },
     "市": {
      "total": 407,
-     "with_url": 403,
-     "missing": 4,
-     "missing_rate": 0.98
+     "with_url": 405,
+     "missing": 2,
+     "missing_rate": 0.49
     },
     "县": {
      "total": 2910,
-     "with_url": 2811,
-     "missing": 99,
-     "missing_rate": 3.4
+     "with_url": 2827,
+     "missing": 83,
+     "missing_rate": 2.85
     }
    },
    "total": {
     "total": 3349,
-    "with_url": 3246,
-    "missing": 103,
-    "missing_rate": 3.08
+    "with_url": 3264,
+    "missing": 85,
+    "missing_rate": 2.54
    }
   },
   {
@@ -244,15 +244,15 @@
    "levels": {
     "省": {
      "total": 1238,
-     "with_url": 1217,
-     "missing": 21,
-     "missing_rate": 1.7
+     "with_url": 1233,
+     "missing": 5,
+     "missing_rate": 0.4
     },
     "市": {
-     "total": 5737,
-     "with_url": 5661,
-     "missing": 76,
-     "missing_rate": 1.32
+     "total": 5724,
+     "with_url": 5662,
+     "missing": 62,
+     "missing_rate": 1.08
     },
     "县": {
      "total": 0,
@@ -262,10 +262,10 @@
     }
    },
    "total": {
-    "total": 6975,
-    "with_url": 6878,
-    "missing": 97,
-    "missing_rate": 1.39
+    "total": 6962,
+    "with_url": 6895,
+    "missing": 67,
+    "missing_rate": 0.96
    }
   },
   {
@@ -316,16 +316,16 @@
     },
     "县": {
      "total": 2779,
-     "with_url": 472,
-     "missing": 2307,
-     "missing_rate": 83.02
+     "with_url": 471,
+     "missing": 2308,
+     "missing_rate": 83.05
     }
    },
    "total": {
     "total": 3215,
-    "with_url": 773,
-    "missing": 2442,
-    "missing_rate": 75.96
+    "with_url": 772,
+    "missing": 2443,
+    "missing_rate": 75.99
    }
   },
   {
@@ -340,22 +340,22 @@
     },
     "市": {
      "total": 405,
-     "with_url": 367,
-     "missing": 38,
-     "missing_rate": 9.38
+     "with_url": 369,
+     "missing": 36,
+     "missing_rate": 8.89
     },
     "县": {
      "total": 2779,
-     "with_url": 2585,
-     "missing": 194,
-     "missing_rate": 6.98
+     "with_url": 2637,
+     "missing": 142,
+     "missing_rate": 5.11
     }
    },
    "total": {
     "total": 3215,
-    "with_url": 2983,
-    "missing": 232,
-    "missing_rate": 7.22
+    "with_url": 3037,
+    "missing": 178,
+    "missing_rate": 5.54
    }
   },
   {
@@ -376,16 +376,16 @@
     },
     "县": {
      "total": 2779,
-     "with_url": 2393,
-     "missing": 386,
-     "missing_rate": 13.89
+     "with_url": 2396,
+     "missing": 383,
+     "missing_rate": 13.78
     }
    },
    "total": {
     "total": 3215,
-    "with_url": 2796,
-    "missing": 419,
-    "missing_rate": 13.03
+    "with_url": 2799,
+    "missing": 416,
+    "missing_rate": 12.94
    }
   },
   {
@@ -406,16 +406,16 @@
     },
     "县": {
      "total": 2779,
-     "with_url": 2305,
-     "missing": 474,
-     "missing_rate": 17.06
+     "with_url": 2309,
+     "missing": 470,
+     "missing_rate": 16.91
     }
    },
    "total": {
     "total": 3215,
-    "with_url": 2702,
-    "missing": 513,
-    "missing_rate": 15.96
+    "with_url": 2706,
+    "missing": 509,
+    "missing_rate": 15.83
    }
   },
   {
@@ -424,9 +424,9 @@
    "levels": {
     "省": {
      "total": 544,
-     "with_url": 390,
-     "missing": 154,
-     "missing_rate": 28.31
+     "with_url": 392,
+     "missing": 152,
+     "missing_rate": 27.94
     },
     "市": {
      "total": 179,
@@ -443,9 +443,9 @@
    },
    "total": {
     "total": 723,
-    "with_url": 543,
-    "missing": 180,
-    "missing_rate": 24.9
+    "with_url": 545,
+    "missing": 178,
+    "missing_rate": 24.62
    }
   },
   {
@@ -510,9 +510,9 @@
   }
  ],
  "total": {
-  "total": 27369,
-  "with_url": 21323,
-  "missing": 6046,
-  "missing_rate": 22.09
+  "total": 27356,
+  "with_url": 21420,
+  "missing": 5936,
+  "missing_rate": 21.7
  }
 }

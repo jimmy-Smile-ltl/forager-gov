@@ -31,6 +31,11 @@ data/snapshots/
 # p240 全量核查的断点与全量报告：可由脚本重跑复现，摘要见 data/URL_VERIFY.md
 data/p240_results.jsonl
 data/url_verify_report.json
+# p241/p241b 回填断点与复核报告：可重跑复现
+data/p241_report.json
+data/p241b_audit_report.json
+# p243 跨地区串站裁决报告：可重跑复现，结论摘要见 data/URL_VERIFY.md
+data/p243_report.json
 
 # ===== 获取层实现（浏览器/指纹/WAF 处理，不随仓库发布）=====
 util/*
