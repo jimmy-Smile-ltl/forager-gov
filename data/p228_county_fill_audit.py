@@ -269,6 +269,17 @@ def main():
     kc = _C(n.split("(")[0] for _, _, n in freport)
     print(f"p228 F 复验 {len(filled)} 条：不符 {len(freport)}"
           f"（其中可清除类 {len(fclear)}） {dict(kc)}")
+    try:      # 复核清单落盘（人工审阅用，不参与写库）
+        with open("/tmp/p228_fclear.tsv", "w", encoding="utf-8") as fh:
+            for t, tt, note in fclear:
+                u = (t["org"].get("u") or "")
+                fh.write(f"{note.split('(')[0]}\t{t['prov']}\t{t['parent'].get('n')}\t"
+                         f"{t['county'].get('n')}\t{t['org_name']}\t{tt[:40]}\t{u}\n")
+        with open("/tmp/p228_acount.tsv", "w", encoding="utf-8") as fh:
+            for n, p2, u, s2 in hits:
+                fh.write(f"{p2.split('/')[-2][:12]}\t{n.get('n')}\t{u}\n")
+    except OSError:
+        pass
     for t, tt, note in freport[:30]:
         print(f"  F-{note[:22]:<22} {t['prov']}/{t['parent'].get('n')}/{t['county'].get('n')}"
               f"/{t['org_name']} {tt[:26]} {(t['org'].get('u') or '')[:56]}")

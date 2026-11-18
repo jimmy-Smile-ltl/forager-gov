@@ -109,12 +109,17 @@ NEWS_PATH = re.compile(
     r"/(news|content|article|detail|info|tzgg|art|Show|doc|Item|columns|channel)(/|_|\.)|"
     r"/art\d+|/t\d{8}_|/\d{4}[-/]?\d{2}/|/c\d{6,}|/content_\d+|/content-\d+|/content-[0-9a-f]{16,}"
     r"|/(19|20)\d{2}_\d{2}(_\d{2})?/|/\d{5,}\.s?html?"
-    r"|/(19|20)\d{6}/|/\d{8}\.s?html?|/static/|/contents/\d+/\d+",
+    r"|/(19|20)\d{6}/|/\d{8}\.s?html?|/static/|/contents/\d+/\d+"
+    # 纯数字详情页（实测省人大网地县人大栏目文章 /dxrd/46572「那曲市人大
+    # 常委会2026年监督工作计划」被当成那曲市人大官网）
+    r"|/\d{3,8}/?$"
+    # 模板占位页（实测邵阳市监委 ← hunan.12388.gov.cn/shaoyangshi/m/example.html）
+    r"|/example\.[a-z]+$",
     re.I)
 # 领导之窗/领导简介页——政府门户的领导栏目，不是机构官网
 # （实测：集贤县政协 ← www.jixian.gov.cn/jx/9/ldzc.shtml「集贤县政协」）
 LEADER_PATH = re.compile(
-    r"(^|[/_\-])(ldzc|ldjj|ldjjx|ldmp|lingdao|leader|ldcy|zxld|rdld|qzx)"
+    r"(^|[/_\-])(ldzc|ldjj|ldjjx|ldmp|lingdao|leader|ldcy|zxld|rdld)"
     r"([/_\-.]|$)", re.I)
 # 门户频道页形态（UUID 栏目：/columns/<uuid>/index.html）——不是文章页，
 # 真实存在的人大/政协频道官方入口常是这一形态（p228 SERP 实测正定县）。
@@ -123,7 +128,10 @@ CHANNEL_OK = re.compile(r"/columns/[0-9a-f][0-9a-f-]{7,}(/index\.html?)?/?(\?.*)
 BAD_COLUMN = re.compile(
     r"/(ysjs|czyjs|czxx|czbg|cwbg|caiheng|qyjsgk|czjsgk|cwys|yjsgk|"
     r"czys|ysgk|jfzq|czgk|jyta|jytabl|zxta|taya|yajy|taql|zxwj|"
-    r"czzj|sgjf|czxxgk|ysxxgk|yjsxxgk|cwxx|cwtz|qjbm_dw)/", re.I)
+    r"czzj|sgjf|czxxgk|ysxxgk|yjsxxgk|cwxx|cwtz|qjbm_dw|"
+    # 带数字/下划线的变体（实测锦州市政协 ← /zwgk/fdzdgknr/ys_js1/czyjs1/
+    # bmys1/y2024/rdzx1.htm 是部门预算页）
+    r"ys_?js\d*|czyjs\d*|bmys\d*|bmjs\d*|czys\d*|y(19|20)\d{2})/", re.I)
 BAD_HOST = (
     "baidu.com", "weixin.qq.com", "weibo.com", "people.com.cn", "xinhuanet.com",
     "news.cn", "cctv.com", "mzfzw.net", "qq.com", "163.com", "sohu.com",
@@ -322,6 +330,10 @@ def host_ok(u, allow_host=None, strict=True):
         return True
     if any(b in h for b in BAD_HOST):
         return False
+    # 高校/科研机构域（实测 S1 把「黄山学院纪检监察网 jjjc.hsu.edu.cn」
+    # 当成黄山市纪委监委官网）
+    if h.endswith((".edu.cn", ".ac.cn")):
+        return False
     if h == "gov.cn" or h.endswith(".gov.cn"):
         return True
     if strict:
@@ -483,14 +495,18 @@ PORTAL_COL = re.compile(r"(政协|人大|纪委|监委|纪检|法院|检察)"
 TITLE_BAD = re.compile(
     r"(决算|预算|三公|经费|任免|招录|招考|招聘|中标|成交|招标|采购|"
     r"表彰|先进事迹|工作报告|述职|述廉|考核|公示|通知|公告|通告|会议|培训|"
-    r"主题教育|专项整治|巡察|巡视|整改|民主生活会)")
+    r"主题教育|专项整治|巡察|巡视|整改|民主生活会|"
+    # 「那曲市人大常委会2026年监督工作计划」曾被当成那曲市人大官网
+    r"工作计划|工作要点|工作安排|监督计划|年度计划|工作综述|"
+    # 省院官网「市级院简介」栏目页被当成市院官网（聊城/菏泽市检察院）
+    r"简介|检察机关)")
 
 
 # 文章标题动词——「魏县政协组织开展…专题调研_邯郸市政协信息网」曾被当成
 # 魏县政协官网（zx.hd.gov.cn/List.asp?C-1-7048.html 其实是文章列表页）
 ARTICLE_TITLE = re.compile(
     r"(开展|召开|举行|组织|调研|视察|座谈|部署|推进|督导|专访|纪实|侧记|"
-    r"通报|倡议|讲话|致词|致辞|访谈|系列报道|专题专栏)")
+    r"通报|倡议|讲话|致词|致辞|访谈|系列报道)")   # 「专题专栏」是栏目不是文章
 
 
 def title_ok(title, task, anchor_exact):
@@ -641,8 +657,11 @@ def apply_fill(reg, task, u, src, level, dup_names):
 # ── S1 上级官网 ────────────────────────────────────────────
 def run_s1(tasks, reg, dup_names, st, prov_map, limit=None):
     groups = {}
+    only = [x for x in (os.environ.get("P223_S1_ORG") or "").split(",") if x]
     for t in tasks:
         if t["filled"]:
+            continue
+        if only and t["org_name"] not in only:
             continue
         u = parent_site(t, prov_map)
         if not u:
@@ -653,6 +672,8 @@ def run_s1(tasks, reg, dup_names, st, prov_map, limit=None):
     if limit:
         items = items[:limit]
     filled = 0
+    nav_cap = int(os.environ.get("P223_S1_NAV", "3"))
+    deep = os.environ.get("P223_S1_DEEP") == "1"
 
     def work(item):
         (u, org_name), ts = item
@@ -668,12 +689,31 @@ def run_s1(tasks, reg, dup_names, st, prov_map, limit=None):
                 continue
             if NAV_KW.search(txt) or NAV_KW.search(link):
                 navs.append(link)
-            if len(navs) >= 3:
+            if len(navs) >= nav_cap:
                 break
         for nu in navs:
             nh = fetch_cached(nu)
             if nh and len(nh) > 300:
                 pages.append((nu, nh))
+        if deep:
+            # 深一层：栏目页里的二级栏目（「市县人大」「地方政协」「县区法院」）
+            # ——省级人大/政协官网的市县名录多在这一层
+            seen2 = {x[0] for x in pages}
+            subs = []
+            for pu, ph in pages[1:]:
+                for txt, link in extract_links(ph, pu):
+                    if link in seen2 or urlparse(link).netloc != urlparse(u).netloc:
+                        continue
+                    if ((NEWS_PATH.search(link) or NEWS_QUERY.search(link))
+                            and not CHANNEL_OK.search(link)):
+                        continue
+                    if NAV_KW.search(txt) or CHANNEL_OK.search(link):
+                        seen2.add(link)
+                        subs.append(link)
+            for nu in subs[:nav_cap * 2]:
+                nh = fetch_cached(nu)
+                if nh and len(nh) > 300:
+                    pages.append((nu, nh))
         local = 0
         for page_u, page_h in pages:
             links = extract_links(page_h, page_u)
@@ -715,6 +755,19 @@ def run_s2(tasks, reg, dup_names, st, all_city_bases, limit=None):
         e = portals.setdefault(portal_u, {"county": t["county"], "prov": t["prov"],
                                           "parent": t["parent"], "tasks": []})
         e["tasks"].append(t)
+    only = [x for x in (os.environ.get("P223_S2_ORG") or "").split(",") if x]
+    if only:
+        for e in portals.values():
+            e["tasks"] = [t for t in e["tasks"] if t["org_name"] in only]
+        portals = {k: v for k, v in portals.items() if v["tasks"]}
+    # 补跑：跳过已挖过的门户（旧轮次用 --limit 只跑了一小部分；state 记在 s2）
+    if os.environ.get("P223_S2_SKIP_DONE") == "1":
+        done = st.get("s2", {})
+        portals = {k: v for k, v in portals.items() if k not in done}
+    # 省过滤（分省分批跑，避免一次跑几小时）
+    provs = [x for x in (os.environ.get("P223_S2_PROV") or "").split(",") if x]
+    if provs:
+        portals = {k: v for k, v in portals.items() if v["prov"] in provs}
     print(f"S2 县级门户组: {len(portals)}")
     items = list(portals.items())
     if limit:
@@ -779,6 +832,14 @@ def run_s2(tasks, reg, dup_names, st, all_city_bases, limit=None):
                         continue
                     title = page_title(link)
                     if not title or not text_has_county(title, county):
+                        continue
+                    # 门户「领导之窗 / 建议提案办理 / 预决算 / 会议报道」类栏目不是
+                    # 机构官网（2026-11-17 全量门户轮实测：2341 门户产出的填充里
+                    # 三成是这类子页，p228 审计全部回清）
+                    if LEADER_PATH.search(link) or BAD_COLUMN.search(link):
+                        continue
+                    if TITLE_BAD.search(title.replace("政治协商会议", "")) \
+                            or KIND_BAD.search(title):
                         continue
                     if text_has_org(title, org_name):
                         ok, note = True, "title双验"

@@ -221,7 +221,19 @@
 - `p216_registry_sync.py` — 五系统审计裁决回灌 registry：按旧 URL 定位条目替换/清除，并向 p204/p206 种 cleared 标记防重采。
 - `p217_five_sys_level_fix.py` — 五系统「县级机构误挂市级」修复：按权威源重采并 title 验证，补填 12 个严谨验证节点。
 
-## 中期批次概览（p116-p200）
+## 县级五系统补采与审计（p223-p239）
+- `p223_county_5sys_fill.py` — 县级五系统补采主机器：四档渠道（S1 上级同系统官网名录 / S2 本级政府门户导航 / S3 同级互链 / S4 SERP 线索+title 严格验证）+ 共享校验器（ORG5/ORG_PATH/title_ok/geo_base…）。环境开关：`P223_STRATEGY`、`P223_S1_NAV/DEEP/ORG`、`P223_S2_SKIP_DONE/ORG/PROV`、`P223_S4_VARIANT/SKIP_BASE/RETRY/NS/WORKERS`。S2 的门户导航验收已加「领导之窗 / 建议提案办理 / 预决算 / 会议报道」负向过滤（2026-11-17 全量门户轮沉淀）。
+- `p228_county_fill_audit.py` — 县级补采结果审计：A 文章/新闻路径清除、D 业务栏目/上级机构/机构类型错配、E 县名复验、F 按 p223 现行严格校验全量复验（`P228_FIX=1` 才清可清除类）。
+- `p231_tidy.py` — 末期数据清理：WAF 会话参数剥离、空名/重复节点删除、门户「国家部委」链接区块误采节点清理（本次 3,595 个，市级机构数因此回到真实值）。
+- `p235_upper_site_county_channel.py` — 上级站点县级频道专轮：市人大/政协/两院官网「县区」栏目深挖并 title 验证。
+- `p237_12388_counties.py` — 县级监委 12388 名录补采（省纪委 12388 子站的县区目录 + root_hint 归一）。
+- `p238_city_5sys_fill.py` — 市级五系统补采（复用 p223 四档渠道，task 里 county=市级节点、parent=省级节点）+ `--audit` 市级复核（省站栏目页 / 区县机构页 / 门户专题页 / 移动版归一等）。SERP 轮已加「区县机构顶替市级」「门户类目页」两条拒绝规则。
+- `p239_registry_five_sync.py` — 五系统 registry 同步（省/市/县全量叶子）：树有 URL 而 registry 不同 → 以树为准；树因审计清空且 s 留痕 → registry 置 cleared；树有 URL 而 registry 缺记录 → 补登（verified_at 留空，不冒充当日复验）。
+
+## 全量 URL 核查与治理（p240 系列）
+- `p240_full_url_verify.py` — **全站 URL 身份全量核查**：树节点 + registry-only 共 2.3 万唯一 URL 逐条实抓，按「地区/机构类型/文章页」三维判身份，分档 `ok / ok_neutral / waf / dead / suspect / mismatch`。要点：WAF/IP 封锁（含 4xx 反爬）**默认正确**并走隧道代理复验；标题取最深层行政区比对（上级地名顶替判错配）；跨省同基底（天津河北区 vs 河北省）专判；功能区名归一（经开区/综改示范区/西海岸新区）；合署办公（黄岛=西海岸、汉南=武汉经开、金州=金普）与省级平台市级频道（wx.jsjc「江苏检察网」）列入复核例外。`--report` 出报告、`--prune` 清「省级部门误挂市级组」结构垃圾、`--apply` 按节点清除 mismatch（同 URL 在别的节点正确则不清树、registry 仅在无任何存活节点时清除）。
+- `p240b_article_fix.py` — 文章/详情页 URL 处置：把 p240 判为「文章页」的链接换成本站根页并重判身份，根页也过不了的清空列名（文章页不是机构官网入口）。
+- 本轮核查口径、分档统计与误判修正记录见 **`URL_VERIFY.md`**（`p240_results.jsonl` / `url_verify_report.json` 为可复跑的中间产物，不入库）。
 > 该批次脚本较多，各脚本头部有完整背景说明；此处按主题登记主线，未逐条列出。
 
 - **垂直系统补采 p116-p120**：省院渲染探测、金融监管/移民/海关官网机构页、总局名录落库。

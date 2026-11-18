@@ -366,9 +366,12 @@ def main():
                                if x and x != cb)
 
     # 分组：(上级站 URL, 机构类型) → 该市待补任务
+    only = [x for x in (os.environ.get("P235_ORG") or "").split(",") if x]
     groups = {}
     for t in tasks:
         if t["filled"]:
+            continue
+        if only and t["org_name"] not in only:
             continue
         u, cand = upper_url(t, prov_map)
         if not u:
@@ -408,6 +411,8 @@ def main():
     prov_groups = {}
     for t in tasks:
         if t["filled"]:
+            continue
+        if only and t["org_name"] not in only:
             continue
         pv = prov_map.get(t["prov"])
         if pv is None:

@@ -28,6 +28,9 @@ data/snapshots/
 *.tmp
 *_state*.json
 *_state*
+# p240 全量核查的断点与全量报告：可由脚本重跑复现，摘要见 data/URL_VERIFY.md
+data/p240_results.jsonl
+data/url_verify_report.json
 
 # ===== 获取层实现（浏览器/指纹/WAF 处理，不随仓库发布）=====
 util/*
