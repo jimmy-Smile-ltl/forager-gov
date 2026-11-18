@@ -55,6 +55,16 @@ def stats_of(node):
 def main():
     tree = json.load(open("tree.json", encoding="utf-8"))
     rules = json.load(open("extraction_rules.json", encoding="utf-8"))
+    # 2026-11-18 用户指令：列表模式新增「市政府部门 / 县政府部门」两个节点。
+    # 节点在生成层注入（tree.json 主数据不动），模块文件名固定为 ascii。
+    try:
+        import zzjg_nodes
+        for _g, _fn in zip(zzjg_nodes.tree_groups(),
+                           ("modules/shi_zzjg.js", "modules/xian_zzjg.js")):
+            _g["_file"] = _fn
+            tree["ks"].append(_g)
+    except Exception as _e:
+        print("!! 市政府部门/县政府部门 节点生成失败:", _e)
     os.makedirs(OUT, exist_ok=True)
     os.makedirs(os.path.join(OUT, "modules"), exist_ok=True)
     os.makedirs(os.path.join(OUT, "rules"), exist_ok=True)
@@ -77,7 +87,7 @@ def main():
     write_module("central", central_g, "modules/central.js")
     write_module("gat", gat_g, "modules/gat.js")
     for g in extra_gs:
-        write_module(g["n"], g, "modules/%s.js" % prov_py(g["n"]))
+        write_module(g["n"], g, g.get("_file") or "modules/%s.js" % prov_py(g["n"]))
 
     prov_stubs = []
     for pnode in prov_g["ks"]:
@@ -138,8 +148,12 @@ def main():
 
     extra_stubs = [{
         "n": g["n"], "l": g.get("l", "根"), "k": g.get("k", "分组"),
-        "c": g.get("c", ""), "file": "modules/%s.js" % prov_py(g["n"]),
+        "c": g.get("c", ""), "file": g.get("_file") or "modules/%s.js" % prov_py(g["n"]),
         "_key": g["n"], "_stats": stats_of(g),
+        # 2026-11-18：市政府部门/县政府部门 要在块视图根部可见。
+        # 前端 visible() 对「无 ks 的 file stub」按 l=根 过滤掉，故给空 ks
+        # （expandable 仍走 file 惰性加载）；其余既有 extra 组保持原行为不动。
+        **({"ks": []} if (g.get("_file") or "").endswith("_zzjg.js") else {}),
     } for g in extra_gs]
 
     root = {

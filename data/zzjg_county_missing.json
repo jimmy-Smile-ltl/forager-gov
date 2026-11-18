@@ -1,0 +1,38 @@
+[
+ {
+  "key": "县|浙江省|宁波市|奉化区",
+  "level": "县",
+  "name": "奉化区",
+  "prov": "浙江省",
+  "city": "宁波市",
+  "cd": "330213",
+  "url": "http://www.fh.gov.cn/index.html"
+ },
+ {
+  "key": "县|浙江省|宁波市|象山县",
+  "level": "县",
+  "name": "象山县",
+  "prov": "浙江省",
+  "city": "宁波市",
+  "cd": "330225",
+  "url": "http://www.xiangshan.gov.cn"
+ },
+ {
+  "key": "县|湖北省|湖北省|潜江市",
+  "level": "县",
+  "name": "潜江市",
+  "prov": "湖北省",
+  "city": "湖北省",
+  "cd": "429005",
+  "url": "https://www.hbqj.gov.cn/"
+ },
+ {
+  "key": "县|海南省|海南省|白沙黎族自治县",
+  "level": "县",
+  "name": "白沙黎族自治县",
+  "prov": "海南省",
+  "city": "海南省",
+  "cd": "469025",
+  "url": "https://baisha.hainan.gov.cn/"
+ }
+]

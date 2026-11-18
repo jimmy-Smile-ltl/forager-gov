@@ -332,6 +332,13 @@ def gen_viz(tree_path="tree.json"):
     tree = json.load(open(tree_path, encoding="utf-8"))
     here = os.path.dirname(os.path.abspath(__file__))
     blk = build_block(tree)
+    # 2026-11-18 用户指令：树模式新增「市政府部门 / 县政府部门」两个节点
+    # （生成层注入，tree.json 主数据不动；数据源 p246/p248 采集结果）
+    try:
+        import zzjg_nodes
+        blk["ks"].extend(zzjg_nodes.block_groups())
+    except Exception as _e:
+        print("!! 市政府部门/县政府部门 节点生成失败:", _e)
     tiao = build_tiao(tree)
     # registry 合并 USR 全字段
     reg_path = os.path.join(here, "site_registry.json")
