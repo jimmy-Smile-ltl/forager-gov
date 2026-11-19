@@ -40,7 +40,15 @@ def stats_of(node):
         nonlocal e, ok, warn, miss
         if not n.get("ks") or n.get("k") != "分组":
             e += 1
-            if n.get("x"):
+            # 部门名录叶子（市政府部门/县政府部门下的 k=部门）没有政府信息公开
+            # 专栏概念，有栏目链接即算已收录；与前端 statusOf 保持一致，
+            # 否则桩节点 _stats 会显示「N 单位 · 0 已收录」（2026-11-19 巡检修复）
+            if n.get("k") == "部门":
+                if n.get("u"):
+                    ok += 1
+                else:
+                    miss += 1
+            elif n.get("x"):
                 ok += 1
             elif n.get("u"):
                 warn += 1

@@ -249,7 +249,8 @@ function showChinaSide(){
     const G=window.__GOV_DATA__||{};
     for(const root of [G.block,G.tiao]){
       if(!root)continue;
-      (function f(n){const ks=n.ks||[];if(!ks.length){fn(n);return}for(const c of ks)f(c)})(root);
+      // 2026-11-19：部门名录叶子（t=dept）不参与综合覆盖率——否则总览卡虚高
+      (function f(n){const ks=n.ks||[];if(!ks.length){if(n.t!=="dept")fn(n);return}for(const c of ks)f(c)})(root);
     }
   }
   const ty=MapViz.getType();

@@ -132,13 +132,79 @@ PARTY = re.compile(
     r"政法委|政法委员会|机关工委|编办|机构编制委员会|老干部局|巡察)"
 )
 
-TOWN = re.compile(r"(人民政府|镇政府|乡政府|街道办事处|街道)$")
+TOWN = re.compile(r"(人民政府|镇政府|乡政府|街道办事处|街道|镇|乡)$")
+
+# 2026-11-19 网页展示巡检发现的三类脏数据（县级名录里真实出现过）：
+#   1. 面包屑污染：海南 7 个县把**省厅**采成了本县部门，锚文本是
+#      `&gt;海南省公安厅`（页面导航条「省级部门」混进部门列表）——先剥前缀，
+#      再由 county_guard_depts 按省名前缀拒掉（用户红线：不能采成上级部门）；
+#   2. HTML 属性残片：`陶河镇"tabindex="-1">陶河镇`（锚文本里带属性串）；
+#   3. 栏目占位名：`默认主站`（导航 select 的默认项）、`信息公开查阅场所`。
+BREAD_PREFIX = re.compile(r"^(?:&gt;|&lt;|&amp;gt;|&amp;lt;|>|»|›)+")
+HTML_ATTR = re.compile(r'^[^"<>]{0,24}"[^<>]*>\s*')
+PLACEHOLDER = re.compile(
+    r"^(?:默认主站|主站|网站首页|首页|政府|人民政府|政务公开|政府信息公开|"
+    r"信息公开|部门|机构|组织机构|部门平台链接|信息公开查阅场所|"
+    r"信息公开阅读场所|信息公开受理/查阅场所|政务公开查阅场所)$")
+
+
+def repair_name(n):
+    """已落盘名称的修复（reclean 用）：只剥面包屑/属性残片/实体，不重跑词尾规则。"""
+    n = (n or "").replace("&amp;", "&")
+    n = BREAD_PREFIX.sub("", n)
+    n = HTML_ATTR.sub("", n)
+    n = re.sub(r'"?[A-Za-z-]+="[^"]*"', "", n)
+    return re.sub(r"\s+", "", n)
+
+
+def finalize_depts(key, depts):
+    """落盘前统一收口（抽取与 reclean 共用同一套口径）。
+
+    - 占位名（默认主站/查阅场所）不是部门；
+    - `XX县人民政府`/`XX县政府` 是该县本体，门户挂在县节点上，不算部门；
+    - 括号被截断的补右括号（`江安县委办公室（县档案局` → 补 `）`）；
+    - URL 内空格去掉（四川平台 `deptCode=…-9 &areaCode=`）；
+    - 同 URL 语义重复（`扎兰屯市人民政府办公室` vs `政府办公室`）只留更完整的。
+    """
+    parts = key.split("|")
+    county = parts[-1] if parts else ""
+    self_names = {county + "人民政府", county + "政府"} if county else set()
+    norm = []
+    for d in depts:
+        n = d.get("n") or ""
+        if not n or PLACEHOLDER.match(n) or n in self_names:
+            continue
+        if n.count("（") > n.count("）"):
+            n += "）"
+        u = re.sub(r"\s+", "", d.get("u") or "")
+        norm.append({**d, "n": n, "u": u})
+    keep_by_url = {}
+    out = []
+    for d in norm:
+        cmp_n = d["n"].replace("人民政府", "政府")
+        prev = keep_by_url.get(d["u"])
+        if prev is not None:
+            pn = prev["n"].replace("人民政府", "政府")
+            if cmp_n in pn:                     # 新条目是旧条目的残片 → 丢新的
+                continue
+            if pn in cmp_n:                     # 旧条目是残片 → 换成新的
+                out.remove(prev)
+        keep_by_url[d["u"]] = d
+        out.append(d)
+    seen, uniq = set(), []
+    for d in out:
+        if d["n"] in seen:
+            continue
+        seen.add(d["n"])
+        uniq.append(d)
+    return uniq
 
 
 # ── 名称清洗 ─────────────────────────────────────────────────────────────
 def clean_name(raw):
     n = re.sub(r"<[^>]+>", "", raw or "")
-    n = re.sub(r"&nbsp;|&amp;|\s+", "", n)
+    n = repair_name(n)
+    n = re.sub(r"&nbsp;|\s+", "", n)
     n = re.sub(r"^[·•\-—_>»\|\s、，,\.]+|[·•\-—_>«\|\s、，,\.]+$", "", n)
     sm = SITE_TAIL.match(n)
     if sm:
@@ -233,6 +299,19 @@ def county_guard_depts(key, depts):
     return out
 
 
+def _tail_ok(name):
+    """合法尾巴判定。合署名「XX局（XX委员会）」以括号收尾，括号内或括号前
+    命中部门后缀即算合法——finalize_depts 会自动补右括号，若不兼容会让
+    reclean 第二次运行时把上轮已闭合的条目误删（2026-11-19 实测 11 条）。"""
+    if TAIL.search(name):
+        return True
+    if name.endswith("）"):
+        i = name.rfind("（")
+        if i > 0 and (TAIL.search(name[i + 1:-1]) or TAIL.search(name[:i])):
+            return True
+    return False
+
+
 def name_ok(name, locals_=()):
     """单条名称合规性（抽取与 reclean 共用同一套口径）。"""
     if not (3 <= len(name) <= 32):
@@ -241,7 +320,7 @@ def name_ok(name, locals_=()):
         return False
     if UPPER.match(name) and not any(t in name for t in locals_):
         return False
-    return bool(TAIL.search(name))
+    return _tail_ok(name)
 
 
 def extract_depts(html, base_url, locals_=()):
@@ -345,7 +424,8 @@ def do_static(item):
     html, method = P.fetch(u, timeout=20)
     if not html:
         return key, None
-    depts = county_guard_depts(key, extract_depts(html, u, local_tokens(key)))
+    depts = finalize_depts(key, county_guard_depts(
+        key, extract_depts(html, u, local_tokens(key))))
     return key, {
         "u": u,
         "method": "static/" + (method or ""),
@@ -433,7 +513,7 @@ def do_render(item, deadline_s=90):
         "method": "render/pager",
         "pages": pages,
         "pages_total": None,
-        "depts": county_guard_depts(key, list(got.values())),
+        "depts": finalize_depts(key, county_guard_depts(key, list(got.values()))),
         "collected_at": TODAY,
     }
 
@@ -465,16 +545,17 @@ def main():
         for k, v in out.items():
             before = len(v.get("depts") or [])
             toks = local_tokens(k)
-            kept = [d for d in (v.get("depts") or []) if name_ok(d.get("n") or "", toks)]
-            kept = county_guard_depts(k, kept)
-            seen, uniq = set(), []
-            for d in kept:
-                if d.get("n") in seen:
-                    continue
-                seen.add(d.get("n"))
-                uniq.append(d)
-            v["depts"] = uniq
-            dropped += before - len(uniq)
+            fixed = []
+            for d in (v.get("depts") or []):
+                n = repair_name(d.get("n") or "")
+                # 归类随 TOWN/PARTY 规则变化（2026-11-19 补「XX镇/XX乡」形态），
+                # reclean 时一并重算，前端据此显示「乡镇/街道」「党委机构」标注
+                d = {**(d if n == d.get("n") else {**d, "n": n}), "c": classify(n)}
+                if name_ok(n, toks):
+                    fixed.append(d)
+            kept = finalize_depts(k, county_guard_depts(k, fixed))
+            v["depts"] = kept
+            dropped += before - len(kept)
         save_out(out)
         print(f"reclean: 剔除 {dropped} 条（上级部门/栏目噪声/重复）")
         if args.phase in ("static", "render") or args.force:

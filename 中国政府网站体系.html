@@ -107,6 +107,7 @@ h1{
 .search.has-text .clear{display:block}
 .search .count{font-size:11.5px; color:var(--muted); border-left:1px solid var(--line2); padding-left:10px; white-space:nowrap; font-variant-numeric:tabular-nums}
 .hshu{font-size:10px; margin-left:6px; padding:1px 6px; border-radius:99px; background:var(--warn-bg,#f6efdf); color:var(--warn,#a97b22); border:1px solid color-mix(in srgb,var(--warn,#a97b22) 40%,transparent); white-space:nowrap}
+.dtag{font-size:10px; margin-left:6px; padding:1px 6px; border-radius:99px; background:color-mix(in srgb,var(--line,#d8dbe2) 45%,transparent); color:var(--muted,#6b7280); border:1px solid color-mix(in srgb,var(--muted,#6b7280) 25%,transparent); white-space:nowrap}
 .chips{display:flex; gap:6px; flex-wrap:wrap}
 .chip{
   border:1px solid var(--line2); border-radius:999px; padding:4px 12px;
@@ -492,6 +493,10 @@ const BASE=new URL(".", document.baseURI).href;
 const LEVELS=["中央","省","市","地级区","县","特别行政区","港澳台"];
 const LEVEL_LABELS={中央:"中央",省:"省级",市:"市级",地级区:"地级区",县:"县级",特别行政区:"特别行政区",港澳台:"港澳台下级"};
 function statusOf(n){
+  // 部门名录叶子（k=部门，市政府部门/县政府部门两个专题节点下）：有栏目链接即
+  // 视为已收录。它们没有「政府信息公开专栏」概念，走门户口径会 6.5 万条全变黄
+  // 「待核」，分组行也会显示「N 单位 · 0 已收录」（2026-11-19 列表巡检修复）
+  if(n.k==="部门") return n.u?"ok":"missing";
   if(n.x) return "ok";
   if(n.u) return "warn";
   return "missing";
@@ -637,6 +642,14 @@ function nodeRow(n, depth, opts={}){
     hb.textContent="🤝合署";
     hb.title=n.m;
     nameEl.appendChild(hb);
+  }
+  // 2026-11-19：县级「组织机构」页里混有乡镇（街道）与党委机构，节点名统一是
+  // 「XX局」，不加标注会被误读为县政府部门。dt 由 p250 归类带出。
+  if(n.k==="部门"&&(n.dt==="town"||n.dt==="party")){
+    const tg=document.createElement("span");
+    tg.className="dtag";
+    tg.textContent=n.dt==="town"?"乡镇/街道":"党委机构";
+    nameEl.appendChild(tg);
   }
   const cntEl=document.createElement("span");
   cntEl.className="cnt";
@@ -1068,10 +1081,10 @@ function renderOverview(n,body){
       </div>
       <div class="dsection"><p class="dlabel">下级构成</p>
         <div class="dgroup-stats">
-          <div class="gstat"><b>${s.e}</b><span>单位总数</span></div>
-          <div class="gstat"><b style="color:var(--ok)">${s.ok}</b><span>专栏URL已收录</span></div>
+          <div class="gstat"><b>${s.e}</b><span>${(n.c||"")==="部门"?"部门总数":"单位总数"}</span></div>
+          <div class="gstat"><b style="color:var(--ok)">${s.ok}</b><span>${(n.c||"")==="部门"?"有栏目链接":"专栏URL已收录"}</span></div>
           <div class="gstat"><b style="color:var(--warn)">${s.warn}</b><span>门户在录 · 专栏待核</span></div>
-          <div class="gstat"><b style="color:var(--missing)">${s.miss}</b><span>门户未解析</span></div>
+          <div class="gstat"><b style="color:var(--missing)">${s.miss}</b><span>${(n.c||"")==="部门"?"无链接":"门户未解析"}</span></div>
         </div>
       </div>
       ${n.ks?`<div class="dsection"><p class="dlabel">直接下级</p>
@@ -1082,7 +1095,7 @@ function renderOverview(n,body){
     return;
   }
   const st=statusOf(n);
-  const stLabel=st==="ok"?"专栏URL已收录":st==="warn"?"门户在录 · 专栏待核":"门户未解析";
+  const stLabel=n.k==="部门"?"部门栏目链接":st==="ok"?"专栏URL已收录":st==="warn"?"门户在录 · 专栏待核":"门户未解析";
   body.innerHTML=`
     <p class="dtitle">${esc(n.n)}</p>
     <p class="crumb">${esc(breadcrumb(n))}</p>
@@ -1544,7 +1557,9 @@ function showChinaDetail(){
     const G=window.__GOV_DATA__||{};
     for(const root of [G.block,G.tiao]){
       if(!root)continue;
-      (function f(n){const ks=n.ks||[];if(!ks.length){fn(n);return}for(const c of ks)f(c)})(root);
+      // 2026-11-19：市政府部门/县政府部门的 6.5 万条部门名录叶子（t=dept）
+      // 不是并列机关，不参与「综合覆盖率」分母——否则全国总览卡从 62% 虚高到 87%
+      (function f(n){const ks=n.ks||[];if(!ks.length){if(n.t!=="dept")fn(n);return}for(const c of ks)f(c)})(root);
     }
   }
   const ty=MapViz.getType();
