@@ -1,0 +1,91 @@
+{
+ "_note": "人工核验过的县级「部门/组织机构」入口页（用户 2026-11-19 人工分析结果）。p250 优先采信，method=manual。key 口径同 zzjg_county.json：县|省|市|县名。",
+ "_verified_by": "用户人工逐站分析（县级未采清单-2026-11-19.md）",
+ "_date": "2026-11-19",
+ "seeds": {
+  "县|吉林省|吉林市|磐石市": {
+   "u": "http://xxgk.panshi.gov.cn/szf/dfbmhz/",
+   "m": "政府信息公开板块「地方部门平台链接」子站"
+  },
+  "县|宁夏回族自治区|中卫市|中宁县": {
+   "u": "https://www.znzf.gov.cn/xxgk/jgzn/",
+   "m": "政府信息公开→概况信息/机构职能；同站另有 /xxgk/ysqgk/、/xxgk/zfxxgkzn/"
+  },
+  "县|山西省|吕梁市|岚县": {
+   "u": "http://www.lanxian.gov.cn/infopub/xxgkml/zzjg/",
+   "m": "法定主动公开内容→政府组成部门"
+  },
+  "县|广西壮族自治区|南宁市|武鸣区": {
+   "u": "https://www.wuming.gov.cn/gk/xxgkzn/",
+   "m": "政府信息公开指南→政府组成部门"
+  },
+  "县|西藏自治区|拉萨市|曲水县": {
+   "u": "https://www.qushuixian.gov.cn/qsx/jgjj/zfxxgk_jgjj.shtml",
+   "m": "机构简介→县直部门"
+  },
+  "县|贵州省|六盘水市|六枝特区": {
+   "u": "https://www.liuzhi.gov.cn/newsite/zwgk_5753282/zfxxgk/fdzdgknr_5759066/jgjj_5759067/tqzfgzjg_5759069/",
+   "m": "特区政府工作机构"
+  },
+  "县|黑龙江省|伊春市|嘉荫县": {
+   "u": "https://www.jyx.gov.cn/jyxrmzf/c104325/xxgk_list.shtml",
+   "m": "更多 分页"
+  },
+  "县|云南省|大理白族自治州|云龙县": {
+   "u": "https://www.ylx.gov.cn/ylxrmzf/c106965/pc/list.html",
+   "m": "云南统一平台 list.html，分页"
+  },
+  "县|浙江省|丽水市|景宁畲族自治县": {
+   "u": "http://www.jingning.gov.cn/col/col1229437953/index.html",
+   "m": "信息公开→部门街道信息公开（原 col1229437960 是年份归档页，无部门）"
+  },
+  "县|海南省|海口市|琼山区": {
+   "u": "https://qsqzf.haikou.gov.cn/hksqsqzf/qzjbmptlj/qsqxxgk_bm.shtml",
+   "m": "区镇街、部门平台链接"
+  },
+  "县|甘肃省|兰州市|榆中县": {
+   "u": "https://www.lzyuzhong.gov.cn/col/col1804/index.html",
+   "m": "乡镇街道/部门单位"
+  },
+  "县|江苏省|南京市|六合区": {
+   "u": "http://www.njlh.gov.cn/lhqrmzf/214/215/index_17537.html",
+   "m": "法定主动公开内容→概况信息；条目是《XX局职能配置和内设机构规定》公文标题，靠 clean_name 的 MARK 截断出部门名"
+  },
+  "县|江西省|上饶市|弋阳县": {
+   "u": "http://www.jxyy.gov.cn/jxyy/dfbmptlj/yyzwgk_xxgklist_bm.shtml",
+   "m": "地方部门平台链接"
+  },
+  "县|福建省|南平市|顺昌县": {
+   "u": "https://www.fjsc.gov.cn/cms/html/scxrmzf/bmzfxxgk/index.html",
+   "m": "部门和乡镇街道信息公开"
+  },
+  "县|辽宁省|大连市|长海县": {
+   "u": "https://www.dlch.gov.cn/zjchList?parentId=463356412469317&catalogId=463356483375173&leaderAll=1",
+   "m": "zjchList 动态列表"
+  },
+  "县|安徽省|宣城市|广德市": {
+   "u": "https://www.guangde.gov.cn/OpennessBranch/",
+   "m": "部门与乡镇公开导航"
+  },
+  "县|山东省|临沂市|沂南县": {
+   "u": "http://www.yinan.gov.cn/bmml/bm/xfb/xfb_3393.htm",
+   "m": "部门目录，左侧导航"
+  },
+  "县|广东省|梅州市|蕉岭县": {
+   "u": "https://www.jiaoling.gov.cn/gkmlzl/",
+   "m": "公开目录专栏"
+  },
+  "县|湖北省|孝感市|孝昌县": {
+   "u": "http://www.xiaochang.gov.cn/c/xcx/dfbmptlj.jhtml",
+   "m": "地方部门平台链接"
+  },
+  "县|湖南省|株洲市|茶陵县": {
+   "u": "https://www.chaling.gov.cn/c24620/index.html",
+   "m": "法定主动公开内容→机构职能"
+  },
+  "县|陕西省|商洛市|丹凤县": {
+   "u": "https://www.danfeng.gov.cn/zfxxgk1/fdzdgk/bm_zbgk.htm",
+   "m": "法定主动公开内容→部门、镇办公开"
+  }
+ }
+}

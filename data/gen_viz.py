@@ -278,9 +278,15 @@ def build_records(block, tiao, registry):
         if v.get("u"):
             u2r[v["u"]] = v
     records = {}
+    # 2026-11-19：市政府部门/县政府部门两个聚合分组不进 USR 记录——它们 6.5 万条
+    # 部门名录叶子只有 n/u（tree 已带），塞进 records 会让文件从 8.5MB 涨到 22MB
+    # （p219 限额 25MiB，加 JSON 开销后 36.7MB 直接超限）。叶子 t="dept"。
+    SKIP_GROUPS = ("市政府部门", "县政府部门")
     def walk(n, path, prefix):
         nid = "/".join(path)
         full = prefix + "·" + n.get("n", "") if prefix else n.get("n", "")
+        if n.get("n") in SKIP_GROUPS and n.get("t") == "block":
+            return
         kids = n.get("ks", []) or []
         if not kids:
             usr = {"id": nid, "name": n.get("n", ""), "type": n.get("t", "group")}

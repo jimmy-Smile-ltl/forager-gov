@@ -49,6 +49,10 @@ sys.path.insert(0, HERE)
 
 import p246_zzjg_pages as P  # 复用 分类/评分/验证/合并 的单一判定标准
 
+# 县级候选页渲染兜底（2026-11-19）：`/{县}rmzf/cXXXXXX/pc/list.html` 这类统一平台
+# 的组织机构页是 JS 壳（HTML 40~60KB，可见正文 19~870 字），静态抓取永远无候选。
+P.RENDER_CANDIDATE = True
+
 TODAY = datetime.date.today().isoformat()
 OUT_F = os.path.join(HERE, "zzjg_county.json")
 STATE_F = os.path.join(HERE, "p248_state.json")
@@ -453,7 +457,7 @@ def try_portal_xxgk(t):
         for su in sub[:3]:
             if time.time() > deadline:
                 break
-            h2, m2 = P.fetch_or_render(su, timeout=15)
+            h2, m2 = _fr(su, 15)
             own2 = P.self_candidate(su, h2, m2)
             if own2 and own2["kind"] in P.CORE_KINDS:
                 own2["src"] = f"信息公开专栏「{entry}」→「{su}」→ " + own2["src"]
@@ -466,8 +470,166 @@ def try_portal_xxgk(t):
     return None, f"xxgk-no-verified (入口{len(cands)})"
 
 
+# ── 政府信息公开板块发现（2026-11-19 用户人工分析产物）──────────────────
+# 用户逐站核验 26 个失败县后给出的主导形态：
+#   首页 →「政府信息公开 / 政务公开」→「法定主动公开内容」→
+#   「组织机构 / 机构简介 / 政府组成部门 / 部门平台链接 / 机构职能」
+# 信息公开还常独立挂在 xxgk.<domain> 子站（磐石 xxgk.panshi.gov.cn/szf/dfbmhz/，
+# 即同 registrable domain 的子域，P.same_site 已允许）。
+# 旧 static 阶段只扫门户首页锚点 → 这类站一律「候选0」，是本轮最大的漏采来源。
+XXGK_TXT = re.compile(r"政府信息公开|政务公开|政务信息公开|信息公开|法定主动公开")
+XXGK_HREF = re.compile(r"xxgk|zwgk|zfxxgk|gongkai|openness|openinfo", re.I)
+
+# 文章/公文页 URL 形态：单篇内容不是部门清单
+ARTICLE_URL = re.compile(
+    r"/content/\d|/info/\d|/art/|/doc/|/detail|/article|content_\d|"
+    r"/\d{6}/|/20\d{2}[-/]\d{2}/|\d{6,}\.s?html?$", re.I)
+
+
+def _anchors(html, base):
+    """(锚文本, 绝对URL, 原始href) 迭代器。"""
+    for mm in re.finditer(P.ANCHOR_RE, html or ""):
+        hr = re.search(r"href\s*=\s*[\"']([^\"']+)[\"']", mm.group(1), re.I)
+        if not hr:
+            continue
+        raw = hr.group(1).strip()
+        if not raw or raw.lower().startswith(("javascript:", "#", "mailto:", "tel:")):
+            continue
+        yield P.norm_text(mm.group(2)), urljoin(base, raw), raw
+
+
+def _deptlist_ok(links, portal_url, deadline, key=""):
+    """候选记录必须是「部门清单页」，不是单篇公文/新闻栏目/单个乡镇简介。
+
+    `page_score` 只看标题有没有「机构职能」——「长山峪镇人民政府机构职能信息」
+    这类**单个乡镇的介绍文章**、企事业单位专栏都能拿高分（2026-11-19 实测
+    滦平/怀安/宽城采到）；脚注里带一串部门名的新闻栏目（黑山「重大民生信息」）
+    也能凑够计数。用户要的是本级部门名录，所以这里再卡一道：
+      ① URL 是文章形态（/content/46770.html、/info/、/doc/、日期目录）→ 跳过
+      ② **锚文本本身**是部门名（复用 p250 的清洗/同站判定，不看正文散文）< 6 条 → 跳过
+    返回第一个通过的 link（补 dept_n），全不过返回 None。
+    """
+    import p250_county_depts as D    # 复用「部门名清洗 + 同站过滤」的单一实现
+    toks = D.local_tokens(key) if key else ()
+    for x in links:
+        if time.time() > deadline:
+            break
+        u = x.get("u") or ""
+        if ARTICLE_URL.search(u):
+            continue
+        h, _ = P.fetch(u, timeout=15)
+        if not h or len(h) < 1500:
+            continue
+        depts = D.county_guard_depts(key, D.extract_depts(h, u, toks)) if key else \
+            D.extract_depts(h, u, toks)
+        if len(depts) < 6 and time.time() < deadline - 30 and P._js_shell(h):
+            # JS 壳的机构栏目（代县 /dxzw/zwgk/jgsz/、准格尔旗 /jgzn/）静态
+            # 抽不出锚点，但 p250 渲染阶段能抽——不能因为静态为空就否掉
+            try:
+                h2 = P.render_page(u, wait_ms=2500, use_proxy=True)
+            except Exception:
+                h2 = ""
+            if h2:
+                depts = D.county_guard_depts(
+                    key, D.extract_depts(h2, u, toks)) if key else \
+                    D.extract_depts(h2, u, toks)
+                if len(depts) >= 6:
+                    x["dept_n"] = len(depts)
+                    x["js_shell"] = True
+                    return x
+        if len(depts) < 6:
+            continue
+        x["dept_n"] = len(depts)
+        return x
+    return None
+
+
+def try_portal_xxgk_page(t):
+    """门户页内的「政府信息公开」入口 → 逐层下钻找机构栏目。"""
+    deadline = time.time() + P.BUDGET
+    h, m = P.fetch_or_render(t["url"], timeout=20)
+    if not h or len(h) < 800:
+        return None, "portal-blocked"
+
+    def _fr(u, to):
+        """预算尾声不再开渲染（一次渲染 ~45s，会把整站预算吃光）。"""
+        if time.time() > deadline - 35:
+            return P.fetch(u, timeout=to)
+        return P.fetch_or_render(u, timeout=to)
+
+    home_host = urlparse(t["url"]).hostname or ""
+    hubs = []
+
+    def _add(u):
+        u = (u or "").split("#")[0]
+        if u.startswith("http") and P.same_site(u, t["url"]) and u not in hubs:
+            hubs.append(u)
+
+    for text, u, raw in _anchors(h, t["url"]):
+        host = urlparse(u).hostname or ""
+        short = bool(text) and len(text) <= 20
+        if (short and XXGK_TXT.search(text)) or XXGK_HREF.search(raw) \
+                or (short and host and host != home_host):
+            _add(u)
+
+    if not hubs:
+        return None, "no-xxgk-hub"
+
+    for hub in hubs[:5]:
+        if time.time() > deadline:
+            break
+        h1, m1 = _fr(hub, 15)
+        if not h1 or len(h1) < 800:
+            continue
+        own = P.self_candidate(hub, h1, m1)
+        if own and own["kind"] in P.CORE_KINDS and P.same_site(own["u"], t["url"]):
+            ok = _deptlist_ok([own], t["url"], deadline, t["key"])
+            if ok:
+                ok["src"] = f"信息公开入口「{hub}」即目标 → " + ok["src"]
+                return P.make_rec([ok], method=f"xxgkpage/{m}+{m1}"), ""
+        lk = P.collect_links(hub, h1, t["url"], deadline)
+        if lk:
+            ok = _deptlist_ok(lk, t["url"], deadline, t["key"])
+            if ok:
+                ok["src"] = f"信息公开入口「{hub}」→ " + ok["src"]
+                return P.make_rec([ok], method=f"xxgkpage/{m}+{m1}"), ""
+        # 再下一层：法定主动公开内容 → 机构简介 / 部门平台链接 / 政府组成部门
+        seen2 = set()
+        for text, su, raw in _anchors(h1, hub):
+            if time.time() > deadline:
+                break
+            if not text or len(text) > 20 or not P.SUB_KW.search(text):
+                continue
+            if not su.startswith("http") or not P.same_site(su, t["url"]) or su in seen2:
+                continue
+            seen2.add(su)
+            if len(seen2) > 6:
+                break
+            h2, m2 = _fr(su, 15)
+            own2 = P.self_candidate(su, h2, m2)
+            if own2 and own2["kind"] in P.CORE_KINDS:
+                ok = _deptlist_ok([own2], t["url"], deadline, t["key"])
+                if ok:
+                    ok["src"] = f"信息公开「{hub}」→「{su}」→ " + ok["src"]
+                    return P.make_rec([ok], method=f"xxgkpage/{m}+{m1}+{m2}"), ""
+            l2 = P.collect_links(su, h2, t["url"], deadline)
+            if l2:
+                ok = _deptlist_ok(l2, t["url"], deadline, t["key"])
+                if ok:
+                    ok["src"] = f"信息公开「{hub}」→「{su}」→ " + ok["src"]
+                    return P.make_rec([ok], method=f"xxgkpage/{m}+{m1}+{m2}"), ""
+    return None, "xxgkpage-no-verified"
+
+
 PHASES = {
+    # 2026-11-19 用户人工分析 26 站后新增：主导形态是「部门清单不在门户首页」，
+    # 而在 政府信息公开 → 法定主动公开内容 → 组织机构/机构简介/部门平台链接，
+    # 且信息公开常独立挂 xxgk.<domain> 子站。所以它排在最前。
+    "xxgkpage": try_portal_xxgk_page,
     "static": P.try_portal_static,
+    # 渲染阶段：首页是 JS 壳 / 懒加载导航，静态 HTML 里根本没锚点（p246 已有实现，
+    # 之前没接进县级管线，导致「候选0」的 600 多个县从来没走过渲染通道）
+    "render": P.try_portal_render,
     "deep": P.try_portal_deep,
     "sc": try_portal_sc,
     "xxgk": try_portal_xxgk,
@@ -496,6 +658,14 @@ def main():
                     help="剔除错采记录（县级 key 全文，空格分隔）并清断点，供下轮重采")
     ap.add_argument("--tidy", action="store_true",
                     help="离线清理：按 title 剔除上级单位/非清单页链接")
+    ap.add_argument("--rotate", action="store_true",
+                    help="每个目标先换一个新代理 IP（用户指令「多试试几个代理 IP」）："
+                         "把该 host 现绑定的 IP 拉黑，下次提取换新节点")
+    ap.add_argument("--force", action="store_true",
+                    help="已有核心链接也重跑（配合新阶段回炉低产县：入口 URL 本身"
+                         "就不是部门清单的，不重跑永远拿不到正确入口）")
+    ap.add_argument("--keys-file", default="",
+                    help="只处理文件里的 key（每行一个，与 tree key 完全相等）")
     args = ap.parse_args()
     if args.budget:
         P.BUDGET = args.budget
@@ -510,6 +680,10 @@ def main():
     only = args.only.split()
     if only:
         targets = [t for t in targets if any(o in t["name"] for o in only)]
+    if args.keys_file:
+        want = {ln.strip() for ln in open(args.keys_file, encoding="utf-8")
+                if ln.strip() and not ln.startswith("#")}
+        targets = [t for t in targets if t["key"] in want]
     if args.prov:
         targets = [t for t in targets if args.prov in t["prov"]]
     _REGISTRY_XXGK = _registry_xxgk()
@@ -532,10 +706,10 @@ def main():
         rx = re.compile(args.retry_fail_re, re.I) if args.retry_fail_re else None
         for t in targets:
             rec = out.get(t["key"])
-            if rec and any(l.get("kind") in P.CORE_KINDS
-                           for l in rec.get("links") or []):
+            if not args.force and rec and any(
+                    l.get("kind") in P.CORE_KINDS for l in rec.get("links") or []):
                 continue
-            if not args.retry_fail and st["done"].get(t["key"]):
+            if not args.force and not args.retry_fail and st["done"].get(t["key"]):
                 continue
             if rx:      # 只重试「上次失败原因」匹配的（如只重试被封/超时的，省代理）
                 msg = st["fail"].get(f"{phase}:{t['key']}") or ""
@@ -547,8 +721,19 @@ def main():
         log(f"== 阶段 {phase}: 待处理 {len(todo)} / 总 {len(targets)}")
         done_n = hit_n = 0
         t0 = time.time()
+
+        def _run(t):
+            if args.rotate:
+                # 换 IP：把该 host 现绑定的节点拉黑，smart_fetch 下次提取必换新出口
+                try:
+                    from dps_proxy import mark_host_failed as _bad
+                    _bad(urlparse(t["url"]).hostname or "")
+                except Exception:
+                    pass
+            return fn(t)
+
         with ThreadPoolExecutor(max_workers=max(1, args.workers)) as ex:
-            futs = {ex.submit(fn, t): t for t in todo}
+            futs = {ex.submit(_run, t): t for t in todo}
             for fut in as_completed(futs):
                 t = futs[fut]
                 try:

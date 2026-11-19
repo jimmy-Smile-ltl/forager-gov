@@ -76,7 +76,12 @@ KIND_RULES = [
                             r"组织架构|机构介绍|机构名录|工作机构|政府组成部门|"
                             r"部门机构|机构职责|机构编制|机构信息|党政机构|"
                             r"组织体系|机构列表|机关简介|机构简介|机关职能|"
-                            r"政府组成机构|政府工作部门")),
+                            r"政府组成机构|政府工作部门|"
+                            # 2026-11-19 用户人工分析 26 站新增：县级「部门清单」入口
+                            # 的真实锚文本（磐石/广德/孝昌/弋阳/顺昌/丹凤/榆中/琼山…）
+                            r"部门平台链接|平台链接|地方部门汇总|部门汇总|"
+                            r"部门与乡镇|乡镇街道信息公开|部门信息公开|"
+                            r"部门目录|部门单位|镇办公开|公开导航|工作机构")),
     ("内设机构", re.compile(r"内设机构|内设部门|处室设置|部门设置|科室设置|内设科室")),
     ("直属单位", re.compile(r"直属单位|直属机构|直属事业单位|下属单位|下属机构|"
                             r"部门管理机构|直属特设机构")),
@@ -115,7 +120,12 @@ NEG_TITLE = re.compile(r"领导|动态|要闻|新闻|会议|活动|简历|之窗
 VERIFY_TITLE = re.compile(r"机构职能|机构设置|组织机构|政府机构|机构概况|组织架构|"
                           r"内设机构|机构介绍|政府组成部门|工作机构|机构名录|部门机构|"
                           r"机构职责|机构编制|机构信息|机关简介|机构简介|机关职能|"
-                          r"政府组成机构|政府工作部门")
+                          r"政府组成机构|政府工作部门|"
+                          # 县级门户常用「部门职责 / 部门设置」命名组织机构栏目
+                          # （淮阳区 /bmzz/ 标题「部门职责_淮阳区人民政府」正文 28 个
+                          # 部门名，旧口径只给 3 分被误判 low-conf 丢弃）
+                          r"部门职责|部门职能|部门设置|部门导航|部门列表|部门简介|"
+                          r"职能配置|机构导航")
 # 正文大标题证据：大量门户栏目页 <title> 沿用站点模版（「XX市人民政府-中国长春」），
 # 真正的栏目名在 h1/h2 里（长春政府机构页 h2=「政府组成机构」）
 HEAD_RE = re.compile(r"<h[1-3][^>]*>(.*?)</h[1-3]>", re.S | re.I)
@@ -460,6 +470,26 @@ DEFAULT_BUDGET = 75   # 每站时间预算（秒）：用户指令「不在一�
 BUDGET = float(os.environ.get("P246_BUDGET", DEFAULT_BUDGET))
 
 
+def _js_shell(html):
+    """HTML 体积不小、可见正文却极短 → 内容靠 JS 加载的空壳页。
+
+    实测「云南统一平台」`/{县}rmzf/cXXXXXX/pc/list.html`：HTML 40~60KB，
+    去掉脚本后正文只有 19~870 字（云龙 836 / 弥渡 854 / 南涧 19）。
+    """
+    if not html or len(html) < 6000:
+        return False
+    body = re.sub(r"<script[\s\S]*?</script>|<style[\s\S]*?</style>", " ", html,
+                  flags=re.I)
+    vis = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", body))
+    return len(vis) < 1200
+
+
+# 候选页渲染兜底开关（2026-11-19）：默认关，由 p248 县级管线打开。
+# 只渲染「疑似 JS 壳」的候选页，且每页最多 RENDER_CANDIDATE_MAX 次。
+RENDER_CANDIDATE = False
+RENDER_CANDIDATE_MAX = 3
+
+
 def collect_links(page_url, html, portal_url, deadline, limit=5, max_tries=8,
                   skip_kinds=()):
     """一页 HTML → 候选锚文本 → 逐个回抓验证；跨类别覆盖，同类最多 2 条。
@@ -468,6 +498,7 @@ def collect_links(page_url, html, portal_url, deadline, limit=5, max_tries=8,
     `skip_kinds`：扩围补采时排除已收类别，把预算留给还没拿到的类别。
     """
     links, seen, by_kind = [], set(), {}
+    n_rendered = 0
     own = self_candidate(page_url, html)
     # 同站校验：9222 是共享 context，并发点击可能抓到别的 worker 的 tab
     # （郴州曾收到益阳的「政府机构」页），跨站一律不认
@@ -488,6 +519,41 @@ def collect_links(page_url, html, portal_url, deadline, limit=5, max_tries=8,
         tries += 1
         h2, m2 = fetch(url, timeout=15)
         ok, s2, title, why = page_score(url, h2, kind)
+        # 候选页是 JS 壳（部门列表异步加载）→ 渲染这一页再验一次。
+        # 旧逻辑只渲染门户首页、候选页仍走静态抓取，导致这类统一平台的
+        # 组织机构页在 render 阶段同样报「无候选」（云龙/弥渡/剑川实锤）。
+        if (not ok and RENDER_CANDIDATE and n_rendered < RENDER_CANDIDATE_MAX
+                and _js_shell(h2) and time.time() < deadline):
+            n_rendered += 1
+            try:
+                h3 = render_page(url, wait_ms=2500, use_proxy=True)
+            except Exception:
+                h3 = ""
+            if h3:
+                ok3, s3, t3, why3 = page_score(url, h3, kind)
+                if ok3:
+                    ok, s2, title = ok3, s3, t3
+                    why = why3 + ",rendered"
+                    m2 = f"{m2}+render"
+                else:
+                    h2 = h3           # 渲染后仍不过 → 拿渲染版继续找第二跳
+        # 两跳跟随（2026-11-19）：信息公开壳页里的「机构设置」常再指向真正的
+        # 部门目录页。玄武区 `?id=xxgk_217` 渲染后只有一条
+        # `机构设置 → /zwgk/jgsz_/index_21522.html`，而后者静态抓就有 dept36。
+        # 只跟一跳、只在同站、且锚文本与当前 kind 同类时跟。
+        if not ok and h2 and len(h2) > 2000 and time.time() < deadline:
+            for _sc, _tx, _u2, _k in link_candidates(h2, portal_url):
+                if _k != kind or _u2 in seen or not same_site(_u2, portal_url):
+                    continue
+                seen.add(_u2)
+                h4, m4 = fetch(_u2, timeout=15)
+                ok4, s4, t4, why4 = page_score(_u2, h4, kind)
+                if ok4:
+                    ok, s2, title = ok4, s4, t4
+                    why = why4 + ",2hop"
+                    url = _u2
+                    m2 = m4
+                break
         if ok:
             by_kind[kind] = by_kind.get(kind, 0) + 1
             links.append(dict(kind=kind, u=url, title=title,
@@ -668,7 +734,9 @@ PUBLIC_KW = re.compile(r"政府信息公开|政务公开|信息公开|政务公�
                        # 机构设置入口常挂在枢纽页而非首页（黑龙江 /hlj/c107864/szf.shtml）
                        r"^(省|市|县|区)?政府$|政府机构|走进|概况|省情|市情|政府领导")
 SUB_KW = re.compile(r"公开内容|公开目录|法定主动公开|政府机构|机构职能|机构设置|"
-                    r"组织机构|工作机构|部门|政府领导|政府组成")
+                    r"组织机构|工作机构|部门|政府领导|政府组成|"
+                    # 2026-11-19 人工分析新增（信息公开子站/平台链接类入口）
+                    r"平台链接|部门单位|镇办公开|公开导航|信息公开指南|部门汇总")
 CLICK_JS = r"""() => {
   const kw = /组织机构|机构设置|机构职能|政府机构|机构概况|内设机构|直属单位|事业单位|直属企业|公积金|高校/;
   const els = [...document.querySelectorAll('a,li,span,div,button')].filter(e => {

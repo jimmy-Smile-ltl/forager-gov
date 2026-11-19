@@ -22,6 +22,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 CITY_F = os.path.join(HERE, "zzjg_pages.json")
 COUNTY_F = os.path.join(HERE, "zzjg_county.json")
+DEPTS_F = os.path.join(HERE, "county_depts.json")   # p250 部门名录
 TREE_F = os.path.join(HERE, "tree.json")
 
 KIND_ORDER = ["机构设置", "内设机构", "直属单位", "事业单位",
@@ -95,25 +96,43 @@ def _city_tree():
 
 
 def _county_tree():
-    """县政府部门：省 → 市 → 县 → 栏目。"""
+    """县政府部门：省 → 市 → 县 → 部门。
+
+    2026-11-19：县级优先用 p250 抽出的**部门名录**（county_depts.json）做叶子——
+    用户口径「政府信息公开 → 法定主动公开内容 → 组织机构」「删去机构职能几个字
+    就是我要的内容」「采完分页、清洗、去重」。没有名录的县回退到栏目链接。
+    """
     data = _load(COUNTY_F)
+    depts_all = _load(DEPTS_F)
     provs = {}
+    n_dept_nodes = 0
     for key, rec in sorted(data.items()):
         parts = key.split("|")
         if len(parts) < 4:
             continue
         _lv, prov, city, name = parts[0], parts[1], parts[2], parts[3]
-        links = sorted((rec.get("links") or []),
-                       key=lambda l: (KIND_ORDER.index(l["kind"])
-                                      if l.get("kind") in KIND_ORDER else 99))
-        links = [l for l in links if l.get("u")]
-        if not links:
-            continue
+        drec = depts_all.get(key) or {}
+        depts = [d for d in (drec.get("depts") or []) if d.get("n") and d.get("u")]
+        if len(depts) >= 3:
+            # c 保持「部门」与既有叶子一致（前端按 c 分组）；细分类型放 dt
+            ks = [{"n": d["n"], "l": "县", "k": "部门", "c": "部门",
+                   "dt": d.get("c") or "gov", "u": d["u"]} for d in depts]
+            n_dept_nodes += len(ks)
+        else:
+            links = sorted((rec.get("links") or []),
+                           key=lambda l: (KIND_ORDER.index(l["kind"])
+                                          if l.get("kind") in KIND_ORDER else 99))
+            links = [l for l in links if l.get("u")]
+            if not links:
+                continue
+            ks = [_leaf(l.get("kind") or "机构设置", l["u"], l.get("src", ""), "县")
+                  for l in links]
         node = {"n": name, "l": "县", "k": "分组", "c": "部门",
-                "u": rec.get("u") or "",
-                "ks": [_leaf(l.get("kind") or "机构设置", l["u"], l.get("src", ""), "县")
-                       for l in links]}
+                "u": (drec.get("u") if len(depts) >= 3 else rec.get("u")) or "",
+                "ks": ks}
         provs.setdefault(prov, {}).setdefault(city, []).append(node)
+    if n_dept_nodes:
+        print(f"  县政府部门叶子：{n_dept_nodes} 个部门名录条目（p250）")
     kids = []
     for p, cities in sorted(provs.items(), key=lambda kv: kv[0]):
         cks = [{"n": c, "l": "市", "k": "分组", "c": "部门",
@@ -137,7 +156,7 @@ def block_groups():
     def conv(n):
         t = "block" if n.get("k") == "分组" else "dept"
         o = {"n": n["n"], "u": n.get("u", ""), "t": t}
-        for f in ("l", "k", "c", "s", "m"):
+        for f in ("l", "k", "c", "s", "m", "dt"):
             if n.get(f):
                 o[f] = n[f]
         if n.get("ks"):
