@@ -1006,6 +1006,9 @@ window.MapViz=(function(){
     el.appendChild(svg);
     // 图例: 覆盖率 低→高 + 灰态说明（随主题刷新）
     lg=document.createElement("div");
+    // mplegend：窄屏下由模板 CSS 放开换行（nowrap + 绝对定位会溢出右边缘，
+    // 配色圆点被裁掉——2026-11-19 移动端地图修复）
+    lg.className="mplegend";
     lg.style.cssText="position:absolute;left:10px;bottom:10px;z-index:5;display:flex;align-items:center;gap:6px;"
       +"font-size:11px;color:var(--sub,#666);opacity:.94;"
       +"padding:5px 10px;border-radius:9px;border:1px solid var(--line,#e5e5e5);box-shadow:0 2px 8px rgba(0,0,0,.12);pointer-events:none;white-space:nowrap";

@@ -274,6 +274,20 @@ main{flex:1; display:flex; min-height:0}
 .legend{display:flex; gap:12px; font-size:11px; color:var(--muted); flex-wrap:wrap; margin-top:3px}
 .legend span{display:flex; align-items:center; gap:4px}
 .legend i{width:9px; height:9px; border-radius:2.5px; display:inline-block; flex:none}
+/* 分系统覆盖行（数据总览）：名称 · 覆盖率条 · 占比 · 有官网/总数 */
+.syscov{display:flex; flex-direction:column; gap:7px}
+.sysrow{display:flex; align-items:center; gap:10px; font-size:12.5px}
+.sysrow .sysname{flex:0 0 84px; color:var(--ink); white-space:nowrap}
+.sysrow .sysbar{flex:1; height:9px; border-radius:5px; background:var(--line); overflow:hidden; min-width:60px}
+.sysrow .sysbar i{display:block; height:100%; border-radius:5px; background:var(--ok)}
+.sysrow .sysbar i.mid{background:var(--warn)}
+.sysrow .sysbar i.low{background:var(--missing)}
+.sysrow .syspct{flex:0 0 46px; text-align:right; font-variant-numeric:tabular-nums; font-weight:700; color:var(--ink)}
+.sysrow .sysnum{flex:0 0 116px; text-align:right; color:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+@media (max-width:900px){
+  .sysrow .sysname{flex:0 0 64px; font-size:12px}
+  .sysrow .sysnum{display:none}
+}
 
 /* ---------- 提取规则（详情面板内子视图） ---------- */
 .rulebox{border:1px solid var(--line2); border-radius:10px; padding:14px 16px; background:var(--surface)}
@@ -373,17 +387,28 @@ footer{padding:8px 22px; border-top:1px solid var(--line); font-size:11.5px; col
   header{padding:8px 12px 10px; gap:8px 10px}
   .seal{width:38px; height:38px; font-size:17px}
   h1{font-size:18px}
-  .sub{font-size:11.5px}
-  .stats{gap:6px}
-  .stat{flex:1 1 calc(33.333% - 6px); min-width:0; padding:4px 6px 3px}
+  .sub{font-size:11.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+  /* 统计条单行横向滚动：8 张卡折成 3 行会把页头撑到 300px+，首屏看不到工具栏 */
+  .stats{gap:6px; flex-wrap:nowrap; overflow-x:auto; overflow-y:hidden;
+    justify-content:flex-start; scrollbar-width:none; padding:1px 0 3px}
+  .stats::-webkit-scrollbar{display:none}
+  .stat{flex:0 0 auto; min-width:88px; padding:4px 8px 3px}
   .stat b{font-size:12.5px}
   .stat span{font-size:10px}
   .toolbar{padding:6px 12px; gap:6px; position:sticky; top:0; z-index:24}
   .search{flex:1 1 100%; order:-1}
-  .btn,.viewbtn{padding:5px 10px; font-size:12px}
+  .btn,.viewbtn{padding:4px 8px; font-size:11.5px}
   .filterrow{padding:6px 12px}
   main{display:block}
   .treepane{height:auto; max-height:none; overflow:visible; padding:8px 6px 16px 10px}
+  /* 树图/地图容器在窄屏要有确定高度：treepane 高度 auto 时它们的 height:100%
+     会塌成几十像素（2026-11-19 移动端树图不可用修复） */
+  #treeVizWrap,#mapWrapOuter{height:64vh !important}
+  #tvMinimap{display:none}   /* 小地图在手机屏占比过大且难精确点击 */
+  /* 地图图例：绝对定位 + nowrap 在 390px 下溢出右缘，配色圆点被裁；
+     窄屏放开换行，宽度收进容器内 */
+  .mplegend{max-width:calc(100% - 20px);white-space:normal !important;
+    flex-wrap:wrap;row-gap:4px}
   .detailpane{flex:0 0 auto; max-width:none; max-height:none; overflow:visible;
     border-left:none; border-top:1px solid var(--line); padding:16px 14px 48px}
   footer{padding:6px 12px; font-size:10.5px; gap:4px 10px}
@@ -1041,6 +1066,10 @@ function switchTab(n){
   else if(curTab==="规则") renderRuleTab(n,body);
   else renderDataTab(n,body);
 }
+/* 移动端是「列表在上、档案在下」的单列布局：选中后把档案滚进视野，
+   卡片顶部给一个「回到列表」键，否则用户要手动划过整棵树。
+   首屏 select(DATA) 不滚动——之前一进页面就落到档案区，页头与统计条被跳过。 */
+let __firstSelect=true;
 function select(n,rowEl){
   selectedNode=n;
   curTab="概况";
@@ -1058,13 +1087,17 @@ function select(n,rowEl){
   body.prepend(vb);
   document.getElementById("vizRootBtn").addEventListener("click",()=>openVizAt(selectedNode.n));
   // 移动端是「列表在上、档案在下」的单列布局：选中后把档案滚进视野，
-  // 卡片顶部给一个「回到列表」键，否则用户要手动划过整棵树
+  // 卡片顶部给一个「回到列表」键，否则用户要手动划过整棵树。
+  // 首屏 select(DATA) 例外——不滚动，页头与统计条要留在视野内。
   if(matchMedia("(max-width:900px)").matches){
-    const back=document.createElement("button");
-    back.className="mback"; back.textContent="↑ 回到列表";
-    back.addEventListener("click",()=>mScrollTo(document.querySelector(".treepane"),"smooth"));
-    body.prepend(back);
-    requestAnimationFrame(()=>mScrollTo(detailEl,"smooth"));
+    if(__firstSelect) __firstSelect=false;
+    else{
+      const back=document.createElement("button");
+      back.className="mback"; back.textContent="↑ 回到列表";
+      back.addEventListener("click",()=>mScrollTo(document.querySelector(".treepane"),"smooth"));
+      body.prepend(back);
+      requestAnimationFrame(()=>mScrollTo(detailEl,"smooth"));
+    }
   }
 }
 /* 粘性工具栏（搜索框在窄屏独占一行）高度随视口变化，滚动偏移必须实时量，
@@ -1225,6 +1258,26 @@ function renderRootOverview(body){
   const stLeg=Object.entries(st).map(([k,v])=>
     `<span><i style="background:${(ST[k]||[k,"#94a3b8"])[1]}"></i>${(ST[k]||[k])[0]} ${v.toLocaleString()}</span>`).join("");
   const gen=(window.__MANIFEST__||{}).generated||"";
+  // 分系统覆盖：manifest 在构建期按叶子归类预算（p22 sys_stats），首屏模块
+  // 尚未加载也能给出权威数字；替代原来与顶部 KPI 重复的「数据规模」四卡。
+  const SYS=((window.__MANIFEST__||{}).systems)||[];
+  const sysRows=SYS.length?`<div class="dsection">
+      <p class="dlabel">分系统官网覆盖 · 块视图</p>
+      <div class="syscov">${SYS.map(s=>{
+        const p=s.e?Math.round(s.u/s.e*100):0;
+        const cls=p>=70?"":p>=40?"mid":"low";
+        return `<div class="sysrow" title="${esc(s.name)}：有官网 ${s.u.toLocaleString()} / ${s.e.toLocaleString()}">
+          <span class="sysname">${esc(s.name)}</span>
+          <span class="sysbar"><i class="${cls}" style="width:${Math.max(p,1.5)}%"></i></span>
+          <b class="syspct">${p}%</b>
+          <span class="sysnum">${s.u.toLocaleString()} / ${s.e.toLocaleString()}</span>
+        </div>`}).join("")}</div>
+      <div class="legend" style="margin-top:9px">
+        <span><i style="background:var(--ok)"></i>≥70% 已建站为主</span>
+        <span><i style="background:var(--warn)"></i>40–70% 部分未建站</span>
+        <span><i style="background:var(--missing)"></i>&lt;40% 多数列名</span>
+      </div>
+    </div>`:"";
   body.innerHTML=`
     <p class="dtitle">中国政府网站体系 · 数据总览</p>
     <p class="crumb">中央 · 省 · 市 · 县四级党政机关与垂直管理系统 — 官网名录、政府信息公开专栏、部门名录</p>
@@ -1242,14 +1295,7 @@ function renderRootOverview(body){
         ${covBar(b)}
       </div>
     </div>
-    <div class="dsection"><p class="dlabel">数据规模</p>
-      <div class="dgroup-stats">
-        <div class="gstat"><b>${b.e.toLocaleString()}</b><span>块 · 机关单位</span></div>
-        <div class="gstat"><b style="color:var(--ok)">${hit.toLocaleString()}</b><span>有官网</span></div>
-        <div class="gstat"><b>${b.dept.toLocaleString()}</b><span>部门名录</span></div>
-        <div class="gstat"><b>${t.e.toLocaleString()}</b><span>条 · 垂直系统</span></div>
-      </div>
-    </div>
+    ${sysRows}
     ${lvLeg?`<div class="dsection"><p class="dlabel">URL 来源等级 · 注册机构 ${(q.registry_total||0).toLocaleString()}</p>
       <div class="stackbar">${lvSegs}</div><div class="legend">${lvLeg}</div></div>`:""}
     ${stLeg?`<div class="dsection"><p class="dlabel">URL 健康状态（巡检）</p>
@@ -1680,7 +1726,7 @@ document.querySelectorAll("#viewSwitch .viewbtn").forEach(b=>{
              sidePanel:document.getElementById("detail"),
              onRoot:function(p){const c=document.getElementById("tvCrumb");if(c)c.textContent=p.join(" → ")}});
         }
-        TreeViz.setExpanded(kind2==="tiao"?["root","root/0"]:["root","root/0","root/1","root/1/0"]);
+        TreeViz.setExpanded(kind2==="tiao"?["root","root/0"]:["root","root/0"]);
       }
     },80);
     setTimeout(()=>clearInterval(t2),6000);
@@ -1751,7 +1797,7 @@ function showViz(){
   loadVizData(kind);
   if(window.TreeViz&&window.__VIZ_KIND__===kind){
     TreeViz.setTree(kind==="tiao"?window.__TIAO__:window.__TREE__);
-    TreeViz.setExpanded(kind==="tiao"?["root","root/0"]:["root","root/0","root/1","root/1/0"]);
+    TreeViz.setExpanded(kind==="tiao"?["root","root/0"]:["root","root/0"]);
     return;
   }
   if(window.TreeViz&&window[kind==="tiao"?"__TIAO__":"__TREE__"]){
@@ -1761,7 +1807,7 @@ function showViz(){
        sidePanel:document.getElementById("detail"),
        onRoot:function(p){const c=document.getElementById("tvCrumb");if(c)c.textContent=p.join(" → ")}});
     bindTvCtrl();
-    TreeViz.setExpanded(kind==="tiao"?["root","root/0"]:["root","root/0","root/1","root/1/0"]);
+    TreeViz.setExpanded(kind==="tiao"?["root","root/0"]:["root","root/0"]);
   }
 }
 function bindTvCtrl(){
@@ -1778,16 +1824,38 @@ function showChinaDetail(){
   // （法院→最高人民法院… 政府→国务院; 综合=总览卡列全部最高机构）
   const d=document.getElementById("detail");
   if(!d)return;
-  // 全国覆盖统计：直接遍历 block+tiao 叶子（records 索引 10MB 已拆为
-  // gov_data_records.js 按需加载, 首屏不再下载——2026-11-17 慢网优化）
+  // 全国覆盖统计：口径与页头 KPI、数据总览面板同源（MANIFEST）。
+  // 旧实现自己遍历 block+tiao 叶子：既把条树重复计入，又漏掉带子节点的实体，
+  // 结果同一屏上页头「总计 70%」与地图卡「62%」两个数打架（2026-11-19 修复）。
+  const SYSNAME={gov:"政府",rd:"人大",zx:"政协",fy:"法院",jcy:"检察院",jw:"监委/纪委"};
+  function manifestCoverage(ty){
+    // 条视图：统计口径是垂直管理系统自身（条树），与块视图的 MANIFEST 不同源
+    if(window.MapViz&&MapViz.mode&&MapViz.mode()==="tiao"){
+      const T=(window.__GOV_DATA__||{}).tiao;
+      if(!T)return null;
+      let u=0,total=0;
+      (function f(n){const ks=n.ks||[];if(!ks.length){
+        if(n.t==="dept")return;
+        if(ty!=="all"&&n.t!==ty)return;
+        total++;if(n.u)u++;
+        return}for(const c of ks)f(c)})(T);
+      return total?{u,total}:null;
+    }
+    const M=window.__MANIFEST__||{};
+    if(ty==="all"){
+      const t=M.total;
+      return (t&&t.e)?{u:(t.ok||0)+(t.warn||0),total:t.e}:null;
+    }
+    const s=(M.systems||[]).find(x=>x.name===SYSNAME[ty]);
+    return (s&&s.e)?{u:s.u,total:s.e}:null;
+  }
+  // 兜底（manifest 未加载）：只走块树，与地图着色同源
   function _leafWalk(fn){
     const G=window.__GOV_DATA__||{};
-    for(const root of [G.block,G.tiao]){
-      if(!root)continue;
-      // 2026-11-19：市政府部门/县政府部门的 6.5 万条部门名录叶子（t=dept）
-      // 不是并列机关，不参与「综合覆盖率」分母——否则全国总览卡从 62% 虚高到 87%
-      (function f(n){const ks=n.ks||[];if(!ks.length){if(n.t!=="dept")fn(n);return}for(const c of ks)f(c)})(root);
-    }
+    if(!G.block)return;
+    // 市政府部门/县政府部门的 6.5 万条部门名录叶子（t=dept）不是并列机关，
+    // 不参与「综合覆盖率」分母
+    (function f(n){const ks=n.ks||[];if(!ks.length){if(n.t!=="dept")fn(n);return}for(const c of ks)f(c)})(G.block);
   }
   const ty=MapViz.getType();
   const TN={gov:"人民政府",rd:"人大",zx:"政协",fy:"法院",jcy:"检察院",jw:"监委"};
@@ -1812,15 +1880,18 @@ function showChinaDetail(){
   if(ty!=="all"){
     const top=findTop();
     if(top){
-      let uu=0,tt=0;
-      _leafWalk(n=>{if((n.t||"group")!==ty)return;tt++;if(n.u)uu++});
+      const cov=manifestCoverage(ty)||(()=>{
+        let uu=0,tt=0;
+        _leafWalk(n=>{if((n.t||"group")!==ty)return;tt++;if(n.u)uu++});
+        return {u:uu,total:tt};
+      })();
       d.innerHTML=`<div class="vsd">
         <button class="vsd-x" title="关闭">✕</button>
         <div class="vsd-badge" style="background:${TCOL[ty]||"#8a7f70"}">${TICO[ty]||""} ${TN[ty]||ty}</div>
         <div class="vsd-n">${top.n}</div>
         <div class="vsd-rows">
           <div class="vsd-row"><span class="vsd-k">官网</span><span class="vsd-urlv"><a href="${top.u}" target="_blank" rel="noopener">${top.u}</a></span></div>
-          ${barRow(uu,tt,TCOL[ty]||"#8a7f70")}
+          ${barRow(cov.u,cov.total,TCOL[ty]||"#8a7f70")}
         </div>
         <div class="vsd-btns"><button class="vsd-btn vsd-pri" id="mzOpen">🔗 打开官网</button></div></div>`;
       const x=d.querySelector(".vsd-x");if(x)x.addEventListener("click",()=>{d.style.display="none"});
@@ -1828,9 +1899,12 @@ function showChinaDetail(){
       return;
     }
   }
-  let u=0;
-  _leafWalk(n=>{u+=n.u?1:0});
-  let total=0;_leafWalk(()=>{total++});const pct=total?Math.round(u/total*100):0;
+  const covAll=manifestCoverage("all")||(()=>{
+    let u=0,total=0;
+    _leafWalk(n=>{total++;if(n.u)u++});
+    return {u,total};
+  })();
+  const u=covAll.u,total=covAll.total,pct=total?Math.round(u/total*100):0;
   // 综合: 总览卡列 5 系统最高机构
   let topRows="";
   {
@@ -1858,6 +1932,9 @@ function showChinaDetail(){
 function showMapMode(){
   if(dispMode!=="map")window.__preMapDisp=dispMode;   // 记录进入地图前的显示方式(退出时还原)
   dispMode="map";
+  // 列表/树图是块·条维度下的显示方式，地图态下不能留着高亮（曾有「地图已开、
+  // 树图键还亮着」的状态错位）
+  document.querySelectorAll("#dispSwitch .viewbtn").forEach(x=>x.classList.remove("active"));
   listBox.style.display="none";vizWrap.style.display="none";
   const mw=document.getElementById("mapWrap");
   document.getElementById("mapWrapOuter").style.display="block";
@@ -2038,6 +2115,14 @@ function showList(){
 document.getElementById("dispSwitch").addEventListener("click",e=>{
   const b=e.target.closest("[data-disp]");
   if(!b)return;
+  // 地图态下点列表/树图 = 退出地图回到块视图，否则「地图」会一直亮着
+  const mapBtn=document.querySelector('#viewSwitch [data-view="map"]');
+  if(mapBtn&&mapBtn.classList.contains("active")){
+    mapBtn.classList.remove("active");
+    const blkBtn=document.querySelector('#viewSwitch [data-view="块"]');
+    if(blkBtn)blkBtn.classList.add("active");
+    viewMode="块";
+  }
   document.querySelectorAll("#dispSwitch .viewbtn").forEach(x=>x.classList.remove("active"));
   b.classList.add("active");
   if(b.dataset.disp==="map"){

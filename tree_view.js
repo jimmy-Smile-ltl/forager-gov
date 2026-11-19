@@ -23,6 +23,9 @@ window.TreeViz=(function(){
   let lastLaid=new Map();   // path → {x,y,w}（render 后坐标, 供聚焦）
   let anim=null;            // 聚焦动画句柄
   let lastMaxX=0,lastMaxY=0,mm=null,mmCtx=null;   // 小地图
+  // 初始视图自适应：换树/换根/首屏展开后自动缩放到「全图入屏」，否则根节点
+  // 落在画布左上角、被工具栏遮住（2026-11-19 布局修复）
+  let autoFit=false,autoFitRAF=0;
   function tw(s){return Math.max(120,(s||"").length*14+44)}
   function col(t){return FLAT[t]||FLAT.group}
   function assignPaths(n,p){pathMap.set(n,p);(n.ks||[]).forEach((k,i)=>assignPaths(k,p+"/"+i))}
@@ -257,11 +260,45 @@ window.TreeViz=(function(){
       rootG.appendChild(g);
     });
     lastMaxX=maxX+40;lastMaxY=maxY+40;
-    svg.setAttribute("viewBox",`0 0 ${lastMaxX} ${lastMaxY}`);
+    // 不设 viewBox：SVG 已由 CSS 撑满容器，viewBox 会按 meet 再缩一次，
+    // 把内部 transform 的缩放乘成两倍（2026-11-19 树图错位修复）
     lastLaid.clear();
     laid.forEach(d=>lastLaid.set(d.p,{x:d.x,y:d.y,w:d.w}));
     applyT();
     drawMinimap();
+    if(autoFit)tryAutoFit();
+  }
+  // 初始自适应（瞬时，不做动画）：全图缩放居中；容器尚无尺寸（隐藏/未布局）时
+  // 每帧重试，等 Trees 面板真正可见再落位
+  function tryAutoFit(){
+    if(!autoFit||!container)return;
+    const vw=container.clientWidth||0,vh=container.clientHeight||0;
+    if(vw<20||vh<20){
+      if(autoFitRAF)cancelAnimationFrame(autoFitRAF);
+      autoFitRAF=requestAnimationFrame(tryAutoFit);
+      return;
+    }
+    autoFit=false;
+    if(autoFitRAF){cancelAnimationFrame(autoFitRAF);autoFitRAF=0}
+    const TOP=48;                       // 顶部悬浮工具条留白
+    const vh2=Math.max(80,vh-TOP);
+    const s0=Math.min(vw/lastMaxX,vh2/lastMaxY);
+    if(s0>=0.45){
+      // 全图基本装得下 → 整体缩放居中（根在左上、被工具栏压住的老问题）
+      scale=Math.min(1.15,s0);
+      ox=(vw-scale*lastMaxX)/2;
+      oy=TOP+(vh2-scale*lastMaxY)/2;
+    }else{
+      // 图太高（展开到 32 省）：不缩成看不清的蚂蚁图，按可读比例把「根节点」
+      // 钉在视区左上；根在子树里是垂直居中的，直接贴 (0,0) 会把根甩到屏外。
+      // 需要看全时用「适应窗口」按钮。
+      const rt=subRoot||tree;
+      const rx=rt.__x==null?30:rt.__x, ry=rt.__y==null?30:rt.__y;
+      scale=Math.max(0.5,Math.min(0.9,vw/lastMaxX));
+      ox=16-rx*scale;
+      oy=TOP+10-ry*scale;
+    }
+    applyT();
   }
   function mount(cont,t,opts){
     container=cont;tree=t;tipEl=opts&&opts.tip;detailEl=opts&&opts.detail;
@@ -284,9 +321,16 @@ window.TreeViz=(function(){
     container.innerHTML="";
     svg=document.createElementNS(NS,"svg");
     svg.setAttribute("id",opts&&opts.id||"tvsvg");
+    // 不撑满容器的话 svg 会按 viewBox 宽高比撑出 2000px+ 高的空白滚动区
+    // （2026-11-19 树图布局修复）
+    svg.style.width="100%";
+    svg.style.height="100%";
+    svg.style.display="block";
     container.appendChild(svg);
     assignPaths(tree,"root");
     expanded.clear();hl.clear();selPath=null;scale=1;ox=0;oy=0;
+    if(tipEl)tipEl.style.display="none";   // 首屏不残留悬浮提示框
+    autoFit=true;
     let dragging=false,sx=0,sy=0;
     svg.addEventListener("wheel",e=>{
       e.preventDefault();
@@ -310,7 +354,7 @@ window.TreeViz=(function(){
     tree=t;
     subRoot=null;
     pathMap.clear();assignPaths(tree,"root");
-    expanded.clear();hl.clear();selPath=null;scale=1;ox=0;oy=0;
+    expanded.clear();hl.clear();selPath=null;scale=1;ox=0;oy=0;autoFit=true;
     if(svg)render();
     if(onRootChange)onRootChange(rootPath());
   }
@@ -332,7 +376,7 @@ window.TreeViz=(function(){
     expanded.clear();
     expanded.add("root");
     if((node.ks||[]).length)expanded.add("root/0");   // 默认展开第一层
-    hl.clear();selPath=null;scale=1;ox=0;oy=0;
+    hl.clear();selPath=null;scale=1;ox=0;oy=0;autoFit=true;
     if(svg)render();
     if(onRootChange)onRootChange(rootPath());
   }
@@ -415,7 +459,7 @@ window.TreeViz=(function(){
     }
     anim=requestAnimationFrame(step);
   }
-  function setExpanded(paths){expanded=new Set(paths);if(svg)render()}
+  function setExpanded(paths){expanded=new Set(paths);autoFit=true;if(svg)render()}
   function zoom(f){if(anim)cancelAnimationFrame(anim);anim=null;scale=Math.min(3,Math.max(.2,scale*f));applyT()}
   function fit(){if(anim)cancelAnimationFrame(anim);anim=null;scale=1;ox=0;oy=0;applyT()}
   function focusNode(path,ts){focus(path,ts)}

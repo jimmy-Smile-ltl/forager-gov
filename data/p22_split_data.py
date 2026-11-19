@@ -77,6 +77,74 @@ def stats_of(node):
     return {"e": e, "ok": ok, "warn": warn, "miss": miss}
 
 
+# ---- 分系统覆盖（数据总览面板）----
+# 块树里人大/政协/法院/检察院在市级以下是「并列机关」共享一个 c 值，只能按
+# 节点名归类；顺序即优先级（法院先于政府、检察院先于监委等）。
+_SYS_FY = re.compile(r"人民法院|法院$|中院$|高院$|法院（")
+_SYS_JCY = re.compile(r"人民检察院|检察院")
+_SYS_JW = re.compile(r"监委|监察委员会|纪委|纪律检查")
+_SYS_RD = re.compile(r"人大")
+_SYS_ZX = re.compile(r"政协")
+_SYS_DW = re.compile(r"县委|市委|区委|省委|党委|党组|工委")   # 党委机关（含县委/市委等）
+_SYS_ORDER = ["政府", "政府部门", "党委", "人大", "政协", "法院", "检察院",
+              "监委/纪委", "群团组织", "民主党派", "其他"]
+
+
+def sys_bucket(n):
+    k = n.get("k") or ""
+    nm = n.get("n") or ""
+    c = n.get("c") or ""
+    if "民主党派" in k or "民主党派" in c:
+        return "民主党派"
+    if k == "群团组织" or "群团" in c:
+        return "群团组织"
+    if _SYS_FY.search(nm):
+        return "法院"
+    if _SYS_JCY.search(nm):
+        return "检察院"
+    if _SYS_JW.search(nm):
+        return "监委/纪委"
+    if _SYS_RD.search(nm):
+        return "人大"
+    if _SYS_ZX.search(nm):
+        return "政协"
+    if _SYS_DW.search(nm):
+        return "党委"
+    if k == "人民政府" or re.search(r"人民政府$", nm):
+        return "政府"
+    if k in ("部门", "政府部门"):
+        return "政府部门"
+    return "其他"
+
+
+def sys_stats(tree):
+    """块视图（不含条）叶子按系统归类：e=机构数, u=有官网数。
+    与 stats_of 同口径：分组容器与带子节点的节点不计；空分组占位跳过。"""
+    out = {s: {"e": 0, "u": 0} for s in _SYS_ORDER}
+
+    def walk(n):
+        kids = n.get("ks") or []
+        # 与 stats_of 同一条实体口径：非分组节点即使带子节点也算一个机构
+        if not kids or n.get("k") != "分组":
+            b = sys_bucket(n)
+            out[b]["e"] += 1
+            if n.get("u"):
+                out[b]["u"] += 1
+        for x in kids:
+            walk(x)
+
+    for g in tree["ks"]:
+        if (g.get("n") or "").startswith("条"):
+            continue
+        # 构建期注入的 65k 部门名录（p250）不是机关实体，单独按「部门名录」计
+        if (g.get("_file") or "").endswith("_zzjg.js") or \
+                g.get("n") in ("市政府部门", "县政府部门"):
+            continue
+        walk(g)
+    return [{"name": s, "e": out[s]["e"], "u": out[s]["u"]}
+            for s in _SYS_ORDER if out[s]["e"]]
+
+
 def main():
     tree = json.load(open("tree.json", encoding="utf-8"))
     rules = json.load(open("extraction_rules.json", encoding="utf-8"))
@@ -212,6 +280,7 @@ def main():
         "root": root,
         "total": {"e": all_e, "ok": all_ok, "warn": all_warn},
         "perLevel": per,
+        "systems": sys_stats(tree),
         "modules": {"central": "modules/central.js", "gat": "modules/gat.js",
                     **{s["n"]: s["file"] for s in prov_stubs},
                     **{s["n"]: s["file"] for s in extra_stubs}},
