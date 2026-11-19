@@ -1169,8 +1169,8 @@
   "verified_at": "2026-11-06",
   "status": "ok",
   "snapshot": "",
-  "xxgk": "http://www.forestry.gov.cn/zfxxgk/",
-  "xxgk_src": "p173"
+  "xxgk": "",
+  "xxgk_src": "p256 清除错配专栏"
  },
  "部委管理的国家局|国家铁路局": {
   "u": "https://www.nra.gov.cn/",
@@ -5521,17 +5521,18 @@
   "xxgk_src": "p175c"
  },
  "省政府组成部门|河北省交通运输厅": {
-  "u": "http://www.hbzwfw.gov.cn/hbzw/foursxcx/itemList/fr_index.do?webId=1&amp;zt=17&amp;deptid=",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "省交通运输厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "http://jtt.hebei.gov.cn/jtyst/zwgk",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府组成部门/直属机构|河北省人力资源和社会保障厅": {
   "u": "https://rst.hebei.gov.cn",
@@ -5622,30 +5623,32 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|河北省发展和改革委员会": {
-  "u": "http://www.hbzwfw.gov.cn/hbzw/foursxcx/itemList/fr_index.do?webId=1&amp;zt=01&amp;deptid=13201",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "省发展和改革委员会",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "http://hbdrc.hebei.gov.cn/xxgk_2232/",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府组成部门|河北省司法厅": {
-  "u": "http://www.hbzwfw.gov.cn/hbzw/foursxcx/itemList/gr_index.do?webId=1&amp;zt=04&amp;deptid=13209",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "省司法厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "http://sft.hebei.gov.cn/zwgk/xxgk/xxgkzn/",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府组成部门|河北省商务厅": {
   "u": "http://swt.hebei.gov.cn/",
@@ -5869,17 +5872,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|河北省民政厅": {
-  "u": "http://www.hbzwfw.gov.cn/hbzw/foursxcx/itemList/gr_index.do?webId=1&amp;zt=04&amp;deptid=13208",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "省民政厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "http://minzheng.hebei.gov.cn/zfxxgk/",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府组成部门/直属机构|河北省民族事务委员会": {
   "u": "http://mw.hebei.gov.cn/",
@@ -5971,17 +5975,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|河北省自然资源厅": {
-  "u": "http://www.hbzwfw.gov.cn/hbzw/foursxcx/itemList/gr_index.do?webId=1&amp;zt=04&amp;deptid=13212",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "省自然资源厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "http://zrzy.hebei.gov.cn/heb/gongk",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府直属机构/部门管理机构|河北省药品监督管理局": {
   "u": "https://yjj.hebei.gov.cn",
@@ -5997,17 +6002,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|河北省财政厅": {
-  "u": "http://www.hbzwfw.gov.cn/hbzw/foursxcx/itemList/gr_index.do?webId=1&amp;zt=04&amp;deptid=13210",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "省财政厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "http://czt.hebei.gov.cn/root17/",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府组成部门|河北省退役军人事务厅": {
   "u": "http://tyjrswt.hebei.gov.cn/",
@@ -7326,27 +7332,29 @@
   "xxgk_src": "p175c"
  },
  "省政府组成部门|发展和改革委员会": {
-  "u": "https://www.ndrc.gov.cn/?code=&amp;state=123",
+  "u": "",
   "n": "发展和改革委员会",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
-  "status": "unknown",
-  "xxgk": "http://xjdrc.xinjiang.gov.cn/xjfgw/c108345/zwgk.shtml"
+  "verified_at": "2026-11-19",
+  "status": "nosite",
+  "xxgk": "http://xjdrc.xinjiang.gov.cn/xjfgw/c108345/zwgk.shtml",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府组成部门|教育厅": {
-  "u": "http://www.sczwfw.gov.cn/",
+  "u": "",
   "n": "教育厅",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "rooted",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "xxgk": "http://edu.sc.gov.cn/scedu/c100528/zfxxgk_xxgkzn.shtml",
-  "note": " | p240b 文章页处置: 根化自文章页（ok）"
+  "note": " | p240b 文章页处置: 根化自文章页（ok）",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府组成部门/直属机构|科学技术厅": {
   "u": "http://kjt.nmg.gov.cn",
@@ -7382,16 +7390,17 @@
   "xxgk": "https://mw.nmg.gov.cn/xxgk/?gk=1"
  },
  "省政府组成部门|公安厅": {
-  "u": "http://www.sczwfw.gov.cn/",
+  "u": "",
   "n": "公安厅",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "rooted",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "xxgk": "http://gat.sc.gov.cn/scgat/c103335/zfxxgk_xxgkzn.shtml",
-  "note": " | p240b 文章页处置: 根化自文章页（ok）"
+  "note": " | p240b 文章页处置: 根化自文章页（ok）",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府组成部门|民政厅": {
   "u": "http://mzt.sc.gov.cn/",
@@ -7471,16 +7480,17 @@
   "xxgk": "https://zjt.nmg.gov.cn/zwgk/zfxxgkn/fdzdgknr/?gk=3"
  },
  "省政府组成部门|交通运输厅": {
-  "u": "http://www.sczwfw.gov.cn/",
+  "u": "",
   "n": "交通运输厅",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "rooted",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "xxgk": "http://jtt.sc.gov.cn/jtt/c101575/jump_column.shtml",
-  "note": " | p240b 文章页处置: 根化自文章页（ok）"
+  "note": " | p240b 文章页处置: 根化自文章页（ok）",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府组成部门|水利厅": {
   "u": "http://slt.sc.gov.cn/",
@@ -7586,17 +7596,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|国有资产监督管理委员会": {
-  "u": "http://www.sasac.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "国有资产监督管理委员会",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "http://gzw.xinjiang.gov.cn/gzw/zwgk/list_gk.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府直属机构/部门管理机构|内蒙古自治区场监督管理局": {
   "u": "http://amr.nmg.gov.cn",
@@ -9778,17 +9789,18 @@
   "xxgk_src": "p175c"
  },
  "省政府组成部门|黑龙江省发展和改革委员会": {
-  "u": "https://www.ndrc.gov.cn/",
+  "u": "http://drc.hlj.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省发展和改革委员会",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://drc.hlj.gov.cn/drc/zwgk/zwgk.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|黑龙江省教育厅": {
   "u": "http://jyt.hlj.gov.cn/",
@@ -9804,30 +9816,32 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门/直属机构|黑龙江省科学技术厅": {
-  "u": "https://kjt.hebei.gov.cn",
+  "u": "http://kjt.hlj.gov.cn",
   "locations": [
    "块"
   ],
   "n": "省科学技术厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "https://kjt.hebei.gov.cn/hebkjt/xxgk2020/212560/index.html",
-  "xxgk_src": "p175c"
+  "xxgk_src": "p175c",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|黑龙江省工业和信息化厅": {
-  "u": "http://gxt.hebei.gov.cn/",
+  "u": "http://gxt.hlj.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省工业和信息化厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "https://gxt.shaanxi.gov.cn/xxgk/",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|黑龙江省民族宗教事务委员会": {
   "u": "http://mzw.hlj.gov.cn/",
@@ -9908,43 +9922,46 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|黑龙江省自然资源厅": {
-  "u": "http://www.mnr.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "省自然资源厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "http://zrzyt.xinjiang.gov.cn/xjgtzy/gkgd/zfxxgk_xxgkzd.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府组成部门|黑龙江省生态环境厅": {
-  "u": "http://hbepb.hebei.gov.cn",
+  "u": "http://sthj.hlj.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省生态环境厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "https://sthjt.shaanxi.gov.cn/xxgk/",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|黑龙江省住房和城乡建设厅": {
-  "u": "http://zfcxjst.hebei.gov.cn/",
+  "u": "http://zfcxjst.hlj.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省住房和城乡建设厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://zjt.jiangxi.gov.cn/jxszfhcxjst/xxgkz/pc/list.html",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|黑龙江省交通运输厅": {
   "u": "https://www.zwfw.hlj.gov.cn/yswz/f/tasks/fr?themeId=090&amp;sortTab=1",
@@ -9973,17 +9990,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|黑龙江省农业农村厅": {
-  "u": "http://www.moa.gov.cn/",
+  "u": "http://nynct.hlj.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省农业农村厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://nynct.xinjiang.gov.cn/xjnynct/c113556/zwgk.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|黑龙江省商务厅": {
   "u": "http://sswt.hlj.gov.cn/",
@@ -9999,17 +10017,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|黑龙江省文化和旅游厅": {
-  "u": "https://www.mct.gov.cn/",
+  "u": "http://wlt.hlj.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省文化和旅游厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://wlt.xinjiang.gov.cn/wlt/xxgk/xxgk.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|黑龙江省卫生健康委员会": {
   "u": "http://wsjkw.hlj.gov.cn/wsjkw/index.shtml",
@@ -10026,31 +10045,33 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|黑龙江省退役军人事务厅": {
-  "u": "http://www.mva.gov.cn/",
+  "u": "http://dva.hlj.gov.cn/dva/index.shtml",
   "locations": [
    "块"
   ],
   "n": "省退役军人事务厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "maintain",
+  "verified_at": "2026-11-19",
+  "status": "ok",
   "snapshot": "",
   "xxgk": "http://tyjr.xinjiang.gov.cn/tyjr/tgk/jump.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|黑龙江省应急管理厅": {
-  "u": "http://yjglt.jiangxi.gov.cn",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "江西省省应急管理厅",
   "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "http://yjgl.hlj.gov.cn/yjgl/zwgk/zwgk.shtml",
   "xxgk_src": "p173",
-  "note": " | p240 全量核查清除"
+  "note": " | p240 全量核查清除",
+  "source": "p256 清除错配URL（原指向中央部委/其他省份站点）"
  },
  "省政府组成部门|黑龙江省审计厅": {
   "u": "http://sjt.hlj.gov.cn/",
@@ -10079,43 +10100,46 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|黑龙江省国有资产监督管理委员会": {
-  "u": "http://www.sasac.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "省国有资产监督管理委员会",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "http://gzw.xinjiang.gov.cn/gzw/zwgk/list_gk.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府直属机构/部门管理机构|黑龙江省市场监督管理局": {
-  "u": "http://scjg.hebei.gov.cn",
+  "u": "http://amr.hlj.gov.cn/amr/index.shtml",
   "locations": [
    "块"
   ],
   "n": "省市场监督管理局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://www.jxzwfww.gov.cn/art/2020/3/3/art_4650_1227638.html?webId=1",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府直属机构/部门管理机构|黑龙江省广播电视局": {
-  "u": "http://www.nrta.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "省广播电视局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "http://gdj.xinjiang.gov.cn/xjgdj/zfxxgk/zfxxgk_xxgkzn.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 清除错配URL（原指向中央部委/其他省份站点）"
  },
  "省政府直属机构/部门管理机构|黑龙江省体育局": {
   "u": "http://tyj.hlj.gov.cn/",
@@ -10157,17 +10181,18 @@
   "xxgk_src": "p173"
  },
  "省政府直属机构/部门管理机构|黑龙江省医疗保障局": {
-  "u": "http://www.nhsa.gov.cn/",
+  "u": "http://ybj.hlj.gov.cn/ybj/index.shtml",
   "locations": [
    "块"
   ],
   "n": "省医疗保障局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
-  "xxgk": "http://www.nhsa.gov.cn/col/col123/index.html",
-  "xxgk_src": "p173"
+  "xxgk": "",
+  "xxgk_src": "p256 清除错配专栏",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门/直属机构|黑龙江省营商环境建设监督局": {
   "u": "http://bec.hlj.gov.cn/",
@@ -10183,30 +10208,32 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门/直属机构|黑龙江省林业和草原局": {
-  "u": "http://www.forestry.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "省林业和草原局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
-  "xxgk": "http://www.forestry.gov.cn/zfxxgk/",
-  "xxgk_src": "p173"
+  "xxgk": "",
+  "xxgk_src": "p256 清除错配专栏",
+  "source": "p256 清除错配URL（原指向中央部委/其他省份站点）"
  },
  "省政府直属机构/部门管理机构|黑龙江省机关事务管理局": {
-  "u": "http://www.ggj.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "省机关事务管理局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "http://sgj.jiangxi.gov.cn/jxsjgswglj/col/col48774/index.html",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 清除错配URL（原指向中央部委/其他省份站点）"
  },
  "省政府直属机构/部门管理机构|黑龙江省国防动员办公室": {
   "u": "http://gdb.hlj.gov.cn/",
@@ -10222,17 +10249,18 @@
   "xxgk_src": "p173"
  },
  "省政府直属机构/部门管理机构|黑龙江省粮食和物资储备局": {
-  "u": "http://www.lswz.gov.cn/",
+  "u": "http://lsj.hlj.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省粮食和物资储备局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://lswz.jiangxi.gov.cn/jxslshwzcbj/col/col4960/index.html",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府直属机构/部门管理机构|黑龙江省监狱管理局": {
   "u": "http://jyglj.hlj.gov.cn/",
@@ -10248,56 +10276,60 @@
   "xxgk_src": "p173"
  },
  "省政府直属机构/部门管理机构|黑龙江省中医药管理局": {
-  "u": "http://www.natcm.gov.cn/",
+  "u": "http://tcm.hlj.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省中医药管理局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://tcm.hlj.gov.cn/zwgk-tablist/1-1-1?nid=1",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府直属机构/部门管理机构|黑龙江省药品监督管理局": {
-  "u": "https://yjj.hebei.gov.cn",
+  "u": "http://mpa.hlj.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省药品监督管理局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://mpa.hlj.gov.cn/mpa/zwgk/zwgk.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门/直属机构|黑龙江省知识产权局": {
-  "u": "https://www.cnipa.gov.cn/",
+  "u": "http://hlipa.hlj.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省知识产权局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "https://www.cnipa.gov.cn/col/col62/index.html",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门/直属机构|黑龙江省疾病预防控制局": {
-  "u": "https://www.ndcpa.gov.cn/",
+  "u": "https://jkj.hlj.gov.cn",
   "locations": [
    "块"
   ],
   "n": "省疾病预防控制局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "https://www.ndcpa.gov.cn/jbkzzx/c100025/common/list.html",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "群团|黑龙江省总工会": {
   "u": "https://www.hljgh.org.cn/",
@@ -12032,17 +12064,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门/直属机构|江苏省农业农村厅": {
-  "u": "http://nync.hebei.gov.cn",
+  "u": "http://nynct.jiangsu.gov.cn/col/col51434/index.html",
   "locations": [
    "块"
   ],
   "n": "省农业农村厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://nynct.jiangsu.gov.cn/col/col12541/index.html",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门/直属机构|江苏省医保局": {
   "u": "http://ybj.jiangsu.gov.cn/col/col71688/index.html",
@@ -15677,17 +15710,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|江西省交通运输厅": {
-  "u": "http://www.hbzwfw.gov.cn/hbzw/foursxcx/itemList/fr_index.do?webId=1&amp;zt=17&amp;deptid=",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "省交通运输厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "https://jtyst.shaanxi.gov.cn/zfxxgk/",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府组成部门/直属机构|江西省人力资源和社会保障厅": {
   "u": "http://www.mohrss.gov.cn/",
@@ -15703,17 +15737,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|江西省住房和城乡建设厅": {
-  "u": "http://zfcxjst.hebei.gov.cn/",
+  "u": "http://zjt.jiangxi.gov.cn",
   "locations": [
    "块"
   ],
   "n": "省住房和城乡建设厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://zjt.jiangxi.gov.cn/jxszfhcxjst/xxgkz/pc/list.html",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府直属机构/部门管理机构|江西省体育局": {
   "u": "http://tyj.jiangxi.gov.cn/",
@@ -15768,30 +15803,32 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|江西省农业农村厅": {
-  "u": "http://www.moa.gov.cn/",
+  "u": "http://nync.jiangxi.gov.cn",
   "locations": [
    "块"
   ],
   "n": "省农业农村厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://nynct.xinjiang.gov.cn/xjnynct/c113556/zwgk.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府直属机构/部门管理机构|江西省医疗保障局": {
-  "u": "http://www.nhsa.gov.cn/",
+  "u": "http://ybj.jiangxi.gov.cn",
   "locations": [
    "块"
   ],
   "n": "省医疗保障局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
-  "xxgk": "http://www.nhsa.gov.cn/col/col123/index.html",
-  "xxgk_src": "p173"
+  "xxgk": "",
+  "xxgk_src": "p256 清除错配专栏",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|江西省卫生健康委员会": {
   "u": "http://hc.jiangxi.gov.cn/",
@@ -15808,17 +15845,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|江西省发展和改革委员会": {
-  "u": "http://www.ndrc.gov.cn/",
+  "u": "http://drc.jiangxi.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省发展和改革委员会",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://drc.jiangxi.gov.cn/jxsfzhggwyh/col/col48163/index.html",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|江西省司法厅": {
   "u": "http://sf.jiangxi.gov.cn/",
@@ -15923,56 +15961,60 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|江西省工业和信息化厅": {
-  "u": "http://gxt.hebei.gov.cn/",
+  "u": "http://gxt.jiangxi.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省工业和信息化厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "https://gxt.shaanxi.gov.cn/xxgk/",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府直属机构/部门管理机构|江西省市场监督管理局": {
-  "u": "http://scjg.hebei.gov.cn",
+  "u": "http://amr.jiangxi.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省市场监督管理局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://www.jxzwfww.gov.cn/art/2020/3/3/art_4650_1227638.html?webId=1",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府直属机构/部门管理机构|江西省广播电视局": {
-  "u": "http://www.nrta.gov.cn/",
+  "u": "http://gdj.jiangxi.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省广播电视局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://gdj.xinjiang.gov.cn/xjgdj/zfxxgk/zfxxgk_xxgkzn.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|江西省应急管理厅": {
-  "u": "https://www.mem.gov.cn/",
+  "u": "http://yjglt.jiangxi.gov.cn",
   "locations": [
    "块"
   ],
   "n": "省应急管理厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://yjgl.xinjiang.gov.cn/xjyjgl/c112895/zfxxgk_xxgkzn.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府直属机构/部门管理机构|江西省政府驻京办": {
   "u": "http://www.jxszjb.gov.cn/",
@@ -16025,30 +16067,32 @@
   "xxgk_src": "p175h"
  },
  "省政府组成部门|江西省文化和旅游厅": {
-  "u": "http://whly.hebei.gov.cn/",
+  "u": "http://dct.jiangxi.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省文化和旅游厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://dct.jiangxi.gov.cn/jxswhhlyt/col/col4946/index.html",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府直属机构/部门管理机构|江西省机关事务管理局": {
-  "u": "http://www.ggj.gov.cn/",
+  "u": "http://sgj.jiangxi.gov.cn",
   "locations": [
    "块"
   ],
   "n": "省机关事务管理局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://sgj.jiangxi.gov.cn/jxsjgswglj/col/col48774/index.html",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府直属机构/部门管理机构|江西省林业局": {
   "u": "http://ly.jiangxi.gov.cn",
@@ -16116,17 +16160,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|江西省生态环境厅": {
-  "u": "http://hbepb.hebei.gov.cn",
+  "u": "http://sthjt.jiangxi.gov.cn",
   "locations": [
    "块"
   ],
   "n": "省生态环境厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "https://sthjt.shaanxi.gov.cn/xxgk/",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|江西省科技厅": {
   "u": "http://kjt.jiangxi.gov.cn/",
@@ -16142,17 +16187,18 @@
   "xxgk_src": "p173"
  },
  "省政府直属机构/部门管理机构|江西省粮食和物资储备局": {
-  "u": "http://www.lswz.gov.cn/",
+  "u": "http://lswz.jiangxi.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省粮食和物资储备局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://lswz.jiangxi.gov.cn/jxslshwzcbj/col/col4960/index.html",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府直属机构/部门管理机构|江西省统计局": {
   "u": "http://tjj.jiangxi.gov.cn",
@@ -16168,30 +16214,32 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|江西省自然资源厅": {
-  "u": "http://www.mnr.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "省自然资源厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "http://zrzyt.xinjiang.gov.cn/xjgtzy/gkgd/zfxxgk_xxgkzd.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府直属机构/部门管理机构|江西省药品监督管理局": {
-  "u": "https://www.nmpa.gov.cn/",
+  "u": "http://mpa.jiangxi.gov.cn",
   "locations": [
    "块"
   ],
   "n": "省药品监督管理局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://mpa.jiangxi.gov.cn/jxsypjdglj/col/col4962/index.html",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|江西省财政厅": {
   "u": "http://jxf.jiangxi.gov.cn/",
@@ -16207,17 +16255,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|江西省退役军人事务厅": {
-  "u": "http://www.mva.gov.cn/",
+  "u": "http://tyjrswt.jiangxi.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省退役军人事务厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "dead",
+  "verified_at": "2026-11-19",
+  "status": "ok",
   "snapshot": "",
   "xxgk": "http://tyjr.xinjiang.gov.cn/tyjr/tgk/jump.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府直属机构/部门管理机构|江西省通信管理局": {
   "u": "http://jxca.miit.gov.cn",
@@ -24710,18 +24759,19 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|科技厅": {
-  "u": "http://www.sczwfw.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "科技厅",
   "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "rooted",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "http://kjt.sc.gov.cn/kjt/zzjg/newszwxxgk.shtml",
   "xxgk_src": "p173",
-  "note": " | p240b 文章页处置: 根化自文章页（ok）"
+  "note": " | p240b 文章页处置: 根化自文章页（ok）",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府组成部门/直属机构|经济和信息化厅": {
   "u": "http://jxt.sc.gov.cn",
@@ -25471,30 +25521,32 @@
   "xxgk_src": "p175c"
  },
  "省政府组成部门/直属机构|贵州省中医药局": {
-  "u": "http://www.natcm.gov.cn/",
+  "u": "http://atcm.guizhou.gov.cn/home/index.html",
   "locations": [
    "块"
   ],
   "n": "省中医药局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://tcm.hlj.gov.cn/zwgk-tablist/1-1-1?nid=1",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|贵州省交通运输厅": {
-  "u": "https://www.mot.gov.cn/",
+  "u": "http://jt.guizhou.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省交通运输厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://jtyst.xinjiang.gov.cn/xjjtysj/zfxxgkml/child_01.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门/直属机构|贵州省人力资源社会保障厅": {
   "u": "http://rst.guizhou.gov.cn/",
@@ -25573,17 +25625,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|贵州省农业农村厅": {
-  "u": "http://www.moa.gov.cn/",
+  "u": "http://nynct.guizhou.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省农业农村厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://nynct.xinjiang.gov.cn/xjnynct/c113556/zwgk.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|贵州省农业科学院": {
   "u": "http://aas.guizhou.gov.cn/",
@@ -25612,17 +25665,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|贵州省卫生健康委": {
-  "u": "http://www.nhc.gov.cn/",
+  "u": "https://wjw.guizhou.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省卫生健康委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://wjw.xinjiang.gov.cn/hfpc/zwgk/zwgk.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|贵州省发展改革委": {
   "u": "http://fgw.guizhou.gov.cn/",
@@ -25729,17 +25783,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|贵州省工业和信息化厅": {
-  "u": "https://www.miit.gov.cn/",
+  "u": "http://gxt.guizhou.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省工业和信息化厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://gxt.xinjiang.gov.cn/gxt/zwgk/zw.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府直属机构/部门管理机构|贵州省广电局": {
   "u": "http://gbdsj.guizhou.gov.cn/",
@@ -25807,30 +25862,32 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|贵州省文化和旅游厅": {
-  "u": "https://www.mct.gov.cn/",
+  "u": "https://whhly.guizhou.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省文化和旅游厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://wlt.xinjiang.gov.cn/wlt/xxgk/xxgk.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门/直属机构|贵州省机关事务局": {
-  "u": "http://www.ggj.gov.cn/",
+  "u": "http://jgsw.guizhou.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省机关事务局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://sgj.jiangxi.gov.cn/jxsjgswglj/col/col48774/index.html",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府直属机构/部门管理机构|贵州省林业局": {
   "u": "http://lyj.guizhou.gov.cn/",
@@ -25912,17 +25969,18 @@
   "xxgk_src": "p175c"
  },
  "省政府组成部门/直属机构|贵州省疾病预防控制局": {
-  "u": "https://www.ndcpa.gov.cn/",
+  "u": "https://jkj.guizhou.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省疾病预防控制局",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "https://www.ndcpa.gov.cn/jbkzzx/c100025/common/list.html",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门/直属机构|贵州省监狱局": {
   "u": "http://jyglj.guizhou.gov.cn/",
@@ -26001,17 +26059,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|贵州省自然资源厅": {
-  "u": "https://www.mnr.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "省自然资源厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "https://zrzy.guizhou.gov.cn/wzgb/zwgk/",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府组成部门/直属机构|贵州省药品监管局": {
   "u": "http://yjj.guizhou.gov.cn/",
@@ -26040,17 +26099,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门/直属机构|贵州省退役军人厅": {
-  "u": "http://www.mva.gov.cn/",
+  "u": "http://tyjrswt.guizhou.gov.cn",
   "locations": [
    "块"
   ],
   "n": "省退役军人厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "maintain",
+  "verified_at": "2026-11-19",
+  "status": "ok",
   "snapshot": "",
   "xxgk": "http://tyjr.xinjiang.gov.cn/tyjr/tgk/jump.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府直属机构/部门管理机构|贵州省地震局": {
   "u": "http://www.gzsdzj.gov.cn/",
@@ -27712,17 +27772,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|陕西省工业和信息化厅": {
-  "u": "http://gxt.hebei.gov.cn/",
+  "u": "http://gxt.shaanxi.gov.cn",
   "locations": [
    "块"
   ],
   "n": "省工业和信息化厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "https://gxt.shaanxi.gov.cn/xxgk/",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|陕西省民族宗教委": {
   "u": "http://mzzj.shaanxi.gov.cn",
@@ -27803,30 +27864,32 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|陕西省自然资源厅": {
-  "u": "http://www.mnr.gov.cn/",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "省自然资源厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "http://zrzyt.xinjiang.gov.cn/xjgtzy/gkgd/zfxxgk_xxgkzd.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府组成部门|陕西省生态环境厅": {
-  "u": "http://hbepb.hebei.gov.cn",
+  "u": "http://sthjt.shaanxi.gov.cn",
   "locations": [
    "块"
   ],
   "n": "省生态环境厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "https://sthjt.shaanxi.gov.cn/xxgk/",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门/直属机构|陕西省住房城乡建设厅": {
   "u": "http://js.shaanxi.gov.cn/",
@@ -27842,17 +27905,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|陕西省交通运输厅": {
-  "u": "http://www.hbzwfw.gov.cn/hbzw/foursxcx/itemList/fr_index.do?webId=1&amp;zt=17&amp;deptid=",
+  "u": "",
   "locations": [
    "块"
   ],
   "n": "省交通运输厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "https://jtyst.shaanxi.gov.cn/zfxxgk/",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "省政府组成部门|陕西省水利厅": {
   "u": "http://slt.shaanxi.gov.cn/",
@@ -27868,17 +27932,18 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|陕西省农业农村厅": {
-  "u": "http://www.moa.gov.cn/",
+  "u": "https://nynct.shaanxi.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省农业农村厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://nynct.xinjiang.gov.cn/xjnynct/c113556/zwgk.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|陕西省商务厅": {
   "u": "http://sxdofcom.shaanxi.gov.cn/",
@@ -27894,43 +27959,46 @@
   "xxgk_src": "p173"
  },
  "省政府组成部门|陕西省文化和旅游厅": {
-  "u": "http://whly.hebei.gov.cn/",
+  "u": "http://whhlyt.shaanxi.gov.cn/",
   "locations": [
    "块"
   ],
   "n": "省文化和旅游厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://whhlyt.shaanxi.gov.cn/zfxxgk/",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|陕西省卫生健康委": {
-  "u": "http://www.nhc.gov.cn/",
+  "u": "http://Sxwjw.shaanxi.gov.cn",
   "locations": [
    "块"
   ],
   "n": "省卫生健康委",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": "",
   "xxgk": "http://wjw.xinjiang.gov.cn/hfpc/zwgk/zwgk.shtml",
-  "xxgk_src": "p173"
+  "xxgk_src": "p173",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门/直属机构|陕西省退役军人厅": {
-  "u": "https://tyjrswt.fujian.gov.cn/",
+  "u": "http://dva.shaanxi.gov.cn",
   "locations": [
    "块"
   ],
   "n": "省退役军人厅",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "maintain",
+  "verified_at": "2026-11-19",
+  "status": "ok",
   "snapshot": "",
   "xxgk": "http://tyjrswt.fujian.gov.cn/zwgk/zfxxgkzl/",
-  "xxgk_src": "p175c"
+  "xxgk_src": "p175c",
+  "source": "p256 按树回填（原 registry URL 跨省/中央错配）"
  },
  "省政府组成部门|陕西省应急厅": {
   "u": "http://yjt.shaanxi.gov.cn/",
@@ -75911,139 +75979,148 @@
   "xxgk_src": "p173"
  },
  "垂直管理|国家自然资源督察北京局": {
-  "u": "http://www.mnr.gov.cn/",
+  "u": "",
   "locations": [
    "块",
    "条"
   ],
   "n": "国家自然资源督察北京局",
   "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "rooted",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "https://gk.mnr.gov.cn/index.html?name=two&num=2",
   "xxgk_src": "p175c",
-  "note": " | p240b 文章页处置: 根化自文章页（ok）"
+  "note": " | p240b 文章页处置: 根化自文章页（ok）",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "垂直管理|国家自然资源督察沈阳局": {
-  "u": "http://www.mnr.gov.cn/",
+  "u": "",
   "locations": [
    "块",
    "条"
   ],
   "n": "国家自然资源督察沈阳局",
   "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "rooted",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "https://gk.mnr.gov.cn/index.html?name=two&num=2",
   "xxgk_src": "p175c",
-  "note": " | p240b 文章页处置: 根化自文章页（ok）"
+  "note": " | p240b 文章页处置: 根化自文章页（ok）",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "垂直管理|国家自然资源督察上海局": {
-  "u": "http://www.mnr.gov.cn/",
+  "u": "",
   "locations": [
    "块",
    "条"
   ],
   "n": "国家自然资源督察上海局",
   "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "rooted",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "https://gk.mnr.gov.cn/index.html?name=two&num=2",
   "xxgk_src": "p175c",
-  "note": " | p240b 文章页处置: 根化自文章页（ok）"
+  "note": " | p240b 文章页处置: 根化自文章页（ok）",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "垂直管理|国家自然资源督察南京局": {
-  "u": "http://www.mnr.gov.cn/",
+  "u": "",
   "locations": [
    "块",
    "条"
   ],
   "n": "国家自然资源督察南京局",
   "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "rooted",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "https://gk.mnr.gov.cn/index.html?name=two&num=2",
   "xxgk_src": "p175c",
-  "note": " | p240b 文章页处置: 根化自文章页（ok）"
+  "note": " | p240b 文章页处置: 根化自文章页（ok）",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "垂直管理|国家自然资源督察济南局": {
-  "u": "http://www.mnr.gov.cn/",
+  "u": "",
   "locations": [
    "块",
    "条"
   ],
   "n": "国家自然资源督察济南局",
   "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "rooted",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "https://gk.mnr.gov.cn/index.html?name=two&num=2",
   "xxgk_src": "p175c",
-  "note": " | p240b 文章页处置: 根化自文章页（ok）"
+  "note": " | p240b 文章页处置: 根化自文章页（ok）",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "垂直管理|国家自然资源督察广州局": {
-  "u": "http://www.mnr.gov.cn/",
+  "u": "",
   "locations": [
    "块",
    "条"
   ],
   "n": "国家自然资源督察广州局",
   "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "rooted",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "https://gk.mnr.gov.cn/index.html?name=two&num=2",
   "xxgk_src": "p175c",
-  "note": " | p240b 文章页处置: 根化自文章页（ok）"
+  "note": " | p240b 文章页处置: 根化自文章页（ok）",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "垂直管理|国家自然资源督察武汉局": {
-  "u": "http://www.mnr.gov.cn/",
+  "u": "",
   "locations": [
    "块",
    "条"
   ],
   "n": "国家自然资源督察武汉局",
   "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "rooted",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "https://gk.mnr.gov.cn/index.html?name=two&num=2",
   "xxgk_src": "p175c",
-  "note": " | p240b 文章页处置: 根化自文章页（ok）"
+  "note": " | p240b 文章页处置: 根化自文章页（ok）",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "垂直管理|国家自然资源督察成都局": {
-  "u": "http://www.mnr.gov.cn/",
+  "u": "",
   "locations": [
    "块",
    "条"
   ],
   "n": "国家自然资源督察成都局",
   "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "rooted",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "https://gk.mnr.gov.cn/index.html?name=two&num=2",
   "xxgk_src": "p175c",
-  "note": " | p240b 文章页处置: 根化自文章页（ok）"
+  "note": " | p240b 文章页处置: 根化自文章页（ok）",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "垂直管理|国家自然资源督察西安局": {
-  "u": "http://www.mnr.gov.cn/",
+  "u": "",
   "locations": [
    "块",
    "条"
   ],
   "n": "国家自然资源督察西安局",
   "source_level": "L2",
-  "verified_at": "2026-11-18",
-  "status": "rooted",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "https://gk.mnr.gov.cn/index.html?name=two&num=2",
   "xxgk_src": "p175c",
-  "note": " | p240b 文章页处置: 根化自文章页（ok）"
+  "note": " | p240b 文章页处置: 根化自文章页（ok）",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "垂直管理|东北能源监管局": {
   "u": "http://dbj.nea.gov.cn",
@@ -155151,19 +155228,6 @@
   "xxgk": "",
   "xxgk_src": ""
  },
- "市级政府部门|湖北省中央人民政府门户网站": {
-  "u": "http://www.gov.cn/",
-  "n": "中央人民政府门户网站",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": ""
- },
  "市级政府部门|湖北省十堰住房公积金中心": {
   "u": "http://gjj.shiyan.gov.cn/",
   "n": "十堰住房公积金中心",
@@ -155178,17 +155242,18 @@
   "xxgk_src": ""
  },
  "市级政府部门|湖北省发展和改革委员会": {
-  "u": "https://www.ndrc.gov.cn/",
+  "u": "",
   "n": "发展和改革委员会",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|湖北省国防部": {
   "u": "http://www.mod.gov.cn/",
@@ -159106,17 +159171,18 @@
   "xxgk_src": ""
  },
  "市级政府部门|湖南省医疗保障局": {
-  "u": "http://www.nhsa.gov.cn/",
+  "u": "",
   "n": "医疗保障局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|湖南省广播电视总局": {
   "u": "http://www.nrta.gov.cn/",
@@ -159132,17 +159198,18 @@
   "xxgk_src": ""
  },
  "市级政府部门|湖南省机关事务管理局": {
-  "u": "http://www.ggj.gov.cn/",
+  "u": "",
   "n": "机关事务管理局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|湖南省省交通运输厅": {
   "u": "http://jtt.hunan.gov.cn/",
@@ -159379,17 +159446,18 @@
   "xxgk_src": ""
  },
  "市级政府部门|湖南省知识产权局": {
-  "u": "https://www.cnipa.gov.cn/",
+  "u": "",
   "n": "知识产权局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|湖南省税务总局": {
   "u": "http://www.chinatax.gov.cn/",
@@ -159470,17 +159538,18 @@
   "xxgk_src": ""
  },
  "市级政府部门|湖南省国有资产监督管理委员会": {
-  "u": "http://www.sasac.gov.cn/",
+  "u": "",
   "n": "国有资产监督管理委员会",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|湖南省市交通运输局": {
   "u": "http://jtj.yzcity.gov.cn",
@@ -159756,43 +159825,46 @@
   "xxgk_src": ""
  },
  "市级政府部门|湖南省林业和草原局": {
-  "u": "http://www.forestry.gov.cn/",
+  "u": "",
   "n": "林业和草原局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|湖南省移民管理局": {
-  "u": "http://www.mps.gov.cn/n2254996/",
+  "u": "",
   "n": "移民管理局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|湖南省粮食和物资储备局": {
-  "u": "http://www.lswz.gov.cn/",
+  "u": "",
   "n": "粮食和物资储备局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|湖南省能源局": {
   "u": "http://www.nea.gov.cn/",
@@ -160780,19 +160852,6 @@
  "市级政府部门|广东省韶关市教育局": {
   "u": "http://jy.sg.gov.cn/",
   "n": "韶关市教育局",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": ""
- },
- "市级政府部门|广东省中央人民政府门户网站": {
-  "u": "http://www.gov.cn/",
-  "n": "中央人民政府门户网站",
   "locations": [
    "块"
   ],
@@ -164682,17 +164741,18 @@
   "xxgk_src": ""
  },
  "市级政府部门|广西壮族自治区知识产权局": {
-  "u": "http://www.cnipa.gov.cn/",
+  "u": "",
   "n": "知识产权局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|广西壮族自治区税务总局": {
   "u": "http://www.chinatax.gov.cn/",
@@ -176539,19 +176599,6 @@
   "xxgk": "",
   "xxgk_src": ""
  },
- "市级政府部门|辽宁省中国共产党第二十次全国代表大会": {
-  "u": "http://www.gov.cn/zhuanti/zggcddescqgdbdh/index.htm",
-  "n": "中国共产党第二十次全国代表大会",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": ""
- },
  "市级政府部门|辽宁省本溪市人力资源和社会保障局": {
   "u": "http://rsj.benxi.gov.cn",
   "n": "本溪市人力资源和社会保障局",
@@ -179411,30 +179458,32 @@
   "note": " | p240 全量核查清除"
  },
  "市级政府部门|吉林省知识产权局": {
-  "u": "https://www.cnipa.gov.cn/",
+  "u": "",
   "n": "知识产权局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|吉林省矿山安全监察局": {
-  "u": "https://www.chinamine-safety.gov.cn/",
+  "u": "",
   "n": "矿山安全监察局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|吉林省税务总局": {
   "u": "http://www.chinatax.gov.cn",
@@ -179450,17 +179499,18 @@
   "xxgk_src": ""
  },
  "市级政府部门|吉林省粮食和物资储备局": {
-  "u": "http://www.lswz.gov.cn/",
+  "u": "",
   "n": "粮食和物资储备局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|吉林省航天局": {
   "u": "http://www.cnsa.gov.cn/",
@@ -180209,17 +180259,18 @@
   "note": " | p240 全量核查清除"
  },
  "市级政府部门|黑龙江省国有资产监督管理委员会": {
-  "u": "http://www.sasac.gov.cn/",
+  "u": "",
   "n": "国有资产监督管理委员会",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|黑龙江省国防部": {
   "u": "http://www.mod.gov.cn/",
@@ -195977,19 +196028,6 @@
   "xxgk": "",
   "xxgk_src": ""
  },
- "市级政府部门|河南省中央人民政府门户网站": {
-  "u": "https://www.gov.cn/",
-  "n": "中央人民政府门户网站",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": ""
- },
  "市级政府部门|河南省市交通运输局": {
   "u": "http://jtysj.kaifeng.gov.cn/",
   "n": "市交通运输局",
@@ -209658,17 +209696,18 @@
   "source": "p241b 复核清除(2026-11-18)"
  },
  "市级政府部门|贵州省卫生健康委": {
-  "u": "http://www.nhc.gov.cn/",
+  "u": "",
   "n": "卫生健康委",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|贵州省市交通局": {
   "u": "http://jtj.anshun.gov.cn/",
@@ -211603,19 +211642,6 @@
  "市级政府部门|云南省政协临沧市委员会": {
   "u": "https://www.ynlczx.gov.cn/",
   "n": "政协临沧市委员会",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": ""
- },
- "市级政府部门|云南省中央人民政府门户网站": {
-  "u": "http://www.gov.cn/",
-  "n": "中央人民政府门户网站",
   "locations": [
    "块"
   ],
@@ -214063,17 +214089,18 @@
   "xxgk_src": ""
  },
  "市级政府部门|西藏自治区知识产权局": {
-  "u": "https://www.cnipa.gov.cn/",
+  "u": "",
   "n": "知识产权局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|西藏自治区科学技术局": {
   "u": "http://kj.al.gov.cn/",
@@ -214248,19 +214275,6 @@
  "市级政府部门|陕西省中国证券监督管理委员会": {
   "u": "http://www.csrc.gov.cn/",
   "n": "中国证券监督管理委员会",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": ""
- },
- "市级政府部门|陕西省中央人民政府门户网站": {
-  "u": "http://www.gov.cn",
-  "n": "中央人民政府门户网站",
   "locations": [
    "块"
   ],
@@ -216916,17 +216930,18 @@
   "xxgk_src": ""
  },
  "市级政府部门|甘肃省国有资产监督管理委员会": {
-  "u": "http://www.sasac.gov.cn/",
+  "u": "",
   "n": "国有资产监督管理委员会",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|甘肃省人大常委会": {
   "u": "http://www.jcsrd.gov.cn/",
@@ -217293,19 +217308,6 @@
   "xxgk": "",
   "xxgk_src": ""
  },
- "市级政府部门|甘肃省中央人民政府门户网站": {
-  "u": "https://www.gov.cn/",
-  "n": "中央人民政府门户网站",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": ""
- },
  "市级政府部门|甘肃省中央党校": {
   "u": "https://www.ccps.gov.cn/",
   "n": "中央党校",
@@ -217647,17 +217649,18 @@
   "xxgk_src": ""
  },
  "市级政府部门|甘肃省知识产权局": {
-  "u": "https://www.cnipa.gov.cn/",
+  "u": "",
   "n": "知识产权局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|甘肃省税务总局": {
   "u": "http://www.chinatax.gov.cn/",
@@ -218430,19 +218433,6 @@
  "市级政府部门|甘肃省科学技术部": {
   "u": "https://www.most.gov.cn/index.html",
   "n": "科学技术部",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": ""
- },
- "市级政府部门|甘肃省中国共产党第二十次全国代表大会": {
-  "u": "http://www.gov.cn/zhuanti/zggcddescqgdbdh/index.htm",
-  "n": "中国共产党第二十次全国代表大会",
   "locations": [
    "块"
   ],
@@ -219924,19 +219914,6 @@
   "xxgk": "",
   "xxgk_src": ""
  },
- "市级政府部门|青海省中央人民政府门户网站": {
-  "u": "http://www.gov.cn",
-  "n": "中央人民政府门户网站",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": ""
- },
  "市级政府部门|青海省信访局": {
   "u": "http://gg.gxxf.gov.cn/",
   "n": "广西壮族自治区信访局",
@@ -219952,17 +219929,18 @@
   "note": " | p240 全量核查清除"
  },
  "市级政府部门|青海省卫生健康委": {
-  "u": "http://www.nhc.gov.cn/",
+  "u": "",
   "n": "卫生健康委",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|青海省省交通运输厅": {
   "u": "http://jtyst.qinghai.gov.cn/",
@@ -221427,17 +221405,18 @@
   "note": " | p240 全量核查清除"
  },
  "市级政府部门|宁夏回族自治区国有资产监督管理委员会": {
-  "u": "http://www.sasac.gov.cn/",
+  "u": "",
   "n": "国有资产监督管理委员会",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|宁夏回族自治区地震局": {
   "u": "http://www.cea.gov.cn/",
@@ -222159,17 +222138,18 @@
   "xxgk_src": ""
  },
  "市级政府部门|新疆维吾尔自治区国有资产监督管理委员会": {
-  "u": "http://www.sasac.gov.cn/",
+  "u": "",
   "n": "国有资产监督管理委员会",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|新疆维吾尔自治区市场监督管理局": {
   "u": "http://scjgj.xinjiang.gov.cn/",
@@ -222237,17 +222217,18 @@
   "xxgk_src": ""
  },
  "市级政府部门|新疆维吾尔自治区机关事务管理局": {
-  "u": "http://www.ggj.gov.cn/",
+  "u": "",
   "n": "机关事务管理局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|新疆维吾尔自治区水利厅": {
   "u": "http://slt.xinjiang.gov.cn/",
@@ -222576,17 +222557,18 @@
   "xxgk_src": ""
  },
  "市级政府部门|新疆维吾尔自治区中医药管理局": {
-  "u": "http://www.natcm.gov.cn/",
+  "u": "",
   "n": "中医药管理局",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
+  "verified_at": "2026-11-19",
+  "status": "nosite",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p256 清除错配URL（原指向中央部委/政务服务网）"
  },
  "市级政府部门|新疆维吾尔自治区中国民用航空局": {
   "u": "http://www.caac.gov.cn/index.html",

@@ -3,10 +3,10 @@
  "scope": "块视图「省级」子树（31 省区市 + 新疆兵团 = 32 个单位）及其下辖市/县/直辖市辖区；民主党派省级组织取自中央子树。统计对象为机构节点（不含分组容器）；缺失 = 树中 u 为空（列名）。党委机关不设独立门户网站，不纳入统计。",
  "levels": {
   "省": {
-   "total": 2216,
-   "with_url": 1998,
-   "missing": 218,
-   "missing_rate": 9.84,
+   "total": 2215,
+   "with_url": 1975,
+   "missing": 240,
+   "missing_rate": 10.84,
    "systems": {
     "gov": {
      "total": 32,
@@ -15,10 +15,10 @@
      "missing_rate": 0.0
     },
     "dept": {
-     "total": 1238,
-     "with_url": 1233,
-     "missing": 5,
-     "missing_rate": 0.4
+     "total": 1237,
+     "with_url": 1210,
+     "missing": 27,
+     "missing_rate": 2.18
     },
     "rd": {
      "total": 31,
@@ -71,10 +71,10 @@
    }
   },
   "市": {
-   "total": 8331,
-   "with_url": 7934,
-   "missing": 397,
-   "missing_rate": 4.77,
+   "total": 8314,
+   "with_url": 7885,
+   "missing": 429,
+   "missing_rate": 5.16,
    "systems": {
     "gov": {
      "total": 407,
@@ -83,10 +83,10 @@
      "missing_rate": 0.49
     },
     "dept": {
-     "total": 5719,
-     "with_url": 5657,
-     "missing": 62,
-     "missing_rate": 1.08
+     "total": 5702,
+     "with_url": 5608,
+     "missing": 94,
+     "missing_rate": 1.65
     },
     "rd": {
      "total": 405,
@@ -243,16 +243,16 @@
    "label": "政府部门",
    "levels": {
     "省": {
-     "total": 1238,
-     "with_url": 1233,
-     "missing": 5,
-     "missing_rate": 0.4
+     "total": 1237,
+     "with_url": 1210,
+     "missing": 27,
+     "missing_rate": 2.18
     },
     "市": {
-     "total": 5719,
-     "with_url": 5657,
-     "missing": 62,
-     "missing_rate": 1.08
+     "total": 5702,
+     "with_url": 5608,
+     "missing": 94,
+     "missing_rate": 1.65
     },
     "县": {
      "total": 0,
@@ -262,10 +262,10 @@
     }
    },
    "total": {
-    "total": 6957,
-    "with_url": 6890,
-    "missing": 67,
-    "missing_rate": 0.96
+    "total": 6939,
+    "with_url": 6818,
+    "missing": 121,
+    "missing_rate": 1.74
    }
   },
   {
@@ -510,9 +510,9 @@
   }
  ],
  "total": {
-  "total": 27352,
-  "with_url": 21417,
-  "missing": 5935,
-  "missing_rate": 21.7
+  "total": 27334,
+  "with_url": 21345,
+  "missing": 5989,
+  "missing_rate": 21.91
  }
 }
