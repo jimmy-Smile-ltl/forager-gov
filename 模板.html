@@ -394,8 +394,6 @@ footer{padding:8px 22px; border-top:1px solid var(--line); font-size:11.5px; col
   .resrow .path{max-width:44%}
   /* 移动端主从布局：列表与档案上下堆叠，选中后自动滚到档案，此键回列表 */
   .mback{display:inline-flex}
-  .detailpane{scroll-margin-top:56px}
-  .treepane{scroll-margin-top:56px}
 }
 </style>
 <style>
@@ -497,7 +495,7 @@ footer{padding:8px 22px; border-top:1px solid var(--line); font-size:11.5px; col
 </main>
 <footer>
   <span>数据：中国政府网部门导航 · 民政部行政区划代码库（2025-12-31 版，6 位代码） · 各政府门户链式解析<span id="footGen"></span></span>
-  <span>状态：绿=专栏URL已收录（部门=有栏目链接） · 黄=门户在录专栏待核 · 灰=门户未解析</span>
+  <span>状态：绿=已收录（专栏 URL / 部门栏目 / 无专栏口径机构有官网） · 黄=门户在录专栏待核 · 灰=门户未解析</span>
   <span>部门名录（市政府部门/县政府部门）不计入覆盖率；港澳台下级区划为列名参考，采集名单以内地口径为准</span>
 </footer>
 
@@ -541,11 +539,21 @@ const LEVEL_LABELS={中央:"中央",省:"省级",市:"市级",地级区:"地级�
    也是 k=部门、t=dept，误判会把 82 个中央部委从覆盖率里剔除（2026-11-19 修）。
    名录条目由 p250/zzjg 生成，一律带 dt（gov/town/party），是唯一无歧义标记。 */
 function isDeptLeaf(n){ return !!n.dt; }
+/* 无「政府信息公开专栏」口径的机构（CLAUDE.md §3.4）：专栏只适用于政府机关
+   （政府/部门/厅局）。法院/检察院/人大/政协/监委/纪委/群团/民主党派/党委不是
+   政府，结构上就没有这一栏目——有官网即完整，不能标黄「专栏待核」（此前
+   约 1.4 万条被误判，图例里写着绿点却没实现）。 */
+const NON_GOV_KW=/人民法院|法院$|人民检察院|检察院$|中院|人大|政协|政治协商|监委|监察委|纪律检查|纪委|群团|民主党派|党委/;
+function noXxgk(n){
+  if(isDeptLeaf(n)) return true;
+  return NON_GOV_KW.test((n.k||"")+"|"+(n.c||"")+"|"+(n.t||"")+"|"+(n.n||""));
+}
 function statusOf(n){
   // 部门名录叶子：有栏目链接即视为已收录。它们没有「政府信息公开专栏」概念，
   // 走门户口径会 6.5 万条全变黄「待核」，分组行也会显示「N 单位 · 0 已收录」
   if(isDeptLeaf(n)) return n.u?"ok":"missing";
   if(n.x) return "ok";
+  if(noXxgk(n)) return n.u?"ok":"missing";
   if(n.u) return "warn";
   return "missing";
 }
@@ -1048,10 +1056,19 @@ function select(n,rowEl){
   if(matchMedia("(max-width:900px)").matches){
     const back=document.createElement("button");
     back.className="mback"; back.textContent="↑ 回到列表";
-    back.addEventListener("click",()=>document.querySelector(".treepane").scrollIntoView({block:"start"}));
+    back.addEventListener("click",()=>mScrollTo(document.querySelector(".treepane"),"smooth"));
     body.prepend(back);
-    detailEl.scrollIntoView({block:"start",behavior:"smooth"});
+    requestAnimationFrame(()=>mScrollTo(detailEl,"smooth"));
   }
+}
+/* 粘性工具栏（搜索框在窄屏独占一行）高度随视口变化，滚动偏移必须实时量，
+   静态 scroll-margin-top 会把卡片标题压在工具栏底下。+10 为呼吸间距。 */
+function mScrollTo(el,behavior){
+  if(!el) return;
+  const tb=document.querySelector(".toolbar");
+  const off=(tb?tb.getBoundingClientRect().height:48)+10;
+  el.style.scrollMarginTop=off+"px";
+  el.scrollIntoView({block:"start",behavior});
 }
 /* 树图模式: 以节点 n 名为根打开子图 */
 async function openVizAt(nodeName){
@@ -1154,7 +1171,7 @@ function statsSplit(n){
   })(n);
   return s;
 }
-/* 覆盖分段条：绿=专栏 · 黄=门户待核 · 灰=未解析 */
+/* 覆盖分段条：绿=已收录（专栏/部门栏目/无专栏口径机构的官网）· 黄=门户在录专栏待核 · 灰=未解析 */
 function covBar(s){
   const tot=s.e||1;
   const p=Math.round((s.ok+s.warn)/tot*100);
@@ -1164,7 +1181,7 @@ function covBar(s){
       <i style="width:${s.warn/tot*100}%;background:var(--warn)"></i>
       <i style="width:${s.miss/tot*100}%;background:var(--line2)"></i>
     </div>
-    <div class="covleg"><b>${p}%</b> 有官网 · <span class="cl-ok">专栏 ${s.ok}</span> · <span class="cl-warn">门户待核 ${s.warn}</span> · <span class="cl-miss">未解析 ${s.miss}</span></div>
+    <div class="covleg"><b>${p}%</b> 有官网 · <span class="cl-ok">已收录 ${s.ok.toLocaleString()}</span> · <span class="cl-warn">门户待核 ${s.warn.toLocaleString()}</span> · <span class="cl-miss">未解析 ${s.miss.toLocaleString()}</span></div>
   </div>`;
 }
 let __parentBuilt=false;
@@ -1233,12 +1250,13 @@ function renderRootOverview(body){
       <div class="stackbar">${stSegs}</div><div class="legend">${stLeg}</div></div>`:""}
     <div class="dsection"><p class="dlabel">口径与图例</p>
       <p class="dtext" style="font-size:12px;line-height:1.9">
-        <span class="dot ok" style="display:inline-block;vertical-align:-1px"></span> 绿 = 专栏 URL 已收录 ·
+        <span class="dot ok" style="display:inline-block;vertical-align:-1px"></span> 绿 = 已收录（专栏 URL / 部门栏目 / 无专栏口径机构有官网）·
         <span class="dot warn" style="display:inline-block;vertical-align:-1px"></span> 黄 = 门户在录、专栏待核 ·
         <span class="dot missing" style="display:inline-block;vertical-align:-1px"></span> 灰 = 门户未解析。<br>
         部门名录（市政府部门 / 县政府部门）口径为「有栏目链接」，不计入上方覆盖率；
         县级部门名录来自门户「政府信息公开 → 法定主动公开内容 → 组织机构」，已剔除上级机关与乡镇占位。<br>
-        法院 / 检察院 / 人大 / 政协 / 监委 / 群团 / 民主党派无政府信息公开专栏，绿点表示有官网。
+        法院 / 检察院 / 人大 / 政协 / 监委 / 纪委 / 群团 / 民主党派 / 党委不是政府机关，无政府信息公开专栏——
+        这类机构按「有官网即已收录」计，不计入专栏待核。
       </p>
     </div>
     <div class="vsd-btns">
@@ -1287,7 +1305,9 @@ function renderOverview(n,body){
     return;
   }
   const st=statusOf(n);
-  const stLabel=isDeptLeaf(n)?"部门栏目链接":st==="ok"?"专栏URL已收录":st==="warn"?"门户在录 · 专栏待核":"门户未解析";
+  const stLabel=isDeptLeaf(n)?"部门栏目链接"
+    :noXxgk(n)?(st==="ok"?"门户在录 · 无专栏口径":"门户未解析")
+    :st==="ok"?"专栏URL已收录":st==="warn"?"门户在录 · 专栏待核":"门户未解析";
   body.innerHTML=`
     <p class="dtitle">${esc(n.n)}</p>
     <p class="crumb">${esc(breadcrumb(n))}</p>
@@ -1308,7 +1328,7 @@ function renderOverview(n,body){
     <div class="dsection">
       <p class="dlabel">政府信息公开专栏</p>
       ${n.x?`<div class="durl"><a href="${esc(n.x)}" target="_blank" rel="noopener">${esc(n.x)}</a><button class="copybtn">复制</button></div>`
-            :`<p class="dtext" style="color:var(--warn)">${isDeptLeaf(n)?"部门名录条目 — 无政府信息公开专栏口径":statusOf(n)==="ok"?"已有门户链接，专栏待核":"待核 — 门户在录但专栏链接未确认"}</p>`}
+            :`<p class="dtext" style="color:var(--${noXxgk(n)?"faint":"warn"})">${isDeptLeaf(n)?"部门名录条目 — 无政府信息公开专栏口径":noXxgk(n)?"不适用 — 法院/检察院/人大/政协/监委/纪委/群团/民主党派/党委不是政府机关，无政府信息公开专栏":statusOf(n)==="ok"?"已有门户链接，专栏待核":"待核 — 门户在录但专栏链接未确认"}</p>`}
     </div>
     ${n.s?`<div class="dsection"><p class="dlabel">URL 来源</p><p class="dtext" style="font-size:12px">${esc(n.s)}</p></div>`:""}
     ${n.m?`<div class="dsection"><p class="dlabel">备注</p><p class="dtext">${esc(n.m)}</p></div>`:""}
@@ -1395,7 +1415,7 @@ async function renderDataTab(n,body){
     <div class="jstats">
       <div class="jstat"><b>${st.nodes}</b><span>JSON 节点</span></div>
       <div class="jstat"><b>${st.entities}</b><span>实体</span></div>
-      <div class="jstat"><b style="color:var(--ok)">${st.ok}</b><span>已收录专栏</span></div>
+      <div class="jstat"><b style="color:var(--ok)">${st.ok}</b><span>已收录</span></div>
       <div class="jstat"><b>${st.kb}KB</b><span>原始大小</span></div>
     </div>
     <div class="jsonbox">
@@ -1417,7 +1437,7 @@ function jsonStats(obj){
   (function walk(v){
     nodes++;
     if(v && typeof v==="object"){
-      if(!v.ks || v.k!=="分组"){ entities++; if(v.x) ok++; }
+      if(!v.ks || v.k!=="分组"){ entities++; if(statusOf(v)==="ok") ok++; }
       Object.values(v).forEach(walk);
     }
   })(obj);
@@ -1548,7 +1568,7 @@ function syncChips(){
   filterBadge();
   const sc=document.getElementById("statusChips");
   sc.innerHTML="";
-  [["全部",null],["已收录专栏","ok"],["专栏待核","warn"],["门户未解析","missing"]].forEach(([label,st])=>{
+  [["全部",null],["已收录","ok"],["专栏待核","warn"],["门户未解析","missing"]].forEach(([label,st])=>{
     const c=document.createElement("button"); c.className="chip";
     if(st===null?filter.status.size===3:filter.status.has(st)) c.classList.add("on");
     c.textContent=label;

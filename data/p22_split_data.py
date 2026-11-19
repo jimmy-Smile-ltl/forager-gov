@@ -25,6 +25,20 @@ from urllib.parse import urlparse
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data_js")
 
+# 政府信息公开专栏口径（CLAUDE.md §3.4）：只有政府机关（政府/部门/厅局）有此栏目。
+# 法院/检察院/人大/政协/监委/纪委/群团/民主党派/党委不是政府——有官网即算已收录，
+# 不能计成「专栏待核」。与前端 noXxgk 必须逐字一致，否则模块未加载时的桩统计
+# _stats 与加载后的 statsSplit 对不上（2026-11-19）。
+_NON_GOV = re.compile(r"人民法院|法院$|人民检察院|检察院$|中院|人大|政协|政治协商|"
+                      r"监委|监察委|纪律检查|纪委|群团|民主党派|党委")
+
+
+def no_xxgk(n):
+    if n.get("dt"):
+        return True
+    return bool(_NON_GOV.search("|".join(str(n.get(f, "") or "")
+                                          for f in ("k", "c", "n"))))
+
 
 def prov_py(name):
     s = re.sub(r"(省|市|特别行政区)$", "", name)
@@ -41,11 +55,13 @@ def stats_of(node):
         if not n.get("ks") or n.get("k") != "分组":
             e += 1
             # 部门名录叶子（市政府部门/县政府部门下的名录条目）没有政府信息
-            # 公开专栏概念，有栏目链接即算已收录；与前端 isDeptLeaf 保持一致，
-            # 否则桩节点 _stats 会显示「N 单位 · 0 已收录」。判定不能用 k=部门：
-            # 国务院组成部门/直属机构等真实机关也是 k=部门（2026-11-19 巡检修复）
-            if n.get("dt"):
-                if n.get("u"):
+            # 公开专栏概念，有栏目链接即算已收录；无专栏口径的机构（法检/人大/
+            # 政协/监委/纪委/群团/民主党派/党委）同理，有官网即已收录。
+            # 判定不能用 k=部门：国务院组成部门/直属机构等真实机关也是 k=部门
+            # （2026-11-19 巡检修复）
+            if no_xxgk(n):
+                # 有门户或有专栏 URL 都算已收录（个别节点只有专栏链接）
+                if n.get("u") or n.get("x"):
                     ok += 1
                 else:
                     miss += 1
@@ -133,18 +149,22 @@ def main():
             if not node.get("ks") or node.get("k") != "分组":
                 if node.get("l") == lv_name:
                     s["e"] += 1
-                    if node.get("x"):
+                    # 口径与 stats_of 一致：无专栏口径的机构有官网即 ok
+                    if no_xxgk(node):
+                        _hit = bool(node.get("u") or node.get("x"))
+                        s["ok" if _hit else "miss"] += 1
+                        if _hit:
+                            all_ok += 1
+                    elif node.get("x"):
                         s["ok"] += 1
+                        all_ok += 1
                     elif node.get("u"):
                         s["warn"] += 1
+                        all_warn += 1
                     else:
                         s["miss"] += 1
                 if node.get("l") == lv_name:
                     all_e += 1
-                    if node.get("x"):
-                        all_ok += 1
-                    elif node.get("u"):
-                        all_warn += 1
             for k in node.get("ks", []):
                 add(k, lv_name)
         for g in (central_g, gat_g):
@@ -225,10 +245,11 @@ def gen_quality():
     from collections import Counter
     lvl = Counter(v.get("source_level", "L4") for v in reg.values() if v.get("u"))
     st = Counter(v.get("status", "unknown") for v in reg.values() if v.get("u"))
-    # xxgk 全局统计：有官网叶子的专栏覆盖
+    # xxgk 全局统计：只统计政府机关（法检/人大/政协/监委/纪委/群团/民主党派
+    # 结构上无此栏目，计入分母会把覆盖率压成个位数，误导性极强）
     xx_all = [0, 0]
     def w2(x):
-        if x.get("u") and not x.get("ks"):
+        if x.get("u") and not x.get("ks") and not no_xxgk(x):
             xx_all[0] += 1
             if x.get("x"): xx_all[1] += 1
         for k in x.get("ks", []): w2(k)

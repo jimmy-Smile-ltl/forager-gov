@@ -68,7 +68,10 @@ def leaf(nm, lv, u):
             "u": u, "x": "", "s": "", "m": ""}
 
 added = 0
-# 1) 五个党派省级（列名补齐缺失省）
+# 1) 五个党派省级（列名补齐缺失省）。
+# 节点名规范见 p251：简称在前、地名居中、统一「委员会」，不再用「{省名}{党派}省委会」
+PARTY_ABBR = {"民盟": "民盟", "民建": "民建", "民进": "民进",
+              "农工党": "农工党", "致公党": "致公党", "九三": "九三学社"}
 for key, party in [("民盟", "中国民主同盟"), ("民建", "中国民主建国会"),
                    ("民进", "中国民主促进会"), ("农工党", "中国农工民主党"),
                    ("致公党", "中国致公党")]:
@@ -77,7 +80,7 @@ for key, party in [("民盟", "中国民主同盟"), ("民建", "中国民主建
     kids = []
     for pf in PROV_FULL:
         u = d.get(pf, "")
-        kids.append(leaf(f"{pf}{party.replace('中国', '')}省委会" if "中国" in party else f"{pf}九三学社省委会", "省", u))
+        kids.append(leaf(f"{PARTY_ABBR[key]}{pf}委员会", "省", u))
     # 九三单独
     node["ks"] = kids
     added += len(kids)
@@ -89,7 +92,7 @@ for k, u in j93_prov.items():
     full = j93_name_of(k)
     if not full:
         continue
-    kids93.append(leaf(f"{full}九三学社委员会", "省", u))
+    kids93.append(leaf(f"九三学社{full}委员会", "省", u))
 # 市级
 prov_of = {}
 for k, u in j93_shi.items():

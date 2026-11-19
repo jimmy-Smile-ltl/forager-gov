@@ -45,13 +45,13 @@ def leaf(nm, lv, u):
     return {"n": nm, "l": lv, "k": "民主党派", "c": "民主党派",
             "u": u, "x": "", "s": "", "m": ""}
 
-# 民革
+# 民革（节点名规范见 p251：党派简称在前，如「民革北京市委员会」）
 mg = next(x for x in dp_grp["ks"] if x["n"].startswith("中国国民党革命委员会"))
-mg["ks"] = [leaf(f"{pf}民革省委会", "省", MG.get(pf, "")) for pf in PROV_FULL]
+mg["ks"] = [leaf(f"民革{pf}委员会", "省", MG.get(pf, "")) for pf in PROV_FULL]
 
 # 台盟全列名
 tm = next(x for x in dp_grp["ks"] if x["n"].startswith("台湾民主自治同盟"))
-tm["ks"] = [leaf(f"{pf}台盟省委会", "省", "") for pf in PROV_FULL]
+tm["ks"] = [leaf(f"台盟{pf}委员会", "省", "") for pf in PROV_FULL]
 
 # rules 同步
 rules = json.load(open("extraction_rules.json", encoding="utf-8"))
