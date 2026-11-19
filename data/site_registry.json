@@ -1435,7 +1435,8 @@
  "群团|中华全国总工会": {
   "u": "https://www.acftu.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
   "n": "中华全国总工会",
   "source_level": "L2",
@@ -4497,20 +4498,10 @@
  "群团|北京市总工会": {
   "u": "http://www.bjzgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省总工会",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|团省委": {
-  "u": "https://www.bjyouth.net",
-  "locations": [
-   "块"
-  ],
-  "n": "团省委",
+  "n": "北京市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -4588,7 +4579,7 @@
    "块",
    "条"
   ],
-  "n": "省法学会",
+  "n": "北京市法学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -4600,7 +4591,7 @@
    "块",
    "条"
   ],
-  "n": "省人民对外友好协会",
+  "n": "北京市人民对外友好协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -4609,9 +4600,10 @@
  "群团|北京市欧美同学会": {
   "u": "https://www.bjwrsa.org.cn",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省欧美同学会",
+  "n": "北京市欧美同学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -5362,9 +5354,10 @@
  "群团|天津市总工会": {
   "u": "http://www.ftutj.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省总工会",
+  "n": "天津市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -5435,7 +5428,7 @@
    "块",
    "条"
   ],
-  "n": "省红十字会",
+  "n": "天津市红十字会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -6034,7 +6027,7 @@
   "locations": [
    "块"
   ],
-  "n": "省总工会",
+  "n": "河北省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -6079,7 +6072,7 @@
    "块",
    "条"
   ],
-  "n": "省红十字会",
+  "n": "河北省红十字会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "maintain",
@@ -6091,7 +6084,7 @@
    "块",
    "条"
   ],
-  "n": "省法学会",
+  "n": "河北省法学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -6102,7 +6095,7 @@
   "locations": [
    "块"
   ],
-  "n": "省计划生育协会",
+  "n": "河北省计划生育协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -6115,7 +6108,7 @@
   "locations": [
    "块"
   ],
-  "n": "省欧美同学会",
+  "n": "河北省欧美同学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -6124,9 +6117,10 @@
  "群团|石家庄市总工会": {
   "u": "http://www.sjzzgh.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "石家庄市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -6146,9 +6140,10 @@
  "群团|唐山市总工会": {
   "u": "http://www.tsszgh.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "唐山市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "dead",
@@ -6168,9 +6163,10 @@
  "群团|秦皇岛市总工会": {
   "u": "http://www.qhdzgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "秦皇岛市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -6204,9 +6200,10 @@
  "群团|邯郸市总工会": {
   "u": "http://www.hdszgh.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "邯郸市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "dead",
@@ -6250,9 +6247,10 @@
  "群团|邢台市总工会": {
   "u": "http://www.xtszgh.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "邢台市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -6272,9 +6270,10 @@
  "群团|保定市总工会": {
   "u": "http://www.bdzgh.gov.cn",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "保定市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -6307,9 +6306,10 @@
  "群团|张家口市总工会": {
   "u": "http://www.zjkgh.org",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "张家口市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -6342,9 +6342,10 @@
  "群团|承德市总工会": {
   "u": "http://www.cdszgh.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "承德市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -6364,9 +6365,10 @@
  "群团|沧州市总工会": {
   "u": "http://www.czszgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "沧州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -6399,9 +6401,10 @@
  "群团|廊坊市总工会": {
   "u": "http://www.hblfszgh.com/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "廊坊市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -6421,9 +6424,10 @@
  "群团|衡水市总工会": {
   "u": "http://www.hsszgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "衡水市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -7010,7 +7014,7 @@
   "locations": [
    "块"
   ],
-  "n": "省总工会",
+  "n": "山西省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -7078,7 +7082,7 @@
    "块",
    "条"
   ],
-  "n": "省法学会",
+  "n": "山西省法学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -7089,7 +7093,7 @@
   "locations": [
    "块"
   ],
-  "n": "省计划生育协会",
+  "n": "山西省计划生育协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -7098,9 +7102,10 @@
  "群团|太原市总工会": {
   "u": "https://www.tyzgh.org.cn",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "太原市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -7122,9 +7127,10 @@
  "群团|大同市总工会": {
   "u": "https://www.dtszgh.org.cn",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "大同市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "dead",
@@ -7144,9 +7150,10 @@
  "群团|阳泉市总工会": {
   "u": "https://www.yangqgh.org.cn",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "阳泉市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -7169,9 +7176,10 @@
  "群团|长治市总工会": {
   "u": "https://www.czsgh.org.cn",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "长治市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "dead",
@@ -7191,9 +7199,10 @@
  "群团|晋城市总工会": {
   "u": "http://jcszgh.jcgov.gov.cn",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "晋城市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -7213,9 +7222,10 @@
  "群团|晋中市总工会": {
   "u": "http://www.sxjzszgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "晋中市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -7235,9 +7245,10 @@
  "群团|运城市总工会": {
   "u": "https://www.sxycszgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "运城市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -7259,9 +7270,10 @@
  "群团|临汾市总工会": {
   "u": "https://www.lfszgh.com",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "临汾市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -7771,7 +7783,7 @@
   "locations": [
    "块"
   ],
-  "n": "省总工会",
+  "n": "内蒙古自治区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -7833,7 +7845,7 @@
    "块",
    "条"
   ],
-  "n": "省法学会",
+  "n": "内蒙古自治区法学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -7842,9 +7854,10 @@
  "群团|呼和浩特市总工会": {
   "u": "http://hhhtszgh.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "呼和浩特市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "dead",
@@ -7877,9 +7890,10 @@
  "群团|包头市总工会": {
   "u": "http://www.btszgh.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "包头市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -7901,9 +7915,10 @@
  "群团|乌海市总工会": {
   "u": "http://zgh.wuhai.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "乌海市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -7997,9 +8012,10 @@
  "群团|鄂尔多斯市总工会": {
   "u": "http://www.ordoszgh.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "鄂尔多斯市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -8019,9 +8035,10 @@
  "群团|呼伦贝尔市总工会": {
   "u": "https://www.hlbezgh.org.cn/index.html",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "呼伦贝尔市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -8064,9 +8081,10 @@
  "群团|乌兰察布市总工会": {
   "u": "https://www.wlcbszgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "乌兰察布市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "dead",
@@ -8722,9 +8740,10 @@
  "群团|辽宁省总工会": {
   "u": "http://www.lnszgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省总工会",
+  "n": "辽宁省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -8817,7 +8836,7 @@
    "块",
    "条"
   ],
-  "n": "省红十字会",
+  "n": "辽宁省红十字会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -9487,7 +9506,7 @@
   "locations": [
    "块"
   ],
-  "n": "省总工会",
+  "n": "吉林省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -9544,9 +9563,10 @@
  "群团|长春市总工会": {
   "u": "https://ccgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "长春市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -9603,9 +9623,10 @@
  "群团|通化市总工会": {
   "u": "http://www.thszgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "通化市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -9626,9 +9647,10 @@
  "群团|白山市总工会": {
   "u": "http://www.jlbsszgh.com/web/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "白山市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -10282,7 +10304,7 @@
   "locations": [
    "块"
   ],
-  "n": "省总工会",
+  "n": "黑龙江省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -10374,7 +10396,7 @@
    "块",
    "条"
   ],
-  "n": "省计划生育协会",
+  "n": "黑龙江省计划生育协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -10385,9 +10407,10 @@
  "群团|黑龙江省欧美同学会": {
   "u": "http://www.horsa.org.cn",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省欧美同学会",
+  "n": "黑龙江省欧美同学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -10396,9 +10419,10 @@
  "群团|哈尔滨市总工会": {
   "u": "https://www.hrbgh.org/#/home",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "哈尔滨市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -10430,9 +10454,10 @@
  "群团|齐齐哈尔市总工会": {
   "u": "https://www.hljgh.org.cn/city?orgId=4d766bffdfbe4c6b826d43bf0349ce82",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "齐齐哈尔市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -10453,9 +10478,10 @@
  "群团|鸡西市总工会": {
   "u": "https://www.hljgh.org.cn/city?orgId=1be57e4d3ba544fca181c9beabfe3128",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "鸡西市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -10504,9 +10530,10 @@
  "群团|鹤岗市总工会": {
   "u": "https://www.hljgh.org.cn/city?orgId=02284fbd14214f08a3b16ce824c75337",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "鹤岗市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -10515,9 +10542,10 @@
  "群团|双鸭山市总工会": {
   "u": "https://www.hljgh.org.cn/city?orgId=2543127baa83454d9be94087496f0f69",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "双鸭山市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -10526,9 +10554,10 @@
  "群团|大庆市总工会": {
   "u": "https://www.hljgh.org.cn/city?orgId=de205ea34e044bc880b341fc31071cda",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "大庆市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -10537,9 +10566,10 @@
  "群团|伊春市总工会": {
   "u": "https://www.hljgh.org.cn/city?orgId=3e165e2d3f9242afac0251f4727321dc",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "伊春市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -10559,9 +10589,10 @@
  "群团|佳木斯市总工会": {
   "u": "https://www.hljgh.org.cn/city?orgId=fb85398a7add4ec782bc5ada3a4e96bd",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "佳木斯市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -10570,9 +10601,10 @@
  "群团|七台河市总工会": {
   "u": "https://www.hljgh.org.cn/city?orgId=b535968ae2c844118ae101c75c97774d",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "七台河市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -10595,9 +10627,10 @@
  "群团|牡丹江市总工会": {
   "u": "https://www.hljgh.org.cn/city?orgId=b0ac97dd6e3842958b0ace123795074c",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "牡丹江市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -10606,9 +10639,10 @@
  "群团|黑河市总工会": {
   "u": "https://www.hljgh.org.cn/city?orgId=c2707dafa3744e7db288dd23cd7eef86",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "黑河市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -10617,9 +10651,10 @@
  "群团|绥化市总工会": {
   "u": "https://www.hljgh.org.cn/city?orgId=63fe81e101b5443db8b21255686700e1",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "绥化市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -10628,9 +10663,10 @@
  "群团|大兴安岭地区总工会": {
   "u": "https://www.hljgh.org.cn/city?orgId=11ac04803cca43ae89d5433a03faed40",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "大兴安岭地区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -11418,9 +11454,10 @@
  "群团|上海市总工会": {
   "u": "https://www.shszgh.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省总工会",
+  "n": "上海市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -11489,7 +11526,7 @@
    "块",
    "条"
   ],
-  "n": "省红十字会",
+  "n": "上海市红十字会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -11500,7 +11537,7 @@
   "locations": [
    "块"
   ],
-  "n": "省计划生育协会",
+  "n": "上海市计划生育协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -11509,9 +11546,10 @@
  "群团|黄浦区总工会": {
   "u": "http://www.huangpuqu.sh.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "区总工会",
+  "n": "黄浦区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -11532,9 +11570,10 @@
  "群团|徐汇区总工会": {
   "u": "http://www.xuhui.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "区总工会",
+  "n": "徐汇区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -11569,9 +11608,10 @@
  "群团|长宁区总工会": {
   "u": "http://www.changning.sh.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "区总工会",
+  "n": "长宁区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "dead",
@@ -11594,9 +11634,10 @@
  "群团|静安区总工会": {
   "u": "http://www.jingan.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "区总工会",
+  "n": "静安区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -11617,9 +11658,10 @@
  "群团|普陀区总工会": {
   "u": "http://www.shpt.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "区总工会",
+  "n": "普陀区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -11640,9 +11682,10 @@
  "群团|虹口区总工会": {
   "u": "http://www.shhk.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "区总工会",
+  "n": "虹口区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -11663,9 +11706,10 @@
  "群团|杨浦区总工会": {
   "u": "http://www.shyp.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "区总工会",
+  "n": "杨浦区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -11686,9 +11730,10 @@
  "群团|闵行区总工会": {
   "u": "http://www.shmh.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "区总工会",
+  "n": "闵行区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -11709,9 +11754,10 @@
  "群团|宝山区总工会": {
   "u": "http://www.shbsq.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "区总工会",
+  "n": "宝山区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -11734,9 +11780,10 @@
  "群团|嘉定区总工会": {
   "u": "http://www.jiading.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "区总工会",
+  "n": "嘉定区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "dead",
@@ -11759,9 +11806,10 @@
  "群团|金山区总工会": {
   "u": "https://www.jinshan.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "区总工会",
+  "n": "金山区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -11782,9 +11830,10 @@
  "群团|松江区总工会": {
   "u": "http://www.songjiang.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "区总工会",
+  "n": "松江区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -11822,9 +11871,10 @@
  "群团|奉贤区总工会": {
   "u": "https://www.fengxian.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "区总工会",
+  "n": "奉贤区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -11847,9 +11897,10 @@
  "群团|崇明区总工会": {
   "u": "http://www.shcm.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "区总工会",
+  "n": "崇明区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -12293,9 +12344,10 @@
  "群团|江苏省总工会": {
   "u": "http://www.jsgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省总工会",
+  "n": "江苏省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "dead",
@@ -12350,7 +12402,7 @@
   "locations": [
    "块"
   ],
-  "n": "省人民对外友好协会",
+  "n": "江苏省人民对外友好协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -12959,7 +13011,7 @@
   "locations": [
    "块"
   ],
-  "n": "省总工会",
+  "n": "浙江省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -13040,7 +13092,7 @@
   "locations": [
    "块"
   ],
-  "n": "省计划生育协会",
+  "n": "浙江省计划生育协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -13051,9 +13103,10 @@
  "群团|杭州市总工会": {
   "u": "http://www.hzgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "杭州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -13085,9 +13138,10 @@
  "群团|宁波市总工会": {
   "u": "http://www.nbgh.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "宁波市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -13107,9 +13161,10 @@
  "群团|温州市总工会": {
   "u": "http://www.wzgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "温州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "dead",
@@ -13154,9 +13209,10 @@
  "群团|嘉兴市总工会": {
   "u": "http://www.jxzgh.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "嘉兴市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -13176,9 +13232,10 @@
  "群团|湖州市总工会": {
   "u": "http://www.51.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "湖州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "dead",
@@ -13198,9 +13255,10 @@
  "群团|绍兴市总工会": {
   "u": "http://www.sxgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "绍兴市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -13224,9 +13282,10 @@
  "群团|金华市总工会": {
   "u": "http://jhzgh.jinhua.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "金华市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -13260,9 +13319,10 @@
  "群团|衢州市总工会": {
   "u": "http://www.qzzgh.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "衢州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -13284,9 +13344,10 @@
  "群团|舟山市总工会": {
   "u": "http://www.zjzsgh.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "舟山市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -13306,9 +13367,10 @@
  "群团|台州市总工会": {
   "u": "http://www.tzzgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "台州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -13328,9 +13390,10 @@
  "群团|丽水市总工会": {
   "u": "http://zgh.lishui.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "丽水市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -13800,7 +13863,7 @@
   "locations": [
    "块"
   ],
-  "n": "省总工会",
+  "n": "安徽省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -13847,7 +13910,7 @@
    "块",
    "条"
   ],
-  "n": "省法学会",
+  "n": "安徽省法学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -13858,7 +13921,7 @@
   "locations": [
    "块"
   ],
-  "n": "省计划生育协会",
+  "n": "安徽省计划生育协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -13867,9 +13930,10 @@
  "群团|合肥市总工会": {
   "u": "https://www.hefei.gov.cn/ssxw/ztzl/zt/dqxx2024/szgh/index.html",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "合肥市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -13889,9 +13953,10 @@
  "群团|芜湖市总工会": {
   "u": "http://zgh.wh.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "芜湖市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -13925,9 +13990,10 @@
  "群团|蚌埠市总工会": {
   "u": "https://bbszgh.ahghw.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "蚌埠市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -13947,9 +14013,10 @@
  "群团|淮南市总工会": {
   "u": "https://hnszgh.ahghw.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "淮南市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -13969,9 +14036,10 @@
  "群团|马鞍山市总工会": {
   "u": "https://www.maszgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "马鞍山市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -14005,9 +14073,10 @@
  "群团|淮北市总工会": {
   "u": "http://www.ahhbgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "淮北市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -14027,9 +14096,10 @@
  "群团|铜陵市总工会": {
   "u": "http://www.tlgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "铜陵市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -14049,9 +14119,10 @@
  "群团|安庆市总工会": {
   "u": "https://www.aqszgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "安庆市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -14095,9 +14166,10 @@
  "群团|黄山市总工会": {
   "u": "http://www.hszgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "黄山市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -14117,9 +14189,10 @@
  "群团|滁州市总工会": {
   "u": "http://czszgh.ahghw.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "滁州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -14152,9 +14225,10 @@
  "群团|阜阳市总工会": {
   "u": "https://www.fysgh.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "阜阳市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -14188,9 +14262,10 @@
  "群团|宿州市总工会": {
   "u": "https://www.ahszzgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "宿州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -14210,9 +14285,10 @@
  "群团|六安市总工会": {
   "u": "https://www.laszgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "六安市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -14234,9 +14310,10 @@
  "群团|亳州市总工会": {
   "u": "https://bzszgh.ahghw.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "亳州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -14286,9 +14363,10 @@
  "群团|池州市总工会": {
   "u": "http://www.czszgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "池州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -14308,9 +14386,10 @@
  "群团|宣城市总工会": {
   "u": "https://xcszgh.ahghw.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "宣城市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -15063,7 +15142,7 @@
   "locations": [
    "块"
   ],
-  "n": "省总工会",
+  "n": "福建省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -15120,7 +15199,7 @@
   "locations": [
    "块"
   ],
-  "n": "省计划生育协会",
+  "n": "福建省计划生育协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -15131,9 +15210,10 @@
  "群团|福州市总工会": {
   "u": "https://ec.fzszgh.com/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "福州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -15181,9 +15261,10 @@
  "群团|厦门市总工会": {
   "u": "http://www.xmzgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "厦门市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -15215,9 +15296,10 @@
  "群团|莆田市总工会": {
   "u": "http://www.ptszgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "莆田市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -15237,9 +15319,10 @@
  "群团|三明市总工会": {
   "u": "http://www.smgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "三明市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -15271,9 +15354,10 @@
  "群团|泉州市总工会": {
   "u": "http://www.qzszgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "泉州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -15331,9 +15415,10 @@
  "群团|漳州市总工会": {
   "u": "http://www.zzsgh.com/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "漳州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -15353,9 +15438,10 @@
  "群团|南平市总工会": {
   "u": "http://www.npgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "南平市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -15375,9 +15461,10 @@
  "群团|龙岩市总工会": {
   "u": "http://www.lygh.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "龙岩市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -16174,9 +16261,10 @@
  "群团|江西省总工会": {
   "u": "https://www.jxgh.org.cn",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省总工会",
+  "n": "江西省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -17027,7 +17115,7 @@
   "locations": [
    "块"
   ],
-  "n": "省总工会",
+  "n": "山东省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -17095,7 +17183,7 @@
   "locations": [
    "块"
   ],
-  "n": "省计划生育协会",
+  "n": "山东省计划生育协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -17106,9 +17194,10 @@
  "群团|济南市总工会": {
   "u": "http://www.jngh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "济南市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -17142,9 +17231,10 @@
  "群团|青岛市总工会": {
   "u": "http://www.qdszgh.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "青岛市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -17166,9 +17256,10 @@
  "群团|淄博市总工会": {
   "u": "http://www.zbgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "淄博市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -17200,9 +17291,10 @@
  "群团|枣庄市总工会": {
   "u": "http://www.zzsgh.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "枣庄市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -17222,9 +17314,10 @@
  "群团|东营市总工会": {
   "u": "http://dyzgh.dongying.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "东营市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -17244,9 +17337,10 @@
  "群团|烟台市总工会": {
   "u": "http://www.ytghw.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "烟台市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -17278,9 +17372,10 @@
  "群团|潍坊市总工会": {
   "u": "http://gh.weifang.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "潍坊市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -17300,9 +17395,10 @@
  "群团|济宁市总工会": {
   "u": "http://www.jnszgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "济宁市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -17334,9 +17430,10 @@
  "群团|泰安市总工会": {
   "u": "https://taszgh.taian.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "泰安市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "dead",
@@ -17356,9 +17453,10 @@
  "群团|威海市总工会": {
   "u": "http://www.whgh.org.cn/index.html",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "威海市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -17378,9 +17476,10 @@
  "群团|日照市总工会": {
   "u": "http://www.rzgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "日照市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -17412,9 +17511,10 @@
  "群团|临沂市总工会": {
   "u": "http://www.lyghw.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "临沂市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -17458,9 +17558,10 @@
  "群团|德州市总工会": {
   "u": "http://gh.dezhou.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "德州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -17516,9 +17617,10 @@
  "群团|聊城市总工会": {
   "u": "http://www.lcgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "聊城市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -17538,9 +17640,10 @@
  "群团|滨州市总工会": {
   "u": "http://bzszgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "滨州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -17562,9 +17665,10 @@
  "群团|菏泽市总工会": {
   "u": "https://www.hzghw.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "菏泽市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -18190,7 +18294,7 @@
   "locations": [
    "块"
   ],
-  "n": "省总工会",
+  "n": "河南省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -18268,7 +18372,7 @@
    "块",
    "条"
   ],
-  "n": "省红十字会",
+  "n": "河南省红十字会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -18280,7 +18384,7 @@
    "块",
    "条"
   ],
-  "n": "省计划生育协会",
+  "n": "河南省计划生育协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -18289,9 +18393,10 @@
  "群团|郑州市总工会": {
   "u": "http://www.zzgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "郑州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -18346,9 +18451,10 @@
  "群团|平顶山市总工会": {
   "u": "https://www.pdsgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "平顶山市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -18380,9 +18486,10 @@
  "群团|安阳市总工会": {
   "u": "http://www.ayzgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "安阳市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -18402,9 +18509,10 @@
  "群团|鹤壁市总工会": {
   "u": "http://www.hbszgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "鹤壁市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -18435,9 +18543,10 @@
  "群团|焦作市总工会": {
   "u": "http://www.hnjzgh.com/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "焦作市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -18491,9 +18600,10 @@
  "群团|漯河市总工会": {
   "u": "http://www.lhzgh.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "漯河市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -18569,9 +18679,10 @@
  "群团|周口市总工会": {
   "u": "http://www.zkszgh.org/index.asp",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "周口市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -18591,9 +18702,10 @@
  "群团|驻马店市总工会": {
   "u": "https://www.zmdzgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "驻马店市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -18997,9 +19109,10 @@
  "群团|湖北省总工会": {
   "u": "http://www.hbzgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省总工会",
+  "n": "湖北省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -19801,9 +19914,10 @@
  "群团|湖南省总工会": {
   "u": "https://www.hnghw.com/#/home",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省总工会",
+  "n": "湖南省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -19869,7 +19983,7 @@
   "locations": [
    "块"
   ],
-  "n": "省计划生育协会",
+  "n": "湖南省计划生育协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -19880,7 +19994,7 @@
   "locations": [
    "块"
   ],
-  "n": "省欧美同学会",
+  "n": "湖南省欧美同学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -20562,7 +20676,7 @@
   "locations": [
    "块"
   ],
-  "n": "省总工会",
+  "n": "广东省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -20602,7 +20716,7 @@
    "块",
    "条"
   ],
-  "n": "省法学会",
+  "n": "广东省法学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -20624,7 +20738,7 @@
   "locations": [
    "块"
   ],
-  "n": "省计划生育协会",
+  "n": "广东省计划生育协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -20635,9 +20749,10 @@
  "群团|广州市总工会": {
   "u": "http://www.gzgh.org.cn/web/default.aspx",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "广州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -20683,9 +20798,10 @@
  "群团|韶关市总工会": {
   "u": "http://zgh.sg.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "韶关市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -20760,9 +20876,10 @@
  "群团|深圳市总工会": {
   "u": "http://www.szzgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "深圳市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -20838,9 +20955,10 @@
  "群团|珠海市总工会": {
   "u": "http://www.zhgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "珠海市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -20860,9 +20978,10 @@
  "群团|汕头市总工会": {
   "u": "http://www.stgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "汕头市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -20882,9 +21001,10 @@
  "群团|佛山市总工会": {
   "u": "http://www.fftu.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "佛山市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -20958,9 +21078,10 @@
  "群团|江门市总工会": {
   "u": "http://ftu.jiangmen.cn",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "江门市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -20980,9 +21101,10 @@
  "群团|湛江市总工会": {
   "u": "http://www.zjghw.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "湛江市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "dead",
@@ -21002,9 +21124,10 @@
  "群团|茂名市总工会": {
   "u": "https://www.mmszgh.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "茂名市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "dead",
@@ -21024,9 +21147,10 @@
  "群团|肇庆市总工会": {
   "u": "http://gh.zhaoqing.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "肇庆市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -21046,9 +21170,10 @@
  "群团|惠州市总工会": {
   "u": "http://www.hzszgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "惠州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -21165,9 +21290,10 @@
  "群团|东莞市总工会": {
   "u": "http://dgzgh.dg.gov.cn",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "东莞市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -21202,9 +21328,10 @@
  "群团|中山市总工会": {
   "u": "http://www.zszgh.com/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "中山市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -21235,9 +21362,10 @@
  "群团|揭阳市总工会": {
   "u": "http://www.jieyang.gd.cn/zgh",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "揭阳市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -21801,9 +21929,10 @@
  "群团|广西壮族自治区总工会": {
   "u": "http://www.gxftu.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省总工会",
+  "n": "广西壮族自治区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -22600,7 +22729,7 @@
   "locations": [
    "块"
   ],
-  "n": "省总工会",
+  "n": "海南省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -22691,7 +22820,7 @@
    "块",
    "条"
   ],
-  "n": "省红十字会",
+  "n": "海南省红十字会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -22703,7 +22832,7 @@
    "块",
    "条"
   ],
-  "n": "省法学会",
+  "n": "海南省法学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -22712,9 +22841,10 @@
  "群团|海南省欧美同学会": {
   "u": "https://www.hnwrsa.org.cn",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省欧美同学会",
+  "n": "海南省欧美同学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -22723,9 +22853,10 @@
  "群团|海口市总工会": {
   "u": "http://www.hkzgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "海口市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -22745,9 +22876,10 @@
  "群团|三亚市总工会": {
   "u": "https://www.hnszgh.org/hn-web?orgId=5",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "三亚市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -22767,9 +22899,10 @@
  "群团|三沙市总工会": {
   "u": "https://www.hnszgh.org/hn-web?orgId=18",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "三沙市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -22778,9 +22911,10 @@
  "群团|儋州市总工会": {
   "u": "https://www.hnszgh.org/hn-web?orgId=6",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "儋州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -23470,9 +23604,10 @@
  "群团|重庆市总工会": {
   "u": "http://www.cqgh.org/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省总工会",
+  "n": "重庆市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -23494,7 +23629,7 @@
   "locations": [
    "块"
   ],
-  "n": "省法学会",
+  "n": "重庆市法学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -23505,7 +23640,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "万州区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23529,7 +23664,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "涪陵区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23553,7 +23688,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "渝中区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23589,7 +23724,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "大渡口区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23601,7 +23736,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "江北区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23613,7 +23748,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "沙坪坝区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23637,7 +23772,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "九龙坡区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23661,7 +23796,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "南岸区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23685,7 +23820,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "北碚区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23709,7 +23844,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "綦江区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23733,7 +23868,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "大足区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23757,7 +23892,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "渝北区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23769,7 +23904,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "巴南区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23793,7 +23928,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "黔江区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23805,7 +23940,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "长寿区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23817,7 +23952,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "江津区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23853,7 +23988,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "合川区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23865,7 +24000,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "永川区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23901,7 +24036,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "南川区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23913,7 +24048,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "璧山区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23937,7 +24072,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "铜梁区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23961,7 +24096,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "潼南区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -23985,7 +24120,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "荣昌区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -24009,7 +24144,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "开州区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -24021,7 +24156,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "梁平区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -24033,7 +24168,7 @@
   "locations": [
    "块"
   ],
-  "n": "区总工会",
+  "n": "武隆区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -24606,7 +24741,7 @@
   "locations": [
    "块"
   ],
-  "n": "省总工会",
+  "n": "四川省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -24654,7 +24789,7 @@
   "locations": [
    "块"
   ],
-  "n": "省法学会",
+  "n": "四川省法学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -24666,7 +24801,7 @@
    "块",
    "条"
   ],
-  "n": "省人民对外友好协会",
+  "n": "四川省人民对外友好协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -24677,7 +24812,7 @@
   "locations": [
    "块"
   ],
-  "n": "省计划生育协会",
+  "n": "四川省计划生育协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -24688,7 +24823,7 @@
   "locations": [
    "块"
   ],
-  "n": "省欧美同学会",
+  "n": "四川省欧美同学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -24697,9 +24832,10 @@
  "群团|成都市总工会": {
   "u": "http://www.cdzgh.com",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "成都市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -24857,9 +24993,10 @@
  "群团|自贡市总工会": {
   "u": "https://sczggh.com",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "自贡市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -24890,9 +25027,10 @@
  "群团|泸州市总工会": {
   "u": "http://www.lzsgh.cn",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "泸州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -24912,9 +25050,10 @@
  "群团|德阳市总工会": {
   "u": "https://www.dyzgh.com/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "德阳市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -24934,9 +25073,10 @@
  "群团|绵阳市总工会": {
   "u": "http://zgh.my.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "绵阳市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -24956,9 +25096,10 @@
  "群团|广元市总工会": {
   "u": "http://www.gyszgh.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "广元市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -24978,9 +25119,10 @@
  "群团|遂宁市总工会": {
   "u": "http://www.snszgh.gov.cn",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "遂宁市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -25000,9 +25142,10 @@
  "群团|内江市总工会": {
   "u": "http://www.njzgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "内江市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -25091,9 +25234,10 @@
  "群团|达州市总工会": {
   "u": "http://www.dzszgh.com/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "达州市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -25151,9 +25295,10 @@
  "群团|巴中市总工会": {
   "u": "http://www.bzszgh.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "巴中市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -25173,9 +25318,10 @@
  "群团|资阳市总工会": {
   "u": "http://www.zyszgh.org.cn",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "资阳市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -25937,7 +26083,7 @@
   "locations": [
    "块"
   ],
-  "n": "省总工会",
+  "n": "贵州省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -25996,7 +26142,7 @@
   "locations": [
    "块"
   ],
-  "n": "省法学会",
+  "n": "贵州省法学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -26007,7 +26153,7 @@
   "locations": [
    "块"
   ],
-  "n": "省计划生育协会",
+  "n": "贵州省计划生育协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -26038,9 +26184,10 @@
  "群团|遵义市总工会": {
   "u": "http://zy.guizgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "遵义市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "dead",
@@ -26109,9 +26256,10 @@
  "群团|毕节市总工会": {
   "u": "http://bj.guizgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "毕节市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "dead",
@@ -26851,9 +26999,10 @@
  "群团|云南省总工会": {
   "u": "https://ynzgh.org.cn/portal/#/home",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省总工会",
+  "n": "云南省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -26920,7 +27069,7 @@
    "块",
    "条"
   ],
-  "n": "省人民对外友好协会",
+  "n": "云南省人民对外友好协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -26931,7 +27080,7 @@
   "locations": [
    "块"
   ],
-  "n": "省计划生育协会",
+  "n": "云南省计划生育协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -27422,9 +27571,10 @@
  "群团|西藏自治区总工会": {
   "u": "https://www.xzgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省总工会",
+  "n": "西藏自治区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -27459,7 +27609,7 @@
   "locations": [
    "块"
   ],
-  "n": "省欧美同学会",
+  "n": "西藏自治区欧美同学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -28134,7 +28284,7 @@
   "locations": [
    "块"
   ],
-  "n": "省总工会",
+  "n": "陕西省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -28206,7 +28356,7 @@
   "locations": [
    "块"
   ],
-  "n": "省法学会",
+  "n": "陕西省法学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -28218,7 +28368,7 @@
    "块",
    "条"
   ],
-  "n": "省计划生育协会",
+  "n": "陕西省计划生育协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -28227,9 +28377,10 @@
  "群团|西安市总工会": {
   "u": "https://www.xaszgh.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "西安市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -28249,9 +28400,10 @@
  "群团|铜川市总工会": {
   "u": "http://www.tcszgh.net/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "铜川市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -28273,9 +28425,10 @@
  "群团|宝鸡市总工会": {
   "u": "https://bjszgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "宝鸡市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -28295,9 +28448,10 @@
  "群团|咸阳市总工会": {
   "u": "http://www.xyzgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "咸阳市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -28342,9 +28496,10 @@
  "群团|延安市总工会": {
   "u": "http://www.yaszgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "延安市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -28364,9 +28519,10 @@
  "群团|汉中市总工会": {
   "u": "http://zgh.hanzhong.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "汉中市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "dead",
@@ -28400,9 +28556,10 @@
  "群团|榆林市总工会": {
   "u": "http://www.ylszgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "榆林市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -28436,9 +28593,10 @@
  "群团|安康市总工会": {
   "u": "http://gh.ankang.gov.cn/Index.html",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "市总工会",
+  "n": "安康市总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -29055,9 +29213,10 @@
  "群团|甘肃省总工会": {
   "u": "https://www.gsgh.org.cn",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省总工会",
+  "n": "甘肃省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -30012,9 +30171,10 @@
  "群团|青海省总工会": {
   "u": "https://www.qhszgh.com/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省总工会",
+  "n": "青海省总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -30073,7 +30233,7 @@
   "locations": [
    "块"
   ],
-  "n": "省计划生育协会",
+  "n": "青海省计划生育协会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -30084,7 +30244,7 @@
   "locations": [
    "块"
   ],
-  "n": "省欧美同学会",
+  "n": "青海省欧美同学会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -30357,9 +30517,10 @@
  "群团|宁夏回族自治区总工会": {
   "u": "http://www.nxzgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省总工会",
+  "n": "宁夏回族自治区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -30695,9 +30856,10 @@
  "群团|新疆维吾尔自治区总工会": {
   "u": "http://www.xjzgh.org.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省总工会",
+  "n": "新疆维吾尔自治区总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -30741,7 +30903,7 @@
   "locations": [
    "块"
   ],
-  "n": "省法学会",
+  "n": "新疆维吾尔自治区法学会",
   "source_level": "L2",
   "verified_at": "2026-11-18",
   "status": "cleared",
@@ -30864,9 +31026,10 @@
  "群团|新疆生产建设兵团总工会": {
   "u": "http://btftu.xjbt.gov.cn/",
   "locations": [
-   "块"
+   "块",
+   "条"
   ],
-  "n": "省总工会",
+  "n": "新疆生产建设兵团总工会",
   "source_level": "L2",
   "verified_at": "2026-11-06",
   "status": "ok",
@@ -78568,390 +78731,6 @@
   "xxgk": "https://www.gqt.org.cn/xxgk/",
   "xxgk_src": "p175h"
  },
- "群团|上海市共青团委员会": {
-  "u": "https://www.shyouth.net/html/1/index.html",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "上海市共青团委员会",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|云南省共青团委员会": {
-  "u": "http://www.yngqt.org.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "云南省共青团委员会",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|内蒙古自治区共青团委员会": {
-  "u": "http://www.nmyouth.org.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "内蒙古自治区共青团委员会",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|北京市共青团委员会": {
-  "u": "http://www.bjyouth.gov.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "北京市共青团委员会",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|吉林省共青团委员会": {
-  "u": "http://www.jl54.org/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "吉林省共青团委员会",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|四川省共青团委员会": {
-  "u": "https://www.scyol.com/#/home",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "四川省共青团委员会",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|天津市共青团委员会": {
-  "u": "http://www.youthtj.org.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "天津市共青团委员会",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|宁夏回族自治区共青团委员会": {
-  "u": "http://www.nxgqt.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "宁夏回族自治区共青团委员会",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|安徽省共青团委员会": {
-  "u": "http://www.ahyouth.org.cn/base/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "安徽省共青团委员会",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|山东省共青团委员会": {
-  "u": "http://www.sdyl.gov.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "山东省共青团委员会",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|山西省共青团委员会": {
-  "u": "http://www.sxccyl.gov.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "山西省共青团委员会",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|广东省共青团委员会": {
-  "u": "https://www.gdcyl.org/Index.html",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "广东省共青团委员会",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|广西壮族自治区共青团委员会": {
-  "u": "http://www.gxgqt.org.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "广西壮族自治区共青团委员会",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|新疆维吾尔自治区共青团委员会": {
-  "u": "https://www.ts.cn/zxpd/zt3511/tw/index.html",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "新疆维吾尔自治区共青团委员会",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|新疆生产建设兵团共青团委员会": {
-  "u": "http://tw.xjbt.gov.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "新疆生产建设兵团共青团委员会",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|江苏省共青团委员会": {
-  "u": "https://www.jiangsugqt.org.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "江苏省共青团委员会",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|江西省共青团委员会": {
-  "u": "http://www.jxyouth.org.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "江西省共青团委员会",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|河北省共青团委员会": {
-  "u": "http://www.54heb.org.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "河北省共青团委员会",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|河南省共青团委员会": {
-  "u": "http://www.hnyouth.org.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "河南省共青团委员会",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|浙江省共青团委员会": {
-  "u": "https://www.zjyouth.org.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "浙江省共青团委员会",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|海南省共青团委员会": {
-  "u": "http://www.hngqt.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "海南省共青团委员会",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|湖北省共青团委员会": {
-  "u": "http://www.hbgqt.org.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "湖北省共青团委员会",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|湖南省共青团委员会": {
-  "u": "https://www.hngqt.org.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "湖南省共青团委员会",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|甘肃省共青团委员会": {
-  "u": "https://www.gsgqt.gov.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "甘肃省共青团委员会",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|福建省共青团委员会": {
-  "u": "http://www.fjcyl.com/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "福建省共青团委员会",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|西藏自治区共青团委员会": {
-  "u": "https://youth.xzdw.gov.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "西藏自治区共青团委员会",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|贵州省共青团委员会": {
-  "u": "http://www.gzyouth.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "贵州省共青团委员会",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|辽宁省共青团委员会": {
-  "u": "http://www.liaoninggqt.org.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "辽宁省共青团委员会",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|重庆市共青团委员会": {
-  "u": "http://www.cqyl.org.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "重庆市共青团委员会",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|陕西省共青团委员会": {
-  "u": "https://www.sxgqt.org.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "陕西省共青团委员会",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|青海省共青团委员会": {
-  "u": "https://www.qhgqt.org.cn/index.html",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "青海省共青团委员会",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|黑龙江省共青团委员会": {
-  "u": "http://www.hljgqt.gov.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "黑龙江省共青团委员会",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
  "群团|团中央青年志愿者行动指导中心": {
   "u": "http://www.zgzyz.org.cn",
   "locations": [
@@ -79668,7 +79447,7 @@
   ],
   "n": "湖南省作家协会",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": ""
  },
@@ -79716,21 +79495,22 @@
   ],
   "n": "重庆市作家协会",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": ""
  },
  "群团|黑龙江省作家协会": {
-  "u": "http://www.hljzjw.gov.cn/",
+  "u": "https://www.hljzjw.org.cn",
   "locations": [
    "块",
    "条"
   ],
   "n": "黑龙江省作家协会",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "dead",
-  "snapshot": ""
+  "verified_at": "2026-11-19",
+  "status": "ok",
+  "snapshot": "",
+  "source": "p254 树/registy 冲突复核：标题验证通过（树为准）"
  },
  "群团|云南省归国华侨联合会": {
   "u": "http://www.ynql.org.cn/",
@@ -81100,14 +80880,14 @@
   "xxgk_src": "p175h"
  },
  "群团|上海市工商业联合会": {
-  "u": "https://www.sfic.cn/",
+  "u": "http://www.sfic.org.cn",
   "locations": [
    "块",
    "条"
   ],
   "n": "上海市工商业联合会",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": ""
  },
@@ -81448,16 +81228,17 @@
   "snapshot": ""
  },
  "群团|黑龙江省工商业联合会": {
-  "u": "https://www.acfic.org.cn/",
+  "u": "https://www.hljfic.org.cn",
   "locations": [
    "块",
    "条"
   ],
   "n": "黑龙江省工商业联合会",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
-  "snapshot": ""
+  "snapshot": "",
+  "source": "p254 树/registy 冲突复核：标题验证通过（树为准）"
  },
  "群团|吉林省法学会": {
   "u": "http://www.jlfxhw.com/",
@@ -81767,7 +81548,7 @@
   ],
   "n": "河南省科学技术协会",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": ""
  },
@@ -82062,7 +81843,7 @@
   ],
   "n": "天津市台湾同胞联谊会",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": ""
  },
@@ -82087,7 +81868,7 @@
   ],
   "n": "山西省台湾同胞联谊会",
   "source_level": "L2",
-  "verified_at": "2026-11-06",
+  "verified_at": "2026-11-19",
   "status": "ok",
   "snapshot": ""
  },
@@ -82195,66 +81976,6 @@
   "status": "rooted",
   "snapshot": "",
   "note": " | p240b 文章页处置: 根化自文章页（waf）"
- },
- "群团|上海市": {
-  "u": "https://www.china-sorsa.org/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "上海市",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|北京市": {
-  "u": "https://www.bjwrsa.org.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "北京市",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|海南": {
-  "u": "https://www.hnwrsa.org.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "海南",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|重庆": {
-  "u": "https://www.cqwrsa.org.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "重庆",
-  "source_level": "L1",
-  "verified_at": "2026-11-17",
-  "status": "ok",
-  "snapshot": ""
- },
- "群团|黑龙江省": {
-  "u": "http://horsa.org.cn/",
-  "locations": [
-   "块",
-   "条"
-  ],
-  "n": "黑龙江省",
-  "source_level": "L2",
-  "verified_at": "2026-11-06",
-  "status": "ok",
-  "snapshot": ""
  },
  "群团|欧美同学会（中国留学人员联谊会）东南亚和南亚分会": {
   "u": "https://www.wrsa.net/",
@@ -172218,19 +171939,6 @@
   "xxgk_src": "",
   "note": "p226 迁移自 市级政府部门|山西省市人民检察院"
  },
- "市级政府部门|山西省市总工会": {
-  "u": "http://jcszgh.jcgov.gov.cn/",
-  "n": "市总工会",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": ""
- },
  "市级政府部门|山西省市税务局": {
   "u": "http://shanxi.chinatax.gov.cn/son/jc-11405",
   "n": "市税务局",
@@ -184569,19 +184277,6 @@
   "xxgk": "",
   "xxgk_src": ""
  },
- "市级政府部门|江苏省总工会": {
-  "u": "http://zgh.huaian.gov.cn/",
-  "n": "总工会",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": ""
- },
  "市级政府部门|江苏省民盟淮安市委": {
   "u": "http://www.hamm.gov.cn/",
   "n": "民盟淮安市委",
@@ -187213,19 +186908,6 @@
  "市级政府部门|浙江省市建设局": {
   "u": "http://jsj.jiaxing.gov.cn",
   "n": "市建设局",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": ""
- },
- "市级政府部门|浙江省市总工会": {
-  "u": "http://www.jxzgh.gov.cn",
-  "n": "市总工会",
   "locations": [
    "块"
   ],
@@ -195464,19 +195146,6 @@
  "市级政府部门|山东省应急管理局": {
   "u": "http://yjj.weifang.gov.cn/",
   "n": "应急管理局",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": ""
- },
- "市级政府部门|山东省总工会": {
-  "u": "http://gh.weifang.gov.cn/",
-  "n": "总工会",
   "locations": [
    "块"
   ],
@@ -216376,19 +216045,6 @@
  "市级政府部门|陕西省市工商业联合会": {
   "u": "https://gsl.ankang.gov.cn",
   "n": "市工商业联合会",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": ""
- },
- "市级政府部门|陕西省市总工会": {
-  "u": "https://gh.ankang.gov.cn",
-  "n": "市总工会",
   "locations": [
    "块"
   ],
@@ -343843,5 +343499,656 @@
   "xxgk": "",
   "xxgk_src": "",
   "full_name": "通辽市民族事务委员会"
+ },
+ "群团|共青团北京市委员会": {
+  "u": "http://www.bjyouth.gov.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团北京市委员会",
+  "source_level": "L2",
+  "source": "来源:北京市共青团委员会官网名录·条树同源纠正（p227，原挂 https://www.bjyouth.net 多省共用）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|北京市台湾同胞联谊会": {
+  "u": "https://www.bjstl.org.cn",
+  "locations": [
+   "块"
+  ],
+  "n": "北京市台湾同胞联谊会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|共青团天津市委员会": {
+  "u": "http://www.youthtj.org.cn",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团天津市委员会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "2026-11-06",
+  "status": "ok"
+ },
+ "群团|共青团河北省委员会": {
+  "u": "http://www.54heb.org.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团河北省委员会",
+  "source_level": "L2",
+  "source": "来源:河北省共青团委员会官网名录·条树同源纠正（p227，原挂 https://www.bjyouth.net 多省共用）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|共青团山西省委员会": {
+  "u": "http://www.sxccyl.gov.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团山西省委员会",
+  "source_level": "L2",
+  "source": "来源:山西省共青团委员会官网名录·条树同源纠正（p227，原挂 https://www.bjyouth.net 多省共用）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|共青团内蒙古自治区委员会": {
+  "u": "https://www.nmyouth.org.cn",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团内蒙古自治区委员会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "2026-11-06",
+  "status": "ok"
+ },
+ "群团|共青团辽宁省委员会": {
+  "u": "http://www.liaoninggqt.org.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团辽宁省委员会",
+  "source_level": "L2",
+  "source": "来源:辽宁省共青团委员会官网名录·条树同源纠正（p227，原挂 https://www.bjyouth.net 多省共用）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|共青团吉林省委员会": {
+  "u": "http://www.jl54.org",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团吉林省委员会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "2026-11-06",
+  "status": "ok"
+ },
+ "群团|吉林省新闻工作者协会": {
+  "u": "https://www.chinadas.net",
+  "locations": [
+   "块"
+  ],
+  "n": "吉林省新闻工作者协会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|共青团黑龙江省委员会": {
+  "u": "http://www.hljgqt.gov.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团黑龙江省委员会",
+  "source_level": "L2",
+  "source": "来源:黑龙江省共青团委员会官网名录·条树同源纠正（p227，原挂 https://www.bjyouth.net 多省共用）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|共青团上海市委员会": {
+  "u": "https://www.shyouth.net",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团上海市委员会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "2026-11-06",
+  "status": "ok"
+ },
+ "群团|上海市台湾同胞联谊会": {
+  "u": "https://www.shtl.org.cn",
+  "locations": [
+   "块"
+  ],
+  "n": "上海市台湾同胞联谊会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|上海市欧美同学会": {
+  "u": "https://www.china-sorsa.org/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "上海市欧美同学会",
+  "source_level": "L2",
+  "source": "来源:上海市官网名录·条树同源回填（p227）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|共青团江苏省委员会": {
+  "u": "https://www.jiangsugqt.org.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团江苏省委员会",
+  "source_level": "L2",
+  "source": "来源:江苏省共青团委员会官网名录·条树同源纠正（p227，原挂 https://www.bjyouth.net 多省共用）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|江苏省科学技术协会": {
+  "u": "https://www.jskx.org.cn",
+  "locations": [
+   "块"
+  ],
+  "n": "江苏省科学技术协会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|共青团浙江省委员会": {
+  "u": "https://www.zjyouth.org.cn",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团浙江省委员会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "2026-11-06",
+  "status": "ok"
+ },
+ "群团|浙江省科学技术协会": {
+  "u": "https://www.zast.org.cn",
+  "locations": [
+   "块"
+  ],
+  "n": "浙江省科学技术协会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|浙江省台湾同胞联谊会": {
+  "u": "https://www.zjtmtl.org.cn",
+  "locations": [
+   "块"
+  ],
+  "n": "浙江省台湾同胞联谊会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|浙江省新闻工作者协会": {
+  "u": "https://www.zja.org.cn",
+  "locations": [
+   "块"
+  ],
+  "n": "浙江省新闻工作者协会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|共青团安徽省委员会": {
+  "u": "https://www.ahyouth.org.cn",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团安徽省委员会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "2026-11-06",
+  "status": "ok"
+ },
+ "群团|共青团福建省委员会": {
+  "u": "http://www.fjcyl.com/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团福建省委员会",
+  "source_level": "L2",
+  "source": "来源:福建省共青团委员会官网名录·条树同源纠正（p227，原挂 https://www.bjyouth.net 多省共用）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|福建省归国华侨联合会": {
+  "u": "http://fqworld.org",
+  "locations": [
+   "块"
+  ],
+  "n": "福建省归国华侨联合会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|共青团江西省委员会": {
+  "u": "https://www.jxyouth.org.cn",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团江西省委员会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "2026-11-06",
+  "status": "ok"
+ },
+ "群团|江西省归国华侨联合会": {
+  "u": "http://www.jxql.org",
+  "locations": [
+   "块"
+  ],
+  "n": "江西省归国华侨联合会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|共青团山东省委员会": {
+  "u": "http://www.sdyl.gov.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团山东省委员会",
+  "source_level": "L2",
+  "source": "来源:山东省共青团委员会官网名录·条树同源纠正（p227，原挂 https://www.bjyouth.net 多省共用）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|山东省归国华侨联合会": {
+  "u": "http://www.sdql.org",
+  "locations": [
+   "块"
+  ],
+  "n": "山东省归国华侨联合会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|共青团河南省委员会": {
+  "u": "https://www.hnyouth.org.cn",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团河南省委员会",
+  "source_level": "L2",
+  "source": "p175c 第二轮官网首页真实提取",
+  "verified_at": "2026-11-06",
+  "status": "ok"
+ },
+ "群团|河南省作家协会": {
+  "u": "http://www.hnwy.org.cn",
+  "locations": [
+   "块"
+  ],
+  "n": "河南省作家协会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|河南省残疾人联合会": {
+  "u": "https://www.henancjr.org.cn",
+  "locations": [
+   "块"
+  ],
+  "n": "河南省残疾人联合会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|共青团湖北省委员会": {
+  "u": "http://www.hbgqt.org.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团湖北省委员会",
+  "source_level": "L2",
+  "source": "来源:湖北省共青团委员会官网名录·条树同源纠正（p227，原挂 https://www.bjyouth.net 多省共用）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|共青团湖南省委员会": {
+  "u": "https://www.hngqt.org.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团湖南省委员会",
+  "source_level": "L2",
+  "source": "来源:湖南省共青团委员会官网名录·条树同源纠正（p227，原挂 https://www.bjyouth.net 多省共用）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|共青团广东省委员会": {
+  "u": "https://www.gdcyl.org",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团广东省委员会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "2026-11-06",
+  "status": "ok"
+ },
+ "群团|广东省新闻工作者协会": {
+  "u": "http://www.gdjx.org.cn",
+  "locations": [
+   "块"
+  ],
+  "n": "广东省新闻工作者协会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|共青团海南省委员会": {
+  "u": "https://www.zyhn.org.cn",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团海南省委员会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "2026-11-06",
+  "status": "ok"
+ },
+ "群团|海南省科学技术协会": {
+  "u": "https://www.hainanast.org.cn",
+  "locations": [
+   "块"
+  ],
+  "n": "海南省科学技术协会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|海南省台湾同胞联谊会": {
+  "u": "https://www.hntzb.org.cn",
+  "locations": [
+   "块"
+  ],
+  "n": "海南省台湾同胞联谊会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|共青团重庆市委员会": {
+  "u": "http://www.cqyl.org.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团重庆市委员会",
+  "source_level": "L2",
+  "source": "来源:重庆市共青团委员会官网名录·条树同源纠正（p227，原挂 https://www.bjyouth.net 多省共用）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|重庆市欧美同学会": {
+  "u": "https://www.cqwrsa.org.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "重庆市欧美同学会",
+  "source_level": "L2",
+  "source": "来源:重庆官网名录·条树同源回填（p227）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|共青团四川省委员会": {
+  "u": "https://www.scyol.com/#/home",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团四川省委员会",
+  "source_level": "L2",
+  "source": "来源:四川省共青团委员会官网名录·条树同源纠正（p227，原挂 https://www.bjyouth.net 多省共用）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|共青团贵州省委员会": {
+  "u": "http://www.gzyouth.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团贵州省委员会",
+  "source_level": "L2",
+  "source": "来源:贵州省共青团委员会官网名录·条树同源纠正（p227，原挂 https://www.bjyouth.net 多省共用）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|共青团云南省委员会": {
+  "u": "http://www.yngqt.org.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团云南省委员会",
+  "source_level": "L2",
+  "source": "来源:云南省共青团委员会官网名录·条树同源纠正（p227，原挂 https://www.bjyouth.net 多省共用）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|共青团西藏自治区委员会": {
+  "u": "https://youth.xzdw.gov.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团西藏自治区委员会",
+  "source_level": "L2",
+  "source": "来源:西藏自治区共青团委员会官网名录·条树同源纠正（p227，原挂 https://www.bjyouth.net 多省共用）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|共青团陕西省委员会": {
+  "u": "http://www.sxstx.org.cn",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团陕西省委员会",
+  "source_level": "L2",
+  "source": "p175c 第二轮官网首页真实提取",
+  "verified_at": "2026-11-06",
+  "status": "ok"
+ },
+ "群团|陕西省作家协会": {
+  "u": "https://www.sxzjw.org",
+  "locations": [
+   "块"
+  ],
+  "n": "陕西省作家协会",
+  "source_level": "L2",
+  "source": "p173 官网首页真实提取",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|共青团甘肃省委员会": {
+  "u": "https://www.gsgqt.gov.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团甘肃省委员会",
+  "source_level": "L2",
+  "source": "来源:甘肃省共青团委员会官网名录·条树同源纠正（p227，原挂 https://www.bjyouth.net 多省共用）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|甘肃省作家协会": {
+  "u": "http://www.gsarts.org.cn",
+  "locations": [
+   "块"
+  ],
+  "n": "甘肃省作家协会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|甘肃省归国华侨联合会": {
+  "u": "https://www.gsqlw.org",
+  "locations": [
+   "块"
+  ],
+  "n": "甘肃省归国华侨联合会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|共青团青海省委员会": {
+  "u": "https://www.qhgqt.org.cn/index.html",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团青海省委员会",
+  "source_level": "L2",
+  "source": "来源:青海省共青团委员会官网名录·条树同源纠正（p227，原挂 https://www.bjyouth.net 多省共用）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|青海省作家协会": {
+  "u": "http://www.qhwyw.org.cn",
+  "locations": [
+   "块"
+  ],
+  "n": "青海省作家协会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|共青团新疆维吾尔自治区委员会": {
+  "u": "https://www.bjyouth.net",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团新疆维吾尔自治区委员会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "2026-11-06",
+  "status": "ok"
+ },
+ "群团|共青团新疆生产建设兵团委员会": {
+  "u": "http://tw.xjbt.gov.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团新疆生产建设兵团委员会",
+  "source_level": "L2",
+  "source": "来源:新疆生产建设兵团共青团委员会官网名录·条树同源纠正（p227，原挂 https://www.bjyouth.net 多省共用）",
+  "verified_at": "2026-11-17",
+  "status": "ok"
+ },
+ "群团|新疆生产建设兵团科学技术协会": {
+  "u": "https://www.bacsi.org.cn",
+  "locations": [
+   "块"
+  ],
+  "n": "新疆生产建设兵团科学技术协会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|新疆生产建设兵团残疾人联合会": {
+  "u": "https://www.xjdpf.org.cn",
+  "locations": [
+   "块"
+  ],
+  "n": "新疆生产建设兵团残疾人联合会",
+  "source_level": "L2",
+  "source": "",
+  "verified_at": "",
+  "status": "ok"
+ },
+ "群团|共青团宁夏回族自治区委员会": {
+  "u": "http://www.nxgqt.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团宁夏回族自治区委员会",
+  "source_level": "L2",
+  "verified_at": "2026-11-06",
+  "status": "ok",
+  "snapshot": ""
+ },
+ "群团|共青团广西壮族自治区委员会": {
+  "u": "http://www.gxgqt.org.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "共青团广西壮族自治区委员会",
+  "source_level": "L2",
+  "verified_at": "2026-11-06",
+  "status": "ok",
+  "snapshot": ""
+ },
+ "群团|淮安市总工会": {
+  "u": "http://zgh.huaian.gov.cn/",
+  "locations": [
+   "块",
+   "条"
+  ],
+  "n": "淮安市总工会",
+  "source_level": "L2",
+  "source": "来源：淮安市政府门户部门导航 HTML 提取（title 验证: 淮安市总工会）",
+  "verified_at": "",
+  "status": "ok"
  }
 }

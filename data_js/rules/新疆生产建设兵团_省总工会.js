@@ -1,1 +1,0 @@
-window.__R=window.__R||{};window.__R["新疆生产建设兵团·省总工会"]={"portal":"http://btftu.xjbt.gov.cn/","method":"独立门户（全总官网省级工会栏目权威来源）","sources":["http://btftu.xjbt.gov.cn/"],"code":"# -*- coding: utf-8 -*-\n\"\"\"新疆生产建设兵团 省总工会: 无独立公开门户（列名）。\"\"\"\n","depts":[{"n":"省总工会","u":"http://btftu.xjbt.gov.cn/","o":0}],"cities":[]};

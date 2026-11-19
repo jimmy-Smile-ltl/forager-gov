@@ -1,0 +1,1 @@
+window.__R=window.__R||{};window.__R["天津市·天津市总工会"]={"portal":"http://www.ftutj.cn/","method":"独立门户（全总官网省级工会栏目权威来源）","sources":["http://www.ftutj.cn/"],"code":"# -*- coding: utf-8 -*-\n\"\"\"天津市 天津市总工会: 无独立公开门户（列名）。\"\"\"\n","depts":[{"n":"天津市总工会","u":"","o":0}],"cities":[]};

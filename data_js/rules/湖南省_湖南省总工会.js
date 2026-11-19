@@ -1,0 +1,1 @@
+window.__R=window.__R||{};window.__R["湖南省·湖南省总工会"]={"portal":"https://www.hnghw.com/#/home","method":"独立门户（全总官网省级工会栏目权威来源）","sources":["https://www.hnghw.com/#/home"],"code":"# -*- coding: utf-8 -*-\n\"\"\"湖南省 湖南省总工会: 无独立公开门户（列名）。\"\"\"\n","depts":[{"n":"湖南省总工会","u":"","o":0}],"cities":[]};

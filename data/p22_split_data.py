@@ -137,6 +137,14 @@ def main():
                        json.dumps(r, ensure_ascii=False, separators=(",", ":"))))
         rules_files[pname] = fname
 
+    # 清理改名/删除后遗留的旧规则文件（2026-11-19：p255 群团/工会改名后
+    # data_js/rules 里留下 777 个旧名文件，dist 会把它们一起打包发布）
+    keep = set(rules_files.values())
+    for f in os.listdir(os.path.join(OUT, "rules")):
+        rel = "rules/" + f
+        if f.endswith(".js") and rel not in keep:
+            os.remove(os.path.join(OUT, rel))
+
     # ---- 统计 ----
     per = {}
     all_e = all_ok = all_warn = 0

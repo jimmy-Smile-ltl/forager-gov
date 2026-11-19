@@ -1,1 +1,0 @@
-window.__R=window.__R||{};window.__R["重庆市·省残联"]={"portal":"","method":"无独立公开门户/未验证 → 列名参考","sources":[],"code":"# -*- coding: utf-8 -*-\n\"\"\"重庆市 省残联: 无独立公开门户（列名）。\"\"\"\n","depts":[{"n":"省残联","u":"","o":0}],"cities":[]};

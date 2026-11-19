@@ -1,1 +1,0 @@
-window.__R=window.__R||{};window.__R["上海市·省总工会"]={"portal":"https://www.shszgh.cn/","method":"独立门户（全总官网省级工会栏目权威来源）","sources":["https://www.shszgh.cn/"],"code":"# -*- coding: utf-8 -*-\n\"\"\"上海市 省总工会: 无独立公开门户（列名）。\"\"\"\n","depts":[{"n":"省总工会","u":"","o":0}],"cities":[]};

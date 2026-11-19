@@ -1,0 +1,1 @@
+window.__R=window.__R||{};window.__R["吉林省·吉林省总工会"]={"portal":"http://www.jlzgh.cn/","method":"独立门户（全总官网省级工会栏目权威来源）","sources":["http://www.jlzgh.cn/"],"code":"# -*- coding: utf-8 -*-\n\"\"\"吉林省 吉林省总工会: 无独立公开门户（列名）。\"\"\"\n","depts":[{"n":"吉林省总工会","u":"","o":0}],"cities":[]};

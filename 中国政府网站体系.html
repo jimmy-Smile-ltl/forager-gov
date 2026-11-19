@@ -525,7 +525,7 @@ const CROSS_MAP={   // 块视图节点 → 条视图系统组
   "最高人民检察院":"检察院系统（33）",
   "全国人民代表大会（全国人大常委会）":"人大系统（33）",
   "中国人民政治协商会议全国委员会":"政协系统（33）",
-  "中华全国总工会":"工会系统（中华全国总工会）"
+  "中华全国总工会":"工会系统（32）"
 };
 const REVERSE_MAP={}; Object.entries(CROSS_MAP).forEach(([k,v])=>{REVERSE_MAP[v]=k;});
 const MANIFEST=window.__MANIFEST__;
@@ -967,7 +967,7 @@ function fallbackCopy(t,done){
 }
 function ruleKeyOf(n){
   if(n.n==="中央（党中央、国务院及并列机关）") return "中央";
-  if(n.n==="工会系统（中华全国总工会）") return "工会系统";
+  if(n.n==="工会系统（32）") return "工会系统";
   const p=parents.get(n);
   if(n.c==="工会系统"){
     if(n.l==="省") return "工会系统·"+n.n;                 // 省工会节点
@@ -977,7 +977,13 @@ function ruleKeyOf(n){
   if(n.n.startsWith("专门委员会") && p) return p.n+"·"+n.n;
   if(n.c==="并列机关" && p) return p.n+"·"+n.n;          // 省级并列机关组
   if(n.c==="厅局" && p) return p.n+"·"+n.n;               // 省政府部门（厅局）组
-  if(n.c==="群团组织" && p && p.l!=="中央") return p.n+"·"+n.n;   // 省级群团组织组
+  if(n.c==="群团组织" && p && p.l!=="中央"){               // 省级群团组织组
+    if(n.k==="群团组织" && p.c==="群团组织"){
+      const prov=parents.get(p);
+      return (prov?prov.n:"")+"·"+n.n;                     // 省级群团成员（p255：成员叶子
+    }                                                      //  c 也是「群团组织」，必须
+    return p.n+"·"+n.n;                                    //  先判成员再判组，否则规则键
+  }                                                        //  会算成「群团组织（17）·X」）
   if(n.k==="群团组织" && p && p.c==="群团组织" && p.l!=="中央"){
     const prov=parents.get(p);
     return (prov?prov.n:"")+"·"+n.n;                       // 省级群团成员
