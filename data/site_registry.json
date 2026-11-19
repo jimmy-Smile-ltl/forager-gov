@@ -175006,19 +175006,6 @@
   "xxgk": "",
   "xxgk_src": ""
  },
- "市级政府部门|内蒙古自治区民&nbsp;&nbsp;委": {
-  "u": "http://mw.tongliao.gov.cn/",
-  "n": "民&nbsp;&nbsp;委",
-  "locations": [
-   "块"
-  ],
-  "source_level": "L2",
-  "verified_at": "2026-11-13",
-  "status": "ok",
-  "snapshot": "",
-  "xxgk": "",
-  "xxgk_src": ""
- },
  "市级政府部门|内蒙古自治区金融办": {
   "u": "http://jrb.tongliao.gov.cn/",
   "n": "金融办",
@@ -343842,5 +343829,19 @@
     "u": "https://www.cyzq.gov.cn/bmxxgk1/index.html"
    }
   ]
+ },
+ "市级政府部门|通辽市民族事务委员会": {
+  "u": "http://mw.tongliao.gov.cn/",
+  "n": "民&nbsp;&nbsp;委",
+  "locations": [
+   "块"
+  ],
+  "source_level": "L2",
+  "verified_at": "2026-11-13",
+  "status": "ok",
+  "snapshot": "",
+  "xxgk": "",
+  "xxgk_src": "",
+  "full_name": "通辽市民族事务委员会"
  }
 }

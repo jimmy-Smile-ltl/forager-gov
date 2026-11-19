@@ -68,17 +68,19 @@ h1{
   font-size:21px; font-weight:700; letter-spacing:.5px; text-wrap:balance;
 }
 .sub{color:var(--muted); font-size:12.5px; margin-top:1px}
-.stats{display:flex; gap:8px; flex:1 1 100%; margin-left:0; flex-wrap:nowrap}
+.stats{display:flex; gap:8px; flex:1 1 100%; margin-left:0; flex-wrap:wrap}
 .stat{
-  display:flex; flex-direction:column; align-items:center; flex:1;
-  padding:5px 8px; border:1px solid var(--line); border-radius:8px;
-  background:var(--surface); min-width:64px; cursor:pointer;
+  display:flex; flex-direction:column; align-items:center; flex:1 1 84px;
+  padding:5px 8px 4px; border:1px solid var(--line); border-radius:8px;
+  background:var(--surface); min-width:78px; cursor:pointer;
   text-align:center; font-variant-numeric:tabular-nums;
 }
 .stat:hover{border-color:var(--line2); background:var(--surface2)}
 .stat b{font-size:15px; font-variant-numeric:tabular-nums; font-weight:700; white-space:nowrap}
 .stat span{font-size:10.5px; color:var(--muted)}
 .stat .hit{color:var(--ok)} .stat .miss{color:var(--warn)}
+.stat .mini{display:block; width:100%; height:3px; border-radius:99px; background:var(--line); margin-top:4px; overflow:hidden}
+.stat .mini i{display:block; height:100%; border-radius:99px; background:var(--ok)}
 
 /* ---------- 工具栏 ---------- */
 .toolbar{
@@ -260,6 +262,18 @@ main{flex:1; display:flex; min-height:0}
 .gstat{flex:1 1 120px; border:1px solid var(--line); border-radius:8px; padding:10px 12px; background:var(--surface)}
 .gstat b{display:block; font-size:18px; font-variant-numeric:tabular-nums}
 .gstat span{font-size:11.5px; color:var(--muted)}
+/* 覆盖分段条（根/分组档案卡） */
+.covwrap{margin:8px 0 2px}
+.covbar{display:flex; height:8px; border-radius:99px; overflow:hidden; background:var(--line)}
+.covbar i{display:block; height:100%}
+.covleg{font-size:11.5px; color:var(--muted); margin-top:5px; line-height:1.7}
+.covleg b{color:var(--ink); font-size:13px; margin-right:2px}
+.covleg .cl-ok{color:var(--ok)} .covleg .cl-warn{color:var(--warn)} .covleg .cl-miss{color:var(--missing)}
+.stackbar{display:flex; height:10px; border-radius:6px; overflow:hidden; margin:4px 0 3px; background:var(--line)}
+.stackbar i{display:block; height:100%}
+.legend{display:flex; gap:12px; font-size:11px; color:var(--muted); flex-wrap:wrap; margin-top:3px}
+.legend span{display:flex; align-items:center; gap:4px}
+.legend i{width:9px; height:9px; border-radius:2.5px; display:inline-block; flex:none}
 
 /* ---------- 提取规则（详情面板内子视图） ---------- */
 .rulebox{border:1px solid var(--line2); border-radius:10px; padding:14px 16px; background:var(--surface)}
@@ -348,10 +362,40 @@ main{flex:1; display:flex; min-height:0}
 :root[data-theme="dark"] .jbuilt{color:#4fb8c6}
 
 footer{padding:8px 22px; border-top:1px solid var(--line); font-size:11.5px; color:var(--faint); background:var(--surface); display:flex; gap:14px; flex-wrap:wrap}
+/* 移动端「回到列表」键：桌面隐藏，媒体查询内开启 */
+.mback{display:none;align-items:center;gap:6px;margin-bottom:10px;padding:5px 12px;
+  border:1px solid var(--line);border-radius:999px;background:var(--surface);
+  color:var(--muted);font-size:12px;cursor:pointer}
+.mback:hover{border-color:var(--line2);color:var(--ink)}
 @media (max-width:900px){
-  main{flex-direction:column}
-  .detailpane{flex:0 0 auto; max-width:none; border-left:none; border-top:1px solid var(--line)}
-  .treepane{flex:1 1 45%}
+  html,body{height:auto}
+  body{display:block; overflow:auto; min-height:100vh}
+  header{padding:8px 12px 10px; gap:8px 10px}
+  .seal{width:38px; height:38px; font-size:17px}
+  h1{font-size:18px}
+  .sub{font-size:11.5px}
+  .stats{gap:6px}
+  .stat{flex:1 1 calc(33.333% - 6px); min-width:0; padding:4px 6px 3px}
+  .stat b{font-size:12.5px}
+  .stat span{font-size:10px}
+  .toolbar{padding:6px 12px; gap:6px; position:sticky; top:0; z-index:24}
+  .search{flex:1 1 100%; order:-1}
+  .btn,.viewbtn{padding:5px 10px; font-size:12px}
+  .filterrow{padding:6px 12px}
+  main{display:block}
+  .treepane{height:auto; max-height:none; overflow:visible; padding:8px 6px 16px 10px}
+  .detailpane{flex:0 0 auto; max-width:none; max-height:none; overflow:visible;
+    border-left:none; border-top:1px solid var(--line); padding:16px 14px 48px}
+  footer{padding:6px 12px; font-size:10.5px; gap:4px 10px}
+  footer span:nth-child(n+3){display:none}
+  .qpanel{left:8px; right:8px; width:auto; top:56px; max-height:78vh}
+  .dgroup-stats .gstat{flex:1 1 calc(50% - 10px)}
+  .children{margin-left:12px}
+  .resrow .path{max-width:44%}
+  /* 移动端主从布局：列表与档案上下堆叠，选中后自动滚到档案，此键回列表 */
+  .mback{display:inline-flex}
+  .detailpane{scroll-margin-top:56px}
+  .treepane{scroll-margin-top:56px}
 }
 </style>
 <style>
@@ -452,9 +496,9 @@ footer{padding:8px 22px; border-top:1px solid var(--line); font-size:11.5px; col
   <aside class="detailpane" id="detail"></aside>
 </main>
 <footer>
-  <span>数据：中国政府网部门导航 · 民政部行政区划代码库（2025-12-31 版，6 位代码） · 各政府门户链式解析（2026-10-30）</span>
-  <span>状态：绿=专栏URL已收录 · 黄=门户在录专栏待核 · 灰=门户未解析</span>
-  <span>港澳台下级区划（48条）为列名参考，采集名单以内地口径为准</span>
+  <span>数据：中国政府网部门导航 · 民政部行政区划代码库（2025-12-31 版，6 位代码） · 各政府门户链式解析<span id="footGen"></span></span>
+  <span>状态：绿=专栏URL已收录（部门=有栏目链接） · 黄=门户在录专栏待核 · 灰=门户未解析</span>
+  <span>部门名录（市政府部门/县政府部门）不计入覆盖率；港澳台下级区划为列名参考，采集名单以内地口径为准</span>
 </footer>
 
 <script src="data_js/manifest.js?v=20261113"></script>
@@ -492,11 +536,15 @@ const BASE=new URL(".", document.baseURI).href;
 /* ---------- 数据工具 ---------- */
 const LEVELS=["中央","省","市","地级区","县","特别行政区","港澳台"];
 const LEVEL_LABELS={中央:"中央",省:"省级",市:"市级",地级区:"地级区",县:"县级",特别行政区:"特别行政区",港澳台:"港澳台下级"};
+/* 部门名录叶子判定（市政府部门/县政府部门两个专题下的名录条目）。
+   注意不能用 k==="部门"/t==="dept" 单判：国务院组成部门/直属机构等真实机关
+   也是 k=部门、t=dept，误判会把 82 个中央部委从覆盖率里剔除（2026-11-19 修）。
+   名录条目由 p250/zzjg 生成，一律带 dt（gov/town/party），是唯一无歧义标记。 */
+function isDeptLeaf(n){ return !!n.dt; }
 function statusOf(n){
-  // 部门名录叶子（k=部门，市政府部门/县政府部门两个专题节点下）：有栏目链接即
-  // 视为已收录。它们没有「政府信息公开专栏」概念，走门户口径会 6.5 万条全变黄
-  // 「待核」，分组行也会显示「N 单位 · 0 已收录」（2026-11-19 列表巡检修复）
-  if(n.k==="部门") return n.u?"ok":"missing";
+  // 部门名录叶子：有栏目链接即视为已收录。它们没有「政府信息公开专栏」概念，
+  // 走门户口径会 6.5 万条全变黄「待核」，分组行也会显示「N 单位 · 0 已收录」
+  if(isDeptLeaf(n)) return n.u?"ok":"missing";
   if(n.x) return "ok";
   if(n.u) return "warn";
   return "missing";
@@ -626,7 +674,10 @@ function statsOf(n){
   return s;
 }
 function totalStats(){
-  return {all:MANIFEST.total.e, allok:MANIFEST.total.ok, per:MANIFEST.perLevel};
+  // allwarn 之前漏了 → 顶栏「总计」只显示专栏数（4,750），把「门户在录」的
+  // 17,038 个单位丢掉，看起来覆盖只有 15%（2026-11-19 巡检修复）
+  return {all:MANIFEST.total.e, allok:MANIFEST.total.ok,
+          allwarn:MANIFEST.total.warn||0, per:MANIFEST.perLevel};
 }
 
 function nodeRow(n, depth, opts={}){
@@ -655,7 +706,17 @@ function nodeRow(n, depth, opts={}){
   cntEl.className="cnt";
   if(expandable){
     const s=statsOf(n);
-    cntEl.innerHTML=`${s.e} 单位 · <span class="g">${s.ok}</span> 已收录`;
+    if((n.c||"")==="部门"){
+      // 部门专题（市政府部门/县政府部门）：口径是「栏目链接」，不是信息公开专栏
+      cntEl.innerHTML=`${s.e} 单位 · <span class="g">${s.ok}</span> 有链接`;
+      cntEl.title=`部门名录 ${s.ok} 条有栏目链接 / ${s.miss} 条无链接`;
+    }else{
+      // 机关口径：「已收录」= 有官网（专栏 ok + 门户 warn），与顶栏 KPI 一致；
+      // 旧文案只算专栏，法院/检察院/人大/政协等无专栏系统会显示「0 已收录」
+      const hit=s.ok+s.warn;
+      cntEl.innerHTML=`${s.e} 单位 · <span class="g">${hit}</span> 有官网`;
+      cntEl.title=`专栏 ${s.ok} · 门户待核 ${s.warn} · 未解析 ${s.miss}`;
+    }
   }
   const dot=document.createElement("span"); dot.className="dot "+st; dot.title=st;
   const lv=document.createElement("span"); lv.className="lv"; lv.textContent=n.l;
@@ -982,6 +1043,15 @@ function select(n,rowEl){
   vb.innerHTML=`<span class="crossnote">树图</span><button class="btn crossbtn" id="vizRootBtn">🌳 以此节点为根看树图</button>`;
   body.prepend(vb);
   document.getElementById("vizRootBtn").addEventListener("click",()=>openVizAt(selectedNode.n));
+  // 移动端是「列表在上、档案在下」的单列布局：选中后把档案滚进视野，
+  // 卡片顶部给一个「回到列表」键，否则用户要手动划过整棵树
+  if(matchMedia("(max-width:900px)").matches){
+    const back=document.createElement("button");
+    back.className="mback"; back.textContent="↑ 回到列表";
+    back.addEventListener("click",()=>document.querySelector(".treepane").scrollIntoView({block:"start"}));
+    body.prepend(back);
+    detailEl.scrollIntoView({block:"start",behavior:"smooth"});
+  }
 }
 /* 树图模式: 以节点 n 名为根打开子图 */
 async function openVizAt(nodeName){
@@ -1067,10 +1137,126 @@ async function jumpToKuai(target){
   })(DATA);
   if(found) locateInTree(found);
 }
+/* 统计：部门名录叶子单独计数（根/分组档案卡口径）——否则县级 6.5 万条部门
+   会把「单位总数」从 3 万撑到 11 万，覆盖率被稀释（2026-11-19 巡检修复） */
+function statsSplit(n){
+  const s={e:0,ok:0,warn:0,miss:0,dept:0,deptU:0};
+  (function acc(x){
+    if(x.file && !x.__loaded){
+      const st=x._stats||{e:0,ok:0,warn:0,miss:0};
+      if((x.c||"")==="部门"){ s.dept+=st.e; s.deptU+=st.ok; }
+      else { s.e+=st.e; s.ok+=st.ok; s.warn+=st.warn; s.miss+=st.miss; }
+      return;
+    }
+    if(isDeptLeaf(x)){ s.dept++; if(x.u) s.deptU++; return; }
+    if(isEntity(x)){ s.e++; const t=statusOf(x); if(t==="ok")s.ok++; else if(t==="warn")s.warn++; else s.miss++; }
+    (x.ks||[]).forEach(acc);
+  })(n);
+  return s;
+}
+/* 覆盖分段条：绿=专栏 · 黄=门户待核 · 灰=未解析 */
+function covBar(s){
+  const tot=s.e||1;
+  const p=Math.round((s.ok+s.warn)/tot*100);
+  return `<div class="covwrap">
+    <div class="covbar" title="有官网 ${s.ok+s.warn} / ${s.e}">
+      <i style="width:${s.ok/tot*100}%;background:var(--ok)"></i>
+      <i style="width:${s.warn/tot*100}%;background:var(--warn)"></i>
+      <i style="width:${s.miss/tot*100}%;background:var(--line2)"></i>
+    </div>
+    <div class="covleg"><b>${p}%</b> 有官网 · <span class="cl-ok">专栏 ${s.ok}</span> · <span class="cl-warn">门户待核 ${s.warn}</span> · <span class="cl-miss">未解析 ${s.miss}</span></div>
+  </div>`;
+}
+let __parentBuilt=false;
+function leafParent(n){
+  // 模块 attach 后子树换成模块里的新对象（无 __parent），parents Map 由
+  // registerParents 在 attach 时重建，优先用它；DATA 本体走一次性索引
+  const pm=parents.get(n);
+  if(pm) return pm;
+  if(!__parentBuilt){
+    (function walk(x){ for(const k of x.ks||[]){ k.__parent=x; walk(k); } })(DATA);
+    __parentBuilt=true;
+  }
+  return n.__parent||null;
+}
+function renderRootOverview(body){
+  const tiao=DATA.ks.find(g=>g.n===TIAO_ROOT_NAME);
+  const b=statsSplit({ks:DATA.ks.filter(g=>g!==tiao)});
+  // 实体口径以 MANIFEST.total 为准，保证与顶栏 KPI 完全一致（statsSplit 会
+  // 把容器节点/未分级叶子也算进来，和 p22 的按 l 汇总差几十条）
+  b.e=MANIFEST.total.e; b.ok=MANIFEST.total.ok; b.warn=MANIFEST.total.warn||0;
+  b.miss=Math.max(0,b.e-b.ok-b.warn);
+  const t=statsSplit(tiao||{ks:[]});
+  const q=window.__QUALITY__||{};
+  const hit=b.ok+b.warn, pct=b.e?Math.round(hit/b.e*100):0;
+  const lv=q.source_level||{}, lvN=Object.values(lv).reduce((a,x)=>a+(+x||0),0)||1;
+  const LV={L1:["官网名录","#16a34a"],L2:["门户导航","#2563eb"],L3:["搜索验证","#f59e0b"],L4:["其他","#94a3b8"]};
+  const lvSegs=Object.entries(lv).sort().map(([k,v])=>
+    `<i style="width:${Math.round(v/lvN*100)}%;background:${(LV[k]||LV.L4)[1]}" title="${(LV[k]||LV.L4)[0]} ${v}"></i>`).join("");
+  const lvLeg=Object.entries(lv).sort().map(([k,v])=>
+    `<span><i style="background:${(LV[k]||LV.L4)[1]}"></i>${(LV[k]||LV.L4)[0]} ${v.toLocaleString()}</span>`).join("");
+  const st=q.status||{}, stN=Object.values(st).reduce((a,x)=>a+(+x||0),0)||1;
+  const ST={ok:["正常","#16a34a"],dead:["失效","#dc2626"],maintain:["维护","#f59e0b"]};
+  const stSegs=Object.entries(st).map(([k,v])=>
+    `<i style="width:${Math.round(v/stN*100)}%;background:${(ST[k]||[k,"#94a3b8"])[1]}" title="${(ST[k]||[k])[0]} ${v}"></i>`).join("");
+  const stLeg=Object.entries(st).map(([k,v])=>
+    `<span><i style="background:${(ST[k]||[k,"#94a3b8"])[1]}"></i>${(ST[k]||[k])[0]} ${v.toLocaleString()}</span>`).join("");
+  const gen=(window.__MANIFEST__||{}).generated||"";
+  body.innerHTML=`
+    <p class="dtitle">中国政府网站体系 · 数据总览</p>
+    <p class="crumb">中央 · 省 · 市 · 县四级党政机关与垂直管理系统 — 官网名录、政府信息公开专栏、部门名录</p>
+    <div class="dchips">
+      <span class="dchip">块单位 ${b.e.toLocaleString()}</span>
+      <span class="dchip">条叶子 ${t.e.toLocaleString()}</span>
+      <span class="dchip">部门名录 ${b.dept.toLocaleString()}</span>
+      ${gen?`<span class="dchip">更新 ${esc(gen)}</span>`:""}
+    </div>
+    <div class="dsection">
+      <p class="dlabel">块视图官网覆盖 · ${pct}%</p>
+      <div class="gstat" style="padding:14px 16px">
+        <b style="font-size:26px;color:${pct>=70?'var(--ok)':pct>=40?'var(--warn)':'var(--missing)'}">${pct}%</b>
+        <span style="font-size:12px">有官网 ${hit.toLocaleString()} / ${b.e.toLocaleString()} 个单位</span>
+        ${covBar(b)}
+      </div>
+    </div>
+    <div class="dsection"><p class="dlabel">数据规模</p>
+      <div class="dgroup-stats">
+        <div class="gstat"><b>${b.e.toLocaleString()}</b><span>块 · 机关单位</span></div>
+        <div class="gstat"><b style="color:var(--ok)">${hit.toLocaleString()}</b><span>有官网</span></div>
+        <div class="gstat"><b>${b.dept.toLocaleString()}</b><span>部门名录</span></div>
+        <div class="gstat"><b>${t.e.toLocaleString()}</b><span>条 · 垂直系统</span></div>
+      </div>
+    </div>
+    ${lvLeg?`<div class="dsection"><p class="dlabel">URL 来源等级 · 注册机构 ${(q.registry_total||0).toLocaleString()}</p>
+      <div class="stackbar">${lvSegs}</div><div class="legend">${lvLeg}</div></div>`:""}
+    ${stLeg?`<div class="dsection"><p class="dlabel">URL 健康状态（巡检）</p>
+      <div class="stackbar">${stSegs}</div><div class="legend">${stLeg}</div></div>`:""}
+    <div class="dsection"><p class="dlabel">口径与图例</p>
+      <p class="dtext" style="font-size:12px;line-height:1.9">
+        <span class="dot ok" style="display:inline-block;vertical-align:-1px"></span> 绿 = 专栏 URL 已收录 ·
+        <span class="dot warn" style="display:inline-block;vertical-align:-1px"></span> 黄 = 门户在录、专栏待核 ·
+        <span class="dot missing" style="display:inline-block;vertical-align:-1px"></span> 灰 = 门户未解析。<br>
+        部门名录（市政府部门 / 县政府部门）口径为「有栏目链接」，不计入上方覆盖率；
+        县级部门名录来自门户「政府信息公开 → 法定主动公开内容 → 组织机构」，已剔除上级机关与乡镇占位。<br>
+        法院 / 检察院 / 人大 / 政协 / 监委 / 群团 / 民主党派无政府信息公开专栏，绿点表示有官网。
+      </p>
+    </div>
+    <div class="vsd-btns">
+      <button class="vsd-btn vsd-pri" onclick="document.getElementById('expandAll').click()">展开全部</button>
+      <button class="vsd-btn" onclick="toggleQ()">📊 数据健康</button>
+      <button class="vsd-btn" onclick="document.querySelector('#viewSwitch [data-view=map]').click()">🗺 看地图</button>
+    </div>`;
+}
 function renderOverview(n,body){
   const hasRule=!!(MANIFEST.rulesFiles&&MANIFEST.rulesFiles[ruleKeyOf(n)]);
+  if(n===DATA||n.n==="中国政府网站体系"){ renderRootOverview(body); return; }
   if(hasKids(n)&&n.k==="分组"){
-    const s=statsOf(n);
+    const s=statsSplit(n);
+    const dept=(n.c||"")==="部门";
+    // 部门分组：statsSplit 把名录计入 dept/deptU（模块未加载时取自 _stats），
+    // 这里归一成「总数 / 有链接 / 无链接」三个展示值，否则桩节点显示 0
+    const eN=dept?s.dept:s.e, okN=dept?s.deptU:s.ok+s.warn,
+          missN=dept?Math.max(0,s.dept-s.deptU):s.miss;
     body.innerHTML=`
       <p class="dtitle">${esc(n.n)}</p>
       <p class="crumb">${esc(breadcrumb(n))}</p>
@@ -1079,14 +1265,20 @@ function renderOverview(n,body){
         <span class="dchip">分组节点</span>
         <span class="dchip">${esc(n.c||"分组")}</span>
       </div>
-      <div class="dsection"><p class="dlabel">下级构成</p>
+      ${n.m?`<div class="dsection"><p class="dlabel">备注</p><p class="dtext">${esc(n.m)}</p></div>`:""}
+      <div class="dsection"><p class="dlabel">${dept?"部门名录构成":"下级构成"}</p>
+        ${dept?'':covBar(s)}
         <div class="dgroup-stats">
-          <div class="gstat"><b>${s.e}</b><span>${(n.c||"")==="部门"?"部门总数":"单位总数"}</span></div>
-          <div class="gstat"><b style="color:var(--ok)">${s.ok}</b><span>${(n.c||"")==="部门"?"有栏目链接":"专栏URL已收录"}</span></div>
-          <div class="gstat"><b style="color:var(--warn)">${s.warn}</b><span>门户在录 · 专栏待核</span></div>
-          <div class="gstat"><b style="color:var(--missing)">${s.miss}</b><span>${(n.c||"")==="部门"?"无链接":"门户未解析"}</span></div>
+          <div class="gstat"><b>${eN.toLocaleString()}</b><span>${dept?"部门总数":"单位总数"}</span></div>
+          <div class="gstat"><b style="color:var(--ok)">${okN.toLocaleString()}</b><span>${dept?"有栏目链接":"有官网"}</span></div>
+          ${dept?`<div class="gstat"><b style="color:var(--missing)">${missN}</b><span>无链接</span></div>`
+                 :`<div class="gstat"><b style="color:var(--warn)">${s.warn}</b><span>门户在录 · 专栏待核</span></div>
+                   <div class="gstat"><b style="color:var(--missing)">${s.miss}</b><span>门户未解析</span></div>`}
         </div>
+        ${dept?`<p class="dtext" style="font-size:11.5px;color:var(--faint);margin-top:6px">口径：有栏目链接即已收录，不计政府信息公开专栏。</p>`:""}
       </div>
+      ${dept&&s.dept?`<div class="dsection"><p class="dlabel">下级构成</p>
+        <p class="dtext">${s.dept.toLocaleString()} 条部门名录（有链接 ${s.deptU.toLocaleString()}）</p></div>`:""}
       ${n.ks?`<div class="dsection"><p class="dlabel">直接下级</p>
         <p class="dtext">${n.ks.slice(0,40).map(c=>esc(c.n)).join(" · ")}${n.ks.length>40?" · …":""}</p></div>`:""}
       <p class="dtext" style="font-size:12px;color:var(--faint)">${hasRule
@@ -1095,7 +1287,7 @@ function renderOverview(n,body){
     return;
   }
   const st=statusOf(n);
-  const stLabel=n.k==="部门"?"部门栏目链接":st==="ok"?"专栏URL已收录":st==="warn"?"门户在录 · 专栏待核":"门户未解析";
+  const stLabel=isDeptLeaf(n)?"部门栏目链接":st==="ok"?"专栏URL已收录":st==="warn"?"门户在录 · 专栏待核":"门户未解析";
   body.innerHTML=`
     <p class="dtitle">${esc(n.n)}</p>
     <p class="crumb">${esc(breadcrumb(n))}</p>
@@ -1110,14 +1302,15 @@ function renderOverview(n,body){
     <div class="dsection">
       <p class="dlabel">门户网站</p>
       ${n.u?`<div class="durl"><a href="${esc(n.u)}" target="_blank" rel="noopener">${esc(n.u)}</a><button class="copybtn">复制</button></div>`
-            :'<p class="dtext" style="color:var(--missing)">未解析</p>'}
+            :'<p class="dtext" style="color:var(--missing)">未解析 — 该单位暂无独立门户，以列名形式保留</p>'}
+      ${n.u&&leafParent(n)&&leafParent(n).u===n.u?'<p class="dtext" style="font-size:11.5px;color:var(--faint)">与上级门户相同（该单位无独立站点，链接为所属门户栏目）</p>':""}
     </div>
     <div class="dsection">
       <p class="dlabel">政府信息公开专栏</p>
       ${n.x?`<div class="durl"><a href="${esc(n.x)}" target="_blank" rel="noopener">${esc(n.x)}</a><button class="copybtn">复制</button></div>`
-            :'<p class="dtext" style="color:var(--warn)">待核 — 门户在录但专栏链接未确认</p>'}
-      ${n.s?`<p class="dtext" style="font-size:12px">URL来源：${esc(n.s)}</p>`:""}
+            :`<p class="dtext" style="color:var(--warn)">${isDeptLeaf(n)?"部门名录条目 — 无政府信息公开专栏口径":statusOf(n)==="ok"?"已有门户链接，专栏待核":"待核 — 门户在录但专栏链接未确认"}</p>`}
     </div>
+    ${n.s?`<div class="dsection"><p class="dlabel">URL 来源</p><p class="dtext" style="font-size:12px">${esc(n.s)}</p></div>`:""}
     ${n.m?`<div class="dsection"><p class="dlabel">备注</p><p class="dtext">${esc(n.m)}</p></div>`:""}
   `;
   body.querySelectorAll(".copybtn").forEach(b=>{
@@ -1299,15 +1492,18 @@ function renderStats(){
   el.innerHTML="";
   const mk=(label,key)=>{
     const d=document.createElement("div"); d.className="stat";
-    d.title="有官网机构 / 实体总数";
-    const b=document.createElement("b");
     const st=key? s.per[key] : {ok:s.allok,warn:s.allwarn||0,e:s.all};
     const hit=st.ok+(st.warn||0);          // 有官网 = 有专栏 + 有门户无专栏
     const total=st.e;
-    // 有官网(分子, 绿) / 总数(分母) —— 分子 ≤ 分母
-    b.innerHTML=`<span class="hit">${hit.toLocaleString()}</span><span style="font-size:12px;color:var(--faint)"> / </span>${total.toLocaleString()}`;
-    const sp=document.createElement("span"); sp.textContent=label;
-    d.append(b,sp);
+    const pct=total?Math.round(hit/total*100):0;
+    d.title=`${label}：有官网 ${hit.toLocaleString()} / ${total.toLocaleString()}（${pct}%）`;
+    const b=document.createElement("b");
+    b.innerHTML=`<span class="hit">${hit.toLocaleString()}</span><span style="font-size:11px;color:var(--faint)"> / </span>${total.toLocaleString()}`;
+    const sp=document.createElement("span");
+    sp.textContent=`${label} · ${pct}%`;
+    const bar=document.createElement("span"); bar.className="mini";
+    bar.innerHTML=`<i style="width:${pct}%"></i>`;
+    d.append(b,sp,bar);
     if(key) d.addEventListener("click",()=>toggleLevel(key));
     el.append(d);
   };
@@ -1486,6 +1682,11 @@ document.getElementById("collapseAll").addEventListener("click",collapseAll);
   walkLite(DATA,null);
 })();
 renderStats();
+(function(){
+  const g=(window.__MANIFEST__||{}).generated;
+  const el=document.getElementById("footGen");
+  if(g&&el) el.textContent=`（${g}）`;
+})();
 syncChips();
 renderTree();
 select(DATA);   // 默认展示根节点总览

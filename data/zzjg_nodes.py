@@ -39,7 +39,9 @@ def _load(path):
 
 def _leaf(kind, u, src="", level="市"):
     # l 必须落在前端 LEVELS 里，否则默认层级筛选会把叶子过滤掉（2026-11-18 实测）
-    n = {"n": kind, "l": level, "k": "部门", "u": u or "", "c": "部门"}
+    # dt 是名录叶子的唯一标记：k=部门/c=部门 在国务院部委里也有（3 个机关被
+    # tree.json 记成 c=部门），只有 dt 能无歧义区分名录与真实机关（2026-11-19）
+    n = {"n": kind, "l": level, "k": "部门", "u": u or "", "c": "部门", "dt": "gov"}
     if src:
         n["s"] = src
     return n

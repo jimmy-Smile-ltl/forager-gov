@@ -40,10 +40,11 @@ def stats_of(node):
         nonlocal e, ok, warn, miss
         if not n.get("ks") or n.get("k") != "分组":
             e += 1
-            # 部门名录叶子（市政府部门/县政府部门下的 k=部门）没有政府信息公开
-            # 专栏概念，有栏目链接即算已收录；与前端 statusOf 保持一致，
-            # 否则桩节点 _stats 会显示「N 单位 · 0 已收录」（2026-11-19 巡检修复）
-            if n.get("k") == "部门":
+            # 部门名录叶子（市政府部门/县政府部门下的名录条目）没有政府信息
+            # 公开专栏概念，有栏目链接即算已收录；与前端 isDeptLeaf 保持一致，
+            # 否则桩节点 _stats 会显示「N 单位 · 0 已收录」。判定不能用 k=部门：
+            # 国务院组成部门/直属机构等真实机关也是 k=部门（2026-11-19 巡检修复）
+            if n.get("dt"):
                 if n.get("u"):
                     ok += 1
                 else:
@@ -178,6 +179,8 @@ def main():
     }
     manifest = {
         "version": "2026-10-30",
+        # 2026-11-19：数据日期改为生成日（页脚/总览卡展示），别再用固定版本号
+        "generated": __import__("datetime").date.today().isoformat(),
         "root": root,
         "total": {"e": all_e, "ok": all_ok, "warn": all_warn},
         "perLevel": per,

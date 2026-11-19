@@ -25,6 +25,13 @@ def t_of(node, nn):
     return "group"
 
 # ═══ 块视图 ═══════════════════════════════════
+def _extra(node, fields=("l", "k", "c", "x", "s", "m", "cd", "dt")):
+    """展示层需要但不参与结构的字段（2026-11-19：此前部门/并列/群团叶子只投影
+    n/u/t，导致「信息公开专栏」x、来源 s、代码 cd 在列表视图全部丢失，
+    1,685 个有专栏的节点被误显示为「待核」）。"""
+    return {f: node[f] for f in fields if node.get(f)}
+
+
 def build_block_node(node, depth):
     n, u = node.get("n", ""), node.get("u", "")
     out = {"n": n, "u": u, "t": t_of(node, n)}
@@ -33,21 +40,41 @@ def build_block_node(node, depth):
         if v:
             out[f] = v
     depts, binglie, quntuan, subgov = [], [], [], []
+    binglie_note = ""
     for k in node.get("ks", []) or []:
         kn, kc, kk = k.get("n", ""), k.get("c", ""), k.get("k", "")
         if kk == "分组" and any(x in kn for x in ("部门", "厅局", "直属", "内设")):
             for d in k.get("ks", []) or []:
-                depts.append({"n": d.get("n", ""), "u": d.get("u", ""), "t": "dept"})
+                # 65k 县级部门名录叶子只带展示必需字段（l 供层级筛选、dt 供
+                # 乡镇/党委标注）；k/c 与 t=dept 重复，省下 ~1.3MB 首屏体积
+                depts.append({"n": d.get("n", ""), "u": d.get("u", ""), "t": "dept",
+                              **_extra(d, ("l", "x", "s", "m", "cd", "dt"))})
         elif kk == "分组" and "并列" in kn:
-            for d in k.get("ks", []) or []:
+            kids = k.get("ks", []) or []
+            # 兄弟叶子同值字段去重（2026-11-19）：县级并列机关 6 个叶子的 c
+            # 都是同一串「县委/县人大/…/县检察院」（与子节点列表等价）、m 都是
+            # 同一句体制备注，逐叶复制白占 ~2MB。同值则 c 直接省去（下级构成
+            # 已由兄弟列表表达），m 上提到组节点展示一次。
+            drop, gm = set(), ""
+            if kids:
+                if len({d.get("c", "") for d in kids}) == 1:
+                    drop.add("c")
+                ms = {d.get("m", "") for d in kids}
+                if len(ms) == 1:
+                    gm, drop = (ms.pop() or ""), drop | {"m"}
+            for d in kids:
+                e = {f: v for f, v in _extra(d).items() if f not in drop}
                 binglie.append({"n": d.get("n", ""), "u": d.get("u", ""),
-                                "t": t_of(d, d.get("n", ""))})
+                                "t": t_of(d, d.get("n", "")), **e})
+            if gm:
+                binglie_note = gm
         elif kc == "群团组织" or "群团" in kn:
             if k.get("ks"):
                 for d in k.get("ks", []):
-                    quntuan.append({"n": d.get("n", ""), "u": d.get("u", ""), "t": "qt"})
+                    quntuan.append({"n": d.get("n", ""), "u": d.get("u", ""),
+                                    "t": "qt", **_extra(d)})
             else:
-                quntuan.append({"n": kn, "u": k.get("u", ""), "t": "qt"})
+                quntuan.append({"n": kn, "u": k.get("u", ""), "t": "qt", **_extra(k)})
         elif kk == "分组" and k.get("ks") and any(
                 d.get("k") in ("人民政府", "区划") for d in k.get("ks", [])):
             # 区划型分组（兵团直辖县级市、自治区直辖县等特例）: 子级作为下级区划
@@ -56,22 +83,21 @@ def build_block_node(node, depth):
                     subgov.append(build_block_node(d, depth + 1))
                 else:
                     # 2026-11-16: 叶子节点携带 m/s/l（合署标注等备注须进展示层）
-                    _leaf = {"n": d.get("n", ""), "u": d.get("u", ""), "t": "gov"}
-                    for _f in ("m", "s", "l"):
-                        if d.get(_f):
-                            _leaf[_f] = d[_f]
+                    _leaf = {"n": d.get("n", ""), "u": d.get("u", ""), "t": "gov",
+                             **_extra(d, ("m", "s", "l", "k", "c", "x", "cd", "dt"))}
                     subgov.append(_leaf)
         elif kc and "人民政府" in kc and k.get("ks"):
             subgov.append(build_block_node(k, depth + 1))
         elif kc and "人民政府" in kc and not k.get("ks"):
-            _leaf = {"n": kn, "u": k.get("u", ""), "t": "gov"}
-            for _f in ("m", "s", "l"):
-                if k.get(_f):
-                    _leaf[_f] = k[_f]
+            _leaf = {"n": kn, "u": k.get("u", ""), "t": "gov",
+                     **_extra(k, ("m", "s", "l", "k", "c", "x", "cd", "dt"))}
             subgov.append(_leaf)
     ks = [{"n": "人民政府", "u": u, "t": "govhome", "ks": depts}]
     if binglie:
-        ks.append({"n": "并列机关", "u": "", "t": "binglie", "ks": binglie})
+        _bg = {"n": "并列机关", "u": "", "t": "binglie", "ks": binglie}
+        if binglie_note:
+            _bg["m"] = binglie_note
+        ks.append(_bg)
     if quntuan:
         ks.append({"n": "群团组织", "u": "", "t": "qt", "ks": quntuan})
     ks.extend(subgov)

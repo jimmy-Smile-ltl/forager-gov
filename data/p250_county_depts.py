@@ -149,12 +149,19 @@ PLACEHOLDER = re.compile(
 
 
 def repair_name(n):
-    """已落盘名称的修复（reclean 用）：只剥面包屑/属性残片/实体，不重跑词尾规则。"""
-    n = (n or "").replace("&amp;", "&")
+    """已落盘名称的修复（reclean 用）：只剥面包屑/属性残片/实体，不重跑词尾规则。
+
+    2026-11-19：改用 html.unescape 统一解实体。此前只处理 &gt;/&amp;gt;，
+    `&ensp;海南省商务厅` 因前缀不是「海南省」绕过了县级闸门，把 5 个省厅
+    采成了文昌市部门（用户红线：不能采成上级单位）。
+    """
+    import html as _html
+    n = _html.unescape(n or "")
+    n = n.replace("​", "").replace("﻿", "")
     n = BREAD_PREFIX.sub("", n)
     n = HTML_ATTR.sub("", n)
     n = re.sub(r'"?[A-Za-z-]+="[^"]*"', "", n)
-    return re.sub(r"\s+", "", n)
+    return re.sub(r"[\s   ]+", "", n)
 
 
 def finalize_depts(key, depts):
