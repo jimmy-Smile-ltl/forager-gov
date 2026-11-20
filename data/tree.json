@@ -6121,7 +6121,7 @@
          "p1": "北京市",
          "p2": "北京市",
          "cd": "110105",
-         "u": "http://www.bjchy.gov.cn/ztzl/bmzl/ndbgnew/4028805a9ba62cae019bc0a331ce1461.html",
+         "u": "http://www.bjchy.gov.cn/",
          "x": "http://www.bjchy.gov.cn/zfxxgk/gkzn.html",
          "s": "来源：北京市政府门户(www.bjchy.gov.cn)区县导航 HTML 提取（title 验证）",
          "ks": [
@@ -6197,7 +6197,9 @@
             }
            ]
           }
-         ]
+         ],
+         "m": "p257 归一门户根（原为政府网站年度报表文章页）",
+         "verified_at": "2026-11-20"
         },
         {
          "n": "丰台区",
@@ -6638,7 +6640,7 @@
          "p1": "北京市",
          "p2": "北京市",
          "cd": "110112",
-         "u": "https://www.bjtzh.gov.cn/bjtz/zwgk/wzgznb/2026061717543196995/index.shtml",
+         "u": "https://www.bjtzh.gov.cn/",
          "x": "http://www.tongzhou.gov.cn/tzqrmzf/zfxxgkzn/content/4fdb96db-97bb-4423-a66e-f452310a637f.html",
          "s": "来源：北京市政府门户(www.bjtzh.gov.cn)区县导航 HTML 提取（title 验证）",
          "ks": [
@@ -6714,7 +6716,9 @@
             }
            ]
           }
-         ]
+         ],
+         "m": "p257 归一门户根（原为政府网站工作年度报表文章页）",
+         "verified_at": "2026-11-20"
         },
         {
          "n": "顺义区",
@@ -7240,7 +7244,7 @@
          "p1": "北京市",
          "p2": "北京市",
          "cd": "110119",
-         "u": "http://www.bjyq.gov.cn/yanqing/ztlm95/1927398/yq23389094/index.shtml",
+         "u": "http://www.bjyq.gov.cn/",
          "x": "http://www.bjyq.gov.cn/yanqing/zwgk/zfxxgklm/zfxxgkzn38/index.shtml",
          "s": "来源：北京市政府门户(www.bjyq.gov.cn)区县导航 HTML 提取（title 验证）",
          "ks": [
@@ -7316,7 +7320,9 @@
             }
            ]
           }
-         ]
+         ],
+         "m": "p257 归一门户根（原为 /ztlm95/ 专题页）",
+         "verified_at": "2026-11-20"
         }
        ]
       }
@@ -7990,8 +7996,8 @@
          "p1": "天津市",
          "p2": "天津市",
          "cd": "120101",
-         "u": "http://www.syhp.gov.cn/",
-         "x": "http://www.syhp.gov.cn/zwgk/",
+         "u": "http://www.tjhp.gov.cn/",
+         "x": "",
          "s": "导航链接",
          "ks": [
           {
@@ -8067,7 +8073,9 @@
             }
            ]
           }
-         ]
+         ],
+         "m": "p257 修正跨市错配（原 syhp.gov.cn 为沈阳市和平区）；源：天津市政府门户区县导航",
+         "verified_at": "2026-11-20"
         },
         {
          "n": "河东区",
@@ -102200,7 +102208,7 @@
          "s": "来源：淮安市政府门户部门导航 HTML 提取（title 验证: 淮安市总工会）",
          "verified_at": "2026-11-13",
          "status": "ok",
-         "m": "；p255 从「市级政府部门」名录移入市级群团（总工会非政府部门）"
+         "m": "p255 从「市级政府部门」名录移入市级群团（总工会非政府部门）"
         },
         {
          "n": "并列机关（6）",

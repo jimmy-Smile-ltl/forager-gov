@@ -55,7 +55,7 @@ sys.path.insert(0, os.path.dirname(HERE))
 
 import p246_zzjg_pages as P  # noqa: E402  复用统一获取层/同站判定
 
-IN_F = os.path.join(HERE, "zzjg_county.json")
+IN_F = os.environ.get("P250_IN") or os.path.join(HERE, "zzjg_county.json")
 OUT_F = os.environ.get("P250_OUT") or os.path.join(HERE, "county_depts.json")
 # 人工核验过的入口页（用户逐站分析产物），优先级高于自动候选
 SEED_F = os.path.join(HERE, "county_depts_seed.json")

@@ -1,0 +1,332 @@
+{
+ "地级区|北京市|北京市|东城区": {
+  "u": "https://www.bjdch.gov.cn/zwgk/jgzn/index.html",
+  "title": "机构职能_北京市东城区人民政府网站",
+  "src": "锚文本「机构职能」(打分16) → 验证 title,职责,dept34,title+path"
+ },
+ "地级区|北京市|北京市|西城区": {
+  "u": "https://www.bjxch.gov.cn/xxgk/jgzn.html",
+  "title": "北京市西城区人民政府",
+  "src": "锚文本「机构职能」(打分16) → 验证 职责,dept57,bodyhint,dept+path"
+ },
+ "地级区|北京市|北京市|朝阳区": {
+  "u": "http://www.bjchy.gov.cn/affair/govintro/index_jg.html",
+  "title": "北京朝阳",
+  "src": "锚文本「机构职能」(打分10) → 验证 head,职责,dept81"
+ },
+ "地级区|北京市|北京市|丰台区": {
+  "u": "https://www.bjft.gov.cn/xxfb/jgxx/",
+  "title": "机构信息-北京市丰台区人民政府网站",
+  "src": "锚文本「机构信息」(打分12) → 验证 title,dept131,title+path"
+ },
+ "地级区|北京市|北京市|石景山区": {
+  "u": "https://www.bjsjs.gov.cn/gongkai/zwgkpd/jgzn_1953/zfbm_1955/",
+  "title": "北京市石景山区人民政府门户网站",
+  "src": "锚文本「机构职能」(打分16) → 验证 head,职责,dept37,title+path"
+ },
+ "地级区|北京市|北京市|海淀区": {
+  "u": "https://zyk.bjhd.gov.cn/zwdt/jgzn/",
+  "title": "北京市海淀区人民政府-机构职能",
+  "src": "锚文本「机构职能」(打分16) → 验证 title,职责,title+path"
+ },
+ "地级区|北京市|北京市|门头沟区": {
+  "u": "https://www.bjmtg.gov.cn/bjmtg/zwxx/jgsz/index.shtml",
+  "title": "机构职能_北京市门头沟区人民政府",
+  "src": "锚文本「机构职能」(打分16) → 验证 title,直属单位,职责,dept141,title+path"
+ },
+ "地级区|北京市|北京市|房山区": {
+  "u": "https://www.bjfsh.gov.cn/zfxxgk/2020jgzn/",
+  "title": "机构职能",
+  "src": "锚文本「机构职能」(打分16) → 验证 title,职责,dept36,title+path"
+ },
+ "地级区|北京市|北京市|通州区": {
+  "u": "https://www.bjtzh.gov.cn/bjtz/zwgk/jgzn/index.shtml",
+  "title": "机构职能",
+  "src": "锚文本「机构职能」(打分16) → 验证 title,职责,dept37,title+path"
+ },
+ "地级区|北京市|北京市|顺义区": {
+  "u": "https://www.bjshy.gov.cn/web/zwgk/jgxx/qzfwbj/index.html",
+  "title": "区政府委办局",
+  "src": "锚文本「机构信息」(打分12) → 验证 dept51,dept+path"
+ },
+ "地级区|北京市|北京市|昌平区": {
+  "u": "https://www.bjchp.gov.cn/cpqzf/xxgk2671/jgzn2024/index.html",
+  "title": "机构职能",
+  "src": "锚文本「机构职能」(打分16) → 验证 title,职责,dept37,title+path"
+ },
+ "地级区|北京市|北京市|大兴区": {
+  "u": "https://www.bjdx.gov.cn/bjsdxqrmzf/zwfw/jgzq/index.html",
+  "title": "机构职权-北京市大兴区人民政府网站",
+  "src": "锚文本「机构职权」(打分5) → 验证 title-weak,dept135,low-conf"
+ },
+ "地级区|北京市|北京市|怀柔区": {
+  "u": "http://www.bjhr.gov.cn/zwgk/jgzn/wbj/",
+  "title": "委办局_怀柔区人民政府网站",
+  "src": "渲染枢纽页「https://www.bjhr.gov.cn/zwgk/」→ 锚文本「机构职能」(打分16) → 验证 head,职责,dept17,title+path"
+ },
+ "地级区|北京市|北京市|平谷区": {
+  "u": "https://www.bjpg.gov.cn/pgqrmzf/zfxxgk68/fdzdgknr/jgjj65/jgzn432/index.html",
+  "title": "机构职能",
+  "src": "锚文本「机构职责」(打分16) → 验证 title,职责,dept38,title+path"
+ },
+ "地级区|北京市|北京市|密云区": {
+  "u": "https://www.bjmy.gov.cn/zwgk/jgzn/",
+  "title": "机构职能_北京市密云区人民政府",
+  "src": "锚文本「机构职能」(打分16) → 验证 title,职责,dept29,title+path"
+ },
+ "地级区|北京市|北京市|延庆区": {
+  "u": "http://www.bjyq.gov.cn/yanqing/zwgk/jgsz14/index.shtml",
+  "title": "机构职能",
+  "src": "锚文本「机构职能」(打分16) → 验证 title,职责,dept125,title+path"
+ },
+ "地级区|天津市|天津市|和平区": {
+  "u": "https://www.tjhp.gov.cn/zw/zfxxgk/fdzdgknr/jgxx/",
+  "title": "机构信息-天津市和平区人民政府",
+  "src": "政务公开索引「https://www.tjhp.gov.cn/zw/」→「https://www.tjhp.gov.cn/zw/zfxxgk/zfxxgkzn/」类目「/zw/zfxxgk/fdzdgknr/jgxx/」→ 导航直达该页 → 验证 title,dept72,title+path"
+ },
+ "地级区|天津市|天津市|河东区": {
+  "u": "https://www.tjhd.gov.cn/zwgk/zfxxgk/zfxxgkqjjg/",
+  "title": "河东区人民政府",
+  "src": "政务公开索引「https://www.tjhd.gov.cn/zwgk/」→「https://www.tjhd.gov.cn/zwgk/zfxxgk/zfxxgkqjjg/」即目标 → 导航直达该页 → 验证 dept91,bodyhint,low-conf"
+ },
+ "地级区|天津市|天津市|河西区": {
+  "u": "https://www.tjhx.gov.cn/zwgk/zfxxgk/fdzdgknr/jgxx/",
+  "title": "机构信息_天津市河西区人民政府",
+  "src": "政务公开索引「https://www.tjhx.gov.cn/zwgk/」→「https://www.tjhx.gov.cn/zwgk/zfxxgk/xxgkzn/」类目「/zwgk/zfxxgk/fdzdgknr/jgxx/」→ 导航直达该页 → 验证 title,职责,dept12,title+path"
+ },
+ "地级区|天津市|天津市|南开区": {
+  "u": "https://www.tjnk.gov.cn/NKQZF/ZWGK5712/ggxxfw/",
+  "title": "天津市南开区人民政府",
+  "src": "锚文本「公共企事业单位信息公开」(打分10) → 验证 kind:事业单位,ent44"
+ },
+ "地级区|天津市|天津市|红桥区": {
+  "u": "http://www.tjhq.gov.cn/zwgk/qsyxxgk/",
+  "title": "天津市红桥区人民政府-公共企事业单位",
+  "src": "枢纽页「http://www.tjhq.gov.cn/zwgk/qsyxxgk/」即目标 → 导航直达该页 → 验证 kind:事业单位,title,ent31"
+ },
+ "地级区|天津市|天津市|东丽区": {
+  "u": "https://www.tjdl.gov.cn/gongkai/jgsz/",
+  "title": "机构设置_天津市东丽区人民政府",
+  "src": "锚文本「政府机构」(打分16) → 验证 title,dept109,title+path"
+ },
+ "地级区|天津市|天津市|西青区": {
+  "u": "https://www.tjxq.gov.cn/zwgk/zfxxgk/fdzdgknr/jgxx/",
+  "title": "机构信息-天津市西青区人民政府",
+  "src": "政务公开索引「https://www.tjxq.gov.cn/zwgk/」→「https://www.tjxq.gov.cn/zwgk/zfxxgk/xxgkzn/」类目「/zwgk/zfxxgk/fdzdgknr/jgxx/」→ 导航直达该页 → 验证 title,dept68,title+path"
+ },
+ "地级区|天津市|天津市|北辰区": {
+  "u": "http://www.tjbc.gov.cn/zwgk/zfxxgk/xxgk_fdzdgk/xxgk_jgxx/",
+  "title": "机构信息-天津市北辰区人民政府",
+  "src": "政务公开索引「https://www.tjbc.gov.cn/zwgk/」→「http://www.tjbc.gov.cn/zwgk/zfxxgk/xxgk_xxgkzn/」类目「/zwgk/zfxxgk/xxgk_fdzdgk/xxgk_jgxx/」→ 导航直达该页 → 验证 title,职责,dept78,titl"
+ },
+ "地级区|天津市|天津市|武清区": {
+  "u": "https://www.tjwq.gov.cn/zwgk/zfxxgk/zfxxgkqzf/hz/fdzdgknr1/jgxx1/",
+  "title": "机构信息_政务公开信息公开专栏",
+  "src": "政务公开索引「https://www.tjwq.gov.cn/zwgk/」→「https://www.tjwq.gov.cn/zwgk/zfxxgk/zfxxgkqzf/hz/fdzdgknr1/jgxx1/」即目标 → 导航直达该页 → 验证 title,dept38,title+path"
+ },
+ "地级区|天津市|天津市|滨海新区": {
+  "u": "https://www.tjbh.gov.cn/sec_site.html",
+  "title": "天津市滨海新区人民政府门户网站欢迎您",
+  "src": "锚文本「部门网站」(打分4) → 验证 dept34,low-conf"
+ },
+ "地级区|天津市|天津市|宁河区": {
+  "u": "https://www.tjnh.gov.cn/zwgk/pcjgjg/",
+  "title": "天津市宁河区人民政府",
+  "src": "锚文本「派出机关（机构）」(打分5) → 验证 dept117,low-conf"
+ },
+ "地级区|天津市|天津市|静海区": {
+  "u": "http://www.tjjh.gov.cn/jhqzf/zwgk_28985/zfxxgk_qjjg1/",
+  "title": "天津市静海区人民政府",
+  "src": "锚文本「政府机构」(打分10) → 验证 dept70,bodyhint,low-conf"
+ },
+ "地级区|天津市|天津市|蓟州区": {
+  "u": "https://www.tjjz.gov.cn/zwgk/ggqsydwxxgk/",
+  "title": "公共企事业单位信息公开_天津市蓟州区人民政府",
+  "src": "点击「公共企事业单位\n信息公开」后跳转 → 导航直达该页 → 验证 kind:事业单位,title,ent32"
+ },
+ "地级区|上海市|上海市|黄浦区": {
+  "u": "https://www.shhuangpu.gov.cn/service_gover.html",
+  "title": "公共服务-政府机构",
+  "src": "锚文本「政府机构」(打分10) → 验证 title,dept53"
+ },
+ "地级区|上海市|上海市|徐汇区": {
+  "u": "http://www.xuhui.gov.cn/zhengwu/glgk/jgzz/",
+  "title": "上海徐汇-政务公开-机构职责",
+  "src": "渲染枢纽页「http://www.xuhui.gov.cn/zhengwu/」→ 锚文本「机构职责」(打分10) → 验证 title,dept32"
+ },
+ "地级区|上海市|上海市|长宁区": {
+  "u": "http://zwgk.shcn.gov.cn/xxgk/wbj-zfjg/index.html",
+  "title": "委办局_上海市长宁区人民政府",
+  "src": "政务公开索引「http://zwgk.shcn.gov.cn/xxgk/」→「http://zwgk.shcn.gov.cn/xxgk/wbj-zfjg/index.html」即目标 → 导航直达该页 → 验证 dept30,dept+path"
+ },
+ "地级区|上海市|上海市|静安区": {
+  "u": "https://www.jingan.gov.cn/xxgk/002019/002019005/002019005001/info-goverment.html",
+  "title": "静安区政府-上海静安门户网站欢迎您！",
+  "src": "政务公开索引「https://www.jingan.gov.cn/xxgk/government_affairs.html」→「https://www.jingan.gov.cn/xxgk/002019/002019005/002019005001/info-goverment.html」即目标 → 导航直达该页 → "
+ },
+ "地级区|上海市|上海市|普陀区": {
+  "u": "https://www.shpt.gov.cn/zhengwu/qgbmptlj-zfxxgk/index.html",
+  "title": "区各部门平台链接_上海普陀",
+  "src": "渲染枢纽页「https://www.shpt.gov.cn/zhengwu/qgbmptlj-zfxxgk/index.html」→ 导航直达该页 → 验证 dept33,low-conf"
+ },
+ "地级区|上海市|上海市|虹口区": {
+  "u": "http://www.shhk.gov.cn/hkxxgk/infoDeptList.html?categoryNum=002004001",
+  "title": "政务公开-上海市虹口区人民政府",
+  "src": "渲染枢纽页「https://www.shhk.gov.cn/hkxxgk/」→ 锚文本「机构职能」(打分10) → 验证 职责,dept38,low-conf,rendered"
+ },
+ "地级区|上海市|上海市|杨浦区": {
+  "u": "https://www.shyp.gov.cn/shypq/xxgk-jgzn-wbj/",
+  "title": "区政府工作部门_上海市杨浦区人民政府",
+  "src": "渲染枢纽页「https://www.shyp.gov.cn/zhengwu/」→ 锚文本「机构职能」(打分16) → 验证 title,职责,dept16,title+path"
+ },
+ "地级区|上海市|上海市|闵行区": {
+  "u": "http://zwgk.shmh.gov.cn/mh-xxgk-cms/website/mh_xxgk/mhxxgk/List/index.htm",
+  "title": "上海市闵行区人民政府网站",
+  "src": "锚文本「部门信息公开」(打分10) → 验证 dept40,low-conf"
+ },
+ "地级区|上海市|上海市|宝山区": {
+  "u": "https://xxgk.shbsq.gov.cn/department.html",
+  "title": "信息公开机构_上海市宝山区人民政府门户网站",
+  "src": "锚文本「政府机构」(打分10) → 验证 title-weak,内设机构,职责,dept17,bodyhint,low-conf"
+ },
+ "地级区|上海市|上海市|嘉定区": {
+  "u": "http://www.jiading.gov.cn/zwpd/zfjgszjs",
+  "title": "政府机构设置介绍",
+  "src": "锚文本「机构设置」(打分16) → 验证 title,dept55,title+path"
+ },
+ "地级区|上海市|上海市|浦东新区": {
+  "u": "https://www.pudong.gov.cn/zwgk/014017003002/index.html",
+  "title": "机构职能_政务公开-上海市浦东新区门户网站",
+  "src": "政务公开索引「https://www.pudong.gov.cn/zwgk/xxgk_gkzn/index.html」→ 锚文本「工作机构」(打分10) → 验证 title,职责,dept55"
+ },
+ "地级区|上海市|上海市|金山区": {
+  "u": "https://www.jinshan.gov.cn/zhengwu/zwgk-zfjg/index.html",
+  "title": "政府机构_上海金山",
+  "src": "政务公开索引「https://www.jinshan.gov.cn/zhengwu/zwgk-zfxxgkzn/」→「https://www.jinshan.gov.cn/zhengwu/zwgk-fdgknr/」→ 锚文本「机构职责」(打分14) → 验证 title,dept33,title+path"
+ },
+ "地级区|上海市|上海市|崇明区": {
+  "u": "https://www.shcm.gov.cn/govxxgk/xxgk.html",
+  "title": "上海市崇明区人民政府",
+  "src": "枢纽页「https://www.shcm.gov.cn/govxxgk/xxgk.html」即目标 → 导航直达该页 → 验证 dept34,low-conf"
+ },
+ "地级区|重庆市|重庆市|万州区": {
+  "u": "https://www.wz.gov.cn/zwgk_266/fdzdgknr/jgzn/",
+  "title": "机关简介_重庆市万州区人民政府",
+  "src": "锚文本「机关简介」(打分16) → 验证 title,职责,dept1110,title+path"
+ },
+ "地级区|重庆市|重庆市|涪陵区": {
+  "u": "http://www.fl.gov.cn/zfxxgk_206/zfxxgkml/gzgqxx/index.html",
+  "title": "国资国企信息_重庆市涪陵区人民政府",
+  "src": "渲染枢纽页「http://www.fl.gov.cn/zfxxgk_206/」→ 锚文本「国资国企信息」(打分8) → 验证 kind:直属企业,title,list,ent26"
+ },
+ "地级区|重庆市|重庆市|渝中区": {
+  "u": "https://www.cqyz.gov.cn/zwgk_229/jgzn/",
+  "title": "机构职能",
+  "src": "锚文本「机构职能」(打分16) → 验证 title,直属单位,职责,dept116,title+path"
+ },
+ "地级区|重庆市|重庆市|大渡口区": {
+  "u": "https://www.ddk.gov.cn/zwgk_271/zfxxgk/fdzdgknr/jgzn/",
+  "title": "机构职能_重庆市大渡口区人民政府",
+  "src": "锚文本「机构职能」(打分16) → 验证 title,职责,dept153,title+path"
+ },
+ "地级区|重庆市|重庆市|沙坪坝区": {
+  "u": "https://www.cqspb.gov.cn/zwgk_235/xxgk_19662/fdzdgknr/jgzn/",
+  "title": "机构职能_重庆市沙坪坝区人民政府",
+  "src": "锚文本「机构职能」(打分16) → 验证 title,职责,dept74,title+path"
+ },
+ "地级区|重庆市|重庆市|九龙坡区": {
+  "u": "https://cqjlp.gov.cn/zwgk_251/zfxxgkml/qqjj/",
+  "title": "机关简介_重庆市九龙坡区人民政府",
+  "src": "锚文本「机构职能」(打分10) → 验证 title,职责,dept227"
+ },
+ "地级区|重庆市|重庆市|南岸区": {
+  "u": "https://www.cqna.gov.cn/zwgk_254/fdzdgknr/jgzn/",
+  "title": "机关简介_重庆市南岸区人民政府网",
+  "src": "锚文本「机构设置」(打分16) → 验证 title,职责,dept343,title+path"
+ },
+ "地级区|重庆市|重庆市|北碚区": {
+  "u": "http://www.beibei.gov.cn/zwgk_239/fdzdgknr/jgzn/",
+  "title": "机关简介_重庆市北碚区人民政府",
+  "src": "锚文本「机关简介」(打分16) → 验证 title,职责,dept321,title+path"
+ },
+ "地级区|重庆市|重庆市|綦江区": {
+  "u": "https://www.cqqj.gov.cn/zwgk_159/fdzdgknr/jgjj/index.html",
+  "title": "机关简介_重庆市綦江区人民政府",
+  "src": "锚文本「部门镇街」(打分10) → 验证 title,职责,dept472,title+path"
+ },
+ "地级区|重庆市|重庆市|大足区": {
+  "u": "http://www.dazu.gov.cn/zwgk_175/fdzdgknr/jgzn/",
+  "title": "机构职能_重庆市大足区人民政府",
+  "src": "锚文本「机构职能」(打分16) → 验证 title,职责,dept423,title+path"
+ },
+ "地级区|重庆市|重庆市|巴南区": {
+  "u": "https://www.cqbn.gov.cn/zwgk_252/fdzdgknr/jgjj/jgzn/",
+  "title": "机构设置_重庆市巴南区人民政府网",
+  "src": "锚文本「机构职能」(打分16) → 验证 title,职责,dept377,title+path"
+ },
+ "地级区|重庆市|重庆市|黔江区": {
+  "u": "https://www.qianjiang.gov.cn/zwgk_210/fdzdgknr/jgjj/jgzn/",
+  "title": "机构设置_重庆市黔江区人民政府",
+  "src": "锚文本「机构设置」(打分16) → 验证 title,dept85,title+path"
+ },
+ "地级区|重庆市|重庆市|长寿区": {
+  "u": "https://www.cqcs.gov.cn/zwxx_164/bmjz/",
+  "title": "部门街镇_重庆市长寿区人民政府",
+  "src": "锚文本「部门街镇」(打分4) → 验证 dept42,low-conf"
+ },
+ "地级区|重庆市|重庆市|江津区": {
+  "u": "http://www.jiangjin.gov.cn/zwgk_180/fdzdgknr/jgzn/",
+  "title": "机关简介_重庆市江津区人民政府",
+  "src": "锚文本「机关简介」(打分16) → 验证 title,职责,dept366,title+path"
+ },
+ "地级区|重庆市|重庆市|合川区": {
+  "u": "https://www.hc.gov.cn/xxgk/qzfwj/jgzn/",
+  "title": "机关简介_重庆市合川区人民政府",
+  "src": "锚文本「机构职能」(打分16) → 验证 title,职责,dept515,title+path"
+ },
+ "地级区|重庆市|重庆市|永川区": {
+  "u": "https://www.cqyc.gov.cn/zwgk_204/zfxxgk/zfxxgkml/jgzn/",
+  "title": "机关简介_重庆市永川区人民政府",
+  "src": "锚文本「机关简介」(打分16) → 验证 title,职责,dept278,title+path"
+ },
+ "地级区|重庆市|重庆市|南川区": {
+  "u": "http://www.cqnc.gov.cn/zwgk_197/fdzdgknr/jgjj_482756/",
+  "title": "机关简介-重庆市南川区人民政府",
+  "src": "锚文本「机构职能信息公开专栏」(打分16) → 验证 title,dept130,title+path"
+ },
+ "地级区|重庆市|重庆市|璧山区": {
+  "u": "http://www.bishan.gov.cn/zwgk_241/jgzn/",
+  "title": "机构设置_重庆市璧山区人民政府",
+  "src": "锚文本「机构设置」(打分16) → 验证 title,职责,dept97,title+path"
+ },
+ "地级区|重庆市|重庆市|铜梁区": {
+  "u": "https://www.cqstl.gov.cn/zwgk_171/fdzdgknr/jgjj/jgsz/",
+  "title": "政府信息公开_重庆市铜梁区人民政府",
+  "src": "锚文本「机构设置」(打分16) → 验证 head,职责,dept101,title+path"
+ },
+ "地级区|重庆市|重庆市|潼南区": {
+  "u": "https://www.cqtn.gov.cn/zwgk_184/zfxxgkml/jgjj/jgzn/",
+  "title": "机构职能_重庆市潼南区人民政府",
+  "src": "锚文本「机构职能」(打分16) → 验证 title,职责,dept323,title+path"
+ },
+ "地级区|重庆市|重庆市|荣昌区": {
+  "u": "http://www.rongchang.gov.cn/zwgk_264/zfxxgkml/qxqjj/",
+  "title": "机构职能_重庆市荣昌区人民政府",
+  "src": "锚文本「机构职能」(打分10) → 验证 title,职责,dept98"
+ },
+ "地级区|重庆市|重庆市|开州区": {
+  "u": "https://www.cqkz.gov.cn/zwgk_238/fdzdgknr/jgjj/jgzn/",
+  "title": "机构设置_重庆市开州区人民政府",
+  "src": "锚文本「机构设置」(打分16) → 验证 title,职责,dept88,title+path"
+ },
+ "地级区|重庆市|重庆市|梁平区": {
+  "u": "http://www.cqlp.gov.cn/zwgk_178/fdzdgknr/jgzn/",
+  "title": "机构职能_重庆市梁平区人民政府",
+  "src": "锚文本「机构职能」(打分16) → 验证 title,职责,dept432,title+path"
+ },
+ "地级区|重庆市|重庆市|武隆区": {
+  "u": "https://www.cqwl.gov.cn/zwgk_170/fdzdgknr/jgjj/",
+  "title": "机构职能_重庆市武隆区人民政府",
+  "src": "锚文本「机构职能」(打分16) → 验证 title,职责,dept81,title+path"
+ }
+}

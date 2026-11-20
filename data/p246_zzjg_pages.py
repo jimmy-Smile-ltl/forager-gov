@@ -20,7 +20,9 @@
 阶段：
   1. static   —— smart_fetch(门户首页) 取真实 HTML，锚文本分类 + 逐候验证；
   2. render   —— 静态失败的走 CDP 9222 渲染首页（滚动触发懒加载）再提取；
-  3. deep     —— 首页 → 政府信息公开/政务公开索引 → 机构栏目（上海/广州形态）；
+  3. deep     —— 首页 → 政府信息公开/政务公开索引 → 法定主动公开内容类目
+                 （机构信息/机构职能/政府机构）→ 机构栏目；直辖市市辖区多用此形态
+                 （天津：政务公开 → 法定主动公开内容 → 机构信息，2026-11-20）；
   4. candrender —— 强锚点但落地页是 JS 列表：渲染候选页再验证；
   5. click    —— 渲染后仍无锚点的，按关键词点击导航元素，捕获跳转页再验证；
   6. extras   —— `--refresh-extras`：对已命中门户重扫首页，补扩围类别（增量并入）。
@@ -56,7 +58,7 @@ import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from contextlib import contextmanager
-from urllib.parse import urljoin, urlparse
+from urllib.parse import unquote, urljoin, urlparse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -114,9 +116,20 @@ NEG_TEXT = re.compile(r"新闻|专题|解读|问答|意见|举报|信访|留言|
                       r"预算|决算|三公经费|绩效|统计公报|年度报告|工作报告|"
                       r"报送|上报")
 NEG_PATH = re.compile(r"/art/|/content_|/doc/|content\.|Item/|/\d{6}/|/detail|"
+                      # 文章/信息页特征（2026-11-20 徐汇实锤：渲染阶段把
+                      # /zhengwu/.../2026/296/543210.html「涉企收费目录清单」
+                      # 当成了「直属单位」）：年份目录、CMS 文章号、长数字页
+                      r"/20\d{2}/|/t\d{8}_|\d{5,}\.html?$|"
+                      # 企事业单位信息公开不是政府部门（和平区 ggqsyxxgk）
+                      r"ggqsyxxgk|ggqsydw|qyxxgk|gqxxgk|sopxxgk|"
                       r"/ldzc/|/lddt/|/bmdt/|/xwzx/|/zwlb/|/xwdt/|/ldjs/|/news|/xw/|/zixun/|"
                       r"\.(pdf|docx?|xlsx?|zip|rar)(\?|$)", re.I)
 NEG_TITLE = re.compile(r"领导|动态|要闻|新闻|会议|活动|简历|之窗")
+# 站点模板错误页：标题沿用「XX区人民政府」外框，正文是错误提示，靠标题里的区名
+# 一样能过地名校验（2026-11-20 河东区实锤：「通用错误页面_天津市河东区人民政府」
+# 被当成机构设置页收下）。这类页面一律判死，不管正文有多少部门名。
+ERROR_TITLE = re.compile(r"通用错误页面|错误页面|页面不存在|页面未找到|页面找不到|"
+                         r"(?<!\d)404(?!\d)|not\s*found|出错了|服务器错误|访问出错|系统错误", re.I)
 VERIFY_TITLE = re.compile(r"机构职能|机构设置|组织机构|政府机构|机构概况|组织架构|"
                           r"内设机构|机构介绍|政府组成部门|工作机构|机构名录|部门机构|"
                           r"机构职责|机构编制|机构信息|机关简介|机构简介|机关职能|"
@@ -184,7 +197,10 @@ def load_targets():
     def walk(n, path):
         for ch in n.get("ks") or []:
             p = path + [ch.get("n")]
-            if ch.get("k") == "人民政府" and ch.get("l") in ("省", "市") and ch.get("u"):
+            # 地级区 = 直辖市的市辖区（北京/天津/上海/重庆，共 74 个）。
+            # 它们在行政层级上是「市级」，其政府部门属于市政府部门口径
+            # （用户指正 2026-11-20：上海市下应该能看到各区的政府部门）。
+            if ch.get("k") == "人民政府" and ch.get("l") in ("省", "市", "地级区") and ch.get("u"):
                 out.append(dict(
                     key=f"{ch.get('l')}|{ch.get('n')}",
                     level=ch.get("l"), name=ch.get("n"),
@@ -295,6 +311,8 @@ def page_score(url, html, kind="机构设置"):
     # 「首都之窗」这类门户品牌词含「之窗」：机构页标题同时命中 VERIFY_TITLE 时放行
     if NEG_TITLE.search(title) and not VERIFY_TITLE.search(title):
         return False, 0, title, "neg-title"
+    if ERROR_TITLE.search(title):
+        return False, 0, title, "error-page"
     # 公文/预决算/统计公报类单页：部门名再多也不是机构目录（桓仁实锤）
     if DOC_TOKEN.search(title[:80]):
         return False, 0, title, "doc-page"
@@ -426,13 +444,25 @@ def page_score(url, html, kind="机构设置"):
     return score >= 5, score, title, ",".join(reasons)
 
 
+# 渲染类阶段（render/deep/click/homeblock）里 fetch() 的兜底开关，见 fetch()
+FETCH_RENDER_FALLBACK = False
+
+
 def fetch(url, timeout=20):
     from smart_fetch import smart_fetch
     try:
         html, method = smart_fetch(url, timeout=timeout)
-        return html or "", method
     except Exception as e:
-        return "", f"exc:{str(e)[:40]}"
+        html, method = "", f"exc:{str(e)[:40]}"
+    # 渲染类阶段：静态拿不到（封锁/空壳）→ 渲染该页再返回。
+    # 上海 16 个区门户对 HTTP 一律 blocked、浏览器却完全正常（2026-11-20 实锤），
+    # 候选验证若继续走静态，render/deep 阶段必然「候选满页、验证 0 命中」。
+    # 只在 render/deep/click/homeblock 打开（main 里按 --phase 设置）。
+    if FETCH_RENDER_FALLBACK and len(html or "") < 1500:
+        h2 = render_page(url, wait_ms=2000, use_proxy=True)
+        if h2 and len(h2) > len(html or ""):
+            return h2, "render"
+    return html or "", method
 
 
 def iframe_home(html, base_url):
@@ -522,8 +552,12 @@ def collect_links(page_url, html, portal_url, deadline, limit=5, max_tries=8,
         # 候选页是 JS 壳（部门列表异步加载）→ 渲染这一页再验一次。
         # 旧逻辑只渲染门户首页、候选页仍走静态抓取，导致这类统一平台的
         # 组织机构页在 render 阶段同样报「无候选」（云龙/弥渡/剑川实锤）。
+        # 2026-11-20：静态**直接封锁**（smart_fetch 返回空/blocked）的站同理——
+        # 上海 16 个区门户就是这一类（HTTP 一律 blocked，浏览器能正常打开），
+        # 只判 _js_shell 会让候选验证永远空手而归。
         if (not ok and RENDER_CANDIDATE and n_rendered < RENDER_CANDIDATE_MAX
-                and _js_shell(h2) and time.time() < deadline):
+                and (_js_shell(h2) or not (h2 or "").strip())
+                and time.time() < deadline):
             n_rendered += 1
             try:
                 h3 = render_page(url, wait_ms=2500, use_proxy=True)
@@ -649,8 +683,24 @@ def _playwright_proxy(url):
     return d
 
 
+def _safe_dismiss(d):
+    try:
+        d.dismiss()
+    except Exception:
+        pass
+
+
 def _render_with(page, url, wait_ms):
     """页面上跑导航 + 滚动 → DOM HTML。"""
+    # 政府站常见 alert/confirm（登录/防爬提示）。playwright 没有 handler 时会
+    # 自动 dismiss，但其内置 DialogManager 的 dismiss 与页面自关存在竞态，实测抛
+    # ProtocolError(Page.handleJavaScriptDialog: No dialog is showing) 把 node
+    # driver 整个打崩、整轮渲染无 summary 中断（2026-11-20）。注册显式 handler
+    # 即绕开内置自动 dismiss，异常吞掉。
+    try:
+        page.on("dialog", _safe_dismiss)
+    except Exception:
+        pass
     try:
         page.goto(url, wait_until="domcontentloaded", timeout=25000)
     except Exception:
@@ -706,7 +756,21 @@ def hub_entries(html, base_url, limit=4):
 
 def try_portal_render(t):
     """渲染阶段：CDP 渲染首页（滚动触发懒加载）→ 同套多类别候选/验证。
-    首页渲染后仍无锚点时，再渲染 1 个枢纽页（JS 菜单常只在枢纽页展开）。"""
+    首页渲染后仍无锚点时，再渲染 1 个枢纽页（JS 菜单常只在枢纽页展开）。
+
+    本阶段候选验证也允许渲染（RENDER_CANDIDATE）：既然静态已经被封/是 JS 壳
+    才走到这里，候选页继续走静态抓取必然同样空手（上海 16 个区实锤）。
+    """
+    global RENDER_CANDIDATE
+    _prev_rc = RENDER_CANDIDATE
+    RENDER_CANDIDATE = True
+    try:
+        return _try_portal_render(t)
+    finally:
+        RENDER_CANDIDATE = _prev_rc
+
+
+def _try_portal_render(t):
     deadline = time.time() + BUDGET
     html = render_page(t["url"], use_proxy=True)
     if not html or len(html) < 1500:
@@ -735,8 +799,16 @@ PUBLIC_KW = re.compile(r"政府信息公开|政务公开|信息公开|政务公�
                        r"^(省|市|县|区)?政府$|政府机构|走进|概况|省情|市情|政府领导")
 SUB_KW = re.compile(r"公开内容|公开目录|法定主动公开|政府机构|机构职能|机构设置|"
                     r"组织机构|工作机构|部门|政府领导|政府组成|"
+                    # 「机构信息」是天津等地市辖区政务公开的法定主动公开类目名
+                    # （和平区 /zw/zfxxgk/fdzdgknr/jgxx/ 标题「机构信息-天津市和平区
+                    # 人民政府」，正文列出区发展改革委等 30+ 部门），2026-11-20 实取
+                    r"机构信息|"
                     # 2026-11-19 人工分析新增（信息公开子站/平台链接类入口）
                     r"平台链接|部门单位|镇办公开|公开导航|信息公开指南|部门汇总")
+# 政务公开页里的「类目锚点」：法定主动公开内容页上摆着 20 来个类目，
+# 「机构信息/机构职能」只是其中之一，必须按锚文本精确跟进（deep 第 4 跳）
+ORG_ENTRY = re.compile(r"^[·\s]*(机构信息|机构职能|机构设置|组织机构|机构概况|机构简介|"
+                       r"机关职能|部门职能|机构名录|政府机构)[·\s]*$")
 CLICK_JS = r"""() => {
   const kw = /组织机构|机构设置|机构职能|政府机构|机构概况|内设机构|直属单位|事业单位|直属企业|公积金|高校/;
   const els = [...document.querySelectorAll('a,li,span,div,button')].filter(e => {
@@ -765,7 +837,8 @@ def self_candidate(url, html, method="static"):
     恰恰是枢纽页直达（黑龙江 /hlj/c108396/jgsz.shtml 由「省政府」页的锚点进入）。
 
     从严：标题必须自证类别（江苏「政府信息公开指南」正文里满屏机构字样，
-    只靠 body 特征会被误收），正文特征只作辅助。
+    只靠 body 特征会被误收），正文特征只作辅助；唯一的例外是正文 ≥30 个不同
+    部门名（目录级页面的强证据，见下方 fallback）。
     """
     if not html or len(html) < 800:
         return None
@@ -780,6 +853,27 @@ def self_candidate(url, html, method="static"):
         ok, score, t2, why = page_score(url, html, kind)
         if ok:
             return dict(kind=kind, u=url, title=t2,
+                        src=f"导航直达该页 → 验证 {why}",
+                        method=method, score=score)
+    # 标题是站点模板名、类别只存在于正文（上海静安「政府机构」页 title 是
+    # 「静安区政府-上海静安门户网站欢迎您！」，KIND_RULES 一个都不命中，
+    # 但正文排着 30+ 个「区XX委/局」）——标题不自证时只认「正文 ≥30 个不同
+    # 部门名」这一档目录级证据（与 page_score 的 dept30 同口径），低 dept 数的
+    # 页面仍按原口径拒绝，服务页/新闻页不会借此混入。2026-11-20 静安实锤。
+    # 例外之例外：**门户根址/频道首页**不算栏目页——首页页脚/导航就摆着 30+ 个
+    # 部门链接（天津河北区 dept32、静安区 dept44、奉贤 /shfx 子站首页），同一口径
+    # 会把首页当成机构设置栏收录（2026-11-20 实锤误收 6 个区）。要求 URL 至少两级
+    # 路径（/xxgk/ 这类频道首页、/shfx 这类子站首页一律不算），根址走 homeblock
+    # 那条独立通道。
+    segs = [x for x in urlparse(url).path.split("/") if x]
+    if len(segs) < 2 and not urlparse(url).query:
+        return None
+    body = re.sub(r"<script[\s\S]*?</script>|<style[\s\S]*?</style>", " ", html,
+                  flags=re.I)
+    if len(set(DEPT_RE.findall(body))) >= 30:
+        ok, score, t2, why = page_score(url, html, "机构设置")
+        if ok:
+            return dict(kind="机构设置", u=url, title=t2,
                         src=f"导航直达该页 → 验证 {why}",
                         method=method, score=score)
     return None
@@ -1085,7 +1179,18 @@ def try_portal_deep(t):
             url = urljoin(entry, href.group(1).strip())
             if url.startswith("http") and same_site(url, t["url"]) and url not in subs:
                 subs.append(url)
-        for sub in subs[:3]:
+        # 排序：直接叫「机构信息/机构职能」的入口优先，其次法定主动公开内容；
+        # 否则 subs[:3] 会被「政府信息公开指南」这类泛入口占满（2026-11-20）
+        def _sub_rank(u):
+            path = unquote(urlparse(u).path)
+            tail = path.rstrip("/").split("/")[-1]
+            if ORG_ENTRY.match(tail):
+                return 0
+            if "fdzdgknr" in path or "zdgknr" in path:
+                return 1
+            return 2
+        subs.sort(key=_sub_rank)
+        for sub in subs[:4]:
             if time.time() > deadline:
                 break
             h3, m3 = fetch_or_render(sub, timeout=15)
@@ -1098,6 +1203,36 @@ def try_portal_deep(t):
                 for x in l3:
                     x["src"] = f"政务公开索引「{entry}」→「{sub}」→ " + x["src"]
                 return make_rec(l3, method=f"deep/{hm}+{m3}"), ""
+            # 第 4 跳：法定主动公开内容页上按锚文本跟进「机构信息/机构职能」类目
+            # （天津各市辖区形态：政务公开 → 法定主动公开内容 → 机构信息，
+            #  2026-11-20 和平区实取；此前只走 3 跳，市辖区一律采空）
+            orgs = []
+            for m4 in re.finditer(ANCHOR_RE, h3):
+                href = re.search(r"href\s*=\s*[\"']([^\"']+)[\"']", m4.group(1), re.I)
+                if not href:
+                    continue
+                text = norm_text(m4.group(2))
+                if not text or not ORG_ENTRY.match(text):
+                    continue
+                url4 = urljoin(sub, href.group(1).strip())
+                if url4.startswith("http") and same_site(url4, t["url"]) \
+                        and url4 not in orgs and url4.rstrip("/") != sub.rstrip("/"):
+                    orgs.append(url4)
+            for o4 in orgs[:2]:
+                if time.time() > deadline:
+                    break
+                h4, m4 = fetch_or_render(o4, timeout=15)
+                own4 = self_candidate(o4, h4, m4)
+                if own4 and own4["kind"] in CORE_KINDS:
+                    own4["src"] = (f"政务公开索引「{entry}」→「{sub}」类目「"
+                                   f"{urlparse(o4).path}」→ " + own4["src"])
+                    return make_rec([own4], method=f"deep/{hm}+{m4}"), ""
+                l4 = collect_links(o4, h4, t["url"], deadline)
+                if l4:
+                    for x in l4:
+                        x["src"] = (f"政务公开索引「{entry}」→「{sub}」→"
+                                    f"类目「{o4}」→ " + x["src"])
+                    return make_rec(l4, method=f"deep/{hm}+{m4}"), ""
     return None, f"deep-no-verified (入口{len(entries)})"
 
 
@@ -1522,6 +1657,11 @@ def main():
 
     phases = (["static", "render", "deep", "candrender", "click", "homeblock"]
               if args.phase == "all" else [args.phase])
+    # 渲染类阶段：fetch() 静态拿不到就渲染（见 fetch() 注释）。static 阶段不打开，
+    # 静态口径必须保持纯 HTTP。
+    global FETCH_RENDER_FALLBACK
+    FETCH_RENDER_FALLBACK = any(p in ("render", "deep", "click", "homeblock")
+                                for p in phases)
     for phase in phases:
         fn = PHASES[phase]
         todo = []

@@ -87828,15 +87828,16 @@
   "xxgk": "https://www.bjmy.gov.cn/zwgk/zfxxgk/"
  },
  "市辖区（地级行政区划）|和平区": {
-  "u": "http://www.syhp.gov.cn/",
+  "u": "http://www.tjhp.gov.cn/",
   "n": "和平区",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
-  "status": "unknown",
-  "xxgk": "http://www.syhp.gov.cn/zwgk/"
+  "verified_at": "2026-11-20",
+  "status": "ok",
+  "xxgk": "",
+  "source": "p257 修正跨市错配（原 syhp.gov.cn 为沈阳市和平区）；源：天津市政府门户区县导航"
  },
  "市辖区（地级行政区划）|河东区": {
   "u": "http://www.tjhd.gov.cn",
@@ -129240,43 +129241,46 @@
   ]
  },
  "市辖区（地级行政区划）|朝阳区": {
-  "u": "http://www.bjchy.gov.cn/ztzl/bmzl/ndbgnew/4028805a9ba62cae019bc0a331ce1461.html",
+  "u": "http://www.bjchy.gov.cn/",
   "n": "朝阳区",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
+  "verified_at": "2026-11-20",
   "status": "ok",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p257 归一门户根（原为政府网站年度报表文章页）"
  },
  "市辖区（地级行政区划）|通州区": {
-  "u": "https://www.bjtzh.gov.cn/bjtz/zwgk/wzgznb/2026061717543196995/index.shtml",
+  "u": "https://www.bjtzh.gov.cn/",
   "n": "通州区",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
+  "verified_at": "2026-11-20",
   "status": "ok",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p257 归一门户根（原为政府网站工作年度报表文章页）"
  },
  "市辖区（地级行政区划）|延庆区": {
-  "u": "http://www.bjyq.gov.cn/yanqing/ztlm95/1927398/yq23389094/index.shtml",
+  "u": "http://www.bjyq.gov.cn/",
   "n": "延庆区",
   "locations": [
    "块"
   ],
   "source_level": "L2",
-  "verified_at": "2026-11-11",
+  "verified_at": "2026-11-20",
   "status": "ok",
   "snapshot": "",
   "xxgk": "",
-  "xxgk_src": ""
+  "xxgk_src": "",
+  "source": "p257 归一门户根（原为 /ztlm95/ 专题页）"
  },
  "县级人民政府|秦皇岛市经济技术开发区": {
   "u": "https://www.qetdz.gov.cn/Content/browse/cid/106",

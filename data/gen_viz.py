@@ -8,7 +8,7 @@
   tree.json 新增字段不影响（新展示需求再扩展 m 等）；
 - 新系统/新板块自动纳入（遍历式重组，无硬编码系统清单）；
 - 数据规模无上限（按需渲染，前端只画展开路径）。"""
-import json, os, sys
+import json, os, sys, time
 
 def t_of(node, nn):
     n = node or {}
@@ -383,8 +383,11 @@ def gen_viz(tree_path="tree.json"):
     # records（USR 扁平索引, 约 10MB raw / 1.3MB br）与树数据分离——慢网下
     # 它占首屏 payload 2/3（2026-11-17 线上实测 1.94MB br 里约 1.35MB 是
     # records），而首屏只有「全国总览卡」用得到；改为独立文件按需加载。
-    s = json.dumps({"meta": {"version": "2026-11-11",
-                             "generated": "2026-11-11",
+    # generated 是 records 的缓存戳（loadRecords 拼 ?v=generated），写死常量会让
+    # 浏览器永远命中旧的 gov_data_records.js —— 每次生成取当天时间。
+    _gen = time.strftime("%Y-%m-%d")
+    s = json.dumps({"meta": {"version": _gen,
+                             "generated": _gen,
                              "recordsFile": "gov_data_records.js"},
                     "block": blk, "tiao": tiao},
                    ensure_ascii=False, separators=(",", ":"))

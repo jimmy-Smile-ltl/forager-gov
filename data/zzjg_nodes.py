@@ -57,9 +57,34 @@ def _city_prov_map():
 
     def walk(n, prov):
         for k in n.get("ks") or []:
-            if k.get("k") == "人民政府" and k.get("l") == "市":
+            # 地级区 = 直辖市的市辖区（上海市浦东新区 等），行政上就是「市级」，
+            # 归到所属直辖市（2026-11-20 用户指正）
+            if k.get("k") == "人民政府" and k.get("l") in ("市", "地级区"):
                 out.setdefault(k.get("n", ""), prov)
             walk(k, prov if n.get("l") == "省" and n.get("k") == "人民政府" else prov)
+
+    pg = next((g for g in tree.get("ks") or [] if g.get("n", "").startswith("省级")), None)
+    for p in (pg or {}).get("ks") or []:
+        walk(p, p.get("n", ""))
+    return out
+
+
+def _muni_districts():
+    """直辖市的市辖区全表 [(直辖市名, 区名, 门户URL)]，从 tree.json 走（74 个）。
+
+    用户口径 2026-11-20：市辖区在机构级别上等同地级市、在区划类型上属县级，
+    **两个列表都要出现**。「有没有采到机构栏目」不能决定它出不出现——没采到的
+    照样列名（u="")，与项目「无官网列名、宁缺毋滥」的纪律一致。
+    """
+    tree = _load(TREE_F)
+    out = []
+
+    def walk(n, prov):
+        for k in n.get("ks") or []:
+            if k.get("k") == "人民政府" and k.get("l") == "地级区":
+                out.append((prov, k.get("n", ""), k.get("u") or ""))
+            else:
+                walk(k, prov)
 
     pg = next((g for g in tree.get("ks") or [] if g.get("n", "").startswith("省级")), None)
     for p in (pg or {}).get("ks") or []:
@@ -84,15 +109,28 @@ def _city_tree():
         if not links:
             continue
         prov = rec.get("prov") or (name if lv == "省" else pmap.get(name, ""))
-        node = {"n": name, "l": "市" if lv == "市" else "省", "k": "分组",
+        # 区级（直辖市市辖区）在层级上与地级市平级：l=地级区，叶子同层
+        nlv = "地级区" if lv == "地级区" else ("市" if lv == "市" else "省")
+        node = {"n": name, "l": nlv, "k": "分组",
                 "c": "部门", "u": rec.get("u") or "",
-                "ks": [_leaf(l.get("kind") or "机构设置", l["u"], l.get("src", ""),
-                             "省" if lv == "省" else "市")
+                "ks": [_leaf(l.get("kind") or "机构设置", l["u"], l.get("src", ""), nlv)
                        for l in links]}
         if lv == "省":
             node["n"] = name + "（省级）"
         provs.setdefault(prov or "中央/未分省", []).append(node)
-    kids = [{"n": p, "l": "省", "k": "分组", "c": "部门", "ks": ns}
+    def _ns_key(n):
+        # 直辖市自身的「（省级）」条目排在各区之前，其余按名排序
+        return (0 if n["n"].endswith("（省级）") else 1, n["n"])
+    # 没采到机构栏目的市辖区照样列名（u=""），不能让区凭空消失
+    have = {n["n"] for ns in provs.values() for n in ns if n.get("l") == "地级区"}
+    for prov, name, _portal in _muni_districts():
+        if name in have:
+            continue
+        provs.setdefault(prov, []).append(
+            {"n": name, "l": "地级区", "k": "分组", "c": "部门", "u": "",
+             "m": "未采到机构设置栏目", "ks": []})
+    kids = [{"n": p, "l": "省", "k": "分组", "c": "部门",
+             "ks": sorted(ns, key=_ns_key)}
             for p, ns in sorted(provs.items(), key=lambda kv: kv[0])]
     return {"n": "市政府部门", "l": "根", "k": "分组", "c": "部门", "ks": kids}
 
@@ -103,6 +141,11 @@ def _county_tree():
     2026-11-19：县级优先用 p250 抽出的**部门名录**（county_depts.json）做叶子——
     用户口径「政府信息公开 → 法定主动公开内容 → 组织机构」「删去机构职能几个字
     就是我要的内容」「采完分页、清洗、去重」。没有名录的县回退到栏目链接。
+
+    2026-11-20 用户口径：直辖市的市辖区「在行政区划类型上属于县级行政区，
+    但在干部和机构级别上相当于地级市」→ 决定「两个列表都放」。本函数按**区划
+    类型**放：市辖区与重庆的县并列在县政府部门（l=县）。机构级别那一份在
+    _city_tree（市政府部门）。
     """
     data = _load(COUNTY_F)
     depts_all = _load(DEPTS_F)
@@ -133,6 +176,46 @@ def _county_tree():
                 "u": (drec.get("u") if len(depts) >= 3 else rec.get("u")) or "",
                 "ks": ks}
         provs.setdefault(prov, {}).setdefault(city, []).append(node)
+
+    # 直辖市市辖区（74 个，zzjg_pages 的 地级区|X 记录）补齐到县级列表，
+    # 按区划类型归类——与重庆的 12 个县并列（2026-11-20 用户口径）
+    pmap = _city_prov_map()
+    seen = {(p, c, n["n"]) for p, cs in provs.items()
+            for c, ns in cs.items() for n in ns}
+    city_all = _load(CITY_F)
+    n_dist = 0
+    # 遍历 tree.json 的全表（74 个），而不是只遍历 registry——没采到机构栏目的
+    # 区也必须列名，否则「上海市下各个区的政府部门」会缺 5 个区（2026-11-20）
+    for prov, name, portal in _muni_districts():
+        if (prov, prov, name) in seen:
+            continue
+        rec = city_all.get(f"地级区|{name}") or {}
+        links = sorted((rec.get("links") or []),
+                       key=lambda l: (KIND_ORDER.index(l["kind"])
+                                      if l.get("kind") in KIND_ORDER else 99))
+        links = [l for l in links if l.get("u")]
+        # 有 p250/p258 抽出的部门名录就用名录（与县级列表形态一致），
+        # 没有再退回栏目链接，两者都没有就列名（u=""）
+        drec = depts_all.get(f"地级区|{prov}|{prov}|{name}") or {}
+        ds = [d for d in (drec.get("depts") or []) if d.get("n") and d.get("u")]
+        if len(ds) >= 3:
+            ks = [{"n": d["n"], "l": "县", "k": "部门", "c": "部门",
+                   "dt": d.get("c") or "gov", "u": d["u"]} for d in ds]
+            node_u = drec.get("u") or rec.get("u") or ""
+        elif links:
+            ks = [_leaf(l.get("kind") or "机构设置", l["u"],
+                        l.get("src", ""), "县") for l in links]
+            node_u = rec.get("u") or ""
+        else:
+            ks, node_u = [], ""
+        node = {"n": name, "l": "县", "k": "分组", "c": "部门",
+                "u": node_u, "ks": ks}
+        if not ks:
+            node["m"] = "未采到机构设置栏目"
+        provs.setdefault(prov, {}).setdefault(prov, []).append(node)
+        n_dist += 1
+    if n_dist:
+        print(f"  县政府部门：直辖市市辖区 {n_dist} 个（区划类型=县级，机构级别=市级）")
     if n_dept_nodes:
         print(f"  县政府部门叶子：{n_dept_nodes} 个部门名录条目（p250）")
     kids = []

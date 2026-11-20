@@ -31,7 +31,8 @@ def main():
         for ch in n.get("ks") or []:
             lvl = ch.get("l")
             p = ch.get("n") if lvl == "省" else prov
-            if ch.get("k") == "人民政府" and lvl in ("省", "市") and ch.get("u"):
+            # 地级区 = 直辖市市辖区（2026-11-20 纳入，与 p246 采集口径一致）
+            if ch.get("k") == "人民政府" and lvl in ("省", "市", "地级区") and ch.get("u"):
                 targets.append(dict(key=f"{ch.get('l')}|{ch.get('n')}",
                                     level=lvl, name=ch.get("n"),
                                     prov=(prov or p), url=ch["u"]))
