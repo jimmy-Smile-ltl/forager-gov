@@ -124,13 +124,14 @@ def merge():
 
 
 def _clean(ds, name=""):
-    """剔掉村/居委员会、区政府自身那条——与 merge() 同一口径。"""
-    return [d for d in ds
-            if not d["n"].endswith(("村民委员会", "居民委员会", "村居委员会",
-                                    "社区居民委员会"))
-            and not (d["n"].endswith("人民政府")
-                     and not d["n"].endswith(("镇人民政府", "乡人民政府")))
-            and d["n"] != name]
+    """与 p250 `finalize_depts` 同一口径（村居委/政府自身/导航噪声/文章标题/去重）。
+
+    2026-11-20 起不再各写一套：市辖区名录混进 `徐汇区残联`、`区委统战部`、
+    `XX街道人民政府` 这类条目时，两处口径必须一致，否则 p258 merge 会把
+    p250 reclean 的成果覆盖回旧口径。
+    """
+    import p250_county_depts as P250
+    return P250.finalize_depts(f"地级区|{name}|{name}|{name}", list(ds))
 
 
 def report():

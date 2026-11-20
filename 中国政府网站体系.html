@@ -524,7 +524,7 @@ footer{padding:8px 22px; border-top:1px solid var(--line); font-size:11.5px; col
   <span>部门名录（市政府部门/县政府部门）不计入覆盖率；港澳台下级区划为列名参考，采集名单以内地口径为准</span>
 </footer>
 
-<script src="data_js/manifest.js?v=20261120a"></script>
+<script src="data_js/manifest.js?v=20261120b"></script>
 <script>
 // 大一统: 列表/树图/地图共用 __GOV_DATA__（块树+条树合并; 无 file 字段,
 // 原 ensureModule 惰性加载逻辑自动跳过）
@@ -562,8 +562,13 @@ const LEVEL_LABELS={中央:"中央",省:"省级",市:"市级",地级区:"地级�
 /* 部门名录叶子判定（市政府部门/县政府部门两个专题下的名录条目）。
    注意不能用 k==="部门"/t==="dept" 单判：国务院组成部门/直属机构等真实机关
    也是 k=部门、t=dept，误判会把 82 个中央部委从覆盖率里剔除（2026-11-19 修）。
-   名录条目由 p250/zzjg 生成，一律带 dt（gov/town/party），是唯一无歧义标记。 */
+   名录条目由 p250/zzjg 生成，一律带 dt（gov/town/party/qt/jud/rdzx），
+   是唯一无歧义标记。 */
 function isDeptLeaf(n){ return !!n.dt; }
+/* 名录叶子上的机构属性标注（p250.classify 产出）。政府部门名录是从县级
+   「组织机构」页原样抽下来的，页面里本来就混着党委/群团/法检/人大政协；
+   标出来读者才知道哪些不是政府部门。 */
+const DT_CN={town:"乡镇/街道",party:"党委机构",qt:"群团组织",jud:"法检机关",rdzx:"人大/政协"};
 /* 无「政府信息公开专栏」口径的机构（CLAUDE.md §3.4）：专栏只适用于政府机关
    （政府/部门/厅局）。法院/检察院/人大/政协/监委/纪委/群团/民主党派/党委不是
    政府，结构上就没有这一栏目——有官网即完整，不能标黄「专栏待核」（此前
@@ -729,10 +734,12 @@ function nodeRow(n, depth, opts={}){
   }
   // 2026-11-19：县级「组织机构」页里混有乡镇（街道）与党委机构，节点名统一是
   // 「XX局」，不加标注会被误读为县政府部门。dt 由 p250 归类带出。
-  if(n.k==="部门"&&(n.dt==="town"||n.dt==="party")){
+  // 2026-11-20：补齐群团/法检/人大政协三档——原来只标注 party/town，
+  // 区残联、区委统战部、区人民法院混在名录里没有任何提示。
+  if(n.k==="部门"&&DT_CN[n.dt]){
     const tg=document.createElement("span");
     tg.className="dtag";
-    tg.textContent=n.dt==="town"?"乡镇/街道":"党委机构";
+    tg.textContent=DT_CN[n.dt];
     nameEl.appendChild(tg);
   }
   const cntEl=document.createElement("span");
@@ -1768,7 +1775,7 @@ select(DATA);   // 默认展示根节点总览
 <script src="data/geo/china.js?v=20261117b"></script>
 <script src="data/geo/adcode.js?v=20261117b"></script>
 <script src="data/geo/geo_index.js?v=20261117b"></script>
-<script src="gov_data.js?v=20261120a"></script>
+<script src="gov_data.js?v=20261120b"></script>
 <script src="data_js/quality.js"></script>
 <script>
 function donutSVG(pct,color,size=74,stroke=8){
