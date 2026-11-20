@@ -448,6 +448,18 @@ def page_score(url, html, kind="机构设置"):
 FETCH_RENDER_FALLBACK = False
 
 
+# 落盘的 method 里只留阶段名，不写获取引擎（CLAUDE.md：获取方法不可公开）。
+# smart_fetch 内部返回的引擎名（浏览器/JS 引擎/HTTP 客户端）一律归一成 smart_fetch，
+# 否则每次采集都会把工具名重新写回 zzjg_pages/zzjg_county/county_depts。
+_ENGINE = re.compile(
+    r"(?i)cloakbrowser|drissionpage|rsspider|sdenv|nodenv|iv8|curl_cffi|playwright|cdp")
+
+
+def method_label(m):
+    m = _ENGINE.sub("smart_fetch", str(m or ""))
+    return re.sub(r"(smart_fetch)(?:\+smart_fetch)+", r"smart_fetch", m)
+
+
 def fetch(url, timeout=20):
     from smart_fetch import smart_fetch
     try:
@@ -462,7 +474,7 @@ def fetch(url, timeout=20):
         h2 = render_page(url, wait_ms=2000, use_proxy=True)
         if h2 and len(h2) > len(html or ""):
             return h2, "render"
-    return html or "", method
+    return html or "", method_label(method)
 
 
 def iframe_home(html, base_url):

@@ -14176,7 +14176,7 @@
          "cd": "130202",
          "u": "http://www.lunan.gov.cn/",
          "x": "https://www.lunan.gov.cn/lunanqu/ts_lunanqu/index.html",
-         "s": "来源：市级政府门户县区导航 CDP 渲染 HTML 提取（title 验证）",
+         "s": "来源：市级政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -14346,7 +14346,7 @@
          "cd": "130204",
          "u": "http://www.guye.gov.cn/",
          "x": "http://www.guye.gov.cn/guye/ts_guyequ/index.html",
-         "s": "来源：市级政府门户县区导航 CDP 渲染 HTML 提取（title 验证）",
+         "s": "来源：市级政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -14432,7 +14432,7 @@
          "cd": "130205",
          "u": "http://www.tskaiping.gov.cn/",
          "x": "http://www.kaiping.gov.cn/kpszfw/zwgk/index.html",
-         "s": "来源：市级政府门户县区导航 CDP 渲染 HTML 提取（title 验证）",
+         "s": "来源：市级政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -14516,7 +14516,7 @@
          "cd": "130207",
          "u": "http://www.fengnanqu.gov.cn/",
          "x": "https://www.fengnanqu.gov.cn/tsfengnan/ts_fengnanqu/index.html",
-         "s": "来源：市级政府门户县区导航 CDP 渲染 HTML 提取（title 验证）",
+         "s": "来源：市级政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -14600,7 +14600,7 @@
          "cd": "130208",
          "u": "http://www.fengrun.gov.cn/",
          "x": "http://www.fengrun.gov.cn/fengrun/ts_fengrunqu/",
-         "s": "来源：市级政府门户县区导航 CDP 渲染 HTML 提取（title 验证）",
+         "s": "来源：市级政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -14684,7 +14684,7 @@
          "cd": "130209",
          "u": "http://www.caofeidian.gov.cn/",
          "x": "https://www.caofeidian.gov.cn/caofeidian/tscaofeidgongkaizhinan/index.html",
-         "s": "来源：市级政府门户县区导航 CDP 渲染 HTML 提取（title 验证）",
+         "s": "来源：市级政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -14768,7 +14768,7 @@
          "cd": "130224",
          "u": "http://www.luannan.gov.cn/",
          "x": "https://www.luannan.gov.cn/Openness/",
-         "s": "来源：市级政府门户县区导航 CDP 渲染 HTML 提取（title 验证）",
+         "s": "来源：市级政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -14852,7 +14852,7 @@
          "cd": "130225",
          "u": "http://www.laoting.gov.cn/",
          "x": "https://www.laoting.gov.cn/laoting/ts_laotingxian/index.html",
-         "s": "来源：市级政府门户县区导航 CDP 渲染 HTML 提取（title 验证）",
+         "s": "来源：市级政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -14936,7 +14936,7 @@
          "cd": "130227",
          "u": "http://www.qianxi.gov.cn/",
          "x": "https://www.qianxi.gov.cn/qianxi/ts_qianxixian/index.html",
-         "s": "来源：市级政府门户县区导航 CDP 渲染 HTML 提取（title 验证）",
+         "s": "来源：市级政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -15020,7 +15020,7 @@
          "cd": "130229",
          "u": "http://www.yutian.gov.cn/",
          "x": "https://www.yutian.gov.cn/yutian/tszwyutianxian/index.html",
-         "s": "来源：市级政府门户县区导航 CDP 渲染 HTML 提取（title 验证）",
+         "s": "来源：市级政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -15114,7 +15114,7 @@
          "cd": "130272",
          "m": "功能区/管委会（非民政部区划序列，据政府门户实存）",
          "u": "http://www.hangu.gov.cn/",
-         "s": "来源：市级政府门户县区导航 CDP 渲染 HTML 提取（title 验证）"
+         "s": "来源：市级政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）"
         },
         {
          "n": "唐山高新技术产业开发区",
@@ -15126,7 +15126,7 @@
          "cd": "130273",
          "m": "功能区/管委会（非民政部区划序列，据政府门户实存）",
          "u": "https://www.tsgxq.gov.cn/",
-         "s": "来源：市级政府门户县区导航 CDP 渲染 HTML 提取（title 验证）"
+         "s": "来源：市级政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）"
         },
         {
          "n": "河北唐山海港经济开发区",
@@ -15148,7 +15148,7 @@
          "cd": "130281",
          "u": "http://www.zunhua.gov.cn/",
          "x": "http://www.zunhua.gov.cn/zunhua/ts_zunhuashi/index.html",
-         "s": "来源：市级政府门户县区导航 CDP 渲染 HTML 提取（title 验证）",
+         "s": "来源：市级政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -15234,7 +15234,7 @@
          "cd": "130283",
          "u": "http://www.qianan.gov.cn/",
          "x": "http://www.qianan.gov.cn/channel/17/index.html",
-         "s": "来源：市级政府门户县区导航 CDP 渲染 HTML 提取（title 验证）",
+         "s": "来源：市级政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -27051,8 +27051,8 @@
           }
          ],
          "u": "https://www.guan.gov.cn/",
-         "s": "来源：廊坊市政府门户「县（市、区）政府」名录页 HTML 提取（用户复核）；站点瑞数防护, title 暂不可得, URL 权威保留",
-         "m": "站点瑞数防护（curl Empty reply），门户官方名录 URL 权威保留",
+         "s": "来源：廊坊市政府门户「县（市、区）政府」名录页 HTML 提取（用户复核）；站点有访问控制, title 暂不可得, URL 权威保留",
+         "m": "站点有访问控制，门户官方名录 URL 权威保留",
          "verified_at": "2026-11-16",
          "status": "maintain"
         },
@@ -212347,7 +212347,7 @@
          "cd": "430103",
          "u": "http://www.tianxin.gov.cn",
          "x": "http://www.tianxin.gov.cn/zwgk8/xxgkml9/",
-         "s": "来源：市级政府门户县区导航 CDP 渲染 HTML 提取（title 验证）",
+         "s": "来源：市级政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -219268,7 +219268,7 @@
           }
          ],
          "u": "https://www.zjjwly.gov.cn/",
-         "s": "来源：市级政府门户县区导航 CDP 渲染 HTML 提取（title 验证）"
+         "s": "来源：市级政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）"
         },
         {
          "n": "慈利县",
@@ -219280,7 +219280,7 @@
          "cd": "430821",
          "u": "https://www.cili.gov.cn/",
          "x": "http://www.cili.gov.cn/c3544/index.html",
-         "s": "来源：市级政府门户县区导航 CDP 渲染 HTML 提取（title 验证）",
+         "s": "来源：市级政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -219365,7 +219365,7 @@
          "cd": "430822",
          "u": "https://www.sangzhi.gov.cn/",
          "x": "http://www.sangzhi.gov.cn//c2379/index.html",
-         "s": "来源：市级政府门户县区导航 CDP 渲染 HTML 提取（title 验证）",
+         "s": "来源：市级政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -225388,7 +225388,7 @@
           }
          ],
          "u": "http://www.fhzf.gov.cn/",
-         "s": "来源：湘西州政府门户县市导航 HTML 提取（cloakbrowser 突破瑞数, title 验证）",
+         "s": "来源：湘西州政府门户县市导航 HTML 提取（smart_fetch(url) 获取, title 验证）",
          "verified_at": "2026-11-16",
          "status": "ok"
         },
@@ -237978,7 +237978,7 @@
          "cd": "441802",
          "u": "http://www.qingcheng.gov.cn/",
          "x": "http://www.qingcheng.gov.cn/xxgk/index.html",
-         "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（title 验证）",
+         "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -238062,7 +238062,7 @@
          "cd": "441803",
          "u": "http://www.qingxin.gov.cn/",
          "x": "https://www.qingxin.gov.cn/zwgk.html",
-         "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（title 验证）",
+         "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（title 验证）",
          "m": "功能区/管委会（非民政部区划序列，据政府门户实存）"
         },
         {
@@ -238075,7 +238075,7 @@
          "cd": "441821",
          "u": "http://www.fogang.gov.cn/",
          "x": "http://www.fogang.gov.cn/zwgk/index.html",
-         "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（title 验证）",
+         "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -238159,7 +238159,7 @@
          "cd": "441823",
          "u": "http://www.yangshan.gov.cn/",
          "x": "http://www.yangshan.gov.cn/xxgk/index.html",
-         "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（title 验证）",
+         "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -238243,7 +238243,7 @@
          "cd": "441825",
          "u": "http://www.gdls.gov.cn/",
          "x": "http://www.gdls.gov.cn/zwgk/index.html",
-         "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（title 验证）",
+         "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -238327,7 +238327,7 @@
          "cd": "441826",
          "u": "http://www.liannan.gov.cn/",
          "x": "https://www.liannan.gov.cn/zwgk/index.html",
-         "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（title 验证）",
+         "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -238413,7 +238413,7 @@
          "cd": "441881",
          "u": "http://www.yingde.gov.cn/",
          "x": "http://www.yingde.gov.cn/zwgk/index.html",
-         "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（title 验证）",
+         "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -238497,7 +238497,7 @@
          "cd": "441882",
          "u": "http://www.lianzhou.gov.cn/",
          "x": "https://www.lianzhou.gov.cn/zwgk.html",
-         "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（title 验证）",
+         "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（title 验证）",
          "ks": [
           {
            "n": "并列机关（6）",
@@ -238581,210 +238581,210 @@
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "http://www.gdqy.gov.cn/channel/qysrmzfbgs/",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市发展改革局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/qysfzhggj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市教育局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/qysjyj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市科学技术局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/qyskxjsj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市工业和信息化局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/qysgyhxxhj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市公安局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/sgaj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市民政局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/smzj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市司法局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/qyssfj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市财政局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/qysczj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市人力资源和社会保障局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/srlzyhshbz",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市自然资源局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/qyszrzyj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市生态环境局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/qyssthjj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市住房城乡建设局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/qyszjj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市交通运输局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/qysjtysj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市水利局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/sslj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市农业农村局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/snyncj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市商务局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/qysswj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市文化广电旅游体育局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/swhgdlytyj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市卫生健康局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/qyswsjkj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市退役军人事务局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/tyjrswj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市应急管理局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/syjglj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市审计局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/ssjj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市人民政府国有资产监督管理委员会",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/srmzfgyzcjdglwyh",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市统计局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/qystjj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市医疗保障局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/qysylbzj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市信访局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/qysxfj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市政务服务和数据管理局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/qyszwfwsjglj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市林业局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/slyj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市城市管理和综合执法局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/scsglhzhzfj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           },
           {
            "n": "市社会保险基金管理局",
            "k": "市级部门",
            "c": "市级政府部门",
            "u": "https://www.gdqy.gov.cn/channel/qysshbxjjglj",
-           "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（只记录不访问）"
+           "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（只记录不访问）"
           }
          ]
         },
@@ -238793,7 +238793,7 @@
          "k": "人民政府",
          "c": "县级人民政府",
          "u": "https://www.gdqy.gov.cn/channel/gdqygxqgwh",
-         "s": "来源：清远市政府门户「部门县市区」栏目(CDP 渲染) HTML 提取（title 验证）"
+         "s": "来源：清远市政府门户「部门县市区」栏目（smart_fetch(url) 获取） HTML 提取（title 验证）"
         }
        ],
        "u": "https://www.gdqy.gov.cn/"
@@ -276158,7 +276158,7 @@
           }
          ],
          "u": "https://www.cnqc.gov.cn",
-         "s": "来源：广元市政府门户县区导航 HTML 提取（cloakbrowser 突破雷池挑战）",
+         "s": "来源：广元市政府门户县区导航 HTML 提取（smart_fetch(url) 获取）",
          "verified_at": "2026-11-16",
          "status": "maintain"
         },
@@ -276241,7 +276241,7 @@
           }
          ],
          "u": "http://www.cnjg.gov.cn",
-         "s": "来源：广元市政府门户县区导航 HTML 提取（cloakbrowser 突破雷池挑战, title 验证）",
+         "s": "来源：广元市政府门户县区导航 HTML 提取（smart_fetch(url) 获取, title 验证）",
          "verified_at": "2026-11-16",
          "status": "ok"
         },
@@ -308447,7 +308447,7 @@
           }
          ],
          "u": "https://www.shuangjiang.gov.cn",
-         "s": "来源：临沧市政府门户县区导航 CDP 渲染 HTML 提取（title 验证）"
+         "s": "来源：临沧市政府门户县区导航 smart_fetch(url) 获取真实 HTML（title 验证）"
         },
         {
          "n": "耿马傣族佤族自治县",

@@ -846,13 +846,16 @@ def process_parent(pn):
         return pn, {"status": f"exception:{str(e)[:40]}", "counties": {}}
 
 
-# ── dps 私密代理（用户指令 2026-11-12: 德阳等站 IP 封禁, 用 college teacher 项目
-#    util/dps_proxy.py 站级粘性代理兜底）——运行时 import, 密钥在其 .env, 不入本仓库 ──
+# ── dps 私密代理（用户指令 2026-11-12: 德阳等站 IP 封禁, 用站级粘性代理兜底）
+#    路径由环境变量 DPS_PROXY_PATH 指定——代理模块含密钥，不入本仓库；
+#    未设置则跳过代理兜底（直连照跑）。此前写死本机绝对路径会连带泄漏目录结构 ──
 DPS_MOD = None
 try:
+    _dps_path = os.environ.get("DPS_PROXY_PATH", "")
+    if not _dps_path:
+        raise ImportError("DPS_PROXY_PATH 未设置")
     import importlib.util as _ilu
-    _spec = _ilu.spec_from_file_location(
-        "dps_proxy", "/Users/jimmy/projectBaidu/college teacher/util/dps_proxy.py")
+    _spec = _ilu.spec_from_file_location("dps_proxy", _dps_path)
     if _spec and _spec.loader:
         DPS_MOD = _ilu.module_from_spec(_spec)
         _spec.loader.exec_module(DPS_MOD)
